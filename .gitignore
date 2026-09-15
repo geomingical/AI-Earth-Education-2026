@@ -1,0 +1,9 @@
+# Publish only course materials and repository instructions.
+/*
+!/Material/
+!/README.md
+!/.gitignore
+
+# macOS metadata and Office temporary files.
+.DS_Store
+~$*
