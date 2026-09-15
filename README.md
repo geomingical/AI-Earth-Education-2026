@@ -14,9 +14,9 @@ GitHub 的 HTML 檔案頁顯示的是原始碼，不是完整網頁。請依下�
 
 ## 教材索引
 
-| 週次 | 簡報 | 補充教材 |
-| --- | --- | --- |
-| Week 1 | [PDF](Material/Week1/week1.pdf) | [HTML 圖解導讀（下載後開啟）](Material/Week1/AI_Earth_課程前言_逐字稿-視覺化.html) · [逐字稿](Material/Week1/AI_Earth_課程前言_逐字稿.md) · [原始辨識文字](Material/Week1/AI_Earth_課程前言_raw.txt) |
+| 週次 | 內容 | 簡報 | 補充教材 |
+| --- | --- | --- | --- |
+| Week 1 | **課程前言與 AI 入門**：為什麼現在要學 AI、文字如何經過 Transformer 模型產生回答，以及使用 AI 時如何保持判斷與查證。 | [PDF](Material/Week1/week1.pdf) | [HTML 圖解導讀（下載後開啟）](Material/Week1/AI_Earth_課程前言_逐字稿-視覺化.html) · [逐字稿](Material/Week1/AI_Earth_課程前言_逐字稿.md) · [原始辨識文字](Material/Week1/AI_Earth_課程前言_raw.txt) |
 
 ## 閱讀提醒
 
