@@ -27,5 +27,3 @@ GitHub 的 HTML 檔案頁顯示的是原始碼，不是完整網頁。請依下�
 ## 教材更新與同步
 
 本 repo 的教材放在 `Material/`。下載 ZIP 的讀者，請重新下載以取得更新；使用 Git 的讀者可在自己的 repo 資料夾執行 `git pull --ff-only` 取得更新。
-
-維護者在本機修改後，需執行 `git add Material README.md .gitignore`、`git commit -m "docs: update course materials"` 與 `git push` 才會更新 GitHub；本機存檔不會自動上傳。目前教材僅追蹤 `Material/Week1/`，簡報提供 PDF，不上傳 PowerPoint 原檔；其他教材保留在本機、不會上傳。其他週次準備公開時，請先更新 `.gitignore` 的公開範圍，再一併更新上方索引。
