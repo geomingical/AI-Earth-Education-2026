@@ -6,7 +6,6 @@
 
 # Only Week 1 is ready for publication.
 /Material/*
-!/Material/week1.pptx
 !/Material/Week1/
 
 # macOS metadata and Office temporary files.

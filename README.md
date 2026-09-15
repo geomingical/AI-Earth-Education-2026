@@ -16,7 +16,7 @@ GitHub 的 HTML 檔案頁顯示的是原始碼，不是完整網頁。請依下�
 
 | 週次 | 簡報 | 補充教材 |
 | --- | --- | --- |
-| Week 1 | [PowerPoint](Material/week1.pptx) | [PDF](Material/Week1/week1.pdf) · [HTML 圖解導讀（下載後開啟）](Material/Week1/AI_Earth_課程前言_逐字稿-視覺化.html) · [逐字稿](Material/Week1/AI_Earth_課程前言_逐字稿.md) · [原始辨識文字](Material/Week1/AI_Earth_課程前言_raw.txt) |
+| Week 1 | [PDF](Material/Week1/week1.pdf) | [HTML 圖解導讀（下載後開啟）](Material/Week1/AI_Earth_課程前言_逐字稿-視覺化.html) · [逐字稿](Material/Week1/AI_Earth_課程前言_逐字稿.md) · [原始辨識文字](Material/Week1/AI_Earth_課程前言_raw.txt) |
 
 ## 閱讀提醒
 
@@ -28,4 +28,4 @@ GitHub 的 HTML 檔案頁顯示的是原始碼，不是完整網頁。請依下�
 
 本 repo 的教材放在 `Material/`。下載 ZIP 的讀者，請重新下載以取得更新；使用 Git 的讀者可在自己的 repo 資料夾執行 `git pull --ff-only` 取得更新。
 
-維護者在本機修改後，需執行 `git add Material README.md .gitignore`、`git commit -m "docs: update course materials"` 與 `git push` 才會更新 GitHub；本機存檔不會自動上傳。目前僅追蹤 `Material/week1.pptx` 與 `Material/Week1/`，其他教材保留在本機、不會上傳。其他週次準備公開時，請先更新 `.gitignore` 的公開範圍，再一併更新上方索引。
+維護者在本機修改後，需執行 `git add Material README.md .gitignore`、`git commit -m "docs: update course materials"` 與 `git push` 才會更新 GitHub；本機存檔不會自動上傳。目前教材僅追蹤 `Material/Week1/`，簡報提供 PDF，不上傳 PowerPoint 原檔；其他教材保留在本機、不會上傳。其他週次準備公開時，請先更新 `.gitignore` 的公開範圍，再一併更新上方索引。
