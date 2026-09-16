@@ -30,3 +30,5 @@ AI × Earth Education 2026 課程教材，每週上傳更新一次，整理完�
 ## 致謝
 
 感謝 [chenjackle45/html-visualizer](https://github.com/chenjackle45/html-visualizer) 專案提供的視覺化工具與設計指引，協助本課程將教材整理成易於閱讀的 HTML 圖解導讀與網頁。
+
+相關模板與樣式的原作者版權及 MIT 授權全文，保留於 [第三方授權聲明](THIRD_PARTY_NOTICES.txt)；此聲明不代表課程教材本身採用相同授權。
