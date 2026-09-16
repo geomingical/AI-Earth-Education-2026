@@ -3,6 +3,10 @@
 !/Material/
 !/README.md
 !/.gitignore
+!/index.html
+!/courses.js
+!/site.js
+!/.nojekyll
 
 # Only Week 1 is ready for publication.
 /Material/*

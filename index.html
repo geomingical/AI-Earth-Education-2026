@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI × Earth Education 2026：每週課程筆記、PDF 簡報與影片，直接在線上閱讀。理解 AI 如何產生答案，建立自己的判斷。">
+  <meta name="theme-color" content="#101318">
+  <title>AI × Earth Education 2026｜課程教材</title>
+  <script src="courses.js" defer></script>
+  <script src="site.js" defer></script>
+  <style>
+    /* Adapted from the existing Week 1 reading template. */
+    :root { color-scheme:dark; --ivory:#101318; --paper:#181d25; --slate:#f1f5fa; --clay:#8ebdff; --g100:#202733; --g300:#344052; --g500:#a0afc3; --g700:#b4c1d3; --green:#9ce1c5; --sans:system-ui,-apple-system,"Segoe UI",Roboto,"PingFang TC","Noto Sans TC",Helvetica,Arial,sans-serif; --mono:ui-monospace,"SF Mono",Menlo,monospace; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--ivory); color:var(--slate); font:16px/1.7 var(--sans); -webkit-font-smoothing:antialiased; }
+    a { color:var(--clay); text-underline-offset:4px; }
+    a:focus-visible,summary:focus-visible { outline:3px solid var(--clay); outline-offset:5px; }
+    .wrap { width:min(94vw,1760px); padding:0 32px; margin:auto; }
+    .skip { position:absolute; left:20px; top:-100px; padding:12px; background:var(--paper); z-index:2; }
+    .skip:focus { top:12px; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:25px 0; border-bottom:1px solid var(--g300); }
+    .brand { font:600 13px var(--mono); letter-spacing:.1em; }
+    .topbar nav { display:flex; gap:24px; font-size:14px; }
+    .topbar a { text-decoration:none; color:var(--g700); }
+    .hero { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(240px,.65fr); gap:64px; padding:72px 0 60px; align-items:center; }
+    .eyebrow { color:var(--clay); font:12px var(--mono); letter-spacing:.14em; }
+    h1 { font-size:clamp(38px,4.5vw,68px); font-weight:550; line-height:1.2; letter-spacing:-.035em; margin:22px 0; }
+    h1 span { color:var(--clay); }
+    .intro { color:var(--g700); font-size:18px; max-width:42ch; }
+    .tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+    .tag { padding:5px 12px; background:var(--g100); border:1px solid var(--g300); border-radius:6px; color:var(--g700); font-size:12px; }
+    .principle { border-left:2px solid var(--clay); padding-left:28px; }
+    .principle h2 { font-size:22px; font-weight:500; margin:0 0 16px; }
+    .principle p { margin:8px 0; color:var(--g700); }
+    .principle .caption { font-size:13px; color:var(--g500); margin-top:22px; }
+    .section-head { display:flex; align-items:baseline; flex-wrap:wrap; justify-content:space-between; gap:12px; border-top:1px solid var(--g300); padding-top:28px; margin-bottom:24px; }
+    .section-head h2 { margin:0; font-size:26px; font-weight:550; }
+    .section-head p { margin:0; color:var(--g500); font-size:14px; }
+    .courses { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+    .course { background:var(--paper); border:1px solid var(--g300); border-radius:14px; padding:30px; display:flex; flex-direction:column; }
+    .course-meta { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .week { font:13px var(--mono); letter-spacing:.08em; color:var(--clay); }
+    .available { color:var(--green); font-size:12px; }
+    .course h3 { font-size:26px; line-height:1.45; margin:22px 0 12px; font-weight:550; }
+    .course p { color:var(--g700); max-width:65ch; margin:0 0 26px; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:auto; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:10px 17px; border:1px solid var(--g300); border-radius:7px; text-decoration:none; color:var(--slate); font-size:14px; }
+    .button:hover { border-color:var(--clay); background:var(--g100); }
+    .button.primary { background:var(--clay); border-color:var(--clay); color:var(--ivory); font-weight:650; }
+    .button.primary:hover { background:#b3d2ff; }
+    .reading { margin:36px 0 60px; padding:22px 26px; border:1px solid var(--g300); border-radius:10px; }
+    .reading summary { cursor:pointer; font-size:15px; }
+    .reading ul { color:var(--g700); max-width:72ch; padding-left:22px; font-size:14px; }
+    .reading li { margin:12px 0; }
+    .load-message { color:var(--g700); }
+    footer { border-top:1px solid var(--g300); padding:24px 0 36px; display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; color:var(--g500); font-size:12px; }
+    @media(min-width:1450px) { .courses { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+    @media(max-width:900px) { .hero { gap:32px; } .courses { grid-template-columns:1fr; } }
+    @media(max-width:600px) { .wrap { padding:0 12px; } .topbar { align-items:flex-start; } .brand { max-width:150px; line-height:1.7; } .topbar nav { gap:16px; } .hero { grid-template-columns:1fr; padding:42px 0; gap:28px; } .intro { font-size:16px; } .principle { padding-left:20px; } .principle h2 { font-size:19px; } .course { padding:24px 20px; } .course h3 { font-size:24px; } .actions { gap:9px; } .button { padding:10px 14px; } .reading { padding:18px 20px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#courses">跳到每週教材</a>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">AI × EARTH EDUCATION</div>
+      <nav aria-label="主要導覽"><a href="#courses">每週教材</a><a href="https://github.com/geomingical/AI-Earth-Education-2026">GitHub</a></nav>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="course-title">
+        <div>
+          <div class="eyebrow">2026 / 課程筆記與學習資源</div>
+          <h1 id="course-title">學 AI，先理解<br><span>答案怎麼來。</span></h1>
+          <p class="intro">從理解模型到建立自己的判斷。把每週的筆記、簡報與影片放在一起，陪你一步步學習 AI。</p>
+          <div class="tags"><span class="tag">每週更新</span><span class="tag">繁體中文</span><span class="tag">免下載，直接閱讀</span></div>
+        </div>
+        <aside class="principle" aria-label="學習方向">
+          <h2>不只取得答案，<br>也理解答案背後的過程。</h2>
+          <p>理解概念 → 看懂流程 → 判斷與查證</p>
+          <p class="caption">筆記幫你整理脈絡，影片保留完整說明。<br>依自己的步調，來回對照閱讀。</p>
+        </aside>
+      </section>
+      <section id="courses" aria-labelledby="materials-title">
+        <div class="section-head"><h2 id="materials-title">每週教材</h2><p>整理完成後陸續公開</p></div>
+        <div class="courses" id="course-list" aria-live="polite"></div>
+        <p class="load-message" id="load-message">教材清單載入中。若未顯示，請重新整理，或前往 <a href="https://github.com/geomingical/AI-Earth-Education-2026/tree/main/Material">GitHub 教材資料夾</a>。</p>
+        <noscript><p>請啟用 JavaScript 顯示教材卡片，或使用上方 GitHub 教材資料夾連結。</p></noscript>
+      </section>
+      <details class="reading">
+        <summary>閱讀方式與內容提醒</summary>
+        <ul>
+          <li>點「閱讀筆記」直接開啟圖解導讀；筆記內的影片與時間連結可跳到 YouTube 對應段落。</li>
+          <li>「PDF 簡報」可在支援的瀏覽器內閱讀，也可以自行下載留存。課程影片需連網觀看。</li>
+          <li>逐字稿由語音辨識整理，並非人工逐秒校稿；不確定的內容請對照原影片。</li>
+          <li>圖解導讀包含整理者歸納與補充，不應全部視為講者原話；來源及校正說明見各週教材。</li>
+        </ul>
+      </details>
+    </main>
+    <footer><span>AI × Earth Education 2026</span><span>持續學習，也持續查證。 · <a href="https://github.com/geomingical/AI-Earth-Education-2026">教材原始檔</a></span></footer>
+  </div>
+</body>
+</html>
