@@ -26,3 +26,7 @@ AI × Earth Education 2026 課程教材，每週上傳更新一次，整理完�
 ## 教材更新
 
 網站會隨教材發布更新；下次閱讀時直接開啟網站即可。下載 ZIP 的讀者請重新下載以取得更新；使用 Git 的讀者可在自己的 repo 資料夾執行 `git pull --ff-only`。
+
+## 致謝
+
+感謝 [chenjackle45/html-visualizer](https://github.com/chenjackle45/html-visualizer) 專案提供的視覺化工具與設計指引，協助本課程將教材整理成易於閱讀的 HTML 圖解導讀與網頁。
