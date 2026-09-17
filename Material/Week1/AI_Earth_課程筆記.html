@@ -1,0 +1,1730 @@
+<!DOCTYPE html><html lang="zh-Hant"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>if(window.tailwind) window.tailwind.config={corePlugins:{preflight:false}};</script>
+    <style>
+      /* ════════════════════════════════════════════ */
+      /* Galaxy reference palette */
+      /* ════════════════════════════════════════════ */
+      :root {
+        color-scheme: dark;
+        --ivory: #101318;
+        --paper: #181d25;
+        --slate: #f1f5fa;
+        --clay: #8ebdff;
+        --clay-d: #8ebdff;
+        --oat: #253750;
+        --olive: #9ce1c5;
+        --g100: #202733;
+        --g200: #293343;
+        --g300: #344052;
+        --g500: #a0afc3;
+        --g700: #b4c1d3;
+
+        --serif: var(--sans);
+        --sans:
+          system-ui, -apple-system, "Segoe UI", Roboto, "PingFang TC",
+          "Noto Sans TC", Helvetica, Arial, sans-serif;
+        --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+
+        /* Semantic colors remain legible on dark surfaces. */
+        --green: #9ce1c5;
+        --green-soft: #1b332e;
+        --green-border: #3a6658;
+        --red: #ffb4b4;
+        --red-soft: #39252c;
+        --red-border: #81515b;
+        --yellow: #f0cf91;
+        --yellow-soft: #302b23;
+        --yellow-border: #756044;
+        --olive-soft: #1b332e;
+        --olive-border: #3a6658;
+        --clay-soft: #253750;
+        --orange: #f0cf91;
+        --orange-soft: #302b23;
+        --orange-border: #756044;
+        --purple: #c6b8f5;
+        --purple-soft: #2c293e;
+        --purple-border: #635681;
+
+        /* ── 兼容舊 component-library snippet ─────────── */
+        /* 通用元件用 --bg / --accent / --text 等命名、alias 到頁面共用色票 */
+        --bg: var(--ivory);
+        --bg-card: var(--paper);
+        --bg-soft: var(--g100);
+        --bg-soft-2: var(--g200);
+        --border: var(--g300);
+        --border-strong: var(--g500);
+        --text: var(--slate);
+        --text-muted: var(--g700);
+        --text-soft: var(--g500);
+        --accent: var(--clay);
+        --accent-soft: var(--clay-soft);
+        --accent-strong: var(--clay-d);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--ivory);
+        color: var(--slate);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* Layout                                       */
+      /* ════════════════════════════════════════════ */
+      .wrap {
+        width: min(94vw, 1760px);
+        margin: 0 auto;
+        padding: 0 32px 140px;
+      }
+      /* 長段落文字護欄：寬容器下避免一行上百字難讀（grid/卡片/表格不受限、吃滿寬） */
+      .intro,
+      p.prose,
+      .body-text {
+        max-width: 72ch;
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* Masthead / Hero                              */
+      /* ════════════════════════════════════════════ */
+      header.masthead {
+        padding: 80px 0 56px;
+        border-bottom: 1.5px solid var(--g300);
+        margin-bottom: 12px;
+      }
+      .eyebrow {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--g500);
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 24px;
+        height: 1.5px;
+        background: var(--clay);
+      }
+      h1 {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: clamp(38px, 5.4vw, 62px);
+        line-height: 1.06;
+        letter-spacing: -0.018em;
+        margin: 0 0 8px;
+        max-width: 17ch;
+        color: var(--slate);
+      }
+      h1 em {
+        font-style: italic;
+        color: var(--clay);
+      }
+      .intro {
+        font-size: 16.5px;
+        color: var(--g700);
+        margin: 22px 0 0;
+        max-width: 620px;
+      }
+      .intro a {
+        color: var(--clay);
+        text-decoration-color: var(--oat);
+        text-underline-offset: 3px;
+      }
+      .intro a:hover {
+        text-decoration-color: var(--clay);
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* TOC pills                                    */
+      /* ════════════════════════════════════════════ */
+      nav.toc {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 26px 0 0;
+      }
+      nav.toc a {
+        font-size: 12.5px;
+        padding: 7px 14px;
+        border: 1.5px solid var(--g300);
+        border-radius: 999px;
+        text-decoration: none;
+        color: var(--g700);
+        background: var(--paper);
+        transition:
+          border-color 120ms,
+          color 120ms;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+      }
+      nav.toc a .n {
+        font-family: var(--mono);
+        font-size: 10px;
+        color: var(--g500);
+      }
+      nav.toc a:hover {
+        border-color: var(--slate);
+        color: var(--slate);
+      }
+      nav.toc a:hover .n {
+        color: var(--clay);
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* Section                                      */
+      /* ════════════════════════════════════════════ */
+      section {
+        margin-top: 72px;
+        scroll-margin-top: 28px;
+      }
+      .sec-head {
+        display: flex;
+        align-items: baseline;
+        gap: 16px;
+        margin-bottom: 10px;
+      }
+      .sec-head .idx {
+        font-family: var(--mono);
+        font-size: 13px;
+        color: var(--clay);
+        font-weight: 600;
+        width: 34px;
+        flex-shrink: 0;
+      }
+      .sec-head h2 {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 27px;
+        margin: 0;
+        letter-spacing: -0.012em;
+        color: var(--slate);
+      }
+      .sec-head .count {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: var(--g500);
+        background: var(--g100);
+        padding: 2px 8px;
+        border-radius: 999px;
+      }
+      .sec-intro {
+        font-size: 14.5px;
+        color: var(--g700);
+        max-width: 700px;
+        margin: 0 0 24px 50px;
+      }
+      @media (max-width: 640px) {
+        .sec-intro {
+          margin-left: 0;
+        }
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* Cards                                        */
+      /* ════════════════════════════════════════════ */
+      .card {
+        background: var(--paper);
+        border: 1.5px solid var(--g300);
+        border-radius: 14px;
+        padding: 24px;
+      }
+      .card-soft {
+        background: var(--g100);
+        border: 1.5px solid var(--g200);
+        border-radius: 10px;
+        padding: 16px;
+      }
+
+      /* link card with hover */
+      a.link-card {
+        display: flex;
+        flex-direction: column;
+        background: var(--paper);
+        border: 1.5px solid var(--g300);
+        border-radius: 14px;
+        text-decoration: none;
+        color: inherit;
+        transition:
+          transform 150ms ease,
+          box-shadow 150ms ease,
+          border-color 150ms ease;
+        overflow: hidden;
+      }
+      a.link-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+        border-color: var(--slate);
+      }
+      .link-card .body {
+        padding: 18px 20px 16px;
+      }
+      .link-card .title {
+        font-family: var(--serif);
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 1.22;
+        color: var(--slate);
+        margin-bottom: 7px;
+        letter-spacing: -0.008em;
+      }
+      .link-card .desc {
+        font-size: 13.5px;
+        color: var(--g700);
+        line-height: 1.5;
+      }
+      .link-card .file {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: var(--g500);
+        border-top: 1px solid var(--g100);
+        padding-top: 11px;
+        margin-top: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .link-card .file .arrow {
+        transition: transform 150ms ease;
+        color: var(--g300);
+      }
+      a.link-card:hover .file {
+        color: var(--clay);
+      }
+      a.link-card:hover .file .arrow {
+        transform: translateX(3px);
+        color: var(--clay);
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* Pills / Badges                               */
+      /* ════════════════════════════════════════════ */
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        border: 1.5px solid var(--g300);
+        border-radius: 999px;
+        font-size: 11.5px;
+        color: var(--g700);
+        background: var(--paper);
+      }
+      .pill.clay {
+        border-color: var(--clay);
+        color: var(--clay);
+      }
+      .pill.olive {
+        border-color: var(--olive);
+        color: var(--olive);
+      }
+
+      /* status badge — cool-aligned semantic */
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 10px;
+        font-size: 11px;
+        font-weight: 600;
+        font-family: var(--mono);
+        border-radius: 9999px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .badge-green {
+        background: var(--green-soft);
+        color: var(--green);
+        border: 1px solid var(--green-border);
+      }
+      .badge-red {
+        background: var(--red-soft);
+        color: var(--red);
+        border: 1px solid var(--red-border);
+      }
+      .badge-yellow {
+        background: var(--yellow-soft);
+        color: var(--yellow);
+        border: 1px solid var(--yellow-border);
+      }
+      .badge-clay {
+        background: #eef2ff;
+        color: var(--clay-d);
+        border: 1px solid #c7d2fe;
+      }
+      .badge-oat {
+        background: var(--oat);
+        color: var(--g700);
+        border: 1px solid var(--g300);
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* Footer                                       */
+      /* ════════════════════════════════════════════ */
+      footer.foot {
+        margin-top: 100px;
+        border-top: 1.5px solid var(--g300);
+        padding-top: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 13px;
+        color: var(--g500);
+      }
+      footer.foot .k {
+        font-family: var(--serif);
+        font-style: italic;
+        color: var(--g700);
+        font-size: 15px;
+      }
+      footer.foot a {
+        color: var(--clay);
+        text-decoration-color: var(--oat);
+        text-underline-offset: 3px;
+      }
+    </style>
+  <style>
+/* Transcript-specific reading layout; original base-template tokens retained. */
+.ae-layout { display:grid; grid-template-columns:208px minmax(0,1fr); gap:42px; }
+.ae-aside { position:sticky; top:22px; align-self:start; max-height:calc(100vh - 44px); overflow-y:auto; padding:25px 0; }
+.ae-aside a { display:block; padding:9px 12px; margin:3px 0; color:var(--g700); font-size:13px; text-decoration:none; border-left:2px solid transparent; }
+.ae-aside a:hover,.ae-aside a[aria-current="location"] { border-color:var(--clay-d); background:var(--g100); color:var(--slate); }
+.ae-aside .ae-aside-title { font-size:12px; letter-spacing:.08em; margin:0 12px 16px; color:var(--g700); }
+.wrap { padding-bottom:100px; }
+header.masthead { padding-top:44px; padding-bottom:36px; }
+h1 { max-width:24ch; line-height:1.2; font-size:clamp(36px,4.5vw,64px); margin-top:28px; }
+h1 em { color:var(--clay-d); }
+h3 { font-family:var(--serif); font-size:21px; font-weight:600; line-height:1.45; margin:9px 0 12px; }
+p { margin:12px 0; }
+.ae-hero-grid { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(250px,1fr); gap:38px; align-items:end; }
+.ae-hero-side { border-left:2px solid var(--clay); padding:0 0 0 26px; }
+.ae-hero-side strong { font-size:28px; font-family:var(--serif); font-weight:500; display:block; }
+.ae-hero-side p { color:var(--g700); font-size:14px; }
+.eyebrow { color:var(--g700); flex-wrap:wrap; }
+.vt-session-badge { border-radius:4px; margin-bottom:26px; }
+.ae-chips { display:flex; gap:8px; flex-wrap:wrap; margin:20px 0; }
+.ae-chips span { padding:5px 11px; font-size:12px; background:var(--g100); border:1px solid var(--g300); border-radius:6px; }
+.ae-grid { display:grid; gap:16px; margin-top:20px; }
+.ae-two { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.ae-three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.card { min-width:0; }
+.card p { color:var(--g700); font-size:15px; line-height:1.85; }
+.ae-kicker { color:var(--clay-d); font-size:12px; font-weight:600; letter-spacing:.04em; display:block; }
+.ae-definition { padding:28px 32px; background:var(--clay-soft); border-left:4px solid var(--clay-d); border-radius:0 12px 12px 0; }
+.ae-big { font-family:var(--serif); font-size:clamp(25px,3vw,36px); line-height:1.6; }
+.ae-big strong { color:var(--clay-d); font-weight:600; }
+.ae-definition>p:last-child { max-width:65ch; color:var(--g700); }
+.ae-note,.ae-caution { padding:16px 20px; margin-top:20px; border:1px solid var(--g300); border-radius:8px; font-size:14px; line-height:1.85; color:var(--g700); }
+.ae-note { background:var(--g100); }
+.ae-caution { background:var(--yellow-soft); border-color:var(--yellow-border); }
+.ae-refs { margin-top:18px; font-size:12px; color:var(--g700); line-height:1.9; }
+.ae-refs a { display:inline-block; color:var(--clay-d); text-underline-offset:3px; margin-right:12px; overflow-wrap:anywhere; }
+.ae-stage-buttons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+button { font:inherit; cursor:pointer; }
+.ae-stage { text-align:left; border:1.5px solid var(--g300); border-radius:10px; background:var(--paper); padding:20px; color:var(--slate); }
+.ae-stage strong { display:block; font-size:20px; margin:9px 0; }
+.ae-stage>span:last-child { font-size:13px; color:var(--g700); }
+.ae-stage[aria-pressed="true"] { background:var(--clay-soft); border-color:var(--clay-d); }
+.ae-stage-panel { margin-top:12px; }
+.ae-slots { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.ae-slots dt { font-size:12px; color:var(--clay-d); margin-bottom:8px; }
+.ae-slots dd { margin:0; font-size:15px; line-height:1.7; }
+.ae-chain { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:20px; counter-reset:chain; }
+.ae-chain li { position:relative; padding:20px 16px; background:var(--g100); border-top:3px solid var(--g300); counter-increment:chain; }
+.ae-chain li::before { content:counter(chain,decimal-leading-zero); font:13px var(--mono); color:var(--clay-d); display:block; margin-bottom:12px; }
+.ae-chain li:not(:last-child)::after { content:"→"; position:absolute; right:-17px; top:40%; color:var(--g700); }
+.ae-chain b { display:block; margin-bottom:8px; }
+.ae-chain span { font-size:14px; color:var(--g700); }
+.figure { width:100%; max-width:100%; min-width:0; overflow-x:auto; background:var(--ivory); border:1px solid var(--g300); border-radius:10px; }
+.figure svg { display:block; width:100%; min-width:960px; height:auto; }
+svg text { font-family:var(--sans); font-size:12px; fill:var(--g700); }
+svg text.n { font-size:14px; font-weight:600; fill:var(--slate); }
+.ae-example { border:1.5px solid var(--g300); border-radius:14px; overflow:hidden; }
+.ae-problem { padding:28px; background:var(--g100); }
+.ae-walk { padding:28px; background:var(--paper); }
+.ae-step-buttons { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:25px; }
+.ae-step-buttons button,#source-reset { background:var(--paper); color:var(--g700); border:1px solid var(--g300); border-radius:7px; padding:9px 12px; font-size:14px; }
+.ae-step-buttons button[aria-pressed="true"] { color:var(--clay-d); border-color:var(--clay-d); background:var(--clay-soft); }
+.ae-equation { font:clamp(19px,3vw,27px) var(--mono); margin-top:22px; padding:17px 0; border-top:1px solid var(--g300); overflow-wrap:anywhere; }
+#walk-panel { min-height:185px; }
+#walk-panel p { max-width:70ch; line-height:1.85; }
+.reveal { border:1.5px solid var(--border); border-radius:10px; background:var(--bg-card); margin-top:12px; overflow:hidden; }
+.reveal>summary { cursor:pointer; padding:15px 18px; font-size:15px; color:var(--text-muted); display:flex; align-items:center; gap:12px; list-style:none; }
+.reveal>summary::-webkit-details-marker { display:none; }
+.reveal>summary::before { content:"▸"; color:var(--clay-d); font-size:12px; flex-shrink:0; }
+.reveal[open]>summary::before { transform:rotate(90deg); }
+.reveal>summary:hover { background:var(--bg-soft); color:var(--text); }
+.reveal-body { padding:8px 22px 22px; font-size:15px; line-height:1.9; color:var(--text-muted); border-top:1px dashed var(--border); }
+.reveal-body p { max-width:78ch; }
+.reveal-body ul { padding-left:20px; }
+.reveal-body li { margin:12px 0; }
+.ae-source { scroll-margin-top:24px; }
+.ae-source-num { flex-shrink:0; font:12px var(--mono); color:var(--clay-d); }
+.ae-source-meta,.ae-small { font-size:12px; color:var(--g700); line-height:1.8; }
+.ae-search-row { display:flex; gap:10px; margin-top:15px; }
+#source-search { flex:1; min-width:0; width:100%; border:1.5px solid var(--g300); border-radius:8px; padding:12px; font:15px var(--sans); background:var(--ivory); }
+#source-count { font:13px var(--mono); }
+#source-reset { flex-shrink:0; }
+a { color:var(--clay-d); text-underline-offset:3px; }
+[hidden] { display:none!important; }
+:focus-visible { outline:3px solid var(--clay-d); outline-offset:4px; }
+.ae-mobile-nav { display:none; }
+.ae-export-dialog { width:min(680px,92vw); max-height:85vh; border:1px solid var(--g300); border-radius:12px; padding:24px; color:var(--slate); background:var(--ivory); }
+.ae-export-dialog::backdrop { background:rgba(15,23,42,.4); }
+.ae-export-dialog textarea { width:100%; height:220px; border:1px solid var(--g300); border-radius:6px; padding:12px; font:14px var(--sans); }
+.ae-export-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:14px; }
+.ae-export-actions button { padding:9px 16px; border:1px solid var(--g300); border-radius:6px; background:var(--paper); }
+.vt-comment-popup,.vt-comment-list { max-width:calc(100vw - 32px); }
+.vt-comment-trigger { max-width:calc(100vw - 16px); }
+footer.foot { color:var(--g700); }
+@media(max-width:1100px) {
+ .ae-layout { grid-template-columns:170px minmax(0,1fr); gap:24px; }
+ .wrap { padding-left:12px; padding-right:12px; }
+ .ae-three { grid-template-columns:1fr; }
+ .ae-stage { padding:15px; }
+ .ae-stage strong { font-size:17px; }
+}
+@media(max-width:760px) {
+ .ae-layout { display:block; }
+ .ae-aside { display:none; }
+ .ae-mobile-nav { display:block; margin-top:25px; }
+ .ae-mobile-nav summary { cursor:pointer; padding:12px 0; font-weight:600; }
+ .ae-mobile-nav nav { display:grid; grid-template-columns:1fr 1fr; gap:5px; }
+ .ae-mobile-nav a { padding:9px 6px; font-size:13px; }
+ .ae-hero-grid,.ae-two,.ae-stage-buttons,.ae-slots { grid-template-columns:1fr; }
+ .ae-hero-grid { gap:22px; }
+ .ae-hero-side { padding-left:18px; }
+ header.masthead { padding-top:22px; }
+ h1 { font-size:38px; }
+ section { margin-top:46px; }
+ .sec-head { gap:8px; align-items:flex-start; }
+ .sec-head .idx { width:28px; padding-top:7px; }
+ .sec-head h2 { font-size:25px; line-height:1.45; }
+ .sec-intro { margin-left:0; font-size:14px; line-height:1.8; }
+ .ae-definition,.card,.ae-problem,.ae-walk { padding:20px; }
+ .ae-stage { padding:14px 18px; }
+ .ae-stage strong { margin:5px 0; }
+ .ae-chain { grid-template-columns:1fr; gap:22px; }
+ .ae-chain li:not(:last-child)::after { content:"↓"; right:50%; top:auto; bottom:-23px; }
+ .reveal>summary { padding:14px 12px; font-size:14px; }
+ .ae-search-row { flex-direction:column; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
+
+.ae-scroll-hint { font-size:12px; color:var(--g700); margin:8px 0; }
+.ae-token-row { display:flex; gap:10px; flex-wrap:wrap; margin:18px 0; }
+.ae-token-row span { min-width:66px; padding:12px 16px; text-align:center; border:1px solid var(--g300); border-radius:8px; background:var(--paper); }
+.ae-token-row small { display:block; font:11px var(--mono); color:var(--g700); margin-top:8px; }
+.ae-quote { font-family:var(--serif); font-size:23px; line-height:1.7; }
+.ae-keyline { border-top:1px solid var(--g300); padding-top:20px; margin-top:20px; }
+.ae-order { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.ae-order button { padding:10px 16px; border:1px solid var(--clay-d); border-radius:8px; color:var(--clay-d); background:var(--paper); }
+#order-example { font-family:var(--serif); font-size:32px; letter-spacing:.12em; }
+.ae-source-paragraph { max-width:78ch; line-height:1.95; margin:18px 0; }
+.ae-time { display:inline-block; font:12px var(--mono); color:var(--clay-d); margin-right:10px; }
+.ae-glossary { display:grid; grid-template-columns:1fr 1fr; gap:12px 24px; padding:0; list-style:none; }
+.ae-glossary li { padding-bottom:10px; border-bottom:1px solid var(--g300); }
+.ae-glossary b { display:block; color:var(--slate); }
+.ae-boundary { padding:10px 14px; margin:10px 0; border-left:3px solid var(--yellow); font-size:12px; background:var(--yellow-soft); }
+.ae-provenance { overflow-wrap:anywhere; }
+.ae-downloads { display:flex; flex-wrap:wrap; gap:10px; }
+.ae-downloads a { display:inline-block; border:1px solid var(--g300); padding:10px 14px; border-radius:7px; background:var(--paper); }
+.ae-final-line { border-left:4px solid var(--clay-d); padding-left:24px; margin:25px 0; font-family:var(--serif); font-size:clamp(24px,3vw,35px); line-height:1.65; }
+@media(max-width:760px) { .ae-glossary { grid-template-columns:1fr; } .ae-source-paragraph { font-size:15px; } }
+</style><style id="galaxy-reading-design">
+/* Reference: grok-galaxy. Preserve the reading structure and all interactions. */
+html { scroll-padding-top:24px; }
+body { line-height:1.65; }
+.wrap { width:min(94vw,1440px); padding:0 0 80px; }
+header.masthead { padding:32px 0 48px; border-bottom:0; margin:0; }
+.eyebrow { color:var(--accent); padding-bottom:20px; border-bottom:1px solid var(--border); margin-bottom:44px; justify-content:space-between; }
+.eyebrow::before { display:none; }
+.ae-hero-grid { grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); align-items:center; gap:48px; }
+h1 { font-size:clamp(40px,5.4vw,76px); font-weight:750; line-height:1.16; letter-spacing:-.045em; margin:0 0 24px; }
+h1 em { font-style:normal; }
+.dek { max-width:52ch; font-size:18px; color:var(--text-muted); line-height:1.85; }
+.ae-hero-side { padding:28px; border:1px solid var(--border); border-radius:16px; background:linear-gradient(135deg,var(--accent-soft),var(--bg-card) 70%); }
+.ae-hero-side strong { font-size:28px; font-weight:700; letter-spacing:-.03em; }
+.ae-hero-side p:first-of-type { color:var(--text); font-size:20px; line-height:1.9; }
+.ae-hero-side a { display:inline-flex; align-items:center; min-height:44px; padding:10px 16px; margin-top:10px; background:var(--accent); color:var(--bg); border-radius:8px; text-decoration:none; font-size:14px; font-weight:650; }
+.ae-chips { margin:24px 0 0; }
+.ae-chips span { border-radius:30px; background:transparent; color:var(--text-muted); }
+.ae-layout { grid-template-columns:208px minmax(0,1fr); gap:40px; }
+.ae-aside { border-top:1px solid var(--border); }
+.ae-aside .ae-aside-title { color:var(--accent); font:12px var(--mono); letter-spacing:.13em; }
+.ae-aside a { border-radius:0 7px 7px 0; line-height:1.65; }
+.ae-aside a:hover,.ae-aside a[aria-current="location"] { color:var(--accent); background:var(--accent-soft); }
+main { min-width:0; }
+main>section { margin-top:0; padding:38px 0; border-top:1px solid var(--border); }
+.sec-head h2 { font-weight:700; font-size:clamp(25px,2.4vw,34px); line-height:1.35; letter-spacing:-.025em; }
+.sec-head .idx { width:30px; }
+.sec-intro { margin:12px 0 24px; max-width:72ch; line-height:1.85; }
+h3 { font-weight:650; font-size:20px; }
+.card,.ae-stage,.reveal { border-width:1px; border-radius:12px; }
+.ae-definition { background:var(--bg-card); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:12px; padding:26px 28px; }
+.ae-big { font-size:clamp(24px,2.4vw,32px); line-height:1.65; font-weight:600; letter-spacing:-.02em; }
+.ae-kicker { font-family:var(--mono); }
+.ae-note { background:var(--bg-card); }
+.ae-caution { border-left:3px solid var(--yellow); }
+.ae-caution strong,.ae-boundary { color:var(--yellow); }
+.ae-chain li { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; }
+.ae-quote,.ae-final-line { font-weight:600; }
+.figure { background:var(--bg-card); margin-top:18px; }
+svg [fill="#eef2ff"] { fill:var(--accent-soft); }
+svg [fill="#ffffff"] { fill:var(--bg-soft); }
+svg [fill="#f8fafc"] { fill:var(--bg-card); }
+svg [fill="#3730a3"] { fill:var(--accent); }
+svg [stroke="#cbd5e1"],svg [stroke="#c7d2fe"] { stroke:var(--border); }
+svg [stroke="#3730a3"] { stroke:var(--accent); }
+svg [stroke="#64748b"] { stroke:var(--text-muted); }
+input,textarea,button { color:var(--text); }
+input,textarea { background:var(--bg); }
+input::placeholder,textarea::placeholder { color:var(--g500); opacity:1; }
+button:hover,.ae-downloads a:hover { border-color:var(--accent); }
+a:hover { color:var(--text); }
+.ae-hero-side a:hover { background:var(--text); color:var(--bg); }
+.ae-source[open]>summary { background:var(--bg-soft); color:var(--text); }
+.ae-source-num { color:var(--green); }
+.ae-source-paragraph { color:var(--text-muted); }
+.ae-time { color:var(--accent); }
+#source-count { color:var(--green); }
+#preview-comments { padding:10px 17px; min-height:44px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; }
+.ae-export-dialog::backdrop { background:#000a; }
+.ae-export-dialog textarea { background:var(--bg-card); color:var(--text); }
+.badge-clay { background:var(--accent-soft); border-color:var(--border); }
+.vt-session-badge { background:var(--bg-card); color:var(--text-muted); border-bottom:1px solid var(--border); padding:9px 3vw; }
+.vt-session-badge .dot { background:var(--accent); }
+footer.foot { margin-top:24px; }
+::selection { background:var(--accent-soft); color:var(--text); }
+@media(max-width:1100px) {
+ .ae-layout { grid-template-columns:170px minmax(0,1fr); gap:24px; }
+ .ae-hero-grid { gap:26px; }
+}
+@media(max-width:760px) {
+ .wrap { width:calc(100% - 32px); }
+ header.masthead { padding:26px 0 30px; }
+ .eyebrow { margin-bottom:30px; font-size:11px; gap:8px; }
+ .ae-hero-grid { grid-template-columns:1fr; }
+ h1 { font-size:clamp(36px,7.8vw,52px); }
+ .dek { font-size:16px; }
+ .ae-hero-side { padding:22px; }
+ .ae-hero-side strong { font-size:24px; }
+ .ae-hero-side p:first-of-type { font-size:18px; }
+ .ae-mobile-nav { border:1px solid var(--border); border-radius:10px; background:var(--bg-card); padding:0 16px; }
+ .ae-mobile-nav nav { grid-template-columns:1fr; padding-bottom:12px; }
+ .ae-mobile-nav a { text-decoration:none; border-top:1px solid var(--border); padding:10px 0; }
+ .ae-layout { display:block; }
+ main>section { padding:30px 0; }
+ .ae-definition { padding:20px; }
+ .vt-session-badge { font-size:10px; padding:8px 16px; flex-wrap:wrap; }
+}
+</style>
+<title>從為什麼學 AI，到看懂它如何回答</title><meta name="description" content="沿影片時間順序，保留問題、例子、轉折與來源的教學型試讀。"></head><body><a class="lesson-skip" href="#lesson-main">跳到正文</a>
+<div class="wrap lesson-wrap">
+<header class="masthead lesson-header">
+  <div class="eyebrow">AI × EARTH EDUCATION · WEEK 1 · 課程筆記</div>
+  <h1>從為什麼學 AI，<br>到看懂它如何回答</h1>
+  <p class="lesson-dek">答案愈容易取得，我們還需要學什麼？從工作與教育的困惑出發，一路走進文字生成的過程，再回到自己的判斷。</p>
+  <div class="lesson-meta"><span>上篇 11:10–30:07</span><span>下篇 40:38–01:03:20</span><span>14 個相連的問題 · 2026.09.17 整理</span></div>
+  <div class="lesson-links"><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=670s" target="_blank" rel="noopener noreferrer">從這段影片開始 ↗</a><a href="./week1.pdf#page=6" target="_blank" rel="noopener noreferrer">開啟 PDF</a><a href="#why-next">直接讀文字生成原理 ↓</a></div>
+  <p class="lesson-source-note">這份筆記依影片順序整理，正文經過重寫，保留問題、例子與前後銜接。每節可展開對應逐字稿；新增的追問與技術補充均有標示。兩篇之間略過的影片內容另有說明。</p>
+</header>
+<div class="lesson-layout">
+<aside class="lesson-sidebar"><p class="lesson-nav-title">沿著時間，一路讀下去</p><nav class="lesson-nav" aria-label="本頁章節"><p class="lesson-nav-group">上篇 · 學習、工作與判斷</p><a href="#two-questions">01 · 題目有答案，和問題能被解決，是同一件事嗎？<small>11:10–12:41</small></a><a href="#rookie">02 · 如果新手的任務變少了，新手要在哪裡練習？<small>12:41–16:17</small></a><a href="#education">03 · 如果 AI 能代答，課程該重新設計哪一部分？<small>16:17–19:13</small></a><a href="#uncertain-future">04 · 看見工具一直更新，就等於看見未來了嗎？<small>19:13–24:03</small></a><a href="#verification">05 · 如果內容生成很便宜，什麼反而變得費力？<small>24:03–25:50</small></a><a href="#learning-path">06 · 知識是一張網，我們為什麼只能先走一條線？<small>25:50–27:53</small></a><a href="#durable">07 · 四種能力，怎麼從名詞變成練習？<small>27:53–30:07</small></a><p class="lesson-nav-group">下篇 · 文字生成原理</p><a href="#why-next">08 · 知道「文字接龍」，還少了哪一段？<small>40:38–42:11</small></a><a href="#tokens">09 · 「開始」是兩個字，一定是兩個 Token 嗎？<small>42:11–46:43</small></a><a href="#embedding">10 · 知道置物櫃號碼，等於知道裡面放了什麼嗎？<small>46:43–49:00</small></a><a href="#position">11 · 「狗咬人」和「人咬狗」，差別藏在哪裡？<small>49:00–50:50</small></a><a href="#attention">12 · 有了前文，模型怎麼知道要參考哪一部分？<small>50:50–54:19</small></a><a href="#generation">13 · 模型算完一輪，拿到的其實是什麼？<small>54:19–01:01:22</small></a><a href="#judgment">14 · 接得很順，為什麼還需要查證？<small>01:01:22–01:03:20</small></a><a href="#reading-notes">來源與閱讀說明</a></nav><p class="lesson-sidebar-note">先順著讀一遍，<br>再回頭查名詞與原文。</p></aside>
+<main id="lesson-main" class="lesson-main">
+<details class="lesson-mobile-toc"><summary>展開閱讀目錄 · 14 個相連的問題</summary><nav class="lesson-nav" aria-label="本頁章節"><p class="lesson-nav-group">上篇 · 學習、工作與判斷</p><a href="#two-questions">01 · 題目有答案，和問題能被解決，是同一件事嗎？<small>11:10–12:41</small></a><a href="#rookie">02 · 如果新手的任務變少了，新手要在哪裡練習？<small>12:41–16:17</small></a><a href="#education">03 · 如果 AI 能代答，課程該重新設計哪一部分？<small>16:17–19:13</small></a><a href="#uncertain-future">04 · 看見工具一直更新，就等於看見未來了嗎？<small>19:13–24:03</small></a><a href="#verification">05 · 如果內容生成很便宜，什麼反而變得費力？<small>24:03–25:50</small></a><a href="#learning-path">06 · 知識是一張網，我們為什麼只能先走一條線？<small>25:50–27:53</small></a><a href="#durable">07 · 四種能力，怎麼從名詞變成練習？<small>27:53–30:07</small></a><p class="lesson-nav-group">下篇 · 文字生成原理</p><a href="#why-next">08 · 知道「文字接龍」，還少了哪一段？<small>40:38–42:11</small></a><a href="#tokens">09 · 「開始」是兩個字，一定是兩個 Token 嗎？<small>42:11–46:43</small></a><a href="#embedding">10 · 知道置物櫃號碼，等於知道裡面放了什麼嗎？<small>46:43–49:00</small></a><a href="#position">11 · 「狗咬人」和「人咬狗」，差別藏在哪裡？<small>49:00–50:50</small></a><a href="#attention">12 · 有了前文，模型怎麼知道要參考哪一部分？<small>50:50–54:19</small></a><a href="#generation">13 · 模型算完一輪，拿到的其實是什麼？<small>54:19–01:01:22</small></a><a href="#judgment">14 · 接得很順，為什麼還需要查證？<small>01:01:22–01:03:20</small></a><a href="#reading-notes">來源與閱讀說明</a></nav></details>
+<div class="lesson-part"><p class="lesson-label">上篇 · 11:10–30:07</p><p class="lesson-part-title">學習、工作與判斷</p><p>先從熟悉的學習經驗開始，看看答案變得容易之後，哪些能力更需要自己練習。</p></div>
+<section id="two-questions" class="lesson-section" data-source-start="670" data-source-end="761" data-part="上篇 · 學習、工作與判斷">
+  <div class="lesson-section-meta">01 · 從熟悉的學習經驗開始 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=670s" target="_blank" rel="noopener noreferrer">11:10–12:41 ↗</a></div>
+  <h2>題目有答案，和問題能被解決，是同一件事嗎？</h2>
+  <div class="lesson-prose">
+  <p>上課、考試、寫作業，我們很熟悉一種學習方式：題目已經有人出好，回答有一定的範圍，最後也有判斷對錯的方法。當然，學校裡的問題不全都只有一個答案；不過，這種熟悉的經驗，可以幫我們對照離開學校後的不確定。</p>
+  <p>到了真實工作裡，常常沒有這本解答本。可能連問題都還沒定義清楚，手上的條件不完整，也沒有人能先告訴你哪條路一定可行。使用 AI 也是如此：即使它很快給出一份回答，<strong>你仍然需要判斷這是不是眼前真正要解決的問題，以及這份回答能不能用。</strong></p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 6 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-6-crop.webp" data-page="6" data-alt="投影片對照學校中的標準答案與真實世界中的條件不足、資訊不全，後者需要自己定義問題及驗證答案。" aria-label="放大第 6 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-6-crop.webp" width="1476" height="670" alt="投影片對照學校中的標準答案與真實世界中的條件不足、資訊不全，後者需要自己定義問題及驗證答案。" loading="lazy"><figcaption><b>跟著看：</b>先看左邊「題目與範圍已經給好」，再看右邊「問題要自己定義、答案要自己驗證」。這個差異，會同時影響我們怎麼工作、怎麼學習。<br><a href="./week1.pdf#page=6" target="_blank" rel="noopener noreferrer">查看完整第 6 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>把問題轉回教育。如果把老師的題目拍照交給 AI，就能立刻得到一份答案，那原本的作業究竟希望我們練到什麼？是交出那張答案紙，還是經歷理解、嘗試與判斷的過程？有了 AI 之後，這兩件事更容易分開。</p>
+  <p>先不用急著判斷「用 AI 好」或「用 AI 不好」。我們可以沿著兩條線思考：一條是職涯——新人怎麼進入沒有標準答案的工作；另一條是教育——當答案容易取得，學習還應該保留什麼。接下來的新手村例子，先從第一條線往前走。</p>
+  </div>
+  <div class="lesson-pause"><span>先把問題留著 · 整理者追問</span><p>想一份你做過的作業：如果 AI 替你寫完，你拿到了成果，卻可能少練到哪一個步驟？這裡先不用選擇支持或反對使用 AI。</p></div>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 11:10–12:41 · 2 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:11:10｜今天要理解的三個問題</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=670s" target="_blank" rel="noopener noreferrer">00:11:10 ↗</a><br>
+所以今天主要會有三個部分。第一個部分是，為什麼我們現在需要學AI。然後今天主要是要跟各位簡單的說明說，什麼是Transformer，文字是怎麼進去的，中間的運算是什麼樣的過程，最後文字是什麼出來的。在這個過程當中，我們需要用什麼樣的基本態度，去面對中間AI運算的過程。</p><h3>00:11:44｜為什麼現在學 AI：職涯與教育</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=704s" target="_blank" rel="noopener noreferrer">00:11:44 ↗</a><br>
+為什麼是現在呢？這一系列的課程其實主要是會，我希望碰觸兩個議題。第一個是關於職涯。原因是因為現在其實，我們的教育比較多主要，其實都是教你結構化的答案。就是你有考試你可能有選擇題，你可能有解答題，所以你的回答裡面會有一定的框架。但其實真實世界是沒有答案的，跟運用AI其實也是一樣，就是運用AI其實沒有答案。第二個是如果今天一個Prompt就有答案的時候，未來的教育要往哪一個部分去前進？</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=751s" target="_blank" rel="noopener noreferrer">00:12:31 ↗</a><br>
+有點像我其實就把老師的問題拍個照，問AI那我馬上就可以寫答案了。所以這個過程是好的還是不好的？</p></div></details>
+</section>
+
+
+<section id="rookie" class="lesson-section" data-source-start="761" data-source-end="977" data-part="上篇 · 學習、工作與判斷">
+  <div class="lesson-section-meta">02 · 從職涯看見學習時間的壓力 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=761s" target="_blank" rel="noopener noreferrer">12:41–16:17 ↗</a></div>
+  <h2>如果新手的任務變少了，新手要在哪裡練習？</h2>
+  <div class="lesson-prose">
+  <p>想像一條熟悉的職涯路線：畢業拿到入場券，進公司後從小案子做起。你可能還不熟練，但會在跟案、出錯與收尾的過程中，逐漸知道真實工作怎麼運作。這段累積經驗的時間，就像遊戲裡的「新手村」。</p>
+  <p>這條路有一個前提：公司願意把適合新人的工作交給新人，也願意花時間帶人。如果某些任務能由有經驗的人搭配 AI 完成，公司可能重新比較人力、成本與產出，原本用來練習的工作也就可能減少。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 8 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-8-crop.webp" data-page="8" data-alt="投影片以三個新人與一人搭配AI作對照，提出入門任務被接手、練習階梯減少的問題。" aria-label="放大第 8 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-8-crop.webp" width="1476" height="670" alt="投影片以三個新人與一人搭配AI作對照，提出入門任務被接手、練習階梯減少的問題。" loading="lazy"><figcaption><b>跟著看：</b>原本拆給新人的任務，可能改由有經驗的人搭配 AI 完成。圖上的「數十倍」是原投影片的概括說法，並非本筆記驗證的跨產業統計。<br><a href="./week1.pdf#page=8" target="_blank" rel="noopener noreferrer">查看完整第 8 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>這裡的張力不只在「AI 能不能做我的工作」。更難的問題是：<strong>一個人還沒有經驗時，原本靠做小任務累積經驗的路，會不會也跟著改變？</strong>因此，除了趕快學會工具，我們還需要思考：可以在哪裡練習，又要怎麼累積判斷所需的經驗？</p>
+  <p>課中引用的簡立峰觀點，接著把焦點帶到「寬的能力」與學習時間：除了把一件事做深，我們也可能需要把不同領域的知識連起來，再用 AI 協助實作。這提供了一種思考方向，讓我們重新看待深入專業與跨領域組合的關係。</p>
+  <p>這系列課的目標因此放在「從零到一」。先建立可繼續走的起點，之後有人往音樂、有人往影像，依自己的興趣發展。這並不能推出「專業深度不再重要」；稍後談到驗證時，我們還會回到領域知識的價值。</p>
+  </div>
+  <aside class="lesson-correction"><strong>閱讀界線 · 這裡是觀察與引述</strong><p>公司的用人情境、產出倍數與「新手村剩兩個月」是課堂用來討論變化的觀察或引述；本試讀沒有另行查核其適用範圍，不把它們寫成所有職業共同的期限或結果。</p></aside>
+  <p class="lesson-transition">當學習時間受到壓力，答案又能快速取得，教育要做的就只是把同一套訓練加速嗎？這把我們帶回一開始的第二個問題。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 12:41–16:17 · 2 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:12:41｜新手村與公司的用人方式</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=761s" target="_blank" rel="noopener noreferrer">00:12:41 ↗</a><br>
+在過去的職涯裡面，我們會先有一個入堂券。你畢業之後你可能會，經過一個新手村的階段，你可能會是一個junior，你需要跟幾個小案子，知道說真實世界是怎麼運作的。那你二到五年後，你可能就會轉成是一個senior的身份。但是對於現在而言，就是這個模式已經完全被AI打爆了。原因是因為現在很多的公司，他們在討論的是，如果我有一件事要給三個新人去做，那我倒不如就一個人加上非常多個AI，那我可能有數十倍的產出。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=815s" target="_blank" rel="noopener noreferrer">00:13:35 ↗</a><br>
+那我不見得需要，或我不見得非常肯花時間去帶新人。所以這個是目前有一些公司的現況，就是有些公司的人就是極度的銳減。原因是AI可以取代掉幾乎百分之六七十的工作。 所以基本上AI的訂閱一直不斷往上。我AI的訂閱最貴，一個帳號可能才六千多塊。但如果我要找一個新的人的時候，我就可能需要花到四萬五萬，或者是以上。所以很多人寧可就是，我多花一點AI訂閱費，反正我訂最高也才六千多。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=864s" target="_blank" rel="noopener noreferrer">00:14:24 ↗</a><br>
+那一個不夠訂兩個，兩個不夠訂三個。所以這個是一個蠻現實的問題。</p><h3>00:14:34｜寬與深的能力，以及從零到一</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=874s" target="_blank" rel="noopener noreferrer">00:14:34 ↗</a><br>
+在2026年就是今年的時候，就是簡立峰老師在一個全國大學校長會議的時候，他有討論到一個問題。過去的教育我們主要是著重於深的能力，就是在一個領域裡面我們要深耕。那你可能會經過大學部碩士，再來到博士班你可能就有非常深的專業能力。但是簡立峰老師認為說，再來可能寬的能力會逐漸大於深的能力，就是你需要去了解很多不同面向的知識，再把這些知識給組合起來，或者是再把這些知識利用AI去做賦能。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=920s" target="_blank" rel="noopener noreferrer">00:15:20 ↗</a><br>
+所以他同時也提到，就是新手村大概只剩兩個月。那原因是因為如果，想一個議題如果六月畢業的話，他說兩個月大概就是七月和八月。所以門檻從來就不是會不會，而是變得你多快要學會這個東西。就等於是你一畢業大家就希望你有AI的技能，你可以運用AI來做很多不一樣的工作。 所以這一系列課我希望給大家的是，協助大家從零到一的過程。那一到後面就是看個人，因為你有可能對音樂非常有興趣，你有可能對影像非常有興趣，所以不同的人會對不同的面向可能感興趣。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=972s" target="_blank" rel="noopener noreferrer">00:16:12 ↗</a><br>
+那你就可以去開發你後續的未來的規劃。</p></div></details>
+</section>
+
+
+<section id="education" class="lesson-section" data-source-start="977" data-source-end="1153" data-part="上篇 · 學習、工作與判斷">
+  <div class="lesson-section-meta">03 · 回到教育到底要留下什麼 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=977s" target="_blank" rel="noopener noreferrer">16:17–19:13 ↗</a></div>
+  <h2>如果 AI 能代答，課程該重新設計哪一部分？</h2>
+  <div class="lesson-prose">
+  <p>對於大學教育，有縮短年限、既有教育可能跟不上變化等不同主張。這些課中引述的看法不見得百分之百正確，但它們讓我們看見教育正在被追問：既有的安排，還能不能帶來原本期待的學習？這個問題值得討論，卻不能直接推成「不用上大學」的結論。</p>
+  <p>接著看課中引用的 MIT 教育建議。不必先背下八個項目，可以先抓出一個方向：<strong>先問這堂課要帶給學習者什麼核心價值，再回頭設計學習過程。</strong>這和前面「題目拍照就能得到答案」相連——產出容易了，更需要重新確認原本想培養的能力。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 12 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-12-crop.webp" data-page="12" data-alt="課堂投影片整理八項教育原則，包含回到學習本身、有意圖地教學，以及保留認知摩擦與生產性掙扎。" aria-label="放大第 12 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-12-crop.webp" width="1476" height="670" alt="課堂投影片整理八項教育原則，包含回到學習本身、有意圖地教學，以及保留認知摩擦與生產性掙扎。" loading="lazy"><figcaption><b>跟著看：</b>不必先背八條。先找第 04「回到學習本身」、第 05「有意圖地教學」與第 07「增能而非自動化」，看它們如何回應前面的代答問題。<br><a href="./week1.pdf#page=12" target="_blank" rel="noopener noreferrer">查看完整第 12 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>其中一個值得停下來想的概念是「認知摩擦與生產性的掙扎」。把它放回剛才的作業情境，意思就比較具體了：有些卡住、比較與自己想辦法的過程，可能正是學習發生的地方。如果 AI 把這些過程連同答案一起代做，我們省下時間，也可能少了一次練習。</p>
+  <p>這不表示所有困難都應該保留。<span class="lesson-inline-label">整理者延伸</span>可以接著問：這一步困難，是在訓練本堂課要練的能力，還是只增加操作負擔？例如，若目標是判斷一段論證，便需要有機會親自辨認證據如何支持主張。這是幫助理解「先定目標，再安排 AI 的角色」的延伸例子，並非影片中的實驗。</p>
+  <p>把視野從一份作業擴大到整個學習環境，還可以從三個面向思考：調整教育流程、以人與社群為中心、持續反思與修正。這些課中彙整的建議提供了方向，實際怎麼安排，仍要回到不同領域的學習目標與情境。</p>
+  </div>
+  <div class="lesson-pause"><span>接回第一節 · 整理者追問</span><p>回到那份可能由 AI 代寫的作業：如果你是設計課程的人，會先保留哪個學習動作？先說明想培養的能力，再思考 AI 可以幫哪一段。</p></div>
+  <p class="lesson-transition">到這裡，問題已從「會不會用一個工具」，擴大到學習與工作的安排。那整個 AI 的發展，又走到哪個階段了？</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 16:17–19:13 · 2 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:16:17｜科技圈對教育的看法</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=977s" target="_blank" rel="noopener noreferrer">00:16:17 ↗</a><br>
+那當然不是只有簡立峰老師這麼說，就是包括OpenAI也就是GPT的老闆Sam Altman，那他其實也在說，大學可能兩年就夠了。我有把來源放在這，他說兩年大概就是叫你去交朋友而已。那Elon Musk就是馬斯克他在說，目前的教育可能是培養一批，就是會被AI淘汰的人。那原因是因為現在很多還是存在於記憶解體，還有標準答案上。那當然各行各業有各行各業的說法，那這個不見得是百分之百正確的。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1023s" target="_blank" rel="noopener noreferrer">00:17:03 ↗</a><br>
+那下面這個有一個YouTube的連結，那這個是一位17歲的少年 那他被接受採訪，那他今年的時候去參加一場AI頂尖的會議，那會場與會者就充滿了各式各樣，跟他苦口婆心的說，其實你真的不用上大學的議題。</p><h3>00:17:26｜教育原則：重新思考學習設計</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1046s" target="_blank" rel="noopener noreferrer">00:17:26 ↗</a><br>
+所以在8月的時候，MIT就針對了大學的這個部分，那他們提出了幾項的指導原則。那他們認為大學這端，在面對AI的時候，我們要怎麼樣去做修正？大家可以看起來就是，並沒有非常一致的一致和明確的這個規劃。那其實主要核心就是來自於說，或許我們需要去逆向的去思考說，這堂課要帶給大家的是什麼樣的核心價值，然後再回過頭來去設計整個學習的過程應該要怎麼走。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1091s" target="_blank" rel="noopener noreferrer">00:18:11 ↗</a><br>
+那以及沒有標準答案，那還有保留認知摩擦與生產性的掙扎。那這個其實蠻，在AI使用我覺得是蠻重要的一個部分，那這個晚一點呢，就會跟各位進行說明。 那他們接著也有提出三大改革的領域，就是要怎麼樣去調整整個教育的流程，那怎麼樣重新規劃人和社群當作中心，然後以及持續的反思和迭代，那就是一直不斷的保持動態的修正。對，但這個就是他們提出的一個report，那上面的內容就是沒有要去抨擊某一個領域，那只是把目前收集到的現況跟各位做一個分享。</p></div></details>
+</section>
+
+
+<section id="uncertain-future" class="lesson-section" data-source-start="1153" data-source-end="1443" data-part="上篇 · 學習、工作與判斷">
+  <div class="lesson-section-meta">04 · 用一段熟悉的歷史，理解當下的不確定 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1153s" target="_blank" rel="noopener noreferrer">19:13–24:03 ↗</a></div>
+  <h2>看見工具一直更新，就等於看見未來了嗎？</h2>
+  <div class="lesson-prose">
+  <p>可以先借網路時代作比較：先有網路與伺服器等基礎，資訊變多之後出現入口與搜尋服務，新的裝置又讓更多應用進入日常生活。這個比較不是要精確重述每一步歷史，而是提供一個觀察角度——<strong>基礎能力出現，和大家能方便使用，中間還有一段距離。</strong></p>
+  <p>對照 AI，下圖把算力、模型、可能的共通操作入口、新載體與應用普及排在一起。圖上的問號很重要：普及性的操作系統會長什麼樣子，仍是開放的問題；幾個階段也可能同時推進，而不是整齊地一格走完才走下一格。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 14 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-14-crop.webp" data-page="14" data-alt="投影片對照網路與AI的基礎建設、入口或操作系統、新載體、應用普及，AI操作系統仍以問號呈現。" aria-label="放大第 14 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-14-crop.webp" width="1536" height="780" alt="投影片對照網路與AI的基礎建設、入口或操作系統、新載體、應用普及，AI操作系統仍以問號呈現。" loading="lazy"><figcaption><b>跟著看：</b>先比較上下兩列，再注意 AI OS 後的問號，以及「同步在走」的註記。這是一個課堂的類比與展望，不是已被驗證的未來時程。<br><a href="./week1.pdf#page=14" target="_blank" rel="noopener noreferrer">查看完整第 14 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>用「出門吃飯」作例子，這個差距就具體了。你可能自己訂位、記時間、開車找停車場，再查步行路線；可以想像另一種情境：由虛擬分身訂位，接到行事曆，再把停車與步行導航接起來。</p>
+  <p>例子的重點不只是哪個步驟能自動化，而是<strong>原本分散的事情能不能連成一段完整的使用經驗</strong>。這是一種整合想像，不代表目前所有服務都已具備這些能力。</p>
+  <p>面對這些變化，我們可能感到焦慮。如果把當時的發展理解為探索與整合，之後的普及便可能帶來更大的改變。但這仍是一種展望。對學習而言，可以先把注意力放在理解與判斷，讓自己能面對變化，不必把學到的東西全綁在某個當下的工具介面上。</p>
+  </div>
+  <p class="lesson-transition">當生成與串接變得更容易，增加的不只是便利。接下來還有另一個問題：我們將如何面對更多、更難辨認來源的資訊？</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 19:13–24:03 · 3 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:19:13｜從網路時代類比 AI 的發展</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1153s" target="_blank" rel="noopener noreferrer">00:19:13 ↗</a><br>
+如果我們回去對照過去的網路時代的時候，現在的AI到底是走到哪一個格點上面？過去的網路時代，我們的第一個階段是網路的基礎建設，那你可能有鋪設網路線，那還有伺服器。所以基礎建設完善之後，就會開始產生資訊的大爆炸。資訊的大爆炸，就衍生出了Google和Yahoo的這些公司，就他們做的就是降低資訊的採選，因為他們其實只是把很多的不同的網路以及資訊去做排序。那接下來則是一個新的載體的出現，像智慧型手機、IG平板的出現，那最後APP的大爆發。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1204s" target="_blank" rel="noopener noreferrer">00:20:04 ↗</a><br>
+那這個路徑是參考，就是部分參考〔書名／作者待核：甄明的智能〕的這一本書，那有一部分是我自己的觀點。 如果對照AI的時代，其實我們現在大概還處於非常的初期，就是AI的基礎建設，因為包括算力、模型不斷的更新，還有資料庫正在不斷的建置。那到了第二個階段，可能會有一個普及性的作業系統，那這個沒有人知道這是什麼東西。所以現在的技術的跌斷才會非常非常的迅速，原因是因為所有人都在try and error，就是我根本就不曉得說，除了coding的這個領域以外，其他的領域是怎麼樣去做事情的。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1259s" target="_blank" rel="noopener noreferrer">00:20:59 ↗</a><br>
+所以像Google他們也就是吸收了某一間公司，然後部署了1000名的工程師，想要進到現場。所以當這些大公司們逐漸的去了解真實社會不同公司運作的面向之後，那或許就會統一出一個操作性的系統。那這個操作性的系統或許也會有一個新的載體，那最後才是應用的大爆發，因為統一之後就代表說，所有人都可以很輕易的很簡單的觸碰到AI，而不是現在我們還需要大量的去串接很多很多不同的模組，然後把它組合起來來去做運作。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1306s" target="_blank" rel="noopener noreferrer">00:21:46 ↗</a><br>
+但在這個過程當中，雖然我們同時在走一二三個，那我們其實還在非常非常初期的階段。</p><h3>00:21:54｜焦慮與尚未普及的應用</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1314s" target="_blank" rel="noopener noreferrer">00:21:54 ↗</a><br>
+可是如果去看一下，好像每個時代都非常的焦慮，就我隨便截取了一個新聞的訊息，就是年輕世代也感到焦慮，然後每個階層好像都感到焦慮，然後中生代也感到焦慮，所以其實好像沒有人不焦慮的。但是如果你回到這個方向看的時候，你就會發現說，現在焦慮好像還太早了，因為等後面的都完成之後，我們可能才要感到焦慮，因為瞬間的應用會整個鋪天蓋地而來。這個可能是一個非常簡單的，</p><h3>00:22:37｜未來訂餐與出行的串接想像</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1357s" target="_blank" rel="noopener noreferrer">00:22:37 ↗</a><br>
+所以如果在，如果針對過去跟未來的幻想，假設我們以去吃飯當做一個例子好了，我們現在的每一個模組都是獨立運作的。第一個可能你要打電話去餐廳訂位，對方幫你訂好位之後，你當天開著你的車出門，你可能要先去找車位。但如果對應到未來AI時代，可能就會變成是說，你只要派你的虛擬分身去訂位就好，訂好位自動幫你加進你的〔疑似行事曆；原辨識：行屍〕裡面。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1404s" target="_blank" rel="noopener noreferrer">00:23:24 ↗</a><br>
+你的車開出去的時候，快到餐廳的時候，你的、可能你的車或手機就直接挑出來說，你應該要去停哪一個停車場或哪一個停車格。這是最友善的。你停好車之後，你的手機就會自動跳出，你怎麼樣走到這一間餐廳。 這個其實目前而言基本上都是做得到的，但是這個系統其實還沒有到這麼的普及，就是每個模組你其實都是需要去自動串接的。</p></div></details>
+</section>
+
+
+<section id="verification" class="lesson-section" data-source-start="1443" data-source-end="1550" data-part="上篇 · 學習、工作與判斷">
+  <div class="lesson-section-meta">05 · 答案變多之後，新的難題才出現 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1443s" target="_blank" rel="noopener noreferrer">24:03–25:50 ↗</a></div>
+  <h2>如果內容生成很便宜，什麼反而變得費力？</h2>
+  <div class="lesson-prose">
+  <p>把視線從「AI 可以幫我做什麼」，移到整個資訊環境，便會遇到另一個問題。當人與機器共同大量產生內容，生成的速度更快、複製與改寫更容易，但讀者不一定更清楚內容是從哪裡來的。</p>
+  <p>一篇文章可能由人寫、由 AI 產生，或經過人與 AI 多次整理。<strong>內容看得見，形成它的過程卻可能看不見。</strong>所以，取得更多資訊不會自動消除不確定；我們還是得花力氣核對來源、理解前提，以及判斷說法是否站得住腳。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 15 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-15-crop.webp" data-page="15" data-alt="投影片比較人類內容產能與Agent分工及反覆生成，指出生成更快、複製更多、來源更模糊及驗證更昂貴的可能性。" aria-label="放大第 15 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-15-crop.webp" width="1505" height="755" alt="投影片比較人類內容產能與Agent分工及反覆生成，指出生成更快、複製更多、來源更模糊及驗證更昂貴的可能性。" loading="lazy"><figcaption><b>跟著看：</b>沿著圖的「生成 → 重組 → 再生成」看，重點是資訊可能反覆進入新的產出。圖中的乘法是概念示意，不是測量出的成長公式。<br><a href="./week1.pdf#page=15" target="_blank" rel="noopener noreferrer">查看完整第 15 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>我們需要的能力因此不只是「取得資訊」，還有「判斷哪些資訊值得相信」。這裡又回到了前面暫時放下的專業深度：沒有一定的領域知識，我們可能連該問什麼、哪裡不合理，都不容易看出來。跨領域組合和領域判斷，是在不同地方派上用場。</p>
+  <p>這也接回開頭的教育問題。若學習只剩把一個看起來完整的答案交出去，我們就可能略過判斷它的練習。因此，課程需要談原理、提問與查證，而不只是示範哪個按鈕可以產生更多文字。</p>
+  </div>
+  <p class="lesson-transition">但要建立判斷力，又得理解很多互相牽連的知識。既然不可能一次學完，第一步應該怎麼走？</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 24:03–25:50 · 1 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:24:03｜資訊增加，驗證反而更重要</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1443s" target="_blank" rel="noopener noreferrer">00:24:03 ↗</a><br>
+在AI的時代，也有人說人其實是一個碳基生物，就是我們是探索組成的。AI是一個矽基的生物。所以在這個時代，其實是碳基生物跟矽基生物的大混戰。原因是因為矽基生物，他們可以產生非常多巨量的資訊，而且他們生成的速度可以到非常快。他們現在網路瀏覽的量已經遠遠超過人類過去十年來所累積的量。 所以未來在網路時代之下，會有非常多的海量資訊需要去做篩選。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1493s" target="_blank" rel="noopener noreferrer">00:24:53 ↗</a><br>
+所以機器讓生成的速度更快、成本更低，但是來源其實是更模糊的，因為你根本就不知道這個是人寫的、還是AI寫的、還是人家AI去寫的。所以未來的驗證會變得很昂貴，原因是因為你需要更好的去判斷每一個東西、每一個準則以及每一個架構。 所以我們缺的已經不再是資訊，因為其實資訊非常好去取得，去判斷哪一些資訊值得相信的能力。所以其實回過頭來，還是會回到人的主要領域的知識。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1541s" target="_blank" rel="noopener noreferrer">00:25:41 ↗</a><br>
+這個是hard skill，當然也會有一些sub skill的部分。</p></div></details>
+</section>
+
+
+<section id="learning-path" class="lesson-section" data-source-start="1550" data-source-end="1673" data-part="上篇 · 學習、工作與判斷">
+  <div class="lesson-section-meta">06 · 先承認學不完，再選一條可走的路 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1550s" target="_blank" rel="noopener noreferrer">25:50–27:53 ↗</a></div>
+  <h2>知識是一張網，我們為什麼只能先走一條線？</h2>
+  <div class="lesson-prose">
+  <p>可以把 AI 知識想成一張網。你可能從語言模型開始，接著碰到如何呼叫模型、如何使用工具，再發現這些又牽連到其他概念。每一個新名詞都不是孤立的，但人在學習時，總得一件接一件地讀、一段接一段地理解。</p>
+  <p>所以，<strong>知識之間的關係像網，實際學習卻沿著時間走成一條線</strong>。這個比喻讓「我怎麼還有這麼多不懂」有了另一種解釋：你正走在局部路徑上，還沒把它和整張網連起來，不等於這條路毫無進展。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 16 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-16-crop.webp" data-page="16" data-alt="投影片以網狀概念節點和一條學習路徑說明先選起點、沿問題前進、建立局部理解，再回頭補上連結。" aria-label="放大第 16 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-16-crop.webp" width="1506" height="710" alt="投影片以網狀概念節點和一條學習路徑說明先選起點、沿問題前進、建立局部理解，再回頭補上連結。" loading="lazy"><figcaption><b>跟著看：</b>先沿左圖亮起的路徑走，不用一次記住所有節點；再看右側「回頭補上連結」。它說明的是學習如何展開，不是一份固定的先修課表。<br><a href="./week1.pdf#page=16" target="_blank" rel="noopener noreferrer">查看完整第 16 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>困難還不只如此，這張網本身也在變：新工具與新名詞出現，有些舊做法則可能被整合或取代。影片中提到先前整理的教材就遇到了這個問題。只記住一套當時的操作方式，之後仍可能需要重新理解。</p>
+  <p>因此，「先走一條線」不是把知識永遠切碎。它容許我們先建立局部理解，再回來補關係。這堂課接下來選擇從「文字怎麼進入模型，又怎麼出來」開始，就是一條具體路徑：先把生成流程走通，之後再談提示、上下文與使用方法，就多了一個可以接上的位置。</p>
+  </div>
+  <div class="lesson-pause"><span>回看自己的學習 · 整理者追問</span><p>最近讓你卡住的一個 AI 名詞是什麼？它和你已經懂的哪件事有關？先找出一條連線，不必立刻把整張網補完。</p></div>
+  <p class="lesson-transition">工具會變、路徑要補，那麼在反覆學習的過程裡，有哪些能力值得持續練習？</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 25:50–27:53 · 1 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:25:50｜知識是一張網，學習先走一條線</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1550s" target="_blank" rel="noopener noreferrer">00:25:50 ↗</a><br>
+AI會非常難學的原因是因為，如果我們把整個學習AI打開，它其實有點像一張網一樣。每一個網的每一個節點，可能就代表了每一個不同的概念。有可能你的開始是從理解LLM模型開始，你的下一個可能是從我如何去呼叫這個模型來去做事，可能再對應到你可能學的是一個skill。但是我們每一次在學習的時候，因為我們的時間軸是時間，所以我們只能夠隨著時間去做線狀的學習。 但整個知識是面狀的。在AI的時代，這個面狀的每一個節點，又會不定時的增加跟消失。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1602s" target="_blank" rel="noopener noreferrer">00:26:42 ↗</a><br>
+就有可能你過去一個月所學的內容，有一些東西已經不見了。所以這個節點的變動是非常非常的快的，所以這會增加了整個在學習AI的難度。原因是因為你需要在相對比較短的時間之內，你必須要去理解整張網在討論什麼。你就會去知道說，為什麼有一個新的東西、新的名詞產生？為什麼會有舊的名詞消失了？原因是因為新的東西，它可能會去覆蓋掉舊的。 所以這個是我之前8月的時候，所以各位有興趣的可以去看一下。這邊主要是把基礎的核心都寫在裡面，但是有一些東西已經不見了。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1654s" target="_blank" rel="noopener noreferrer">00:27:34 ↗</a><br>
+就是8月你知道嗎？然後現在才9月，就是隔一個月，就是有一些概念已經沒了。所以這迭代的速度已經變得很快，就是已經比過去幾個時代都還要快得多。</p></div></details>
+</section>
+
+
+<section id="durable" class="lesson-section" data-source-start="1673" data-source-end="1807" data-part="上篇 · 學習、工作與判斷">
+  <div class="lesson-section-meta">07 · 把抽象能力放回學習動作裡 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1673s" target="_blank" rel="noopener noreferrer">27:53–30:07 ↗</a></div>
+  <h2>四種能力，怎麼從名詞變成練習？</h2>
+  <div class="lesson-prose">
+  <p>值得持續練習的能力很多，但每個人的時間有限，不可能一次顧到全部。這系列課先挑四個方向——批判性思考、元認知、成長心態與好奇心，以及一點堅韌。它們是一組練習的起點，不是一份人人都必須照排的能力排名。</p>
+  <p>如果只抄下這四個名稱，容易又回到背答案。你可能也有這種經驗：看過文字、看過圖，仍然難以想像實際怎麼做，親眼看一次操作才接得起來。我們可以從具體的觀察出發，先看 AI 如何回答，以及為什麼要做某種設定。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 18 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-18-crop.webp" data-page="18" data-alt="投影片列出批判性思考、元認知、成長心態與好奇心、堅韌，並以觀察、反思、迭代連接具體練習。" aria-label="放大第 18 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-18-crop.webp" width="1476" height="700" alt="投影片列出批判性思考、元認知、成長心態與好奇心、堅韌，並以觀察、反思、迭代連接具體練習。" loading="lazy"><figcaption><b>跟著看：</b>先讀上面的四種能力，再看下面的「觀察 → 反思 → 迭代」。後者把能力接到可實際做的學習動作上；反覆練習，也可能需要好奇心與堅韌。<br><a href="./week1.pdf#page=18" target="_blank" rel="noopener noreferrer">查看完整第 18 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>看到了之後，再問有沒有可能做得更好，或是哪個地方還不懂，這就是反思。接著換一種問法、設定或做法，再試一次，才走到迭代。這三步的價值，在於承認自己和 AI 都可能出錯，讓下一次嘗試有依據，而不是期待一次就得到完美答案。</p>
+  <p>現在可以回頭看開場的兩個問題。當工作沒有解答本，我們需要能觀察、判斷並調整；當作業的答案容易取得，我們則需要保留培養這些能力的過程。<strong>這也是為什麼課程先談職涯與教育，再開始拆解模型原理。</strong></p>
+  </div>
+  <div class="lesson-pause"><span>試著接起來 · 整理者練習</span><p>挑一個你最近交給 AI 的問題：先寫下你觀察到什麼，再指出哪裡還不確定，最後想一個能查明它的下一步。能說出這段過程，比只列出四個能力名稱更接近這一段的學習目標。</p></div>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 27:53–30:07 · 2 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:27:53｜長久受用的技能</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1673s" target="_blank" rel="noopener noreferrer">00:27:53 ↗</a><br>
+所以把AI的應技能學完之後，未來的軟技能要怎麼辦？就是軟技能就會討論到，就是有個叫做Durable Skill的圓圈圖。這個圓圈圖就是討論到就是有個叫Durable Skill的圓圈圖。這個圓圈圖會集了大概100個未來可能會碰觸到的技能，包括溝通、協助、品格、正念之類的。但這100個其實非常的難，每個人的時間都有限，所以我們頂多只能夠碰觸到幾個軟技能而已。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1719s" target="_blank" rel="noopener noreferrer">00:28:39 ↗</a><br>
+所以在接下來的時間裡面，只會挑4個，就是批判性思考、元認知，然後以及好奇心還有一些堅韌。就在後面的內容當中，會帶大家去做觀察。</p><h3>00:28:59｜觀察、反思、迭代</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1739s" target="_blank" rel="noopener noreferrer">00:28:59 ↗</a><br>
+就是回到最底層的東西，去看說AI是怎麼回復的，為什麼我們要這樣去做設定。原因是因為從0到1的過程當中，其實非常的難。因為你即使去看任何的文字、看任何的圖片，有時候你沒有親眼看到怎麼操作，其實你會沒有辦法去想像。這是我自己的經歷，所以我會盡量拍每個東西讓大家去看。接下來有些東西我們會反思，就是有沒有機會能夠做得更好，或有沒有機會能夠去優化它。最後再進入到迭代。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1785s" target="_blank" rel="noopener noreferrer">00:29:45 ↗</a><br>
+所以這個也是執行AI很重要的一個過程，因為我們不是永遠都是對的，我們一定有非常巨大的錯誤，但有一些錯誤就是能不犯就不犯。所以我會盡量的回到這三個點，就是從觀察開始、反思，最後再到迭代。</p></div></details>
+  </section>
+
+
+<aside class="lesson-bridge" data-omitted-start="1807" data-omitted-end="2438" aria-label="兩篇之間的影片段落說明">
+  <p class="lesson-label">從學習目的，走進生成原理</p>
+  <p>前面留下了一個問題：我們需要自己的判斷，但判斷要從哪裡開始？接下來先看一次，文字如何進入模型、又如何成為回答。有了這條路徑，才更容易指出哪些地方需要追問與查證。</p>
+  <p class="lesson-small">影片 30:07–40:38 包含社群、課程安排與互動說明，以及地端與雲端模型的開場介紹。這份合併筆記沿用兩篇的節選範圍，從 40:38 接續；<a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=1807s" target="_blank" rel="noopener noreferrer">回看中間段落 ↗</a>。</p>
+</aside>
+<div class="lesson-part"><p class="lesson-label">下篇 · 40:38–01:03:20</p><p class="lesson-part-title">一句話，怎麼變成模型的下一句話？</p><p>先看文字怎麼被拆開，再問數字怎麼帶出意思，最後理解一段流暢回答的來處。</p></div>
+<section id="why-next" class="lesson-section" data-source-start="2438" data-source-end="2531" data-part="下篇 · 文字生成原理">
+  <div class="lesson-section-meta">08 · 問題從哪裡開始 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2438s" target="_blank" rel="noopener noreferrer">40:38–42:11 ↗</a></div>
+  <h2>知道「文字接龍」，還少了哪一段？</h2>
+  <div class="lesson-prose">
+  <p>前面談過為什麼要學 AI，以及資訊愈容易取得，為什麼判斷仍然重要。接下來，把問題往下挖一層：<strong>如果不知道回答怎麼產生，我們就很難判斷該相信它到什麼程度。</strong></p>
+  <p>「文字接龍」是一個好入口，但它還沒有解釋文字怎麼進入模型、模型中間做了什麼，以及下一段文字怎麼被選出來。「預測下一個 Token」也一樣；如果 Token 還是個陌生名詞，這句話只是把問題換了一種說法。</p>
+  <p>我們可以先把整個過程拆成三個問題。這一段不用從矩陣公式開始，先讓這三件事接得起來。下文用 Transformer 說明自回歸文字生成，也就是把新產生的內容接回前文、繼續往下產生文字的方式。</p>
+  </div>
+  <ol class="lesson-route" aria-label="本段的三個問題"><li><span>先問輸入</span><b>文字怎麼變成可計算的資料？</b></li><li><span>再問中間</span><b>模型怎麼利用順序與前文？</b></li><li><span>最後問輸出</span><b>下一個單位怎麼被選出來？</b></li></ol>
+  <p class="lesson-transition">要走進第一步，我們先把熟悉的一句中文交給模型。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 40:38–42:11 · 3 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:40:38｜文字接龍與 AI 幻覺</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2438s" target="_blank" rel="noopener noreferrer">00:40:38 ↗</a><br>
+所以如果你去Google，文字怎麼進到模型裡面呢？你通常會去Google說，它其實就是一個文字接龍。那這個東西就是在預測下一個token，就是下一個字是怎麼樣被預測的。那為什麼沒有理解這個？因為一旦你理解文字怎麼進入到模型，那它又是怎麼被輸出的，你其實就很清楚可以理解，為什麼有時候AI會產生幻覺，AI為什麼會胡說八道。對，那這個呢，就是如果理解整個流程，你就會知道這個原因是從哪邊來的。</p><h3>00:41:18｜Transformer 與 2017 年論文</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2478s" target="_blank" rel="noopener noreferrer">00:41:18 ↗</a><br>
+所以模型的架構呢，主要是來自Transformer的這個結構訓練出來的。關於Transformer呢，各位有興趣可以去看2017年的文章，這個叫Attention Is All You Need，非常非常經典的就是LLM的文章。對，但通常就是打開你你你不太會想看啦。對，因為有時候對非專業領域的人會很複雜。所以如果你有興趣，你可以把文章拉進GPT，然後讓它輔助你去做學習。</p><h3>00:41:52｜把流程拆成輸入、中間、輸出</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2512s" target="_blank" rel="noopener noreferrer">00:41:52 ↗</a><br>
+在這個步驟呢，我自己會抓三件事。第一個呢，我會先理解文字怎麼進去，然後中間發生了什麼事，那文字怎麼出來。所以把整個流程呢，拆成三個不同的Block。</p></div></details>
+</section>
+
+
+<section id="tokens" class="lesson-section" data-source-start="2531" data-source-end="2803" data-part="下篇 · 文字生成原理">
+  <div class="lesson-section-meta">09 · 先拆開，才能編號 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2531s" target="_blank" rel="noopener noreferrer">42:11–46:43 ↗</a></div>
+  <h2>「開始」是兩個字，一定是兩個 Token 嗎？</h2>
+  <div class="lesson-prose">
+  <p>以「我想開始學習人工智慧」為例。人讀到這句話，通常直接理解意思；模型的輸入處理則要先決定：這一串文字，要切成哪些單位？負責切分與編碼的工具叫 <strong>Tokenizer（文字切分與編碼工具）</strong>；切出來的單位叫 <strong>Token</strong>。</p>
+  <p>請先看下面原投影片中的方格。這個示意把「我」和「想」各放一格，卻把「開始」兩個字放在同一格。因此，句子開頭的四個中文字，在這個例子裡只有三個 Token。<strong>數中文字，和數 Token，回答的是不同問題。</strong></p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 24 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-24-crop.webp" data-page="24" data-alt="投影片把我想開始學習人工智慧示意切成我、想、開始、學習、人工、智慧六個單位。" aria-label="放大第 24 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-24-crop.webp" width="1476" height="590" alt="投影片把我想開始學習人工智慧示意切成我、想、開始、學習、人工、智慧六個單位。" loading="lazy"><figcaption><b>跟著看：</b>先看「開始」：兩個中文字被放進同一格。這是投影片的切分示意，不是本頁執行某個 tokenizer 的結果。<br><a href="./week1.pdf#page=24" target="_blank" rel="noopener noreferrer">查看完整第 24 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>那為什麼不乾脆全部一字一格？投影片接著用樂高零件比喻：切分可以保留常見片段，也可以把一個單字拆成較小的片段，例如課中的 <code>transform + er</code> 示意。要保留多大的片段，取決於實際使用的 tokenizer 與詞彙表，不能只靠我們對字詞的直覺決定。</p>
+  <p>試著換一個模型，切法與編號可能跟著變；加上空格、標點或換行，也可能改變切分。這些符號不是可以忽略的裝飾。但也別反過來記成「每個空格永遠恰好占一個 Token」：它可能單獨出現，也可能與鄰近文字合在一起。回看影片中的工具示範，可以觀察這些差異。</p>
+  </div>
+  <details class="lesson-check"><summary><span>停一下 · 整理者練習</span>把同一句話交給另一個 tokenizer，Token 數一定相同嗎？</summary><p>不一定。文字相同，不代表切分規則與詞彙表相同。這也表示，不能只用中文字數直接推算所有模型的 Token 數。</p></details>
+  <p class="lesson-transition">文字已經切成一格一格了。接著要問：每一格的編號，究竟代表什麼？</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 42:11–46:43 · 4 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:42:11｜Token 與文字切分</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2531s" target="_blank" rel="noopener noreferrer">00:42:11 ↗</a><br>
+文字怎麼進去呢？如果你的input呢，是「我想開始學習人工智慧」，記得就是電腦呢，它其實是看不懂任何文字的。所以它會先去找一位翻譯員，那這個翻譯員呢，的功能就是把所有的文字轉成是數字。但對整個文本來說呢，就是它不見得要每一個字都對應到一個數字。像假設以例子上來看，「我想開始」，像「開始」呢，這個在中文字裡面的很容易被綁在一起，所以「開始」呢，可能就是他們的最小單位。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2578s" target="_blank" rel="noopener noreferrer">00:42:58 ↗</a><br>
+那在AI領域裡面呢，最小單位呢，我們會叫它token，就是每一個字元。所以這邊雖然就是「我想開始」，那會被切成「我想」跟「開始」，所以原本是四個字，但是被翻譯員翻譯過後呢，你只剩三個token。第一個token叫我，第二個token叫想，那第三個呢，叫做開始。 但不同的語言模型呢，他們會有不同的切法。那這個完全是取決於說，就是模型公司呢，他們怎麼樣實際去操作整個他們字元切分的這個過程。</p><h3>00:43:44｜Tokenizer 工具與不同模型</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2624s" target="_blank" rel="noopener noreferrer">00:43:44 ↗</a><br>
+就像transformer這個字，可能會被切成叫transform，然後跟er。那這個的原因是因為有一些字彙表呢，會一直不斷的急速被膨脹。像er這個東西不要被常用的，它可能就會被單獨出來。 所以如果我們來看一下，就是這邊的tokenize的這個APP，這個呢就是一個做token切分的。那右邊呢你可以把它換不同的模型，像這個是lama的70b的模型，那你就可以隨便的去打字。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2686s" target="_blank" rel="noopener noreferrer">00:44:46 ↗</a><br>
+所以這邊呢就是不同的token，像這個呢ran是一個token，那逗點呢也是一個token。這邊呢空格加run是一個token，這邊一樣逗點。所以你看它對應到的編碼呢，這個編碼是6713，這個編碼是沒有任何意義的。就這個編碼在製作過程當中呢，只是方便模型去做計算而已，所以記得它沒有任何意義。所以這邊的11就是逗點。</p><h3>00:45:22｜長單字也可能切成多段</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2722s" target="_blank" rel="noopener noreferrer">00:45:22 ↗</a><br>
+對，所以如果你去看切分的時候，在lama70b的這個模型呢，而它並沒有把img給切出來。 所以如果找一個比較容易被切分的好了，最長的單字好像叫，〔長單字辨識不清：我311非幣〕，這個有45個字母。所以我們把它放進去的時候，你就可以看到它一個字被切成好幾個不同的區段。對，所以這個就是token的切分。</p><h3>00:46:00｜空格、標點與換行也是輸入</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2760s" target="_blank" rel="noopener noreferrer">00:46:00 ↗</a><br>
+那如果我們在這邊呢，給它按個空格，給它換行，所以你可以看到右下角的這個數字哦，就是斜線n呢是換行。我們現在來折，所以逗點空格換行，就是代表一個token。所以任何我們人不見得看得到的字符，它都有可能代表一個token。所以一樣我如果這邊逗點，逗點空格換行720，跟這個720，它們其實是都一樣的。</p></div></details>
+</section>
+
+
+<section id="embedding" class="lesson-section" data-source-start="2803" data-source-end="2940" data-part="下篇 · 文字生成原理">
+  <div class="lesson-section-meta">10 · 從編號，走到一組數值 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2803s" target="_blank" rel="noopener noreferrer">46:43–49:00 ↗</a></div>
+  <h2>知道置物櫃號碼，等於知道裡面放了什麼嗎？</h2>
+  <div class="lesson-prose">
+  <p>切換 tokenizer 時，不只切法會變，編號也可能完全不同。可以用置物櫃來想：<strong>Token ID（單位編號）就像置物櫃的號碼</strong>。號碼告訴你去哪一格，並不是對櫃子內容的評分。</p>
+  <p>看下面的 2000 與 8000。8000 比 2000 大，不表示它的意思更強、知識更多，或「聰明四倍」。兩個號碼只是指向不同項目。若把編號的數值大小誤當成語意大小，後面理解模型運算時就會走偏。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 26 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-26-crop.webp" data-page="26" data-alt="投影片用2000與8000號置物櫃說明Token ID只是索引，取回的向量表示才是Embedding。" aria-label="放大第 26 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-26-crop.webp" width="1476" height="415" alt="投影片用2000與8000號置物櫃說明Token ID只是索引，取回的向量表示才是Embedding。" loading="lazy"><figcaption><b>跟著看：</b>圖中的重點是「編號用來找位置」。請把櫃門上的號碼，和從櫃子裡取回的資料分開想。<br><a href="./week1.pdf#page=26" target="_blank" rel="noopener noreferrer">查看完整第 26 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>依照 ID 找到的那組數值，叫 <strong>Embedding（向量表示）</strong>。可以先把它想成高維空間的一組座標：我們熟悉的 XYZ 是三個座標值，模型用的向量則可以有更多維度。這裡先不用想像出完整空間，只要理解它是一整組供後續運算使用的數值。</p>
+  <p>因此，這一步其實有兩次轉換：先把文字單位對應到編號，再由編號取得向量。置物櫃的比喻只幫助理解「查找」，不表示櫃子裡藏著一篇寫好的回答；Embedding 也不是人手填寫的字典解釋。</p>
+  </div>
+  <div class="lesson-recap"><span>把剛才走過的路接起來</span><p>文字 → 切成 Token → 查到 Token ID → 取得 Embedding</p></div>
+  <details class="lesson-check"><summary><span>停一下 · 整理者練習</span>如果兩個編號只差 1，它們的意思就一定很接近嗎？</summary><p>不能這樣判斷。ID 是查找用的編號，不是語意距離。要把「號碼」與「對應的向量表示」分開。</p></details>
+  <p class="lesson-transition">現在，每個文字單位都有了可運算的表示。但只知道有哪些字，還不夠知道這句話在說什麼。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 46:43–49:00 · 2 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:46:43｜不同 tokenizer 使用不同編碼</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2803s" target="_blank" rel="noopener noreferrer">00:46:43 ↗</a><br>
+但是你如果把整個模型換成像Google的好了，對，你就會看到說，它的編碼完全都不一樣。對，所以這個編碼呢，其實真的每一間公司每個模型，它們用的號碼是不一樣的。所以你可以把它想像成，它其實就是一個置物櫃的概念，每個token每個字元，有它專屬的置物櫃存在。對，所以如果你可以自己回去自由的去做切換，你可以看一下主流模型，它們是怎麼樣去區分這些token的。對，所以這個是token的部分。</p><h3>00:47:40｜Token ID、置物櫃與 Embedding</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2860s" target="_blank" rel="noopener noreferrer">00:47:40 ↗</a><br>
+對，所以token的ID只是一個置物櫃的號碼，它真的沒有任何意義。而且其實一般的使用者，也不太會接觸到token ID的東西。但是我只是希望各位可以知道說，模型本身它讀的其實是數字檔案，它讀的其實不是文字，它讀的是數字。所以整個流程呢，其實是文字人看得懂，但是轉換成token之後呢，文字就會被拆成是一個字，或是兩個字 或是三個字綁在一起，那會去找到它們所對應的置物櫃的號碼，再把它轉成是高維空間的一組座標。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2910s" target="_blank" rel="noopener noreferrer">00:48:30 ↗</a><br>
+那高維空間也像是說，基本上理解假設我們以前學過的XYZ，它其實就是一個三個維度的空間。但在語言模型裡面的高維空間，可能是500多維或是1000多維，那這個完全取決於模型公司，它們是怎麼樣再去做計算的。所以你有一個編碼之後呢，你把它轉成是一個高維度空間的一組座標。</p></div></details>
+</section>
+
+
+<section id="position" class="lesson-section" data-source-start="2940" data-source-end="3050" data-part="下篇 · 文字生成原理">
+  <div class="lesson-section-meta">11 · 同一批字，可以說出不同的事 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2940s" target="_blank" rel="noopener noreferrer">49:00–50:50 ↗</a></div>
+  <h2>「狗咬人」和「人咬狗」，差別藏在哪裡？</h2>
+  <div class="lesson-prose">
+  <p>看一個容易記住的例子：狗、咬、人這三個字，不管怎麼排列，字的集合都相同。可是排列成「狗咬人」或「人咬狗」，做出動作的對象就換了。<strong>如果只告訴模型有哪些單位，卻不讓它取得順序資訊，就漏掉了句意的重要部分。</strong></p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 28 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-28-crop.webp" data-page="28" data-alt="狗咬人與人咬狗使用相同的字但動作主體不同；投影片接著提出人咬死狗的歧義。" aria-label="放大第 28 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-28-crop.webp" width="1536" height="590" alt="狗咬人與人咬狗使用相同的字但動作主體不同；投影片接著提出人咬死狗的歧義。" loading="lazy"><figcaption><b>跟著看：</b>這一頁先比較同樣三個字的順序，接著才引出「人咬死狗」的歧義。第二個例子要問的是前後文，不能只靠交換字序解決。<br><a href="./week1.pdf#page=28" target="_blank" rel="noopener noreferrer">查看完整第 28 頁 ↗</a></figcaption></figure>
+  <div class="lesson-order"><p class="lesson-label">整理者互動 · 只交換字序，不執行模型</p><div class="lesson-order-line"><strong id="order-example">狗 → 咬 → 人</strong><button id="swap-order" type="button" aria-pressed="false">交換「狗」與「人」</button></div><p id="order-meaning" aria-live="polite">現在是狗做出「咬」的動作。</p></div>
+  <div class="lesson-prose">
+  <p>所以，模型除了取得 Token 的向量，也需要位置資訊。這解決的是「誰在前面、誰在後面」。再把例子往前推：如果只有「人咬死狗」，是咬一隻已死的狗，還是把狗咬死？順序沒有變，讀者仍然可能有不同理解。</p>
+  <p>這個轉折很重要。<strong>位置解決了排列的問題，前後文則幫助我們判斷應該怎麼解讀。</strong>試著先補一段情境，再接這句話，意思就可能明確許多。接下來要看的，就是模型如何把前文的資訊帶進目前位置的表示。</p>
+  </div>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 49:00–50:50 · 1 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:49:00｜位置、詞序與語意</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2940s" target="_blank" rel="noopener noreferrer">00:49:00 ↗</a><br>
+當然你文字的順序也要告訴模型，原因是因為狗咬人跟人咬狗，這個完全是不同的意思。就是狗咬人每天都會發生，但是人咬狗這個就可能會上頭條，然後可能新聞就會去採訪你家隔壁的可能大嬸或是大叔。那他們可能說啊，他平常就看起來乖乖的，我怎麼知道他突然會去咬狗？就是這種會上新聞的這種人咬狗。所以這三個字完全是只是順序不一樣而已，但它們卻代表完全不同的意思。所以語言模型的輸入，除了高維度的空間向量以外，它模型還要加入每個字的位置。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=2989s" target="_blank" rel="noopener noreferrer">00:49:49 ↗</a><br>
+像這個人在第三個位置，這個人在第一個位置，所以它們需要分辨每個位置的排列順序。 但是因為你知道中文是一個非常難的語言，如果你給語言模型就是人咬死狗，你知道這有兩個意思。一個就是這個狗原本就已經掛了，那一個是你把它弄掛了。我知道這個例子就是可能，應該沒有動保團體，就是這個是AI給的你知道嗎？我也只能按照它給的去做衍生。所以如果你問語言模型這個問題，你只會得到一個答案。如何引導出正確答案呢？</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3035s" target="_blank" rel="noopener noreferrer">00:50:35 ↗</a><br>
+就是代表說你可能前面要先進行一段說明，再接這四個字，或許你可以知道它可能就會衍生出兩個不同的答案。所以順序也要告訴模型。</p></div></details>
+</section>
+
+
+<section id="attention" class="lesson-section" data-source-start="3050" data-source-end="3259" data-part="下篇 · 文字生成原理">
+  <div class="lesson-section-meta">12 · 讓目前位置參照前文 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3050s" target="_blank" rel="noopener noreferrer">50:50–54:19 ↗</a></div>
+  <h2>有了前文，模型怎麼知道要參考哪一部分？</h2>
+  <div class="lesson-prose">
+  <p>這裡進入 <strong>Attention（注意力機制）</strong>。延續上一節的問題：每個位置不只是帶著自己那一組數值，還要能參照相關位置的資訊。可以先想像「在隊伍裡找分組對象」的情境，再認識 Q、K、V 三個角色。</p>
+  <p>先想像你有一個尋找條件，接著比對其他對象的特徵，最後取得相關內容。投影片把這三個角色寫成三個問題：<strong>Q 是現在想找什麼，K 是拿來比對的線索，V 是要取回的內容。</strong>先分清角色，比一開始就背三個英文全名更有用。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 30 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-30-crop.webp" data-page="30" data-alt="Query對應我現在想找什麼，Key對應哪些資訊可能相關，Value對應真正要取回的內容。" aria-label="放大第 30 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-30-crop.webp" width="1476" height="540" alt="Query對應我現在想找什麼，Key對應哪些資訊可能相關，Value對應真正要取回的內容。" loading="lazy"><figcaption><b>跟著看：</b>依序讀 Q → K → V：帶著問題，比對線索，再取回內容。這是理解計算角色的比喻，不表示模型真的有交朋友的意圖。<br><a href="./week1.pdf#page=30" target="_blank" rel="noopener noreferrer">查看完整第 30 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>帶著這個比喻看 Transformer Explainer 示範，就不必只盯著一串看不懂的數字。你可以沿著文字輸入，找到 Token ID 與位置，再看每個位置如何進入 Q、K、V 的計算。先不用急著弄懂中間的矩陣細節，試著把輸入與輸出接起來。</p>
+  </div>
+  <aside class="lesson-correction"><strong>技術補充 · 把類比的邊界留在旁邊</strong><p>Q、K、V 是數學上的向量，不是人格或主觀意圖。這裡談的生成模型會限制目前位置讀取未來位置；Attention 之外，Transformer 區塊還有前饋網路等運算。位置資訊的處理方式也可能隨模型而異。</p><p><a href="https://arxiv.org/html/1706.03762v7" target="_blank" rel="noopener noreferrer">來源：Attention Is All You Need，§3.1–3.5 ↗</a></p></aside>
+  <p class="lesson-transition">模型已經把文字、順序和相關前文帶入運算。那這一輪運算完成時，得到的是一句寫好的答案嗎？</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 50:50–54:19 · 2 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:50:50｜Attention 與 Q、K、V</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3050s" target="_blank" rel="noopener noreferrer">00:50:50 ↗</a><br>
+另外一個就是attention，就是每個token都在看前文。這個也先跳過，原因是因為這個不是那麼好理解。attention主要會有三個參數所產生。我們現在給定一個情境，假設你輸入的文字跟一列隊伍是一樣的，你可能是隊伍裡面的第三個。你們之後可能會分組，所以Q就有點像是說你是第三位，你可能先掃過第一位、掃過第二位、掃過第四位，把它整個隊伍掃完。你可能會想說我現在要找什麼？</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3096s" target="_blank" rel="noopener noreferrer">00:51:36 ↗</a><br>
+分組你可能想要找一個心善的人，可能看起來舒服的人。所以Q也很像是你想要找一個面向看起來順眼的人，哪些知識可能和我相關？你可能會看的是他的特徵，看著他的頭髮、看著他的眼睛、看著他的體型之類的。你要取回的內容是什麼？就代表說你要取回的是這個人的標籤，這個人在你掃過的過程當中，他是不是一個心善的人。所以每一個文字，都需要進行這三個不同的計算。這三個不同的計算其實對應到的，就是你這個字要找什麼、這個字的哪些資訊和他有關、要取回的內容是什麼。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3149s" target="_blank" rel="noopener noreferrer">00:52:29 ↗</a><br>
+所以每一個都要經過這個計算。</p><h3>00:52:33｜Transformer Explainer 的運算示範</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3153s" target="_blank" rel="noopener noreferrer">00:52:33 ↗</a><br>
+我們就可以到Transformer Explainer這邊，這個解釋。這個是修正過後的GPT-2，一個比較簡單的基本的結構。現在的結構，理論上都是按照Transformer結構再去做進行。但後面已經有一點魔改了，原本Transformer結構的版本。 所以如果你今天輸入了文字，叫Data visualization empowers users to，這個是它接龍接出來的。所以你等於是只輸入這幾個字。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3198s" target="_blank" rel="noopener noreferrer">00:53:18 ↗</a><br>
+所以我們可以來看，這邊把它打開，這個就是它的Token的ID。Data對應到6601的數字，它的位置在有一些Computer的計算裡面，其實位是0，所以它是第一個，所以它是0 1 2 3 4 5。所以所有東西每一個字，都會經過QKV的計算。這個計算中間的過程比較複雜，所以中間的過程我們基本上不會去解釋。但是要記得它其實是這個Token的ID，就是Token的ID跟編碼。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3246s" target="_blank" rel="noopener noreferrer">00:54:06 ↗</a><br>
+這個當然先轉成高維度空間，跟編碼一起去進行計算。 所以這個是整個過程的Input，</p></div></details>
+</section>
+
+
+<section id="generation" class="lesson-section" data-source-start="3259" data-source-end="3682" data-part="下篇 · 文字生成原理">
+  <div class="lesson-section-meta">13 · 一次選下一步，再接回去 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3259s" target="_blank" rel="noopener noreferrer">54:19–01:01:22 ↗</a></div>
+  <h2>模型算完一輪，拿到的其實是什麼？</h2>
+  <div class="lesson-prose">
+  <p>接著從輸入端看向輸出端。模型根據目前已有的內容，替詞彙表中的候選 Token 計算分數。這些原始分數叫 <strong>Logits</strong>。此時還沒有一篇完整文章，甚至還沒選定接下來要放哪一個 Token。</p>
+  <p>投影片用取樣流程來解釋接下來的選擇。<strong>Temperature（溫度）</strong>影響候選機率有多集中；<strong>Top-k</strong>限制保留多少個高分候選。<strong>Softmax</strong>把分數轉成機率分布，取樣則依這個分布選出下一步。看圖時，請把「分數」「候選範圍」「機率」和「最後選到的結果」分開。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 32 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-32-crop.webp" data-page="32" data-alt="投影片依序顯示Logits、Temperature與Top-k、Softmax、取樣四個步驟。" aria-label="放大第 32 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-32-crop.webp" width="1476" height="590" alt="投影片依序顯示Logits、Temperature與Top-k、Softmax、取樣四個步驟。" loading="lazy"><figcaption><b>跟著看：</b>沿箭頭讀一次：先有分數，經過分布調整與候選篩選，再依機率選出下一個 Token。這張圖呈現的是一種取樣解碼流程。<br><a href="./week1.pdf#page=32" target="_blank" rel="noopener noreferrer">查看完整第 32 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>為什麼選完之後還要再算？看下一張投影片：原先的輸入是 <code>Data visualization empowers users to</code>，接上 <code>visualize</code> 之後，這個新詞也成了前文的一部分。下一輪要回答的，已經是「這段更長的內容後面接什麼」。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 34 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-34-crop.webp" data-page="34" data-alt="原始輸入後接上visualize，下一輪候選變成and、the、their、data與逗點，表示新文字接回前文後繼續預測。" aria-label="放大第 34 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-34-crop.webp" width="1476" height="590" alt="原始輸入後接上visualize，下一輪候選變成and、the、their、data與逗點，表示新文字接回前文後繼續預測。" loading="lazy"><figcaption><b>跟著看：</b>注意 visualize 已經進入句子；下面列的是接在它後面的新候選。這才把「選下一步」接成「一整段回答」。圖中數值是原投影片的截圖。<br><a href="./week1.pdf#page=34" target="_blank" rel="noopener noreferrer">查看完整第 34 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>影片中的現場操作則走出了另一條路：在包含 <code>find</code> 的前文後，接出 <code>Interesting</code>，再接出 <code>Result</code>。這和投影片的 <code>visualize</code> 不是同一筆結果，不能拼成一次實測。兩個例子共同展示的，是<strong>選出一個、接回前文、繼續下一輪</strong>。</p>
+  <p>如果前面選出的內容把話題帶向另一個方向，後面也可能沿著新的前文繼續走，形成「愈接愈歪」的情境。但不能把所有錯誤都歸因於抽到了低機率選項：一句事實錯誤的話，也可能在模型裡拿到很高的接續機率。</p>
+  </div>
+  <aside class="lesson-correction"><strong>技術補充 · 取樣設定不是所有模型的通則</strong><p>低溫度不保證事實正確；也有直接選取最高分候選等解碼方式。Top-p 是依候選的<strong>累積機率</strong>保留集合，不是逐一挑出「機率大於 p」的 Token。可調參數與預設值需依實際模型、服務及版本確認，不能把課中的介面觀察套到所有模型。</p><p><a href="https://huggingface.co/docs/transformers/main_classes/text_generation" target="_blank" rel="noopener noreferrer">來源：Hugging Face 生成參數文件 ↗</a></p></aside>
+  <details class="lesson-check"><summary><span>停一下 · 整理者練習</span>Top-k 設成 2，代表模型只認識兩個 Token 嗎？</summary><p>不是。這是縮小本次取樣保留的候選名單，不是把模型的詞彙表刪到只剩兩個。也不能把它理解成「一次直接輸出兩個 Token」。</p></details>
+  <p class="lesson-transition">現在，「文字接龍」不再只是一句口號。但這條流程裡，有哪一步保證了回答的事實正確？</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 54:19–01:01:22 · 7 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>00:54:19｜為下一個 Token 計算分數</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3259s" target="_blank" rel="noopener noreferrer">00:54:19 ↗</a><br>
+Output就會決定說，下一個字是怎麼被選出來的。就是模型不是一次〔疑似「寫完」；原辨識「喜歡」〕完整的句子，它會去計算所有儲存格裡面每一個格子，他們的分數是多少。這個分數就決定說，我下一個字，我可能要去接哪一個字。</p><h3>00:54:46｜Temperature 與 Top-k</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3286s" target="_blank" rel="noopener noreferrer">00:54:46 ↗</a><br>
+這邊有兩個可以去控制，就是溫度跟我要取得候選名單，把它轉成機率。這個不好理解，所以回到這張圖來看。最後2後面它要接哪一個？如果我今天K選5的時候，它其實每一個字都會做計算。如果你把這邊打開，它其實每一個字都會去計算，成一組數字。這組數字它會再除以一個溫度。所以如果你把溫度調低的時候，你就會發現說，它的答案有97.66%只會產生這個字。但如果你把溫度調高一點的時候，你就會發現說，它好像每一個的機率，都會變得比較平均。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3342s" target="_blank" rel="noopener noreferrer">00:55:42 ↗</a><br>
+K就代表說你一次，你要取回幾個Token，當作你的候選人。所以如果你取了14個的話，你就有可能這14個字，都是你的候選人。所以如果你的溫度很高的時候，就代表說你可能會去接到一些比較奇怪的單字。這個就會是幻覺的來源之一，就有可能它去接到一個機率比較低的數字所對應的文字。</p><h3>00:56:15｜模型設定與逐步生成例子</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3375s" target="_blank" rel="noopener noreferrer">00:56:15 ↗</a><br>
+現在的模型基本上不太會讓你去調 Temperature，因為它們的Temperature基本上都是固定1，然後它們的TopK原則上大致上都是30或40。 對，所以看就是，原本的文字長這樣：〔畫面輸入：Data visualization empowers users to find；原辨識：DataVariation used to find〕。你把它Generate之後，它就會產生下一個字。下一個字它接到的是Interesting。那你再產生下一個字，所以Interesting完之後是接Result。所以如果你原本一開始，你只有給它這幾個字的話，那它其實就是一個字、一個字、一個字，不斷的去接出來。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3426s" target="_blank" rel="noopener noreferrer">00:57:06 ↗</a><br>
+而且這個Result它接出來的機率只有3.7%，就不是太高，但是還是有一定的機率會去接到這幾個機率比較低的數字。 對，所以你看它就是一路這樣，不斷的被接出來。所以每接一次，它其實都是經過中間的運算。</p><h3>00:57:31｜生成如何逐漸偏離原意</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3451s" target="_blank" rel="noopener noreferrer">00:57:31 ↗</a><br>
+所以你想一個情境是，如果你今天在很前面的狀態之下，你就接到一個非常低機率的字，而且這個字的意思有點奇怪，那後面的接龍就會開始逐漸的亂掉，就它的意思可能就是逐漸的歪樓。對，所以這個就是網頁，大家可以去玩看看，你就可以這樣一路不斷的的字去接下去。</p><h3>00:57:59｜地端模型的慢速生成</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3479s" target="_blank" rel="noopener noreferrer">00:57:59 ↗</a><br>
+所以可以給大家看，就是如果我用地端模型去跑的話，我故意選千問的3.8 原因是因為它接龍的速度很慢，對，你看這個是它思考的過程，所以你可以看它其實是一個字一個字的，不斷的被吐出來，對，所以這個就是文字接龍的概念。</p><h3>00:58:45｜接回上下文，繼續下一輪</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3525s" target="_blank" rel="noopener noreferrer">00:58:45 ↗</a><br>
+所以模型不是每一次就直接選出一個完整的句子，它每一次都會先計算每一個的分數，然後會經過溫度來去調整不同字的機率的曲線，最後TopK會決定你要收回多少個名單，然後轉成句率再做取樣，然後輪迴又到下一輪，就一直不斷的這樣輪迴，最後把該回答的文字給回答完。 所以這個剛已經看過了，所以TopK就是縮短候選的名單。如果我們用圓端模型的話，原則上不太會碰到TopK，除非你用API-T把這個模型調到你的程式裡面來做使用。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3576s" target="_blank" rel="noopener noreferrer">00:59:36 ↗</a><br>
+現在也不會有temperature這個機率的分佈，因為現在的模型的temperature都固定乘1。</p><h3>00:59:43｜AI Studio 介面與參數差異</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3583s" target="_blank" rel="noopener noreferrer">00:59:43 ↗</a><br>
+對，所以可以很快的到AI Studio去看到這個現象。Google有一個AI Studio的platform，它這邊你可以去選，基本上你有Google帳號，你就可以要記得登錄，然後你就可以去使用。所以如果看Gemini的時候，你可以看到它現在可以讓你選的東西，就是這個模型的思考程度，這個思考程度後面的幾周就會跟各位說明，然後你可以去調整不同的細節，你需不需要調用工具，那或你需要這個模型執行後嗎？</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3630s" target="_blank" rel="noopener noreferrer">01:00:30 ↗</a><br>
+所以如果把這個拿到比較以前的模型來看的話，拿到2.5來看的時候，你就可以看到2.5的時候你還可以去調溫度，對，然後這邊也有TopP，其實跟TopK是類似的，就是P是機率，你要取回機率大於多少的候選名單。所以在以前的模型，就是這些東西都可以去做調整，但是在最新的模型裡面，像temperature，然後以及TopP這些TopK，那這些都已經基本上都已經消失了。但是這個就還是因不同的模型會有不同的決定。</p></div></details>
+</section>
+
+
+<section id="judgment" class="lesson-section" data-source-start="3682" data-source-end="3800" data-part="下篇 · 文字生成原理">
+  <div class="lesson-section-meta">14 · 回到一開始為什麼要懂原理 <a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3682s" target="_blank" rel="noopener noreferrer">01:01:22–01:03:20 ↗</a></div>
+  <h2>接得很順，為什麼還需要查證？</h2>
+  <div class="lesson-prose">
+  <p>走到這裡，我們可以把整條路說出來：文字被切成 Token，轉成編號與向量，帶入位置和前文的資訊，算出候選分數，再依解碼規則選出下一步。現在可以回到使用者的問題：<strong>一段話讀起來非常流暢，內容就一定正確嗎？</strong></p>
+  <p>前面的流程說明了文字怎麼生成，卻沒有替每個句子附上可靠證據。接續得自然、聽起來合理、能被資料支持，是三種不同的判斷。這也是為什麼理解機制之後，仍要回到各領域的知識與查證方法。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 38 頁 · 裁圖</span><button type="button" data-slide="teaching-assets/page-38-crop.webp" data-page="38" data-alt="投影片區分流暢是統計上接得下去、合理是聽起來說得通、真實需要回到可靠資料與來源。" aria-label="放大第 38 頁投影片">放大閱讀 ↗</button></div><img src="teaching-assets/page-38-crop.webp" width="1476" height="590" alt="投影片區分流暢是統計上接得下去、合理是聽起來說得通、真實需要回到可靠資料與來源。" loading="lazy"><figcaption><b>跟著看：</b>這張圖把剛才的機制接回使用責任：流暢、合理、真實，不能互相代替。<br><a href="./week1.pdf#page=38" target="_blank" rel="noopener noreferrer">查看完整第 38 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>所以這一段不只是認識七八個新名詞。看到回答時，我們可以追問：這是怎麼產生的？我的前文會不會限制了它的方向？它給的理由有沒有可靠來源？回到一開始「為什麼要學會判斷」的問題，現在就有了更具體的理由。</p>
+  </div>
+  <details class="lesson-check"><summary><span>讀完試著說說看 · 整理者練習</span>不用只列名詞，你能解釋「切分之後，為什麼還要編號、位置與前文」嗎？</summary><p>可以這樣串起來：先把句子切成處理單位，再用編號找到對應向量；但相同的字換順序會改變意思，所以需要位置；只有順序仍可能有歧義，所以還要參照前文。經過運算後，得到候選分數並選下一步。這是生成流程，仍需另行核對事實。</p><p>若只記得 Token、Embedding、Attention 的名字，回去讀它們之間的轉折，會比再背一次定義更有幫助。</p></details>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 01:01:22–01:03:20 · 2 個原章節</summary><div class="lesson-source-content"><p class="lesson-small">以下直接取自整理逐字稿，保留原措辭及待核標記；不是人工逐秒校稿。正文的銜接與練習不包含在此。</p><h3>01:01:22｜從文字到數字，再回到文字</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3682s" target="_blank" rel="noopener noreferrer">01:01:22 ↗</a><br>
+所以我們以為我們看到的是文字，但其實模型它一直不斷的在處理非常多的數字，就是我們看到文字都會被一個編碼員解密成編碼，那以及他們的位置。那這個位置在經過Transformer的計算，那裡面可能幫Tension矩陣的乘法配線性的運算，那最後產生每個候選都有一個分數，那選出的結果再進行重複。所以它不是突出文字，它是先計算下一個Token的分數，然後再依解碼的規則去選出一個文字。那這個文字是機率化的，</p><h3>01:02:16｜流暢的回答不一定正確</h3><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3736s" target="_blank" rel="noopener noreferrer">01:02:16 ↗</a><br>
+所以這邊就會有幾點需要大家去思考。 因為AI很擅長一段話讀起來非常的流暢，但這個流暢是不是就代表內容一定是正確的？這個完全是不一定的。原因是AI很容易去處理統計接得上的問題，就是因為它本來就是一個統計的概念，所以你就是一個Token把一個Token下去接。所以有時候你會看起來文字非常的順，那聽起來也蠻合理的，但是它不見得是正確的。那這個就要回到不同的Domain，有不同Domain的人的檢查方式。所以這也是利用AI來學習一個很大一個問題，就是很多人其實不是那麼容易用正確的方式，藉由AI來學習新的知識。</p><p><a href="https://www.youtube.com/watch?v=Bhn8PmeW1xs&amp;t=3795s" target="_blank" rel="noopener noreferrer">01:03:15 ↗</a><br>
+那這個後面才會跟各位進行說明，</p></div></details>
+  <div class="lesson-end"><p>這段讀完，可以回到真實工具，觀察一次「選出 → 接回 → 再預測」。</p><a href="https://poloclub.github.io/transformer-explainer/" target="_blank" rel="noopener noreferrer">開啟 Transformer Explainer ↗</a><p class="lesson-small">本頁的原圖與互動不會執行語言模型。工具中的重新生成結果可能與課堂、投影片不同。</p></div>
+</section>
+
+
+<section id="reading-notes" class="lesson-section lesson-notes">
+  <h2>來源與閱讀說明</h2>
+  <p>本筆記合併教育篇與模型原理篇，依 11:10–30:07、40:38–01:03:20 的逐字稿順序整理。開場自介、兩篇之間的社群安排與模型開場，以及 01:03:20 之後的比喻與操作段落未納入；完整內容請回到影片或原逐字稿。</p>
+  <p>正文依來源重寫，銜接句及追問由整理者新增，並非影片中的示範或研究。課中的職場觀察、人物引述、教育建議與未來情境，保留當時的語境；本試作未逐項查核其外部來源，不當成已驗證的現況。外部技術補充另附來源。</p>
+  <p>逐字稿為語音辨識整理，未經人工逐秒校稿。時間對照以逐字稿章節為準。14 張 PDF 裁圖保留原內容，依邊界裁去留白與部分頁首頁尾；第 14 頁底部補充、第 16 頁內容區 QR code 仍保留。原圖內的重字或排版問題可能存在，各圖均可放大或開啟完整原頁。</p>
+  <div class="lesson-links"><a href="./AI_Earth_課程前言_逐字稿.md" target="_blank" rel="noopener noreferrer">完整整理逐字稿</a><a href="./AI_Earth_課程前言_raw.txt" target="_blank" rel="noopener noreferrer">原始辨識文字</a><a href="./AI_Earth_課程前言_逐字稿-視覺化.html" target="_blank" rel="noopener noreferrer">對照原版筆記</a><button id="preview-comments" type="button">預覽閱讀回饋</button></div>
+  <p class="lesson-small">可選取文字留下評論，再預覽與複製回饋。評論只保存在目前瀏覽器，不會自動傳送。本頁為教學型筆記的試作，尚未經學習者成效測試。樣式沿用既有 Week1 筆記；<a href="../../THIRD_PARTY_NOTICES.txt" target="_blank" rel="noopener noreferrer">html-visualizer 第三方聲明</a>。</p>
+</section>
+</main></div>
+<footer class="foot"><span>AI × Earth Education · Week 1 課程筆記</span><a href="#lesson-main">回到正文 ↑</a></footer>
+</div>
+<dialog id="slide-dialog" class="lesson-image-dialog" aria-labelledby="slide-dialog-title"><div class="lesson-dialog-head"><strong id="slide-dialog-title">投影片裁圖</strong><button id="close-slide" type="button">關閉</button></div><p class="lesson-small">窄螢幕可在圖內左右滑動，查看原尺寸文字。</p><div class="lesson-image-scroll" tabindex="0" role="region" aria-label="放大的投影片，可水平捲動"><img id="slide-large" alt=""></div><a id="slide-original" target="_blank" rel="noopener noreferrer">開啟完整 PDF 原頁 ↗</a></dialog>
+<dialog id="export-dialog" class="ae-export-dialog" aria-labelledby="export-title"><h3 id="export-title">批註匯出預覽</h3><p id="export-status">先確認內容，再複製或下載。這不會自動送出給任何人。</p><textarea id="export-text" aria-label="批註匯出文字" readonly></textarea><div class="ae-export-actions"><button type="button" id="export-copy">複製文字</button><button type="button" id="export-download">下載文字檔</button><button type="button" id="export-close">關閉</button></div></dialog>    <style>
+      .vt-comment-trigger {
+        position: fixed;
+        z-index: 9998;
+        background: var(--paper);
+        border: 1.5px solid var(--clay);
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 12px;
+        color: var(--clay);
+        font-family: var(--mono);
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+        display: none;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.15s;
+      }
+      .vt-comment-trigger:hover {
+        background: var(--clay);
+        color: var(--paper);
+      }
+      .vt-comment-popup {
+        position: fixed;
+        z-index: 9999;
+        background: var(--paper);
+        border: 1.5px solid var(--g300);
+        border-radius: 12px;
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.15);
+        padding: 14px 16px;
+        width: 340px;
+        display: none;
+      }
+      .vt-comment-popup .quote {
+        background: var(--g100);
+        border-left: 3px solid var(--clay);
+        padding: 8px 10px;
+        font-size: 12.5px;
+        color: var(--g700);
+        line-height: 1.45;
+        margin-bottom: 10px;
+        max-height: 80px;
+        overflow-y: auto;
+      }
+      .vt-comment-popup textarea {
+        width: 100%;
+        border: 1.5px solid var(--g300);
+        border-radius: 8px;
+        padding: 8px 10px;
+        font-size: 13px;
+        font-family: var(--sans);
+        resize: vertical;
+        min-height: 60px;
+        color: var(--slate);
+        box-sizing: border-box;
+      }
+      .vt-comment-popup textarea:focus {
+        outline: none;
+        border-color: var(--clay);
+      }
+      .vt-comment-popup .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 11.5px;
+      }
+      .vt-comment-popup .hint {
+        color: var(--g500);
+        font-family: var(--mono);
+      }
+      .vt-comment-popup button.send {
+        background: var(--clay);
+        color: var(--paper);
+        border: none;
+        border-radius: 8px;
+        padding: 6px 14px;
+        font-size: 12.5px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .vt-comment-popup button.send:hover {
+        background: var(--clay-d);
+      }
+      .vt-comment-popup button.cancel {
+        background: transparent;
+        border: 1px solid var(--g300);
+        color: var(--g500);
+        border-radius: 8px;
+        padding: 6px 12px;
+        font-size: 12.5px;
+        cursor: pointer;
+        margin-right: 8px;
+      }
+      mark.vt-comment-mark {
+        background: var(--oat);
+        padding: 0 2px;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      mark.vt-comment-mark:hover {
+        background: #c7d2fe;
+      }
+      .vt-comment-pill {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 9990;
+        background: var(--paper);
+        border: 1.5px solid var(--clay);
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-family: var(--mono);
+        font-size: 12px;
+        color: var(--clay);
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+        display: none;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.15s;
+      }
+      .vt-comment-pill.is-active {
+        display: inline-flex;
+      }
+      .vt-comment-pill:hover {
+        background: var(--clay);
+        color: var(--paper);
+      }
+      .vt-comment-pill strong {
+        font-weight: 600;
+      }
+      .vt-comment-list {
+        position: fixed;
+        right: 16px;
+        bottom: 60px;
+        width: 360px;
+        max-height: 60vh;
+        z-index: 9991;
+        background: var(--paper);
+        border: 1.5px solid var(--g300);
+        border-radius: 14px;
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.15);
+        display: none;
+        flex-direction: column;
+      }
+      .vt-comment-list.is-open {
+        display: flex;
+      }
+      .vt-comment-list-header {
+        background: var(--paper);
+        border-bottom: 1.5px solid var(--g200);
+        padding: 12px 16px;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--g500);
+        font-weight: 600;
+        border-radius: 14px 14px 0 0;
+      }
+      .vt-comment-list-items {
+        overflow-y: auto;
+        flex: 1;
+      }
+      .vt-comment-item {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--g200);
+      }
+      .vt-comment-item:last-child {
+        border-bottom: none;
+      }
+      .vt-comment-item .item-quote {
+        font-size: 11.5px;
+        color: var(--g500);
+        font-style: italic;
+        border-left: 2px solid var(--oat);
+        padding-left: 8px;
+        line-height: 1.4;
+        margin-bottom: 6px;
+      }
+      .vt-comment-item .item-body {
+        font-size: 13px;
+        color: var(--slate);
+        line-height: 1.5;
+      }
+      .vt-comment-item .item-del {
+        font-size: 11px;
+        color: var(--g500);
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-top: 4px;
+        padding: 0;
+        font-family: inherit;
+      }
+      .vt-comment-item .item-del:hover {
+        color: var(--red);
+      }
+      .vt-comment-list-footer {
+        border-top: 1.5px solid var(--g200);
+        padding: 10px 16px;
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        border-radius: 0 0 14px 14px;
+        background: var(--g100);
+      }
+      .vt-comment-list-footer button {
+        background: transparent;
+        border: 1.5px solid var(--g300);
+        border-radius: 8px;
+        padding: 6px 12px;
+        font-size: 12px;
+        color: var(--g700);
+        cursor: pointer;
+        font-family: inherit;
+      }
+      .vt-comment-list-footer button:hover {
+        border-color: var(--slate);
+        color: var(--slate);
+      }
+      .vt-comment-list-footer button.copy {
+        background: var(--clay);
+        color: var(--paper);
+        border-color: var(--clay);
+      }
+      .vt-comment-list-footer button.copy:hover {
+        background: var(--clay-d);
+      }
+      body.vt-has-existing-export .vt-comment-list-footer button.copy {
+        display: none;
+      }
+    </style>
+    <button class="vt-comment-trigger" id="vt-comment-trigger"> 評論</button>
+    <div class="vt-comment-popup" id="vt-comment-popup">
+      <div class="quote" id="vt-popup-quote"></div>
+      <textarea id="vt-popup-textarea" placeholder="對這段文字的評論 / 疑問 / 補充..."></textarea>
+      <div class="actions">
+        <span class="hint">⌘ + Enter 儲存 · Esc 取消</span>
+        <div>
+          <button class="cancel" id="vt-popup-cancel">取消</button><button class="send" id="vt-popup-send">儲存評論</button>
+        </div>
+      </div>
+    </div>
+    <button class="vt-comment-pill" id="vt-comment-pill">
+       <strong id="vt-count">0</strong>
+    </button>
+    <div class="vt-comment-list" id="vt-comment-list">
+      <div class="vt-comment-list-header">— 我的評論</div>
+      <div class="vt-comment-list-items" id="vt-comment-list-items"></div>
+      <div class="vt-comment-list-footer">
+        <button id="vt-clear-all">全部清除</button>
+        <button class="copy" id="vt-copy-fallback"> 複製評論</button>
+      </div>
+    </div>
+    <script>
+      // 三段式：clipboard API → execCommand 備援 → 都失敗回 false（不假報成功）
+      window.vtCopyText = async function (text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          try {
+            await navigator.clipboard.writeText(text);
+            return true;
+          } catch (err) {
+            // 落到 execCommand 備援
+          }
+        }
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.top = "-9999px";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        try {
+          ta.select();
+          ta.setSelectionRange(0, ta.value.length);
+          return document.execCommand("copy") === true;
+        } catch (err) {
+          return false;
+        } finally {
+          ta.remove();
+        }
+      };
+
+      // 複製失敗時的出路：把文字放進可選取區域並全選，使用者按一次 Cmd+C 即可
+      // target 有給就用頁面既有的預覽區（wrap 為它的外層、會自動展開）；
+      // 沒有預覽區就建一個臨時可選取區（雙擊可關閉）。
+      window.vtSelectForManualCopy = function (text, target, wrap) {
+        let node = target;
+        if (node) {
+          node.textContent = text;
+          if (wrap) wrap.classList.remove("hidden");
+        } else {
+          node = document.getElementById("vt-manual-copy-box");
+          if (!node) {
+            node = document.createElement("pre");
+            node.id = "vt-manual-copy-box";
+            node.title = "雙擊關閉";
+            node.style.cssText =
+              "position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:10000;" +
+              "max-width:min(720px,92vw);max-height:40vh;overflow:auto;white-space:pre-wrap;" +
+              "background:#fff;color:#111;border:1.5px solid #999;border-radius:10px;" +
+              "padding:14px 16px;font-size:12.5px;line-height:1.6;" +
+              "box-shadow:0 12px 40px rgba(0,0,0,.28)";
+            node.addEventListener("dblclick", function () {
+              node.remove();
+            });
+            document.body.appendChild(node);
+          }
+          node.textContent = text;
+        }
+        node.scrollIntoView({ block: "nearest" });
+        const sel = window.getSelection();
+        if (sel) {
+          const range = document.createRange();
+          range.selectNodeContents(node);
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
+        return node;
+      };
+    </script>
+
+    <script>
+      (function () {
+        const S = "vt-comments-" + location.pathname,
+          L = 80;
+        let c = (() => { try { const value = JSON.parse(localStorage.getItem(S) || "[]"); return Array.isArray(value) ? value : []; } catch { return []; } })(),
+          sel = null;
+        const $ = (i) => document.getElementById(i),
+          tr = $("vt-comment-trigger"),
+          p = $("vt-comment-popup"),
+          pq = $("vt-popup-quote"),
+          pt = $("vt-popup-textarea"),
+          pi = $("vt-comment-pill"),
+          ce = $("vt-count"),
+          le = $("vt-comment-list"),
+          li = $("vt-comment-list-items");
+        window.vtCollectComments = function () {
+          if (!c.length) return "";
+          return (
+            "\n\n---\n\n" +
+            c
+              .map((x) => {
+                const q =
+                  x.quote.length > L ? x.quote.slice(0, L) + "…" : x.quote;
+                return `@評論「${q}」\n  → ${x.body}`;
+              })
+              .join("\n\n")
+          );
+        };
+        function hs(e) {
+          if (
+            e.target.closest(
+              ".vt-comment-popup,.vt-comment-trigger,.vt-comment-pill,.vt-comment-list,button,input,select,textarea",
+            )
+          )
+            return;
+          setTimeout(() => {
+            const s = getSelection(),
+              t = s.toString().trim();
+            if (!t || t.length < 2) {
+              tr.style.display = "none";
+              return;
+            }
+            const r = s.getRangeAt(0),
+              b = r.getBoundingClientRect();
+            sel = { text: t, range: r.cloneRange() };
+            tr.style.display = "inline-flex";
+            tr.style.top = Math.max(8, b.top - 38) + "px";
+            tr.style.left = Math.max(8, b.left + b.width / 2 - 40) + "px";
+          }, 10);
+        }
+        document.addEventListener("mouseup", hs);
+        document.addEventListener("touchend", hs);
+        tr.addEventListener("click", op);
+        function op() {
+          if (!sel) return;
+          const q = sel.text.length > L ? sel.text.slice(0, L) + "…" : sel.text;
+          pq.textContent = q;
+          pt.value = "";
+          const t = tr.getBoundingClientRect();
+          let l = t.left;
+          if (l + 340 > innerWidth - 16) l = innerWidth - 356;
+          let to = t.bottom + 6;
+          if (to + 220 > innerHeight) to = t.top - 230;
+          p.style.left = Math.max(8, l) + "px";
+          p.style.top = Math.max(8, to) + "px";
+          tr.style.display = "none";
+          p.style.display = "block";
+          setTimeout(() => pt.focus(), 50);
+        }
+        $("vt-popup-cancel").addEventListener("click", cp);
+        $("vt-popup-send").addEventListener("click", sc);
+        pt.addEventListener("keydown", (e) => {
+          if (e.isComposing || e.keyCode === 229) return;
+          if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) {
+            e.preventDefault();
+            e.stopPropagation();
+            sc();
+          }
+          if (e.key === "Escape") cp();
+        });
+        function cp() {
+          p.style.display = "none";
+          sel = null;
+        }
+        function sc() {
+          const b = pt.value.trim();
+          if (!b || !sel) return cp();
+          const id = "c-" + Date.now(),
+            q = sel.text;
+          try {
+            const m = document.createElement("mark");
+            m.className = "vt-comment-mark";
+            m.dataset.commentId = id;
+            sel.range.surroundContents(m);
+          } catch (e) {}
+          c.push({ id, quote: q, body: b, ts: Date.now() });
+          ps();
+          rn();
+          cp();
+          getSelection().removeAllRanges();
+        }
+        function ps() {
+          localStorage.setItem(S, JSON.stringify(c));
+        }
+        function rn() {
+          ce.textContent = c.length;
+          pi.classList.toggle("is-active", c.length > 0);
+          if (!c.length) le.classList.remove("is-open");
+          li.innerHTML = c
+            .map((x) => {
+              const q =
+                x.quote.length > 60 ? x.quote.slice(0, 60) + "…" : x.quote;
+              return `<div class="vt-comment-item" data-id="${x.id}"><div class="item-quote">「${eh(q)}」</div><div class="item-body">${eh(x.body)}</div><button class="item-del" data-del="${x.id}">刪除</button></div>`;
+            })
+            .join("");
+          li.querySelectorAll("[data-del]").forEach((b) =>
+            b.addEventListener("click", () => dc(b.dataset.del)),
+          );
+        }
+        function dc(id) {
+          c = c.filter((x) => x.id !== id);
+          document
+            .querySelectorAll(`mark.vt-comment-mark[data-comment-id="${id}"]`)
+            .forEach((m) => {
+              const pr = m.parentNode;
+              while (m.firstChild) pr.insertBefore(m.firstChild, m);
+              pr.removeChild(m);
+              pr.normalize();
+            });
+          ps();
+          rn();
+        }
+        function eh(s) {
+          return String(s).replace(
+            /[&<>"']/g,
+            (ch) =>
+              ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;",
+              })[ch],
+          );
+        }
+        pi.addEventListener("click", () => le.classList.toggle("is-open"));
+        $("vt-clear-all").addEventListener("click", () => {
+          if (!c.length) return;
+          if (!confirm("確定清除全部 " + c.length + " 條評論？")) return;
+          document.querySelectorAll("mark.vt-comment-mark").forEach((m) => {
+            const pr = m.parentNode;
+            while (m.firstChild) pr.insertBefore(m.firstChild, m);
+            pr.removeChild(m);
+            pr.normalize();
+          });
+          c = [];
+          ps();
+          rn();
+        });
+        $("vt-copy-fallback").addEventListener("click", async (e) => {
+          if (!c.length) return;
+          const t = window.vtCollectComments().replace(/^\n\n---\n\n/, ""),
+            b = e.currentTarget,
+            o = b.textContent;
+          const ok = await window.vtCopyText(t);
+          if (ok) {
+            b.textContent = " 已複製";
+          } else {
+            // 複製不到就不假報成功：把評論放進臨時區域並全選
+            window.vtSelectForManualCopy(t);
+            b.textContent = "已選取 → 請按 Cmd+C";
+          }
+          setTimeout(() => (b.textContent = o), ok ? 2000 : 6000);
+        });
+        setTimeout(() => {
+          if (typeof window.vtBuildDecisionExport === "function")
+            document.body.classList.add("vt-has-existing-export");
+        }, 100);
+        document.addEventListener("click", (e) => {
+          if (
+            p.style.display === "block" &&
+            !e.target.closest(".vt-comment-popup,.vt-comment-trigger")
+          )
+            cp();
+        });
+        rn();
+      })();
+    </script>
+
+    <script>window.VT_SESSION = {label:"AI × Earth Education · Week 1",id:"week1",project:"Education"};</script>
+    <style>
+      .vt-session-badge {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        padding: 5px 16px;
+        background: var(--vt-session-color, #666);
+        color: #fff;
+        font-family: var(--mono, ui-monospace, monospace);
+        font-size: 11.5px;
+        letter-spacing: 0.06em;
+      }
+      .vt-session-badge .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #fff;
+        opacity: 0.85;
+        flex-shrink: 0;
+      }
+      .vt-session-badge .lb {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .vt-session-badge .id {
+        margin-left: auto;
+        opacity: 0.75;
+      }
+    </style>
+    <script>
+      (function () {
+        const s = window.VT_SESSION || {};
+        if (!s.label) return;
+        const seed = s.id || s.label;
+        let hue = 7;
+        for (const c of seed) hue = (hue * 31 + c.charCodeAt(0)) % 360;
+        const col = `hsl(${hue} 58% 42%)`;
+        document.title = `${s.label} · ${document.title}`;
+        try {
+          const cv = document.createElement("canvas");
+          cv.width = cv.height = 64;
+          const g = cv.getContext("2d");
+          g.fillStyle = col;
+          if (g.roundRect) {
+            g.beginPath();
+            g.roundRect(2, 2, 60, 60, 14);
+            g.fill();
+          } else {
+            g.fillRect(2, 2, 60, 60);
+          }
+          g.fillStyle = "#fff";
+          g.font = '700 38px ui-sans-serif, system-ui, "PingFang TC"';
+          g.textAlign = "center";
+          g.textBaseline = "middle";
+          const ch = (s.label.match(/[A-Za-z0-9\u4e00-\u9fff]/) || ["?"])[0];
+          g.fillText(ch.toUpperCase(), 32, 36);
+          const link = document.createElement("link");
+          link.rel = "icon";
+          link.href = cv.toDataURL();
+          document.head.appendChild(link);
+        } catch (e) {}
+        const b = document.createElement("div");
+        b.className = "vt-session-badge";
+        b.style.setProperty("--vt-session-color", col);
+        b.innerHTML =
+          '<span class="dot"></span><span class="lb"></span><span class="id"></span>';
+        b.querySelector(".lb").textContent = s.label;
+        b.querySelector(".id").textContent = s.id || "";
+        const host = document.querySelector("header") || document.body;
+        host.insertBefore(b, host.firstChild);
+      })();
+    </script>
+  <style>/* Teaching trial: reuse Week 1 tokens and shared controls, keep prose as the reading spine. */
+.lesson-wrap {--lesson-reading-width:680px;--lesson-sidebar-width:215px;--lesson-gap:52px;--lesson-gutter:24px;--lesson-inset:20px;width:min(94vw,calc(var(--lesson-reading-width) + var(--lesson-sidebar-width) + var(--lesson-gap) + var(--lesson-gutter) + var(--lesson-gutter)));padding:0 var(--lesson-gutter) 50px}
+.lesson-header.masthead {padding:38px 0 42px;margin:0;border-bottom:1px solid var(--border)}
+.lesson-header h1 {max-width:24ch;font-size:clamp(36px,4.3vw,62px);line-height:1.3;font-weight:650;letter-spacing:-.035em;margin:26px 0 20px}
+.lesson-header .eyebrow {font-size:12px;margin:24px 0 14px;letter-spacing:.09em}
+.lesson-dek {font-size:20px;line-height:1.85;max-width:36em;color:var(--text-muted)}
+.lesson-meta {display:flex;flex-wrap:wrap;gap:10px 24px;font:12px var(--mono);color:var(--text-soft);margin:24px 0 18px}
+.lesson-links {display:flex;flex-wrap:wrap;gap:10px}
+.lesson-links a,.lesson-links button {font-size:14px;line-height:1.7;padding:10px 15px;border:1px solid var(--border);border-radius:8px;background:var(--bg-card);text-decoration:none;min-height:44px;color:var(--accent)}
+.lesson-links a:hover,.lesson-links button:hover {border-color:var(--accent);color:var(--text)}
+.lesson-source-note {max-width:54em;font-size:14px;line-height:1.85;color:var(--text-muted);margin:22px 0 0}
+.lesson-layout {display:grid;grid-template-columns:var(--lesson-sidebar-width) minmax(0,1fr);gap:var(--lesson-gap)}
+.lesson-sidebar {position:sticky;top:24px;align-self:start;padding:35px 0;max-height:calc(100vh - 48px);overflow:auto}
+.lesson-nav-title {font-size:12px;color:var(--accent);letter-spacing:.06em;padding:0 14px;margin:0 0 18px}
+.lesson-nav {display:grid;gap:3px}
+.lesson-nav-group {font-size:12px;line-height:1.7;color:var(--accent);margin:18px 0 8px;padding:0 14px}
+.lesson-nav-group:first-child {margin-top:0}
+.lesson-nav a {display:block;padding:11px 12px;text-decoration:none;font-size:14px;line-height:1.65;border-left:2px solid transparent;border-radius:0 6px 6px 0;color:var(--text-muted)}
+.lesson-nav a small {display:block;font:11px var(--mono);color:var(--text-soft);margin-top:5px}
+.lesson-nav a:hover,.lesson-nav a[aria-current="location"] {border-left-color:var(--accent);background:var(--accent-soft);color:var(--text)}
+.lesson-sidebar-note {font-size:13px;line-height:1.8;color:var(--text-soft);padding:15px 14px}
+.lesson-main {min-width:0;width:100%;max-width:var(--lesson-reading-width)}
+.lesson-part {padding:35px 0 24px;border-bottom:1px solid var(--border);color:var(--text-muted)}
+.lesson-part .lesson-part-title {font-size:24px;font-weight:600;line-height:1.55;color:var(--text);margin:12px 0}
+.lesson-part > p:last-child {font-size:16px;line-height:1.9;margin:12px 0}
+.lesson-bridge {margin:35px 0 0;padding:22px var(--lesson-inset);border-left:2px solid var(--accent);color:var(--text-muted);font-size:17px;line-height:1.95}
+.lesson-bridge p {margin:0 0 12px}
+.lesson-bridge p:last-child {margin-bottom:0}
+.lesson-main > .lesson-section {padding:48px 0;margin:0;border-top:0;border-bottom:1px solid var(--border);scroll-margin-top:24px}
+.lesson-section-meta {font:12px var(--mono);color:var(--text-soft);display:flex;flex-wrap:wrap;gap:10px 24px;margin:0 0 17px;line-height:1.7}
+.lesson-section h2 {font-size:clamp(25px,2.3vw,34px);line-height:1.5;font-weight:620;letter-spacing:-.02em;margin:0 0 27px;text-wrap:pretty}
+.lesson-prose {font-size:18px;line-height:2.05;color:var(--text-muted)}
+.lesson-prose p {margin:0 0 24px;text-wrap:pretty}
+.lesson-prose strong {color:var(--text);font-weight:620}
+.lesson-prose code {font: .9em var(--mono);color:var(--text);overflow-wrap:anywhere}
+.lesson-figure {margin:32px 0 34px;width:100%;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--bg-card)}
+.lesson-figure-top {display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:12px var(--lesson-inset);font:12px var(--mono);color:var(--text-soft)}
+.lesson-figure-top button {font:inherit;background:var(--bg-card);border:1px solid var(--text-soft);border-radius:6px;color:var(--text);padding:7px 12px;min-height:36px}
+.lesson-figure img {display:block;width:100%;height:auto}
+.lesson-figure figcaption {padding:15px var(--lesson-inset);font-size:15px;line-height:1.85;color:var(--text-muted)}
+.lesson-figure figcaption b {color:var(--accent);font-weight:550}
+.lesson-figure figcaption a {display:inline-block;font-size:12px;margin-top:8px}
+.lesson-transition {font-size:17px;line-height:1.95;margin:28px 0 20px;padding:3px var(--lesson-inset);border-left:2px solid var(--accent);color:var(--text)}
+.lesson-pause {background:var(--bg-card);padding:22px var(--lesson-inset);margin:28px 0;border-left:3px solid var(--green)}
+.lesson-pause > span {font-size:12px;color:var(--green)}
+.lesson-pause p {font-size:17px;line-height:1.95;margin:9px 0 0;color:var(--text)}
+.lesson-check {margin:24px 0;background:var(--bg-card);border:1px solid var(--border);border-radius:9px;padding:0}
+.lesson-check summary {cursor:pointer;padding:18px var(--lesson-inset);font-size:17px;line-height:1.85}
+.lesson-check summary > span {display:block;font-size:12px;color:var(--green)}
+.lesson-check p {padding:0 var(--lesson-inset) 18px;font-size:16px;line-height:1.9;color:var(--text-muted);margin:0}
+.lesson-correction {border-left:3px solid var(--yellow);padding:17px var(--lesson-inset);margin:25px 0;background:var(--yellow-soft);font-size:15px;line-height:1.95;color:var(--text-muted)}
+.lesson-correction > strong {color:var(--yellow);font-size:14px}
+.lesson-correction p {margin:8px 0 0}
+.lesson-inline-label {font-size:12px;color:var(--green);margin-right:8px;border-bottom:1px solid var(--green)}
+.lesson-source {margin:24px 0 0;border-top:1px dashed var(--border);padding-top:9px;color:var(--text-muted)}
+.lesson-source summary {font-size:13px;padding:10px 0;cursor:pointer;line-height:1.8;color:var(--text-soft)}
+.lesson-source-content {font-size:15px;line-height:1.95;padding:8px var(--lesson-inset) 15px;background:var(--bg-card);border-left:2px solid var(--border)}
+.lesson-source-content h3 {font-size:16px;margin:25px 0 12px;line-height:1.8}
+.lesson-source-content p {margin:14px 0;max-width:50em;overflow-wrap:anywhere}
+.lesson-source-content a {font:12px var(--mono)}
+.lesson-route {list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:30px 0}
+.lesson-route li {border-top:2px solid var(--accent);padding-top:12px}
+.lesson-route span {display:block;font-size:12px;color:var(--accent);margin-bottom:12px}
+.lesson-route b {font-size:17px;font-weight:550;line-height:1.8}
+.lesson-recap {border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 0;margin:26px 0}
+.lesson-recap > span,.lesson-label {font-size:12px;color:var(--accent)}
+.lesson-recap p {font-size:18px;line-height:1.8}
+.lesson-order {background:var(--bg-card);border:1px solid var(--border);padding:22px var(--lesson-inset);margin:25px 0;border-radius:8px}
+.lesson-order-line {display:flex;flex-wrap:wrap;gap:18px 30px;align-items:center}
+.lesson-order-line strong {font-size:28px;font-weight:550}
+.lesson-order-line button {background:var(--bg);border:1px solid var(--accent);border-radius:6px;padding:11px 15px;font-size:14px;color:var(--accent);min-height:44px}
+.lesson-order-line button[aria-pressed="true"] {background:var(--accent-soft);color:var(--text)}
+.lesson-end {margin:32px 0 0;padding:25px 0 0;border-top:1px solid var(--border);font-size:17px;line-height:1.9}
+.lesson-end > a {display:inline-block;margin:9px 0;font-size:18px}
+.lesson-small {font-size:13px;line-height:1.85;color:var(--text-soft)}
+.lesson-notes > p {font-size:14px;line-height:1.95;color:var(--text-muted);margin:18px 0}
+.lesson-notes h2 {font-size:22px}
+.lesson-mobile-toc {display:none}
+.lesson-image-dialog {width:min(96vw,1600px);max-width:96vw;max-height:92vh;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:20px}
+.lesson-image-dialog::backdrop {background:#000c}
+.lesson-dialog-head {display:flex;gap:16px;align-items:center;justify-content:space-between}
+.lesson-dialog-head button {padding:9px 18px;min-height:44px;border:1px solid var(--text-soft);border-radius:6px;background:var(--bg-card);color:var(--text)}
+.lesson-image-scroll {overflow:auto;max-height:65vh;margin:14px 0;border:1px solid var(--border)}
+.lesson-image-scroll img {display:block;width:100%;min-width:1100px;height:auto;max-width:none}
+.lesson-skip {position:fixed;left:15px;top:-90px;z-index:10001;padding:14px;background:var(--bg-card);color:var(--accent)}
+.lesson-skip:focus {top:10px}
+.lesson-wrap .vt-session-badge {margin:0;padding:8px 0;background:var(--bg-card);color:var(--text-muted)}
+.vt-comment-list {width:min(360px,calc(100vw - 24px));right:12px}
+.vt-comment-popup {max-width:calc(100vw - 24px)}
+.ae-export-dialog {width:min(800px,94vw);max-height:90vh;overflow:auto}
+.ae-export-dialog textarea {width:100%;min-height:220px;font:15px var(--sans);line-height:1.8;padding:12px}
+:focus-visible {outline:3px solid var(--accent);outline-offset:4px}
+@media (max-width:1100px) {.lesson-wrap{--lesson-sidebar-width:174px;--lesson-gap:26px;--lesson-gutter:8px}.lesson-nav a{font-size:13px}.lesson-prose{font-size:17px}}
+@media (max-width:760px) {.lesson-wrap{--lesson-inset:16px;width:min(calc(100% - 36px),var(--lesson-reading-width));padding:0 0 36px}.lesson-header.masthead{padding:16px 0 29px}.lesson-header h1{font-size:clamp(32px,8.2vw,42px);line-height:1.42}.lesson-header .eyebrow{font-size:10px;letter-spacing:.03em;gap:6px}.lesson-dek{font-size:18px}.lesson-source-note{font-size:13px}.lesson-meta{font-size:11px;gap:9px 16px}.lesson-layout{display:block}.lesson-sidebar{display:none}.lesson-main > .lesson-section{padding:35px 0}.lesson-section h2{font-size:25px;margin-bottom:22px}.lesson-section-meta{font-size:11px;gap:5px 12px}.lesson-mobile-toc{display:block;margin:24px 0 4px;border:1px solid var(--border);border-radius:8px;background:var(--bg-card);padding:0 var(--lesson-inset)}.lesson-mobile-toc > summary{font-size:14px;line-height:1.8;padding:15px 0;cursor:pointer}.lesson-mobile-toc .lesson-nav{padding-bottom:12px}.lesson-prose{font-size:17px;line-height:2.02}.lesson-prose p{margin-bottom:23px}.lesson-figure{margin:26px 0}.lesson-figure-top{padding:10px var(--lesson-inset);font-size:11px}.lesson-figure figcaption{padding:14px var(--lesson-inset);font-size:14px}.lesson-figure-top button{font-size:12px;min-height:42px}.lesson-pause{padding:18px var(--lesson-inset)}.lesson-pause p{font-size:16px}.lesson-transition{font-size:16px}.lesson-correction{padding:14px var(--lesson-inset);font-size:14px}.lesson-route{grid-template-columns:1fr;gap:20px}.lesson-route b{font-size:16px}.lesson-check summary{padding:15px var(--lesson-inset);font-size:16px}.lesson-check p{padding:0 var(--lesson-inset) 15px}.lesson-image-dialog{padding:14px}.lesson-end > a{font-size:17px}.lesson-recap p{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style><script>(() => {
+  const slideDialog = document.getElementById('slide-dialog');
+  document.querySelectorAll('[data-slide]').forEach(button => button.addEventListener('click', () => {
+    const img = document.getElementById('slide-large');
+    img.src = button.dataset.slide;
+    img.alt = button.dataset.alt;
+    document.getElementById('slide-dialog-title').textContent = 'PDF 第 ' + button.dataset.page + ' 頁 · 教學內容裁圖';
+    document.getElementById('slide-original').href = './week1.pdf#page=' + button.dataset.page;
+    slideDialog.showModal();
+    document.getElementById('close-slide').focus();
+  }));
+  document.getElementById('close-slide').addEventListener('click', () => slideDialog.close());
+  const swap = document.getElementById('swap-order');
+  if (swap) swap.addEventListener('click', () => {
+    const reversed = swap.getAttribute('aria-pressed') !== 'true';
+    swap.setAttribute('aria-pressed', String(reversed));
+    document.getElementById('order-example').textContent = reversed ? '人 → 咬 → 狗' : '狗 → 咬 → 人';
+    document.getElementById('order-meaning').textContent = reversed ? '現在是人做出「咬」的動作。字沒有增加，只是順序改變了。' : '現在是狗做出「咬」的動作。';
+  });
+  const navLinks = Array.from(document.querySelectorAll('.lesson-nav a'));
+  const sections = Array.from(document.querySelectorAll('.lesson-main > .lesson-section'));
+  let pending = false;
+  function markSection() {
+    pending = false;
+    let current = sections[0];
+    for (const section of sections) if (section.getBoundingClientRect().top <= window.innerHeight * .32) current = section;
+    navLinks.forEach(link => {
+      if (link.hash === '#' + current.id) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  addEventListener('scroll', () => { if (!pending) { pending = true; requestAnimationFrame(markSection); } }, { passive: true });
+  markSection();
+  const mobileNav = document.querySelector('.lesson-mobile-toc');
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobileNav.open = false; }));
+  const dialog = document.getElementById('export-dialog');
+  const exportText = document.getElementById('export-text');
+  const status = document.getElementById('export-status');
+  function feedback() {
+    const comments = window.vtCollectComments?.() || '';
+    return comments ? '# ' + document.querySelector('h1').innerText.replace(/\n/g,' ') + comments : '';
+  }
+  window.vtBuildDecisionExport = feedback;
+  document.body.classList.add('vt-has-existing-export');
+  document.getElementById('preview-comments').addEventListener('click', () => {
+    exportText.value = feedback();
+    status.textContent = exportText.value ? '先確認內容，再複製或下載。這不會自動傳送。' : '目前沒有評論。先選取正文文字，再使用浮出的評論按鈕。';
+    dialog.showModal();
+  });
+  document.getElementById('export-close').addEventListener('click', () => dialog.close());
+  document.getElementById('export-copy').addEventListener('click', async () => {
+    if (!exportText.value) { status.textContent = '目前沒有可複製的評論。'; return; }
+    const ok = window.vtCopyText ? await window.vtCopyText(exportText.value) : false;
+    status.textContent = ok ? '已複製；尚未傳送到任何地方。' : '瀏覽器未允許自動複製，請在下方文字框手動複製。';
+    if (!ok) { exportText.focus(); exportText.select(); }
+  });
+  document.getElementById('export-download').addEventListener('click', () => {
+    if (!exportText.value) { status.textContent = '目前沒有可下載的評論。'; return; }
+    const url = URL.createObjectURL(new Blob([exportText.value], { type: 'text/plain;charset=utf-8' }));
+    const link = document.createElement('a'); link.href = url; link.download = 'AI_Earth_教學試讀回饋.txt'; link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+})();
+</script></body></html>
