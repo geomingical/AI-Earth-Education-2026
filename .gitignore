@@ -9,9 +9,24 @@
 !/.nojekyll
 !/THIRD_PARTY_NOTICES.txt
 
-# Only Week 1 is ready for publication.
+# Released weeks: add one line per week when it is ready for publication.
 /Material/*
+!/Material/Week01/
+!/Material/Week02/
+
+# Inside each released week, publish only the standard files; drafts stay local.
+/Material/Week*/*
+!/Material/Week*/index.html
+!/Material/Week*/slides.pdf
+!/Material/Week*/transcript.md
+!/Material/Week*/transcript-raw.*
+!/Material/Week*/transcript-visual.html
+!/Material/Week*/assets/
+
+# Redirect pages that keep the original Week 1 addresses working.
 !/Material/Week1/
+!/Material/Week1/AI_Earth_課程筆記.html
+!/Material/Week1/AI_Earth_課程前言_逐字稿-視覺化.html
 
 # macOS metadata and Office temporary files.
 .DS_Store

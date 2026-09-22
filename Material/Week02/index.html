@@ -1,0 +1,1962 @@
+<!DOCTYPE html><html lang="zh-Hant"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="html-visualizer-mode" content="teaching-companion">
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>if(window.tailwind) window.tailwind.config={corePlugins:{preflight:false}};</script>
+    <style>
+      /* ════════════════════════════════════════════ */
+      /* Galaxy reference palette */
+      /* ════════════════════════════════════════════ */
+      :root {
+        color-scheme: dark;
+        --ivory: #101318;
+        --paper: #181d25;
+        --slate: #f1f5fa;
+        --clay: #8ebdff;
+        --clay-d: #8ebdff;
+        --oat: #253750;
+        --olive: #9ce1c5;
+        --g100: #202733;
+        --g200: #293343;
+        --g300: #344052;
+        --g500: #a0afc3;
+        --g700: #b4c1d3;
+
+        --serif: var(--sans);
+        --sans:
+          system-ui, -apple-system, "Segoe UI", Roboto, "PingFang TC",
+          "Noto Sans TC", Helvetica, Arial, sans-serif;
+        --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+
+        /* Semantic colors remain legible on dark surfaces. */
+        --green: #9ce1c5;
+        --green-soft: #1b332e;
+        --green-border: #3a6658;
+        --red: #ffb4b4;
+        --red-soft: #39252c;
+        --red-border: #81515b;
+        --yellow: #f0cf91;
+        --yellow-soft: #302b23;
+        --yellow-border: #756044;
+        --olive-soft: #1b332e;
+        --olive-border: #3a6658;
+        --clay-soft: #253750;
+        --orange: #f0cf91;
+        --orange-soft: #302b23;
+        --orange-border: #756044;
+        --purple: #c6b8f5;
+        --purple-soft: #2c293e;
+        --purple-border: #635681;
+
+        /* ── 兼容舊 component-library snippet ─────────── */
+        /* 通用元件用 --bg / --accent / --text 等命名、alias 到頁面共用色票 */
+        --bg: var(--ivory);
+        --bg-card: var(--paper);
+        --bg-soft: var(--g100);
+        --bg-soft-2: var(--g200);
+        --border: var(--g300);
+        --border-strong: var(--g500);
+        --text: var(--slate);
+        --text-muted: var(--g700);
+        --text-soft: var(--g500);
+        --accent: var(--clay);
+        --accent-soft: var(--clay-soft);
+        --accent-strong: var(--clay-d);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--ivory);
+        color: var(--slate);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* Layout                                       */
+      /* ════════════════════════════════════════════ */
+      .wrap {
+        width: min(94vw, 1760px);
+        margin: 0 auto;
+        padding: 0 32px 140px;
+      }
+      /* 長段落文字護欄：寬容器下避免一行上百字難讀（grid/卡片/表格不受限、吃滿寬） */
+      .intro,
+      p.prose,
+      .body-text {
+        max-width: 72ch;
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* Masthead / Hero                              */
+      /* ════════════════════════════════════════════ */
+      header.masthead {
+        padding: 80px 0 56px;
+        border-bottom: 1.5px solid var(--g300);
+        margin-bottom: 12px;
+      }
+      .eyebrow {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--g500);
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 24px;
+        height: 1.5px;
+        background: var(--clay);
+      }
+      h1 {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: clamp(38px, 5.4vw, 62px);
+        line-height: 1.06;
+        letter-spacing: -0.018em;
+        margin: 0 0 8px;
+        max-width: 17ch;
+        color: var(--slate);
+      }
+      h1 em {
+        font-style: italic;
+        color: var(--clay);
+      }
+      .intro {
+        font-size: 16.5px;
+        color: var(--g700);
+        margin: 22px 0 0;
+        max-width: 620px;
+      }
+      .intro a {
+        color: var(--clay);
+        text-decoration-color: var(--oat);
+        text-underline-offset: 3px;
+      }
+      .intro a:hover {
+        text-decoration-color: var(--clay);
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* TOC pills                                    */
+      /* ════════════════════════════════════════════ */
+      nav.toc {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 26px 0 0;
+      }
+      nav.toc a {
+        font-size: 12.5px;
+        padding: 7px 14px;
+        border: 1.5px solid var(--g300);
+        border-radius: 999px;
+        text-decoration: none;
+        color: var(--g700);
+        background: var(--paper);
+        transition:
+          border-color 120ms,
+          color 120ms;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+      }
+      nav.toc a .n {
+        font-family: var(--mono);
+        font-size: 10px;
+        color: var(--g500);
+      }
+      nav.toc a:hover {
+        border-color: var(--slate);
+        color: var(--slate);
+      }
+      nav.toc a:hover .n {
+        color: var(--clay);
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* Section                                      */
+      /* ════════════════════════════════════════════ */
+      section {
+        margin-top: 72px;
+        scroll-margin-top: 28px;
+      }
+      .sec-head {
+        display: flex;
+        align-items: baseline;
+        gap: 16px;
+        margin-bottom: 10px;
+      }
+      .sec-head .idx {
+        font-family: var(--mono);
+        font-size: 13px;
+        color: var(--clay);
+        font-weight: 600;
+        width: 34px;
+        flex-shrink: 0;
+      }
+      .sec-head h2 {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 27px;
+        margin: 0;
+        letter-spacing: -0.012em;
+        color: var(--slate);
+      }
+      .sec-head .count {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: var(--g500);
+        background: var(--g100);
+        padding: 2px 8px;
+        border-radius: 999px;
+      }
+      .sec-intro {
+        font-size: 14.5px;
+        color: var(--g700);
+        max-width: 700px;
+        margin: 0 0 24px 50px;
+      }
+      @media (max-width: 640px) {
+        .sec-intro {
+          margin-left: 0;
+        }
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* Cards                                        */
+      /* ════════════════════════════════════════════ */
+      .card {
+        background: var(--paper);
+        border: 1.5px solid var(--g300);
+        border-radius: 14px;
+        padding: 24px;
+      }
+      .card-soft {
+        background: var(--g100);
+        border: 1.5px solid var(--g200);
+        border-radius: 10px;
+        padding: 16px;
+      }
+
+      /* link card with hover */
+      a.link-card {
+        display: flex;
+        flex-direction: column;
+        background: var(--paper);
+        border: 1.5px solid var(--g300);
+        border-radius: 14px;
+        text-decoration: none;
+        color: inherit;
+        transition:
+          transform 150ms ease,
+          box-shadow 150ms ease,
+          border-color 150ms ease;
+        overflow: hidden;
+      }
+      a.link-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+        border-color: var(--slate);
+      }
+      .link-card .body {
+        padding: 18px 20px 16px;
+      }
+      .link-card .title {
+        font-family: var(--serif);
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 1.22;
+        color: var(--slate);
+        margin-bottom: 7px;
+        letter-spacing: -0.008em;
+      }
+      .link-card .desc {
+        font-size: 13.5px;
+        color: var(--g700);
+        line-height: 1.5;
+      }
+      .link-card .file {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: var(--g500);
+        border-top: 1px solid var(--g100);
+        padding-top: 11px;
+        margin-top: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .link-card .file .arrow {
+        transition: transform 150ms ease;
+        color: var(--g300);
+      }
+      a.link-card:hover .file {
+        color: var(--clay);
+      }
+      a.link-card:hover .file .arrow {
+        transform: translateX(3px);
+        color: var(--clay);
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* Pills / Badges                               */
+      /* ════════════════════════════════════════════ */
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        border: 1.5px solid var(--g300);
+        border-radius: 999px;
+        font-size: 11.5px;
+        color: var(--g700);
+        background: var(--paper);
+      }
+      .pill.clay {
+        border-color: var(--clay);
+        color: var(--clay);
+      }
+      .pill.olive {
+        border-color: var(--olive);
+        color: var(--olive);
+      }
+
+      /* status badge — cool-aligned semantic */
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 10px;
+        font-size: 11px;
+        font-weight: 600;
+        font-family: var(--mono);
+        border-radius: 9999px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .badge-green {
+        background: var(--green-soft);
+        color: var(--green);
+        border: 1px solid var(--green-border);
+      }
+      .badge-red {
+        background: var(--red-soft);
+        color: var(--red);
+        border: 1px solid var(--red-border);
+      }
+      .badge-yellow {
+        background: var(--yellow-soft);
+        color: var(--yellow);
+        border: 1px solid var(--yellow-border);
+      }
+      .badge-clay {
+        background: #eef2ff;
+        color: var(--clay-d);
+        border: 1px solid #c7d2fe;
+      }
+      .badge-oat {
+        background: var(--oat);
+        color: var(--g700);
+        border: 1px solid var(--g300);
+      }
+
+      /* ════════════════════════════════════════════ */
+      /* Footer                                       */
+      /* ════════════════════════════════════════════ */
+      footer.foot {
+        margin-top: 100px;
+        border-top: 1.5px solid var(--g300);
+        padding-top: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 13px;
+        color: var(--g500);
+      }
+      footer.foot .k {
+        font-family: var(--serif);
+        font-style: italic;
+        color: var(--g700);
+        font-size: 15px;
+      }
+      footer.foot a {
+        color: var(--clay);
+        text-decoration-color: var(--oat);
+        text-underline-offset: 3px;
+      }
+    </style>
+  <style>
+/* Transcript-specific reading layout; original base-template tokens retained. */
+.ae-layout { display:grid; grid-template-columns:208px minmax(0,1fr); gap:42px; }
+.ae-aside { position:sticky; top:22px; align-self:start; max-height:calc(100vh - 44px); overflow-y:auto; padding:25px 0; }
+.ae-aside a { display:block; padding:9px 12px; margin:3px 0; color:var(--g700); font-size:13px; text-decoration:none; border-left:2px solid transparent; }
+.ae-aside a:hover,.ae-aside a[aria-current="location"] { border-color:var(--clay-d); background:var(--g100); color:var(--slate); }
+.ae-aside .ae-aside-title { font-size:12px; letter-spacing:.08em; margin:0 12px 16px; color:var(--g700); }
+.wrap { padding-bottom:100px; }
+header.masthead { padding-top:44px; padding-bottom:36px; }
+h1 { max-width:24ch; line-height:1.2; font-size:clamp(36px,4.5vw,64px); margin-top:28px; }
+h1 em { color:var(--clay-d); }
+h3 { font-family:var(--serif); font-size:21px; font-weight:600; line-height:1.45; margin:9px 0 12px; }
+p { margin:12px 0; }
+.ae-hero-grid { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(250px,1fr); gap:38px; align-items:end; }
+.ae-hero-side { border-left:2px solid var(--clay); padding:0 0 0 26px; }
+.ae-hero-side strong { font-size:28px; font-family:var(--serif); font-weight:500; display:block; }
+.ae-hero-side p { color:var(--g700); font-size:14px; }
+.eyebrow { color:var(--g700); flex-wrap:wrap; }
+.vt-session-badge { border-radius:4px; margin-bottom:26px; }
+.ae-chips { display:flex; gap:8px; flex-wrap:wrap; margin:20px 0; }
+.ae-chips span { padding:5px 11px; font-size:12px; background:var(--g100); border:1px solid var(--g300); border-radius:6px; }
+.ae-grid { display:grid; gap:16px; margin-top:20px; }
+.ae-two { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.ae-three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.card { min-width:0; }
+.card p { color:var(--g700); font-size:15px; line-height:1.85; }
+.ae-kicker { color:var(--clay-d); font-size:12px; font-weight:600; letter-spacing:.04em; display:block; }
+.ae-definition { padding:28px 32px; background:var(--clay-soft); border-left:4px solid var(--clay-d); border-radius:0 12px 12px 0; }
+.ae-big { font-family:var(--serif); font-size:clamp(25px,3vw,36px); line-height:1.6; }
+.ae-big strong { color:var(--clay-d); font-weight:600; }
+.ae-definition>p:last-child { max-width:65ch; color:var(--g700); }
+.ae-note,.ae-caution { padding:16px 20px; margin-top:20px; border:1px solid var(--g300); border-radius:8px; font-size:14px; line-height:1.85; color:var(--g700); }
+.ae-note { background:var(--g100); }
+.ae-caution { background:var(--yellow-soft); border-color:var(--yellow-border); }
+.ae-refs { margin-top:18px; font-size:12px; color:var(--g700); line-height:1.9; }
+.ae-refs a { display:inline-block; color:var(--clay-d); text-underline-offset:3px; margin-right:12px; overflow-wrap:anywhere; }
+.ae-stage-buttons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+button { font:inherit; cursor:pointer; }
+.ae-stage { text-align:left; border:1.5px solid var(--g300); border-radius:10px; background:var(--paper); padding:20px; color:var(--slate); }
+.ae-stage strong { display:block; font-size:20px; margin:9px 0; }
+.ae-stage>span:last-child { font-size:13px; color:var(--g700); }
+.ae-stage[aria-pressed="true"] { background:var(--clay-soft); border-color:var(--clay-d); }
+.ae-stage-panel { margin-top:12px; }
+.ae-slots { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.ae-slots dt { font-size:12px; color:var(--clay-d); margin-bottom:8px; }
+.ae-slots dd { margin:0; font-size:15px; line-height:1.7; }
+.ae-chain { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:20px; counter-reset:chain; }
+.ae-chain li { position:relative; padding:20px 16px; background:var(--g100); border-top:3px solid var(--g300); counter-increment:chain; }
+.ae-chain li::before { content:counter(chain,decimal-leading-zero); font:13px var(--mono); color:var(--clay-d); display:block; margin-bottom:12px; }
+.ae-chain li:not(:last-child)::after { content:"→"; position:absolute; right:-17px; top:40%; color:var(--g700); }
+.ae-chain b { display:block; margin-bottom:8px; }
+.ae-chain span { font-size:14px; color:var(--g700); }
+.figure { width:100%; max-width:100%; min-width:0; overflow-x:auto; background:var(--ivory); border:1px solid var(--g300); border-radius:10px; }
+.figure svg { display:block; width:100%; min-width:960px; height:auto; }
+svg text { font-family:var(--sans); font-size:12px; fill:var(--g700); }
+svg text.n { font-size:14px; font-weight:600; fill:var(--slate); }
+.ae-example { border:1.5px solid var(--g300); border-radius:14px; overflow:hidden; }
+.ae-problem { padding:28px; background:var(--g100); }
+.ae-walk { padding:28px; background:var(--paper); }
+.ae-step-buttons { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:25px; }
+.ae-step-buttons button,#source-reset { background:var(--paper); color:var(--g700); border:1px solid var(--g300); border-radius:7px; padding:9px 12px; font-size:14px; }
+.ae-step-buttons button[aria-pressed="true"] { color:var(--clay-d); border-color:var(--clay-d); background:var(--clay-soft); }
+.ae-equation { font:clamp(19px,3vw,27px) var(--mono); margin-top:22px; padding:17px 0; border-top:1px solid var(--g300); overflow-wrap:anywhere; }
+#walk-panel { min-height:185px; }
+#walk-panel p { max-width:70ch; line-height:1.85; }
+.reveal { border:1.5px solid var(--border); border-radius:10px; background:var(--bg-card); margin-top:12px; overflow:hidden; }
+.reveal>summary { cursor:pointer; padding:15px 18px; font-size:15px; color:var(--text-muted); display:flex; align-items:center; gap:12px; list-style:none; }
+.reveal>summary::-webkit-details-marker { display:none; }
+.reveal>summary::before { content:"▸"; color:var(--clay-d); font-size:12px; flex-shrink:0; }
+.reveal[open]>summary::before { transform:rotate(90deg); }
+.reveal>summary:hover { background:var(--bg-soft); color:var(--text); }
+.reveal-body { padding:8px 22px 22px; font-size:15px; line-height:1.9; color:var(--text-muted); border-top:1px dashed var(--border); }
+.reveal-body p { max-width:78ch; }
+.reveal-body ul { padding-left:20px; }
+.reveal-body li { margin:12px 0; }
+.ae-source { scroll-margin-top:24px; }
+.ae-source-num { flex-shrink:0; font:12px var(--mono); color:var(--clay-d); }
+.ae-source-meta,.ae-small { font-size:12px; color:var(--g700); line-height:1.8; }
+.ae-search-row { display:flex; gap:10px; margin-top:15px; }
+#source-search { flex:1; min-width:0; width:100%; border:1.5px solid var(--g300); border-radius:8px; padding:12px; font:15px var(--sans); background:var(--ivory); }
+#source-count { font:13px var(--mono); }
+#source-reset { flex-shrink:0; }
+a { color:var(--clay-d); text-underline-offset:3px; }
+[hidden] { display:none!important; }
+:focus-visible { outline:3px solid var(--clay-d); outline-offset:4px; }
+.ae-mobile-nav { display:none; }
+.ae-export-dialog { width:min(680px,92vw); max-height:85vh; border:1px solid var(--g300); border-radius:12px; padding:24px; color:var(--slate); background:var(--ivory); }
+.ae-export-dialog::backdrop { background:rgba(15,23,42,.4); }
+.ae-export-dialog textarea { width:100%; height:220px; border:1px solid var(--g300); border-radius:6px; padding:12px; font:14px var(--sans); }
+.ae-export-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:14px; }
+.ae-export-actions button { padding:9px 16px; border:1px solid var(--g300); border-radius:6px; background:var(--paper); }
+.vt-comment-popup,.vt-comment-list { max-width:calc(100vw - 32px); }
+.vt-comment-trigger { max-width:calc(100vw - 16px); }
+footer.foot { color:var(--g700); }
+@media(max-width:1100px) {
+ .ae-layout { grid-template-columns:170px minmax(0,1fr); gap:24px; }
+ .wrap { padding-left:12px; padding-right:12px; }
+ .ae-three { grid-template-columns:1fr; }
+ .ae-stage { padding:15px; }
+ .ae-stage strong { font-size:17px; }
+}
+@media(max-width:760px) {
+ .ae-layout { display:block; }
+ .ae-aside { display:none; }
+ .ae-mobile-nav { display:block; margin-top:25px; }
+ .ae-mobile-nav summary { cursor:pointer; padding:12px 0; font-weight:600; }
+ .ae-mobile-nav nav { display:grid; grid-template-columns:1fr 1fr; gap:5px; }
+ .ae-mobile-nav a { padding:9px 6px; font-size:13px; }
+ .ae-hero-grid,.ae-two,.ae-stage-buttons,.ae-slots { grid-template-columns:1fr; }
+ .ae-hero-grid { gap:22px; }
+ .ae-hero-side { padding-left:18px; }
+ header.masthead { padding-top:22px; }
+ h1 { font-size:38px; }
+ section { margin-top:46px; }
+ .sec-head { gap:8px; align-items:flex-start; }
+ .sec-head .idx { width:28px; padding-top:7px; }
+ .sec-head h2 { font-size:25px; line-height:1.45; }
+ .sec-intro { margin-left:0; font-size:14px; line-height:1.8; }
+ .ae-definition,.card,.ae-problem,.ae-walk { padding:20px; }
+ .ae-stage { padding:14px 18px; }
+ .ae-stage strong { margin:5px 0; }
+ .ae-chain { grid-template-columns:1fr; gap:22px; }
+ .ae-chain li:not(:last-child)::after { content:"↓"; right:50%; top:auto; bottom:-23px; }
+ .reveal>summary { padding:14px 12px; font-size:14px; }
+ .ae-search-row { flex-direction:column; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
+
+.ae-scroll-hint { font-size:12px; color:var(--g700); margin:8px 0; }
+.ae-token-row { display:flex; gap:10px; flex-wrap:wrap; margin:18px 0; }
+.ae-token-row span { min-width:66px; padding:12px 16px; text-align:center; border:1px solid var(--g300); border-radius:8px; background:var(--paper); }
+.ae-token-row small { display:block; font:11px var(--mono); color:var(--g700); margin-top:8px; }
+.ae-quote { font-family:var(--serif); font-size:23px; line-height:1.7; }
+.ae-keyline { border-top:1px solid var(--g300); padding-top:20px; margin-top:20px; }
+.ae-order { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.ae-order button { padding:10px 16px; border:1px solid var(--clay-d); border-radius:8px; color:var(--clay-d); background:var(--paper); }
+#order-example { font-family:var(--serif); font-size:32px; letter-spacing:.12em; }
+.ae-source-paragraph { max-width:78ch; line-height:1.95; margin:18px 0; }
+.ae-time { display:inline-block; font:12px var(--mono); color:var(--clay-d); margin-right:10px; }
+.ae-glossary { display:grid; grid-template-columns:1fr 1fr; gap:12px 24px; padding:0; list-style:none; }
+.ae-glossary li { padding-bottom:10px; border-bottom:1px solid var(--g300); }
+.ae-glossary b { display:block; color:var(--slate); }
+.ae-boundary { padding:10px 14px; margin:10px 0; border-left:3px solid var(--yellow); font-size:12px; background:var(--yellow-soft); }
+.ae-provenance { overflow-wrap:anywhere; }
+.ae-downloads { display:flex; flex-wrap:wrap; gap:10px; }
+.ae-downloads a { display:inline-block; border:1px solid var(--g300); padding:10px 14px; border-radius:7px; background:var(--paper); }
+.ae-final-line { border-left:4px solid var(--clay-d); padding-left:24px; margin:25px 0; font-family:var(--serif); font-size:clamp(24px,3vw,35px); line-height:1.65; }
+@media(max-width:760px) { .ae-glossary { grid-template-columns:1fr; } .ae-source-paragraph { font-size:15px; } }
+</style><style id="galaxy-reading-design">
+/* Reference: grok-galaxy. Preserve the reading structure and all interactions. */
+html { scroll-padding-top:24px; }
+body { line-height:1.65; }
+.wrap { width:min(94vw,1440px); padding:0 0 80px; }
+header.masthead { padding:32px 0 48px; border-bottom:0; margin:0; }
+.eyebrow { color:var(--accent); padding-bottom:20px; border-bottom:1px solid var(--border); margin-bottom:44px; justify-content:space-between; }
+.eyebrow::before { display:none; }
+.ae-hero-grid { grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); align-items:center; gap:48px; }
+h1 { font-size:clamp(40px,5.4vw,76px); font-weight:750; line-height:1.16; letter-spacing:-.045em; margin:0 0 24px; }
+h1 em { font-style:normal; }
+.dek { max-width:52ch; font-size:18px; color:var(--text-muted); line-height:1.85; }
+.ae-hero-side { padding:28px; border:1px solid var(--border); border-radius:16px; background:linear-gradient(135deg,var(--accent-soft),var(--bg-card) 70%); }
+.ae-hero-side strong { font-size:28px; font-weight:700; letter-spacing:-.03em; }
+.ae-hero-side p:first-of-type { color:var(--text); font-size:20px; line-height:1.9; }
+.ae-hero-side a { display:inline-flex; align-items:center; min-height:44px; padding:10px 16px; margin-top:10px; background:var(--accent); color:var(--bg); border-radius:8px; text-decoration:none; font-size:14px; font-weight:650; }
+.ae-chips { margin:24px 0 0; }
+.ae-chips span { border-radius:30px; background:transparent; color:var(--text-muted); }
+.ae-layout { grid-template-columns:208px minmax(0,1fr); gap:40px; }
+.ae-aside { border-top:1px solid var(--border); }
+.ae-aside .ae-aside-title { color:var(--accent); font:12px var(--mono); letter-spacing:.13em; }
+.ae-aside a { border-radius:0 7px 7px 0; line-height:1.65; }
+.ae-aside a:hover,.ae-aside a[aria-current="location"] { color:var(--accent); background:var(--accent-soft); }
+main { min-width:0; }
+main>section { margin-top:0; padding:38px 0; border-top:1px solid var(--border); }
+.sec-head h2 { font-weight:700; font-size:clamp(25px,2.4vw,34px); line-height:1.35; letter-spacing:-.025em; }
+.sec-head .idx { width:30px; }
+.sec-intro { margin:12px 0 24px; max-width:72ch; line-height:1.85; }
+h3 { font-weight:650; font-size:20px; }
+.card,.ae-stage,.reveal { border-width:1px; border-radius:12px; }
+.ae-definition { background:var(--bg-card); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:12px; padding:26px 28px; }
+.ae-big { font-size:clamp(24px,2.4vw,32px); line-height:1.65; font-weight:600; letter-spacing:-.02em; }
+.ae-kicker { font-family:var(--mono); }
+.ae-note { background:var(--bg-card); }
+.ae-caution { border-left:3px solid var(--yellow); }
+.ae-caution strong,.ae-boundary { color:var(--yellow); }
+.ae-chain li { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; }
+.ae-quote,.ae-final-line { font-weight:600; }
+.figure { background:var(--bg-card); margin-top:18px; }
+svg [fill="#eef2ff"] { fill:var(--accent-soft); }
+svg [fill="#ffffff"] { fill:var(--bg-soft); }
+svg [fill="#f8fafc"] { fill:var(--bg-card); }
+svg [fill="#3730a3"] { fill:var(--accent); }
+svg [stroke="#cbd5e1"],svg [stroke="#c7d2fe"] { stroke:var(--border); }
+svg [stroke="#3730a3"] { stroke:var(--accent); }
+svg [stroke="#64748b"] { stroke:var(--text-muted); }
+input,textarea,button { color:var(--text); }
+input,textarea { background:var(--bg); }
+input::placeholder,textarea::placeholder { color:var(--g500); opacity:1; }
+button:hover,.ae-downloads a:hover { border-color:var(--accent); }
+a:hover { color:var(--text); }
+.ae-hero-side a:hover { background:var(--text); color:var(--bg); }
+.ae-source[open]>summary { background:var(--bg-soft); color:var(--text); }
+.ae-source-num { color:var(--green); }
+.ae-source-paragraph { color:var(--text-muted); }
+.ae-time { color:var(--accent); }
+#source-count { color:var(--green); }
+#preview-comments { padding:10px 17px; min-height:44px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; }
+.ae-export-dialog::backdrop { background:#000a; }
+.ae-export-dialog textarea { background:var(--bg-card); color:var(--text); }
+.badge-clay { background:var(--accent-soft); border-color:var(--border); }
+.vt-session-badge { background:var(--bg-card); color:var(--text-muted); border-bottom:1px solid var(--border); padding:9px 3vw; }
+.vt-session-badge .dot { background:var(--accent); }
+footer.foot { margin-top:24px; }
+::selection { background:var(--accent-soft); color:var(--text); }
+@media(max-width:1100px) {
+ .ae-layout { grid-template-columns:170px minmax(0,1fr); gap:24px; }
+ .ae-hero-grid { gap:26px; }
+}
+@media(max-width:760px) {
+ .wrap { width:calc(100% - 32px); }
+ header.masthead { padding:26px 0 30px; }
+ .eyebrow { margin-bottom:30px; font-size:11px; gap:8px; }
+ .ae-hero-grid { grid-template-columns:1fr; }
+ h1 { font-size:clamp(36px,7.8vw,52px); }
+ .dek { font-size:16px; }
+ .ae-hero-side { padding:22px; }
+ .ae-hero-side strong { font-size:24px; }
+ .ae-hero-side p:first-of-type { font-size:18px; }
+ .ae-mobile-nav { border:1px solid var(--border); border-radius:10px; background:var(--bg-card); padding:0 16px; }
+ .ae-mobile-nav nav { grid-template-columns:1fr; padding-bottom:12px; }
+ .ae-mobile-nav a { text-decoration:none; border-top:1px solid var(--border); padding:10px 0; }
+ .ae-layout { display:block; }
+ main>section { padding:30px 0; }
+ .ae-definition { padding:20px; }
+ .vt-session-badge { font-size:10px; padding:8px 16px; flex-wrap:wrap; }
+}
+</style>
+<title>模型只是越做越大嗎？</title><meta name="description" content="沿直播時間順序，從 GPT-1 到推理模型，保留問題、例子、示範與來源的 Week 2 課程筆記。"></head><body><a class="lesson-skip" href="#lesson-main">跳到正文</a>
+<div class="wrap lesson-wrap">
+<header class="masthead lesson-header">
+  <div class="eyebrow">AI × EARTH EDUCATION · WEEK 2 · 課程筆記</div>
+  <h1>模型只是<br>越做越大嗎？</h1>
+  <p class="lesson-dek">從 GPT-1 走到會「思考」的推理模型：參數、資料，以及任務放在哪裡，一起改變了。看懂這條路，也就知道一段寫得很完整的推理，為什麼仍然需要你來查核。</p>
+  <div class="lesson-meta"><span>直播 06:08–01:14:20</span><span>三段路線：規模 → 資料 → 推理</span><span>22 個相連的問題 · 2026.09.22 整理</span></div>
+  <div class="lesson-links"><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=368s" target="_blank" rel="noopener noreferrer">從這段影片開始 ↗</a><a href="https://www.youtube.com/live/u2-M1ab8RGE" target="_blank" rel="noopener noreferrer">YouTube 直播頁 ↗</a><a href="./slides.pdf" target="_blank" rel="noopener noreferrer">開啟 PDF</a><a href="#cot">直接讀 Chain-of-Thought ↓</a></div>
+  <p class="lesson-source-note">這份筆記依直播順序整理，正文經過重寫，保留問題、例子、示範與前後銜接。每節可展開對應逐字稿，時間都連到 YouTube 直播；新增的追問與技術補充均有標示。原逐字稿有數段辨識失敗，已從錄影重新辨識補上。</p>
+</header>
+<div class="lesson-layout">
+<aside class="lesson-sidebar"><p class="lesson-nav-title">沿著時間，一路讀下去</p><nav class="lesson-nav" aria-label="本頁章節"><p class="lesson-nav-group">開場 · 接回上週</p><a href="#route">01 · 上週看懂了 Transformer，這週還要往哪裡走？<small>06:08–08:33</small></a><a href="#news">02 · 只輸出「決策」的模型，和聽得見意念的晶片，說明了什麼？<small>08:33–12:37</small></a><a href="#recap">03 · 模型數不出 Strawberry 有幾個 r，是因為它很笨嗎？<small>12:37–14:20</small></a><p class="lesson-nav-group">01 · 從 GPT-1 到 GPT-3</p><a href="#gpt1">04 · GPT 的 P，為什麼是先「預」訓練？<small>14:20–18:20</small></a><a href="#labels">05 · 微調需要的「標籤」，實際上長什麼樣子？<small>18:20–20:31</small></a><a href="#gpt2">06 · 換了一批資料，模型的樣子也會跟著變嗎？<small>20:31–22:23</small></a><a href="#zero-shot">07 · 沒給任何例子，模型怎麼知道要做什麼？<small>22:23–26:35</small></a><a href="#feedback">08 · 按下「你喜歡哪一個回答」，你其實在做什麼？<small>26:35–29:08</small></a><a href="#few-shot">09 · 不改模型，只給幾個例子，為什麼就能改變回答？<small>29:08–31:38</small></a><a href="#style-demo">10 · 想讓 AI 模仿一種寫法，範例要怎麼給？<small>31:38–36:38</small></a><a href="#context">11 · 微調和 In-context Learning，差在哪裡？<small>36:38–38:38</small></a><a href="#scaling">12 · 模型越大越好，這條規律可以一直走下去嗎？<small>38:38–40:46</small></a><a href="#moe">13 · 看模型大小，為什麼要看兩個參數數字？<small>40:46–43:08</small></a><p class="lesson-nav-group">02 · 模型吃什麼長大</p><a href="#data">14 · 網路上的文字，為什麼不能直接拿來訓練？<small>43:08–45:48</small></a><p class="lesson-nav-group">03 · 讓 AI 把過程寫出來</p><a href="#cot">15 · 多寫幾個中間步驟，模型就變聰明了嗎？<small>45:48–48:38</small></a><a href="#post-training">16 · 把「一步一步想」訓練進模型，要靠什麼？<small>48:38–51:08</small></a><a href="#iq">17 · 模型學會「思考」之後，變得多聰明？<small>51:08–52:38</small></a><a href="#stupid-meter">18 · 分數這麼高，為什麼用起來還是會覺得笨？<small>52:38–55:06</small></a><a href="#local-demo">19 · 看得到模型的內心戲，就知道它想對了嗎？<small>55:06–59:05</small></a><a href="#persuasion">20 · 一段讀起來很合理的回答，為什麼還需要領域專家？<small>59:05–01:03:11</small></a><a href="#gemma">21 · 同一題換一個模型、換一個思考程度，會差多少？<small>01:03:11–01:08:38</small></a><a href="#limits">22 · 推理寫得越長，就越可以相信嗎？<small>01:08:38–01:14:20</small></a><a href="#reading-notes">來源與閱讀說明</a></nav><p class="lesson-sidebar-note">先順著讀一遍，<br>再回頭查名詞與原文。</p></aside>
+<main id="lesson-main" class="lesson-main">
+<details class="lesson-mobile-toc"><summary>展開閱讀目錄 · 22 個相連的問題</summary><nav class="lesson-nav" aria-label="本頁章節"><p class="lesson-nav-group">開場 · 接回上週</p><a href="#route">01 · 上週看懂了 Transformer，這週還要往哪裡走？<small>06:08–08:33</small></a><a href="#news">02 · 只輸出「決策」的模型，和聽得見意念的晶片，說明了什麼？<small>08:33–12:37</small></a><a href="#recap">03 · 模型數不出 Strawberry 有幾個 r，是因為它很笨嗎？<small>12:37–14:20</small></a><p class="lesson-nav-group">01 · 從 GPT-1 到 GPT-3</p><a href="#gpt1">04 · GPT 的 P，為什麼是先「預」訓練？<small>14:20–18:20</small></a><a href="#labels">05 · 微調需要的「標籤」，實際上長什麼樣子？<small>18:20–20:31</small></a><a href="#gpt2">06 · 換了一批資料，模型的樣子也會跟著變嗎？<small>20:31–22:23</small></a><a href="#zero-shot">07 · 沒給任何例子，模型怎麼知道要做什麼？<small>22:23–26:35</small></a><a href="#feedback">08 · 按下「你喜歡哪一個回答」，你其實在做什麼？<small>26:35–29:08</small></a><a href="#few-shot">09 · 不改模型，只給幾個例子，為什麼就能改變回答？<small>29:08–31:38</small></a><a href="#style-demo">10 · 想讓 AI 模仿一種寫法，範例要怎麼給？<small>31:38–36:38</small></a><a href="#context">11 · 微調和 In-context Learning，差在哪裡？<small>36:38–38:38</small></a><a href="#scaling">12 · 模型越大越好，這條規律可以一直走下去嗎？<small>38:38–40:46</small></a><a href="#moe">13 · 看模型大小，為什麼要看兩個參數數字？<small>40:46–43:08</small></a><p class="lesson-nav-group">02 · 模型吃什麼長大</p><a href="#data">14 · 網路上的文字，為什麼不能直接拿來訓練？<small>43:08–45:48</small></a><p class="lesson-nav-group">03 · 讓 AI 把過程寫出來</p><a href="#cot">15 · 多寫幾個中間步驟，模型就變聰明了嗎？<small>45:48–48:38</small></a><a href="#post-training">16 · 把「一步一步想」訓練進模型，要靠什麼？<small>48:38–51:08</small></a><a href="#iq">17 · 模型學會「思考」之後，變得多聰明？<small>51:08–52:38</small></a><a href="#stupid-meter">18 · 分數這麼高，為什麼用起來還是會覺得笨？<small>52:38–55:06</small></a><a href="#local-demo">19 · 看得到模型的內心戲，就知道它想對了嗎？<small>55:06–59:05</small></a><a href="#persuasion">20 · 一段讀起來很合理的回答，為什麼還需要領域專家？<small>59:05–01:03:11</small></a><a href="#gemma">21 · 同一題換一個模型、換一個思考程度，會差多少？<small>01:03:11–01:08:38</small></a><a href="#limits">22 · 推理寫得越長，就越可以相信嗎？<small>01:08:38–01:14:20</small></a><a href="#reading-notes">來源與閱讀說明</a></nav></details>
+<div class="lesson-part"><p class="lesson-label">開場 · 06:08–14:20</p><p class="lesson-part-title">先接回上週，再看這週的 AI</p><p>先說清楚今天要走的三段路，看三則新聞，再用一個經典失誤把上週的 Token 接回來。</p></div>
+<section id="route" class="lesson-section" data-source-start="368" data-source-end="513" data-part="開場 · 接回上週">
+  <div class="lesson-section-meta">01 · 今天要走的三段路 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=368s" target="_blank" rel="noopener noreferrer">06:08–08:33 ↗</a></div>
+  <h2>上週看懂了 Transformer，這週還要往哪裡走？</h2>
+  <div class="lesson-prose">
+  <p>開場先說了一點題外話：上週的片頭歌是先讓 GPT 寫 prompt、再交給 Lyria 唱；這週換 Gemini，卻「聽起來快睡著了」。同一件事換一個模型做，結果就不一樣——這個小插曲，其實也預告了今天會一再碰到的現象。</p>
+  <p>接著講者介紹十月中的 Meetup：來看看不同的人怎麼用 AI。對已經有一些基礎、想再往前一步的人，哪怕一個晚上只聽到一個值得學的點，也算有收穫。</p>
+  <p>回到課程。上週拆解的 Transformer，其實是 GPT-2 的簡化版。<strong>這週把時間往前推回 GPT-1，再一路走到現在的推理模型</strong>，分成三段：</p>
+  </div>
+  <ol class="lesson-route" aria-label="本堂的三段路線"><li><span>第一段</span><b>從 GPT-1 到 GPT-3：架構沒換，變了什麼？</b></li><li><span>第二段</span><b>模型吃什麼長大：訓練資料怎麼清理？</b></li><li><span>第三段</span><b>讓 AI 把過程寫出來：Chain-of-Thought 與推理模型</b></li></ol>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 2 頁 · 裁圖</span><button type="button" data-slide="assets/page-2-crop.webp" data-page="2" data-alt="投影片列出本堂三段路線：從 GPT-1 到 GPT-3、模型吃什麼長大、讓 AI 把過程寫出來。" aria-label="放大第 2 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-2-crop.webp" width="1484" height="472" alt="投影片列出本堂三段路線：從 GPT-1 到 GPT-3、模型吃什麼長大、讓 AI 把過程寫出來。" loading="lazy"><figcaption><b>跟著看：</b>三欄各回答一個問題：模型怎麼長大、吃了什麼、怎麼把過程寫出來。第二欄提到的網頁、重複內容與個資，講者稱為「很煩的結構」，是模型訓練前必須先排除的障礙。第三欄末尾「差別。」重複一次，是原圖的排版問題。<br><a href="./slides.pdf#page=2" target="_blank" rel="noopener noreferrer">查看完整第 2 頁 ↗</a></figcaption></figure>
+  <p class="lesson-transition">開始之前，先花幾分鐘看看這一週 AI 圈又冒出了什麼。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 06:08–08:33 · 2 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:06:08｜開場：上週的歌與十月 Meetup</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=368s" target="_blank" rel="noopener noreferrer">00:06:08 ↗</a><br>
+可以、可以，可以齁？好，那我開始囉。好，就是上個禮拜的歌，其實是 GPT〔原辨識：GBT〕去寫 prompt〔原辨識：Pump〕，然後給 Lyria 去唱歌。但是我就覺得那個聲音聽起來怪怪的〔原辨識：Gay Gay 的〕，你知道嗎？然後這一次我就換 Gemini〔原辨識：Gem9〕去寫〔原辨識：唱〕prompt，然後我就覺得聽起來快睡著了。所以我決定下禮拜可能換一點比較振奮一點的歌。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=400s" target="_blank" rel="noopener noreferrer">00:06:40 ↗</a><br>
+然後 10 月中的 Meetup 已經開出來了，如果有人有興趣的話可以一起來參加。我覺得如果有空都可以來參加，因為可以看看不同的人他們是怎麼運用 AI 的。這個對於如果你有初始知識的，你要再更精進〔原辨識：緊接〕，我覺得都蠻有幫助的。就哪怕你一個晚上只聽到一個你覺得非常值得學習的點，我也覺得這個就都還不錯。</p><h3>00:07:16｜今天的三段路</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=436s" target="_blank" rel="noopener noreferrer">00:07:16 ↗</a><br>
+今天我們要來說的是 GPT 的模型，就是怎麼從 GPT-1 到 GPT-3。上禮拜做的 Transformer 結構是 GPT-2 的簡化版，所以我們今天要再往前移一點，然後再推進到說，現在的推理模型他們是怎麼運作的，那這個我覺得還蠻重要的。所以今天主要會有三塊：第一塊是從 GPT-1 到 GPT-3；那第二塊就是我們可以來嘗試抽絲剝繭，看一下說模型他們原本訓練的資料會長怎樣，那怎麼樣做資料的清洗。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=481s" target="_blank" rel="noopener noreferrer">00:08:01 ↗</a><br>
+因為很多檔案其實它們都會有一些很煩的這種結構，這些結構其實對大語言模型〔原辨識：大於模型〕來說都是一種障礙，所以這種障礙就必須要先把它排除，然後再回到模型的訓練。第三個就會來談一下，AI 一個很重要的叫 Chain of Thought，然後是從 Chain of Thought 延伸到 Reasoning Model，這個過程當中是怎麼樣去進行的。</p></div></details>
+</section>
+
+
+<section id="news" class="lesson-section" data-source-start="513" data-source-end="757" data-part="開場 · 接回上週">
+  <div class="lesson-section-meta">02 · 每週一頁 AI 新聞 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=513s" target="_blank" rel="noopener noreferrer">08:33–12:37 ↗</a></div>
+  <h2>只輸出「決策」的模型，和聽得見意念的晶片，說明了什麼？</h2>
+  <div class="lesson-prose">
+  <p>講者打算每週用一頁投影片分享當週「非常誇張」的 AI 進展。這週有三則。</p>
+  <p><strong>第一則是 xAI 團隊的 Grok Bot Galaxy。</strong>三個人想回答一個問題：三個人、三天，能不能用 Grok Bot 建立一間公司、做出一套產品？他們一天直播八小時。講者覺得值得看的，不是結果，而是他們遇到問題時怎麼解決。團隊說，現在幾乎 95% 的工作都能交給 Grok Bot 自動完成。講者順帶提到一則推文：有位工程師抱怨，自己一天的工作幾乎只剩下跟 AI 聊天、一直按 Enter。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 3 頁 · 裁圖</span><button type="button" data-slide="assets/page-3-crop.webp" data-page="3" data-alt="投影片列出本週三則新聞：xAI 的 Grok Bot Galaxy 直播、JEV 的準確率與成本圖、Neuralink 展示影片。" aria-label="放大第 3 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-3-crop.webp" width="1529" height="765" alt="投影片列出本週三則新聞：xAI 的 Grok Bot Galaxy 直播、JEV 的準確率與成本圖、Neuralink 展示影片。" loading="lazy"><figcaption><b>跟著看：</b>由左到右是 Grok Bot Galaxy、JEV 與 Neuralink。中間那張圖比較四種 workflow 的準確率與成本，圖說提醒：前緣上沒有「又便宜又準」的選項。<br><a href="./slides.pdf#page=3" target="_blank" rel="noopener noreferrer">查看完整第 3 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p><strong>第二則是一個叫 JEV 的新模型。</strong>講者先用上週的流程對照：一般語言模型是「文字 → 數字 → Transformer 計算 → 數字 → 文字」。JEV 的產出不是文字，而是決策——例如給它一張帳單，它不寫一段說明，只給「繳費、不繳費、刪除」這類最基本的選項，以及判斷出來的機率。要做的事很少，所以速度很快、費用很低。這幾天網路上出現各種用法，例如有人把它接上自己的交易系統做量化交易（用程式依規則自動下單）。講者提醒，正因為速度太快，<strong>一個晚上虧掉的錢，可能比以前還多</strong>——決策變快，錯誤也會一起變快。</p>
+  <p><strong>第三則是 Neuralink 的展示。</strong>一位逐漸失去說話能力的漸凍症患者，腦中植入的晶片在語言區產生訊號；團隊用他生病前的聲音克隆出語音。影片最後，他用意念對太太說出「我愛你」，畫面上響起的是他自己的聲音。講者說，這已經不是科幻小說的情節，而是正在發生的事。</p>
+  </div>
+  <aside class="lesson-correction"><strong>閱讀界線 · 這裡是當週新聞</strong><p>三則新聞依課堂介紹整理，產品名稱依投影片標示；95% 自動化、JEV 的運作方式與 Neuralink 展示細節，本筆記沒有另行查核，也不代表之後的發展。想了解原始內容，請從投影片上的連結回到原始貼文。</p></aside>
+  <p class="lesson-transition">JEV 的對照，剛好把我們帶回上週的流程。先快速複習一次，再用一個經典案例檢查自己懂了沒。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 08:33–12:37 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:08:33｜這週的三則 AI 新聞</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=513s" target="_blank" rel="noopener noreferrer">00:08:33 ↗</a><br>
+有鑑於〔原辨識：有介於〕現在 AI 的〔此句後半未辨識〕……所以我就想說，我每個禮拜稍微用一頁很簡單的投影片，來分享一下這禮拜我認為非常誇張的 AI 的進展，還有相關的新聞。第一個就是，上禮拜其實有三天半夜直播的節目，這是 Grok 團隊，因為他們最近發表一個 Grok Bot〔原辨識：GrookBar〕，就是 AI agent 的……</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=545s" target="_blank" rel="noopener noreferrer">00:09:05 ↗</a><br>
+xAI 的團隊有三個人，他們想要回答一個問題：三個人三天，能不能用 Grok Bot〔原辨識：GroupBot〕去建立一間公司，然後做出一套產品？所以他們一天開了八個小時的直播。那這個我覺得蠻值得去學習的，就是如果你想再更進階一點的話，因為他們很多就是在面臨到問題的時候，他們是如何去解決問題的。那他們現在幾乎所有的工作用 Grok Bot〔原辨識：Growbar〕，就可以 95% 幾乎全自動化的去完成。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=586s" target="_blank" rel="noopener noreferrer">00:09:46 ↗</a><br>
+然後我今天才看到一個 X 上面的推文，也是蠻好笑的，就是有一間公司的工程師在抱怨說，他的工作 95% 都是跟 AI 在聊天，然後他的功能就是一直按 Enter，然後他一天的工作好像就結束了，他覺得這個工作太廢了。對，所以如果 AI 能夠說人話，它可能會覺得人類蠻煩的：幫你們省力也不好〔後半句辨識不清〕。所以我覺得這蠻有趣的。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=615s" target="_blank" rel="noopener noreferrer">00:10:15 ↗</a><br>
+那第二個是，有個叫 JEV〔原辨識：JAB；依投影片標題〕的新的模型。上一段我們提過 Transformer 的結構，就是一段文字進去轉成 ID，所以它是一串數字進去 Transformer 結構，算出來之後產生另外一串數字，再轉成文字。所以你可以簡化成：文字進入計算，產生文字，那這是目前 AI 的運作。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=640s" target="_blank" rel="noopener noreferrer">00:10:40 ↗</a><br>
+而 JEV〔原辨識：Java〕這個模型，它產出的不是文字，它產出的是決策，就是它把 AI 那種講廢話的過程完全省略掉。舉很簡單的例子來說，假設你今天給 AI 一張帳單，然後它可能會給你的決策是：可能繳費、不繳費，或是刪除。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=668s" target="_blank" rel="noopener noreferrer">00:11:08 ↗</a><br>
+它只給你最基本的選項，然後只給你簡單的機率，來告訴使用者說，它看到這張帳單所判斷出來的機率是多少。所以它需要做的事情其實很少，這就反映出它的速度會非常非常的快，它產生的費用非常非常的低。所以這幾天網路上又有各式各樣的運用產生，就是有人把它接上自己的交易系統，然後就發現說，我一個晚上虧的錢比原本多太多了，對，因為它速度實在太快了。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=705s" target="_blank" rel="noopener noreferrer">00:11:45 ↗</a><br>
+所以那第三個呢，就是 Neuralink，這個蠻感人的，可以去看一下。這個人他是一個漸凍人，他逐漸不會說話。Neuralink 其實就是馬斯克的其中一間公司，在這個人的腦袋裡面植入〔原辨識：紙錄〕一個晶片，所以這個晶片在語言區那邊……</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=728s" target="_blank" rel="noopener noreferrer">00:12:08 ↗</a><br>
+……然後就會產生一段訊號，它其實就是一個 spectrum。這個團隊他們就利用這個人在生病之前的聲音，嘗試去克隆他的聲音。所以影片的最後，就是這個人對他老婆用意念說出「我愛你」，然後畫面上就真的有一個他的聲音發出「我愛你」。這個就是有點科幻小說的情節，已經是真實在發生的一個現象。</p></div></details>
+</section>
+
+
+<section id="recap" class="lesson-section" data-source-start="757" data-source-end="860" data-part="開場 · 接回上週">
+  <div class="lesson-section-meta">03 · 把上週的流程接回來 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=757s" target="_blank" rel="noopener noreferrer">12:37–14:20 ↗</a></div>
+  <h2>模型數不出 Strawberry 有幾個 r，是因為它很笨嗎？</h2>
+  <div class="lesson-prose">
+  <p>上週的流程可以壓成五步：文字先切成 Token，所以不一定一個字就是一個 Token；Token 轉成向量；每個位置透過 Attention 參照上下文——這一步和之後要談的 Prompt Engineering 關係很深；同樣的運算疊很多層；最後<strong>其實只是在預測下一個 Token</strong>。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 4 頁 · 裁圖</span><button type="button" data-slide="assets/page-4-crop.webp" data-page="4" data-alt="上週回顧五步：切成 Token、轉成向量、Attention、疊很多層、預測下一個，並附 Strawberry 有幾個 r 的案例。" aria-label="放大第 4 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-4-crop.webp" width="1496" height="509" alt="上週回顧五步：切成 Token、轉成向量、Attention、疊很多層、預測下一個，並附 Strawberry 有幾個 r 的案例。" loading="lazy"><figcaption><b>跟著看：</b>五格從左到右就是上週整條路。最下方的案例提醒：這是 2024 年的失誤，現在的推理模型大多已經數對了。<br><a href="./slides.pdf#page=4" target="_blank" rel="noopener noreferrer">查看完整第 4 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>如果這條脈絡接得起來，就可以回頭看 2024 年一個經典案例：有人問模型「Strawberry 有幾個 r？」，模型答錯了。直覺反應可能是：模型怎麼這麼笨，連這個都數不出來？</p>
+  <p>但換成上週的角度想：<strong>模型看到的是 Token，不是字母。</strong>Strawberry 可能只是一兩個 Token，模型從來沒有「看見」裡面的 r，數錯其實很合理。模型公司後來做了修正，現在問任何主流模型 Strawberry 有幾個 r、有沒有 b，大多都能答好。講者也說，這只是一個很小的問題；重點是，懂了流程，就能解釋錯誤從哪裡來。</p>
+  </div>
+  <details class="lesson-check"><summary><span>停一下 · 整理者練習</span>模型曾經數錯字母，代表它讀不懂英文嗎？</summary><p>不代表。它處理的單位是 Token，而不是逐個字母；問題出在輸入被切分的方式，和「懂不懂這個字的意思」是兩回事。這也是上週強調「數中文字，和數 Token，回答的是不同問題」的原因。</p></details>
+  <p class="lesson-transition">有了這個基礎，就可以正式進入第一段：GPT 這三個字母，本身就藏著它的訓練方式。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 12:37–14:20 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:12:37｜上週回顧與 Strawberry 案例</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=757s" target="_blank" rel="noopener noreferrer">00:12:37 ↗</a><br>
+所以快速的 recap：上禮拜說的文字，我們會先切成 token，所以不見得每一個字就是一個 token，這個大家都可以理解。再來 token 會轉成向量，轉成向量之後，每一個字其實都會有 attention，這個 attention 蠻重要的，〔銜接處辨識不完整〕</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=788s" target="_blank" rel="noopener noreferrer">00:13:08 ↗</a><br>
+……我們之後會討論的叫 Prompt Engineering 的技術。最後就是運算之後疊很多層〔原辨識：點很多層〕，它其實只是預測下一個 Token。所以如果你這個脈絡都可以理解之後，我們來看一下，2024 年其實有一個經典的案例，這個案例就是使用者去問說：Strawberry 到底有幾個 R？</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=818s" target="_blank" rel="noopener noreferrer">00:13:38 ↗</a><br>
+你可能會覺得模型很笨，連 Strawberry 都算不出來。這時候如果你懂這個概念，就會想說：拜託，模型看到的是 Token，所以 Strawberry 可能就只有一個 Token 而已，它看到的並不是字母，所以它會數錯完全是很合理的一件事。但是模型公司當時發生這種事之後，他們有做一些方式去修正這個東西。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=848s" target="_blank" rel="noopener noreferrer">00:14:08 ↗</a><br>
+〔你現在去找〕任何一個 AI 的模型，問它們 Strawberry 有幾個 R，或 Strawberry 有幾個 B，所有的模型大致上都可以回答得很好，但這個就是一個非常 minor 的問題。</p></div></details>
+</section>
+
+
+<div class="lesson-part"><p class="lesson-label">第一段 · 14:20–43:08</p><p class="lesson-part-title">架構沒換，變的是規模、資料，以及任務放在哪裡</p><p>同一種 Transformer，讀更多資料、長得更大之後，我們交代任務的方式也跟著改變。</p></div>
+<section id="gpt1" class="lesson-section" data-source-start="860" data-source-end="1100" data-part="01 · 從 GPT-1 到 GPT-3">
+  <div class="lesson-section-meta">04 · GPT-1 · 2018 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=860s" target="_blank" rel="noopener noreferrer">14:20–18:20 ↗</a></div>
+  <h2>GPT 的 P，為什麼是先「預」訓練？</h2>
+  <div class="lesson-prose">
+  <p>GPT 是三個字的縮寫：<strong>G</strong>enerative，能生成內容；<strong>P</strong>re-trained，先經過大規模預訓練；<strong>T</strong>ransformer，就是上週談的架構。講者特別提醒 Pre-train 這個詞：之後會一直出現「預訓練（Pre-training）」與「後訓練（Post-training）」這一組。2018 年的第一篇論文其實沒有寫「GPT-1」，不過直接搜尋「2018 GPT-1 論文」就找得到。</p>
+  <p>GPT-1 分兩個階段。<strong>第一階段是預訓練：</strong>收集大量沒有標籤的文字——當時用了七千多本未出版的書——讓模型練習預測下一個 Token。講者用機器學習的分類說明：沒有標籤的訓練叫非監督式學習，有標籤的叫監督式學習，後者就像給模型一個目標，「監督」它朝那個方向前進。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 7 頁 · 裁圖</span><button type="button" data-slide="assets/page-7-crop.webp" data-page="7" data-alt="GPT-1 兩階段：預訓練用大量沒有標籤的文字練習預測下一個 Token，微調用較小、有標籤的資料適應特定任務；1.17 億參數、7,000 多本未出版書籍，以及 Y=Ax+B 的參數比喻。" aria-label="放大第 7 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-7-crop.webp" width="1484" height="635" alt="GPT-1 兩階段：預訓練用大量沒有標籤的文字練習預測下一個 Token，微調用較小、有標籤的資料適應特定任務；1.17 億參數、7,000 多本未出版書籍，以及 Y=Ax+B 的參數比喻。" loading="lazy"><figcaption><b>跟著看：</b>先看上排的 Stage 1 → Stage 2，再看下排兩個數字。Y=Ax+B 只用來說明「參數是訓練時被調整、訓練後被保存的數字」，不是模型真正的算式。<br><a href="./slides.pdf#page=7" target="_blank" rel="noopener noreferrer">查看完整第 7 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p><strong>第二階段是微調（Fine-tuning）：</strong>預訓練得到的那組參數先保存下來，再拿較小、有標籤的資料去適應不同的任務——這一題解數學、下一題寫程式、再下一題回答教育相關的問答。投影片形容得很貼切：預訓練像廣泛閱讀、建立語感；微調像考前臨時抱佛腳。講者也補充，GPT-1 當年用的是微調；到了今天的新世代模型，重點已經換成後訓練，第三段會再回來。</p>
+  <p>那「參數」是什麼？GPT-1 大約有 1.17 億個。講者用 <code>Y = AX + B</code> 簡化：X 是輸入，Y 是輸出，A 和 B 就是參數——訓練時被調整，訓練完被保存，成為模型的一部分。把文字當成 X 餵進去，控制輸出的不是兩個數字，而是 1.17 億個。</p>
+  </div>
+  <p class="lesson-small"><span class="lesson-inline-label">整理者補充</span>今天常把 GPT 這類「用文字本身預測下一個 Token」的訓練稱為自監督學習：資料不用人工標註，答案就是原文的下一段。這和課堂說的「沒有標籤」指的是同一件事，只是分類名稱不同。</p>
+  <p class="lesson-transition">微調需要「有標籤」的資料。標籤到底長什麼樣子？課堂接著打開一個真實的資料集。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 14:20–18:20 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:14:20｜GPT 三個字與 GPT-1 的兩階段</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=860s" target="_blank" rel="noopener noreferrer">00:14:20 ↗</a><br>
+第一個部分就是從 GPT-1 到 GPT-3。GPT 這三個字，第一個是 Generative，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=878s" target="_blank" rel="noopener noreferrer">00:14:38 ↗</a><br>
+〔P 是〕Pretrain，是經過預訓練。這個 Pretrain 後面會蠻常用，就是我們總共會有 Pretrain 跟 Post-training：Pretrain 就是預訓練，Post-training 就是後訓練。T 就是 Transformer，Transformer 就是訓練文字的架構，所以這是 GPT 三個字的起源。當然他們在 2018 年發表論文的時候，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=905s" target="_blank" rel="noopener noreferrer">00:15:05 ↗</a><br>
+這部分是沒有直接寫 GPT 這麼明確，但你可以直接 Google 說 2018 年 GPT-1 的論文，其實你也可以找到這篇文章。GPT-1 它一開始是先有一個步驟，是經過預訓練。這個預訓練其實就是收集大量沒有標籤的文字，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=930s" target="_blank" rel="noopener noreferrer">00:15:30 ↗</a><br>
+這些文字基本上就是你可以想像的任何的文字，當時是用接近 7,000 多本沒有出版的書，然後瘋狂去掃描那些書，再把這些書當作預訓練〔原辨識：必訓練〕的材料。在機器學習裡面，如果是沒有標籤的這種訓練方式，叫非監督式的學習；如果是有標籤的，就是監督式的學習，就代表我們給一個標籤，有點像是監督整個模型朝著那個標籤前進。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=968s" target="_blank" rel="noopener noreferrer">00:16:08 ↗</a><br>
+但 GPT 它在預訓練的時候，是沒有使用任何標籤的文字，它只是把七千多本書〔原辨識：期限多本書〕丟給預訓練。在 stage 2 的時候，就開始將模型進行微調。這個 stage 1 已經訓練完的參數可以先被固定下來，〔銜接處辨識不完整〕</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=998s" target="_blank" rel="noopener noreferrer">00:16:38 ↗</a><br>
+……〔用來應對〕不同的適應場景。所以進入到微調的時候，資料就會有標籤，不同的標籤可能對應到不同的任務：有可能這一題是要去解數學的，下一題是要去解一個程式的運算，再下一題可能是要解一個跟教育相關的問題，或是 Q&A，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1028s" target="_blank" rel="noopener noreferrer">00:17:08 ↗</a><br>
+這個資料就必須要有標籤。但是後來，GPT-1 是用微調，到了現在的 GPT-4、5、6 再之後，主要是用後訓練。當時的 GPT-1，它的參數大概是 1.17 億個〔原辨識：1.171 個〕。這個參數我們可以把它簡化，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1058s" target="_blank" rel="noopener noreferrer">00:17:38 ↗</a><br>
+Y 等於 AX 加 B，所以 X 是你的 input，你的 input 經過兩個參數的計算〔原辨識：解算〕之後會有一個 output。所以在 Y 等於 AX 加 B 這個非常簡化的函數裡面，A、B 其實就是參數。所以你可以把它想成是說，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1088s" target="_blank" rel="noopener noreferrer">00:18:08 ↗</a><br>
+文字當作一個 input，餵〔原辨識：Way〕進去模型裡面，這個模型總共有 1.17 億個參數來去控制最後整體的輸出，所以這是一個比較簡化的說法。</p></div></details>
+</section>
+
+
+<section id="labels" class="lesson-section" data-source-start="1100" data-source-end="1231" data-part="01 · 從 GPT-1 到 GPT-3">
+  <div class="lesson-section-meta">05 · 打開一個真實資料集 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1100s" target="_blank" rel="noopener noreferrer">18:20–20:31 ↗</a></div>
+  <h2>微調需要的「標籤」，實際上長什麼樣子？</h2>
+  <div class="lesson-prose">
+  <p>最容易想像的是圖片：一張貓咪的照片，標上「貓」。標籤可以寫在資料夾名稱，也可以寫在檔名。投影片把它比喻成字卡：<strong>正面是題目，翻到背面才印著標準答案</strong>，微調要的就是這種一問一答的成對資料。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 8 頁 · 裁圖</span><button type="button" data-slide="assets/page-8-crop.webp" data-page="8" data-alt="標籤資料像字卡：正面是一張貓咪照片，背面寫著標籤「貓」；下方附 Hugging Face fineweb-c 資料集連結。" aria-label="放大第 8 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-8-crop.webp" width="1484" height="474" alt="標籤資料像字卡：正面是一張貓咪照片，背面寫著標籤「貓」；下方附 Hugging Face fineweb-c 資料集連結。" loading="lazy"><figcaption><b>跟著看：</b>一張字卡等於一筆「題目＋標準答案」。圖中提到資料標註員的遠端工作，說明標註本身已經是一種需要人力的工作。<br><a href="./slides.pdf#page=8" target="_blank" rel="noopener noreferrer">查看完整第 8 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>文字的標籤呢？講者打開 Hugging Face 上的一個資料集。每一筆有資料 ID、文字本身，以及標籤；從標籤大概猜得出這個資料集在評估內容和「教育」的相關程度，用 None、Minimal 等等級表示。隨手點開一筆，是在討論中國電影票房的文章——和教育的相關性就比較低。</p>
+  <p>同一段文字也可以有很多標籤：如果內容是電影，它可能額外被標上「電影」或「動漫」。<strong>資料標註員會讀文字，再依需要的標籤逐筆標註</strong>，常見做法是存成 JSON 這類格式，資料格式之後的課還會再談。</p>
+  </div>
+  <div class="lesson-pause"><span>先把問題留著 · 整理者追問</span><p>如果要你替一批地震相關的文字貼標籤，你會設計哪幾種標籤？兩個標註員看法不同時，要以誰為準？這些決定，最後都會變成模型學到的「標準答案」。</p></div>
+  <p class="lesson-transition">標註要花人力。下一代的 GPT-2，換了一種挑選資料的方式。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 18:20–20:31 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:18:20｜標籤資料與 Hugging Face 資料集</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1100s" target="_blank" rel="noopener noreferrer">00:18:20 ↗</a><br>
+標籤其實就有點像是這樣：假設一張貓咪的照片，你可以把它標成貓，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1118s" target="_blank" rel="noopener noreferrer">00:18:38 ↗</a><br>
+你可以標在你的資料夾名稱，或是標在檔案的名稱。如果是文字會長成怎樣？可以很快的稍微看一下，這邊這個是 Hugging Face 上的某一個資料集，這資料集就是非常亂的資料集，所以它會有資料集的 ID，這個是文字本身，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1148s" target="_blank" rel="noopener noreferrer">00:19:08 ↗</a><br>
+〔這邊是〕標籤，所以大概可以猜到說，這個資料集可能是跟教育這個內容是有關的，所以這邊的相關性，它會用 None、Minimal 或 High 來表示。所以來隨便看一下其中一個文字，這個是在討論中國電影票房，然後討論不同的電影，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1175s" target="_blank" rel="noopener noreferrer">00:19:35 ↗</a><br>
+這跟教育的相關性比較低。後面當然會有一些知識化的格式，所以這個有點像是一個文字的標籤的形式。所以資料的標註員有時候就會看裡面的文字，針對需要的標籤來做標註。一段文字它可能會有非常多不同的標籤：假設這個文字是電影，所以它可能額外的標籤就是電影或是動漫之類的，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1208s" target="_blank" rel="noopener noreferrer">00:20:08 ↗</a><br>
+所以這種是文字的標籤。所以標籤相對就是還蠻簡單的，它可能是用 JSON 檔的格式來做儲存，資料格式我們之後會再去提到。</p></div></details>
+</section>
+
+
+<section id="gpt2" class="lesson-section" data-source-start="1231" data-source-end="1343" data-part="01 · 從 GPT-1 到 GPT-3">
+  <div class="lesson-section-meta">06 · GPT-2 · 2019 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1231s" target="_blank" rel="noopener noreferrer">20:31–22:23 ↗</a></div>
+  <h2>換了一批資料，模型的樣子也會跟著變嗎？</h2>
+  <div class="lesson-prose">
+  <p>GPT-2 把模型和資料一起放大：參數從 1.17 億增加到 15 億；資料換成 800 萬份網路文件，大約 40GB 的文字。</p>
+  <p>這批文字的來源很有意思。它們來自美國論壇 Reddit 上被分享、而且被按過讚的外部連結。講者的解讀是：一則貼文或回覆被很多人按讚，代表有人覺得它值得看。比起書本那種敘述一段故事的資料，<strong>這裡多了一層人的判斷</strong>——模型因此有機會知道哪些資料相對好、哪些相對不好。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 9 頁 · 裁圖</span><button type="button" data-slide="assets/page-9-crop.webp" data-page="9" data-alt="GPT-2 三個數字：15 億參數、800 萬份網路文件約 40GB（WebText）、資料來自 Reddit 上至少 3 karma 的外部連結。" aria-label="放大第 9 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-9-crop.webp" width="1484" height="442" alt="GPT-2 三個數字：15 億參數、800 萬份網路文件約 40GB（WebText）、資料來自 Reddit 上至少 3 karma 的外部連結。" loading="lazy"><figcaption><b>跟著看：</b>三個數字分別回答：模型多大、讀了多少、資料怎麼被挑出來。「3 karma」代表至少有人按過讚，是一種粗略的品質篩選，不是逐篇審查。<br><a href="./slides.pdf#page=9" target="_blank" rel="noopener noreferrer">查看完整第 9 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>講者接著點出一個之後會反覆出現的觀念：<strong>模型吃什麼長大，多少會反映在它後來會做什麼。</strong>他預告稍後會用 Ollama 下載一個中國的千問模型來比較，讓大家親眼看到原始資料如何影響輸出；這個比較在第三段的地端示範中出現。</p>
+  </div>
+  <p class="lesson-transition">把參數和文字量一起放大之後，研究者發現了一個意外的能力：不用任何例子，模型也能做某些任務。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 20:31–22:23 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:20:31｜GPT-2：放大模型與 Reddit 上的資料</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1231s" target="_blank" rel="noopener noreferrer">00:20:31 ↗</a><br>
+到了 GPT-2 之後，〔銜接處辨識不完整〕所以在這個模型上，可以把它的模型給放大：剛剛是 1.17 億個參數，到了 GPT-2 之後就上升到了 15 億個參數，網路的資料就到了 800 萬個，大約有 40GB 的文字。有一些文字是來自於 Reddit 上，Reddit 其實就是一個美國的論壇，所以在 Reddit 上就有點類似……</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1268s" target="_blank" rel="noopener noreferrer">00:21:08 ↗</a><br>
+……所以這邊的文字內容可能非常好：如果有一個回覆也被按了非常多個讚，就代表說這一篇文就是要配這個回覆的。所以到了 GPT-2 之後，就又比 GPT-1 多了一層資料。原本書本的資料，它其實就跟故事一樣，它在敘述一段過程，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1298s" target="_blank" rel="noopener noreferrer">00:21:38 ↗</a><br>
+所以它會有人的介入，模型可以知道哪一個資料相對是好的，哪一個資料相對是不好的。但這種就會取決於說，模型吃什麼長大，多少會反應在它後來會做什麼樣的事情上。這個我們待會可以用 Ollama 去下載一個大陸的千問〔原辨識：籤文〕，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1328s" target="_blank" rel="noopener noreferrer">00:22:08 ↗</a><br>
+我們來用這個模型來去比較一下，你可以很清楚看到說，他們原始資料會影響到他們輸出的結果，這是非常明顯的。</p></div></details>
+</section>
+
+
+<section id="zero-shot" class="lesson-section" data-source-start="1343" data-source-end="1595" data-part="01 · 從 GPT-1 到 GPT-3">
+  <div class="lesson-section-meta">07 · Zero-shot 與第一個示範 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1343s" target="_blank" rel="noopener noreferrer">22:23–26:35 ↗</a></div>
+  <h2>沒給任何例子，模型怎麼知道要做什麼？</h2>
+  <div class="lesson-prose">
+  <p>放大之後出現的能力叫 <strong>Zero-shot（零樣本）</strong>：只給任務，不給示範，模型也能照做。這聽起來像無中生有，其實不是。講者的解釋是：<strong>你給出的文字，喚醒了模型在訓練資料中曾經學過的條件結構。</strong>一個問題若常在訓練資料裡出現，模型就知道「問題後面要接答案」。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 10 頁 · 裁圖</span><button type="button" data-slide="assets/page-10-crop.webp" data-page="10" data-alt="Zero-shot 不是無中生有：提示喚起模型在訓練資料中學過的條件結構，例如問題接答案、英文句子接翻譯、長文接摘要、文字接評論或分類；下方是用川普語氣改寫新聞的示範與 Sakana Chat 連結。" aria-label="放大第 10 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-10-crop.webp" width="1136" height="582" alt="Zero-shot 不是無中生有：提示喚起模型在訓練資料中學過的條件結構，例如問題接答案、英文句子接翻譯、長文接摘要、文字接評論或分類；下方是用川普語氣改寫新聞的示範與 Sakana Chat 連結。" loading="lazy"><figcaption><b>跟著看：</b>中間四組「A 後面接著 B」，都是模型在網路文字裡看過無數次的模式。所以模型能力不只取決於參數量，也取決於訓練資料裡有哪些語言、知識與任務結構。<br><a href="./slides.pdf#page=10" target="_blank" rel="noopener noreferrer">查看完整第 10 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>示範很直接：<strong>請模型用川普的語氣改寫一則台積電的新聞。</strong>川普是美國總統，他的發言大量散播在網路上，幾乎一定在訓練資料裡。講者把思考程度（Effort）調到最低，因為這個任務不需要思考，最低檔跑得最快。</p>
+  <p>他也順帶說明訂閱方案的差別：沒訂閱只能選「思考／不思考」；較便宜的方案可選到 High；他自己的方案可以開到 Pro，一個問題可以跑十分鐘以上。這些是課堂當下的方案，之後可能改變。</p>
+  <p>改寫出來的，就是模型原本資料結構裡的「川普風格」。講者接著提醒：如果要進一步問「川普的風格是哪一種？」，最好叫它<strong>不要上網搜尋</strong>。一旦搜尋，它會去找川普的貼文再整理出一種風格，那就不再是模型本身學到的結構了。</p>
+  </div>
+  <details class="lesson-check"><summary><span>停一下 · 整理者練習</span>為什麼 Zero-shot 對「川普語氣」有效，對你們研究室的內部報告格式卻可能失靈？</summary><p>因為 Zero-shot 靠的是訓練資料裡本來就有的模式。川普的發言在網路上大量出現；你們研究室的內部格式，模型很可能從沒見過，這時就需要給它範例——也就是接下來的 One-shot 與 Few-shot。</p></details>
+  <p class="lesson-transition">示範做到一半，畫面剛好跳出一個大家都見過的選擇題。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 22:23–26:35 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:22:23｜Zero-shot 與川普語氣示範</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1343s" target="_blank" rel="noopener noreferrer">00:22:23 ↗</a><br>
+所以到了 GPT-2 之後，他們把整個參數量還有文字量放大，放大的結果他們發現說，會有一個叫 Zero-shot 的東西。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1358s" target="_blank" rel="noopener noreferrer">00:22:38 ↗</a><br>
+這個文字代表說，你給出一段文字，你有辦法可以喚醒模型在訓練資料中曾經學過的條件結構。例如說你給一個模型一個問題，這個問題可能曾經出現在它以前訓練的資料裡面，所以它就知道說，這個問題後面就是要接答案。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1388s" target="_blank" rel="noopener noreferrer">00:23:08 ↗</a><br>
+所以這邊可以快速給大家一個 demo，就是我們用川普的語氣來改寫一段新聞。川普的語氣絕對在它的訓練資料裡面〔同句重複辨識，略〕。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1418s" target="_blank" rel="noopener noreferrer">00:23:38 ↗</a><br>
+川普是一個美國總統，所以他有大量文字被散播在整個網路世界當中。我們改寫的新聞就可以用今天台積電的新聞來表示，所以我就可以跟它說：請用川普的語氣幫我改寫下面這一段新聞。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1448s" target="_blank" rel="noopener noreferrer">00:24:08 ↗</a><br>
+這個 Effort 要調非常低。我看一下，我新聞有放在這邊。額外補充一下，如果各位有訂閱的話，就是訂閱 GPT，就可以去選思考的程度，這個思考程度就會呼應到……</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1478s" target="_blank" rel="noopener noreferrer">00:24:38 ↗</a><br>
+如果你是 for free 的，你都沒有訂閱的話——我還特地創了一個沒有訂閱的帳號——就會長成這樣，只有分有思考跟沒思考。如果你是訂閱大概 600 多塊的那一個，你的思考應該只到 High；因為我是訂閱 3,000 塊的，所以思考可以到 Pro。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1508s" target="_blank" rel="noopener noreferrer">00:25:08 ↗</a><br>
+如果要丟一個東西去〔思考〕的話，基本上可以跑 10 分鐘以上，所以那個差別會非常大。所以如果你現在還在用免費版的，可以考慮稍微升級一下。但我們今天就只是要去 demo 川普的語氣，所以我們用最低的就好了，最低的它基本上就不需要思考，所以它就可以跑很快。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1548s" target="_blank" rel="noopener noreferrer">00:25:48 ↗</a><br>
+所以這個就是它原本資料結構裡面有的川普的這種風格。那當然可以進一步問它說：請問川普的風格是哪一種風格？這時候可能要叫它不要去網路搜尋了，因為我們需要的是它原本這個模型裡面有的結構。一旦它網路搜尋之後，它就會再去網路上找類似川普的貼文，然後總結收斂出一種風格給我們。</p></div></details>
+</section>
+
+
+<section id="feedback" class="lesson-section" data-source-start="1595" data-source-end="1748" data-part="01 · 從 GPT-1 到 GPT-3">
+  <div class="lesson-section-meta">08 · 一個剛好出現的回饋 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1595s" target="_blank" rel="noopener noreferrer">26:35–29:08 ↗</a></div>
+  <h2>按下「你喜歡哪一個回答」，你其實在做什麼？</h2>
+  <div class="lesson-prose">
+  <p>示範時，ChatGPT 剛好同時給出 A、B 兩個回答，問使用者比較喜歡哪一個。講者說，這種回饋是後訓練的一種方式：<strong>你選了之後，這筆偏好資料會回到 OpenAI 的後台，讓它知道人類偏好哪一種回答。</strong>你等於間接幫模型公司訓練模型。</p>
+  <p>他隨手選了一個，也坦白說有時候兩個很接近、很難選——現在大部分都做得不錯。這個小插曲第三段會再回來：它就是 RLHF（人類回饋強化學習）裡「人類偏好」的來源。</p>
+  </div>
+  <div class="lesson-recap"><span>把這個按鈕放回訓練流程</span><p>你在 A／B 之間選一個 → 偏好資料回到模型公司 → 用於後訓練，讓模型更接近人類喜歡的回答</p></div>
+  <div class="lesson-prose">
+  <p>講者再把 Zero-shot 收一次尾：它只是喚醒模型在訓練資料中學過的條件結構而已。接著他推薦沒有付費訂閱的人試試日本公司 Sakana AI 的對話服務：用 Google 帳號就能登入，他覺得表現可以和 Claude 的 Opus 相比，甚至更好；如果需求是和 AI 對話、釐清想法，這是一個不用付錢的選擇。他提到台灣很少人用，但他一直在追蹤這間公司。</p>
+  </div>
+  <aside class="lesson-correction"><strong>閱讀界線 · 這裡是個人使用經驗</strong><p>Sakana AI 與 Claude、OpenAI 的比較，是講者在課堂當下的個人使用感受；免費與否、版本與表現都可能變動，本筆記沒有另做評測。</p></aside>
+  <p class="lesson-transition">Zero-shot 是只給任務。到了 GPT-3，另一種用法變得很重要：直接在問題裡給例子。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 26:35–29:08 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:26:35｜A/B 回饋與 Sakana AI</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1595s" target="_blank" rel="noopener noreferrer">00:26:35 ↗</a><br>
+對，今天非常的剛好遇到這種 feedback。這種 feedback 是後訓練〔原辨識：後續鏈〕裡面的其中一種方式：在模型端，他們會用 A 跟 B，然後輸出兩種不同〔的回答〕，我相信大家都有遇過，它就會問你說你喜歡哪一個。一旦你選了之後，這個資料集就會回到 OpenAI GPT 的後台，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1628s" target="_blank" rel="noopener noreferrer">00:27:08 ↗</a><br>
+〔讓它知道人類〕偏好哪一種回答，所以你等於間接的幫 OpenAI 在訓練他們的模型。這個就是大家看一看就好了。好，選一個，選這個好了。其實有時候兩個會選不太出來，因為有時候還蠻接近的，現在大部分都做得蠻好的。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1658s" target="_blank" rel="noopener noreferrer">00:27:38 ↗</a><br>
+〔所以 Zero-shot〕就是你其實只是喚醒模型在訓練資料中曾經學過的這種條件結構而已。如果你是沒有付費的，我會〔原辨識：我們還〕建議你可以用 Sakana 的 AI，這是日本的一間公司，然後它的作者就是曾經是〔此處辨識不完整〕……</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1688s" target="_blank" rel="noopener noreferrer">00:28:08 ↗</a><br>
+……就是一個日本人。這個 Sakana 的 AI，我覺得它做得非常好，它前陣子〔原辨識：三年前；待核〕更新過它最新的版本。我覺得你其實只用 Google 登入就好了，原則上可以跟 Opus 類似，就是 Claude〔原辨識：Cloud〕的 Opus，而且它現在好像試用〔原辨識：Trade〕是免費的，甚至我覺得它的表現比 Claude 的 Opus 還要好。所以如果你的需求是有點像對話，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1718s" target="_blank" rel="noopener noreferrer">00:28:38 ↗</a><br>
+然後去釐清說，你現在想要跟 AI 討論東西的話，你可以用 Sakana。台灣很少很少人在用，除非你有用的人你才會知道。但因為這間公司我一直有在追蹤，我其實前陣子有用過他們的模型，那個時候也是比 OpenAI 的表現還要好。所以如果你真的不想付錢，你就可以用 Sakana 的 AI。</p></div></details>
+</section>
+
+
+<section id="few-shot" class="lesson-section" data-source-start="1748" data-source-end="1898" data-part="01 · 從 GPT-1 到 GPT-3">
+  <div class="lesson-section-meta">09 · GPT-3 · 2020 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1748s" target="_blank" rel="noopener noreferrer">29:08–31:38 ↗</a></div>
+  <h2>不改模型，只給幾個例子，為什麼就能改變回答？</h2>
+  <div class="lesson-prose">
+  <p>從 GPT-2 到 GPT-3，訓練過程沒有太大改變，只是文字量和參數量再拉大——參數來到 1,750 億。除了 Zero-shot，GPT-3 讓兩種用法變得明顯：<strong>One-shot</strong> 先給一組輸入與輸出的示範；<strong>Few-shot</strong> 給少數幾組，讓模型自己抓規律。講者說，這兩個對他來說「超級重要」，到現在都還在瘋狂使用。</p>
+  <p>課堂的例子是股市。給模型兩組示範：「全面加徵 25% 進口鋼鐵關稅」→ 大盤下跌；「科技大廠宣布在美擴建新廠，釋出數千個就業機會」→ 大盤上漲。然後問第三題：「與主要貿易夥伴達成歷史性降稅協議」→ ？</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 12 頁 · 裁圖</span><button type="button" data-slide="assets/page-12-crop.webp" data-page="12" data-alt="Few-shot 的寫法：兩組新聞標題與大盤漲跌的對照，最後一題降稅協議留問號；說明這叫 In-context Learning，參數沒有更新。" aria-label="放大第 12 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-12-crop.webp" width="1484" height="550" alt="Few-shot 的寫法：兩組新聞標題與大盤漲跌的對照，最後一題降稅協議留問號；說明這叫 In-context Learning，參數沒有更新。" loading="lazy"><figcaption><b>跟著看：</b>先看兩組「新聞 → 漲或跌」，再看最後一行的問號。模型要做的是從前兩組抓出對照關係，而不是翻出一個背好的答案。<br><a href="./slides.pdf#page=12" target="_blank" rel="noopener noreferrer">查看完整第 12 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>模型會嘗試從第一、二個例子歸納經驗，推論第三個應該長什麼樣。<strong>它從你的文字裡，學到了你想要的東西。</strong></p>
+  <p>關鍵在於：<strong>我們沒有改變模型的任何參數，也沒有微調。</strong>模型訓練完之後，只靠幾個簡單的例子，就改變了它產出的行為。這個過程叫 In-context Learning（上下文學習）：改變的只是這一次輸入的 Context。</p>
+  </div>
+  <p class="lesson-small"><span class="lesson-inline-label">整理者補充</span>例子裡的漲跌只是示範 Few-shot 的格式，不是投資判斷。模型可能照著例子的方向回答「上漲」，但真實市場還受許多例子之外的因素影響。</p>
+  <p class="lesson-transition">說完原理，講者開了一個新對話，實際示範一次 Few-shot 怎麼改寫文章。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 29:08–31:38 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:29:08｜GPT-3：One-shot 與 Few-shot</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1748s" target="_blank" rel="noopener noreferrer">00:29:08 ↗</a><br>
+從 GPT-2 到 GPT-3，它基本上不太去改變〔架構〕，就是不太改變它整個訓練的過程，那它把文字量給拉大，一樣把參數量給拉大，所以在這邊它到了 1,750 億個參數〔原辨識：1750 一個參數〕，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1778s" target="_blank" rel="noopener noreferrer">00:29:38 ↗</a><br>
+它就會變成了一個 zero-shot 的結構，就是你一直給任務，你去喚醒原本的資料結構。到了 GPT-3，就會產生 one-shot 跟 few-shot〔原辨識：fuel shot〕。那 one-shot 跟 few-shot 這個對我來說我覺得超級重要，就是我到現在還是瘋狂的在用 one-shot 跟 few-shot 的這種過程，等一下可以展示給大家看。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1808s" target="_blank" rel="noopener noreferrer">00:30:08 ↗</a><br>
+〔Few-shot 就是〕你只給模型幾個例子。假設川普說全面加徵 25% 的進口鋼鐵關稅，這時候美國的大盤可能會下跌；第二個例子，可能科技大廠宣布在美擴建新廠，釋出千個就業機會，這時候的大盤可能就會上漲。所以你的目標就是去問說……</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1838s" target="_blank" rel="noopener noreferrer">00:30:38 ↗</a><br>
+……所以它會問你：如果〔今天〕達成歷史降稅協議的話，那這是漲還跌？所以 few-shot 的意思就是說，模型的結構會嘗試去推理你第一個例子跟第二個例子，總結這兩個的經驗，來告訴你第三個應該要長怎樣。所以它其實從你的文字當中，它就可以去學習你想要的東西是什麼。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1868s" target="_blank" rel="noopener noreferrer">00:31:08 ↗</a><br>
+我們沒有改變整個模型的任何的參數，我們也沒有微調，我們都沒有。這個模型訓練完之後，我們只用簡單的例子，就可以去改變模型產出的行為。所以這邊也給大家一個很簡單的 demo，開一個新的對話。</p></div></details>
+</section>
+
+
+<section id="style-demo" class="lesson-section" data-source-start="1898" data-source-end="2198" data-part="01 · 從 GPT-1 到 GPT-3">
+  <div class="lesson-section-meta">10 · 示範：換一種新聞文風 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1898s" target="_blank" rel="noopener noreferrer">31:38–36:38 ↗</a></div>
+  <h2>想讓 AI 模仿一種寫法，範例要怎麼給？</h2>
+  <div class="lesson-prose">
+  <p>講者準備了兩篇風格很不一樣的新聞。第一篇是剛才示範過的台積電熊本廠新聞，出自 Yahoo：篇幅短，需要比較誇張的話術吸引讀者。第二篇來自《報導者》：敘述性強，會把整個推理過程交代清楚。</p>
+  <p>他把兩篇文字貼上，請模型「按照報導者新聞的風格，改寫這則新聞」，思考程度一樣開最低。結果可以看到，改寫後出現了很多大標題——回頭看《報導者》的原文，確實有這種大標題。<strong>模型從你給的例子抓出文字風格，再試著模仿、改寫。</strong></p>
+  </div>
+  <div class="lesson-prose">
+  <p>One-shot 與 Few-shot 的用法很多變。講者舉了兩個情境：喜歡某位作者的文字，就把文字擷取下來貼給模型，請它「模仿這位大神的文字，幫我改寫我的文字」；或者給它一張時間訊號圖，告訴它「這是地震」，再問另一張是不是地震。總結只有一句：<strong>一定要給範例。</strong></p>
+  <p>範例怎麼給也有講究。如果用的是聊天模式，盡量給純文字。講者的理由是：給 PDF 的話，模型得先用工具把檔案拆開才讀得到文字；多一個步驟，就多一個出錯的機會，而語言模型本身又是機率式的，很難保證拆檔與讀取時不出錯。所以他的習慣是：<strong>要文字就貼文字，要圖片就貼圖片</strong>，不要貼 PDF、Word 這類需要解析的檔案；真要給檔案，txt 或 md 這種純文字檔對 AI 最友善。</p>
+  </div>
+  <div class="lesson-pause"><span>試著用在自己身上 · 整理者練習</span><p>挑一段你覺得寫得很好的文字，貼給 AI 當範例，再附上你自己的一段草稿請它改寫。比較結果時，先問：它模仿到了哪些特徵？又自己多加了什麼？</p></div>
+  <p class="lesson-transition">Few-shot 很好用，但範例放在對話裡。對話關掉之後，會發生什麼事？</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 31:38–36:38 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:31:38｜報導者風格改寫示範與實用提醒</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1898s" target="_blank" rel="noopener noreferrer">00:31:38 ↗</a><br>
+我拿了兩篇新聞，一樣第一篇是剛才示範過的，就是台積電熊本廠〔原辨識：熊本場〕；第二個新聞我拿報導者的新聞。這兩種的新聞很不一樣，因為 Yahoo 的這種新聞就是比較短一點，然後它需要有比較誇張的話術來吸引群眾；</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=1925s" target="_blank" rel="noopener noreferrer">00:32:05 ↗</a><br>
+〔報導者的〕敘述性會比較強，然後嘗試去把整個推理鏈說明得很清楚。所以今天拿這兩個來去做修正，先把文字貼上來。所以這時候你就可以說：請幫我按照報導者新聞的風格去修改新聞。我要先確定我的標籤是不是對的，這個是報導者，那就報導者就好。一樣開最低，好。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2018s" target="_blank" rel="noopener noreferrer">00:33:38 ↗</a><br>
+所以可以看到，確實報導者會有蠻多這種大標題。如果我們回去看報導者的文章的話，就是會有這種大標題。所以訓練好的模型常常會有這種大標題〔此句待核〕。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2048s" target="_blank" rel="noopener noreferrer">00:34:08 ↗</a><br>
+然後它會嘗試著基於你給的例子——第一個就是報導者的文章，你給它這個文字的風格——然後嘗試讓它去模仿、去改寫。這怎麼那麼長……所以 one-shot 跟 few-shot 就是非常非常的有用。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2078s" target="_blank" rel="noopener noreferrer">00:34:38 ↗</a><br>
+〔如果你喜歡某個人的文字，〕你就可以把他的文字擷取出來，貼到 GPT，跟它說：請你模仿這位大神的文字，幫我改寫我的文字。所以這個就是一個 one-shot 的運用的做法。或是你給它一張圖片，假設我有一張時間訊號圖，你跟它說這是地震，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2108s" target="_blank" rel="noopener noreferrer">00:35:08 ↗</a><br>
+〔再問它〕這個是地震還是不是地震。所以 one-shot 跟 few-shot 的用法其實蠻多變的，但總結而言，就是你一定要給範例。範例最好最好就是直接給它：如果你用的是 chat 的 mode 的話，你盡量給它很純的文字，原因是因為它是語言模型。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2138s" target="_blank" rel="noopener noreferrer">00:35:38 ↗</a><br>
+這個文字如果你給 PDF 檔的話，它需要做什麼事？它需要去用一個工具，來去把 PDF 檔拆開，才能讀到裡面的文字。所以一旦多了一個步驟之後，你也知道語言模型它是一個機率式〔原辨識：紀律師〕的，所以你很難保證它在讀文字的過程當中，或它在拆的過程當中〔不出錯〕。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2168s" target="_blank" rel="noopener noreferrer">00:36:08 ↗</a><br>
+所以我自己很常用的是，我如果要給 one-shot 或 few-shot，我就直接給它最 pure 的東西：你要文字的就貼文字給它，你要圖片的就直接貼圖片給它，不要去貼一些很奇奇怪怪的檔案，像 PDF 檔或 Word 檔〔原辨識：我的檔〕這種它都需要去解析。但相對的，你可以去貼一個 txt 檔或是 md 檔，因為這種檔案對 AI 來講都是最 friendly 的。</p></div></details>
+</section>
+
+
+<section id="context" class="lesson-section" data-source-start="2198" data-source-end="2318" data-part="01 · 從 GPT-1 到 GPT-3">
+  <div class="lesson-section-meta">11 · 上課，還是便利貼 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2198s" target="_blank" rel="noopener noreferrer">36:38–38:38 ↗</a></div>
+  <h2>微調和 In-context Learning，差在哪裡？</h2>
+  <div class="lesson-prose">
+  <p>回到 GPT-1 的微調。微調是<strong>真的改變模型內部的參數</strong>：預訓練先得到一組參數，進入微調時再輕微調整，讓它符合我們準備好的任務，例如問答、算數學、寫程式。</p>
+  <p>In-context Learning 則<strong>完全沒有改變任何參數</strong>。你只是給一個範例，請它盡量模仿你給的風格——講者特別說，這叫模仿，不叫抄襲。所以一旦把對話關掉，那段 Context 就消失了；下次要做同樣的新聞改寫，就得重新貼一次範例。如果不想這麼麻煩，就需要另外把風格萃取出來（講者稱為「蒸餾」），這個之後的課才會說明。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 13 頁 · 裁圖</span><button type="button" data-slide="assets/page-13-crop.webp" data-page="13" data-alt="上課還是便利貼：Fine-tuning 像真的去上課，模型內部參數被修改；In-context Learning 像桌上貼便利貼，參數沒變，對話結束就消失。" aria-label="放大第 13 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-13-crop.webp" width="1484" height="458" alt="上課還是便利貼：Fine-tuning 像真的去上課，模型內部參數被修改；In-context Learning 像桌上貼便利貼，參數沒變，對話結束就消失。" loading="lazy"><figcaption><b>跟著看：</b>左右兩張卡的差別只有一個：參數有沒有被改。便利貼只在這場考試有效。<br><a href="./slides.pdf#page=13" target="_blank" rel="noopener noreferrer">查看完整第 13 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>把 GPT-1、2、3 排在一起看：參數量逐步放大，資料從書籍、到網路文字、再到更大更多元的語料。<strong>真正改變的，是任務被放在哪裡。</strong>GPT-1 把任務寫進微調資料；GPT-2 從大量文字中認出任務形式；GPT-3 直接把指令與範例放進 Context。也因此，你的指令可以改寫整個輸出行為——這就是之後 Prompt Engineering 那麼重要的原因：你的話術，會整個引導模型的產出。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 14 頁 · 裁圖</span><button type="button" data-slide="assets/page-14-crop.webp" data-page="14" data-alt="表格比較 GPT-1、GPT-2、GPT-3 的參數量、資料與任務放在哪裡：微調資料裡、從大量文字認出任務形式、指令與範例直接放進 Context。" aria-label="放大第 14 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-14-crop.webp" width="1484" height="399" alt="表格比較 GPT-1、GPT-2、GPT-3 的參數量、資料與任務放在哪裡：微調資料裡、從大量文字認出任務形式、指令與範例直接放進 Context。" loading="lazy"><figcaption><b>跟著看：</b>最右欄就是第一段的主線：任務從訓練流程，一步步移到我們提供的 Context。<br><a href="./slides.pdf#page=14" target="_blank" rel="noopener noreferrer">查看完整第 14 頁 ↗</a></figcaption></figure>
+  <details class="lesson-check"><summary><span>停一下 · 整理者練習</span>昨天在對話裡給 AI 的範例，今天開新對話還有效嗎？</summary><p>通常沒有。範例只存在於那一次的 Context，模型參數沒有因此改變。要讓它「記得」，得重新提供，或使用平台另外提供的記憶、專案說明等功能——那些功能本質上也是把資料再放回 Context。</p></details>
+  <p class="lesson-transition">從 1、2 到 3，好像模型越大，能力就越好。這個直覺，後來被寫成了一條曲線。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 36:38–38:38 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:36:38｜微調與 In-context Learning</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2198s" target="_blank" rel="noopener noreferrer">00:36:38 ↗</a><br>
+所以在 GPT-1 的時候〔原辨識：在 GPT3 就是 GPT1 的時候〕，我們有一個 fine-tune 的過程。fine-tune 的過程是真的有改變模型內部的參數結構：我們的預訓練會先固定好一組參數，接下來進入到微調的時候，我們會輕微的去調整這個模型的參數，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2225s" target="_blank" rel="noopener noreferrer">00:37:05 ↗</a><br>
+這會去符合我們給它準備好的課題，例如是 QA、算數學、Coding。所以它真的會去改變整個的參數。但到了 In-context learning 的過程當中，完全沒有改變任何的參數。你只是給它一個範例，叫模仿，不能叫抄襲，給它一個範例，請它盡量去模仿你給出來的風格。所以一旦你把對話關掉的時候，那個 context 就消失了。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2259s" target="_blank" rel="noopener noreferrer">00:37:39 ↗</a><br>
+所以你下次要重新再喚起〔原辨識：換起〕——假設新聞改寫的這種過程——你就必須要重新貼給它一個範例。如果你不想這麼麻煩，你就必須要去蒸餾〔原辨識：增六〕、萃取它的風格，這個我們之後才會跟各位說明，現在基本上不太需要。所以從 GPT-1、2、3，你可以看到它的參數量逐步被放大，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2288s" target="_blank" rel="noopener noreferrer">00:38:08 ↗</a><br>
+所以這個〔資料〕原本從書籍，到了網路的文字，再放大到更大的資料庫。所以它有一些指令其實是可以改寫整個輸出的行為，所以這才會回到之後的 prompt engineering，就是為什麼這麼重要，因為你的話術整個會引導 GPT 的產出。所以從 1、2、3，</p></div></details>
+</section>
+
+
+<section id="scaling" class="lesson-section" data-source-start="2318" data-source-end="2446" data-part="01 · 從 GPT-1 到 GPT-3">
+  <div class="lesson-section-meta">12 · Scaling Law 與 Chinchilla <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2318s" target="_blank" rel="noopener noreferrer">38:38–40:46 ↗</a></div>
+  <h2>模型越大越好，這條規律可以一直走下去嗎？</h2>
+  <div class="lesson-prose">
+  <p>2020 年，研究者畫出一條叫 <strong>Scaling Law（規模定律）</strong>的曲線：參數量、資料量與計算量一起放大，模型在訓練時的誤差（loss）就會穩定下降。講者說，從那時起，各家公司都進入了軍備競賽。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 15 頁 · 裁圖</span><button type="button" data-slide="assets/page-15-crop.webp" data-page="15" data-alt="Scaling Law：語言模型的測試損失隨參數量 N、資料量 D、計算量 C 以冪律下降，並附示意曲線與 C≈6×N×D。" aria-label="放大第 15 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-15-crop.webp" width="1488" height="733" alt="Scaling Law：語言模型的測試損失隨參數量 N、資料量 D、計算量 C 以冪律下降，並附示意曲線與 C≈6×N×D。" loading="lazy"><figcaption><b>跟著看：</b>右下的 LOSS 說明最重要：下降的是「預測下一個 Token 的誤差」，不是答案的正確率。先用小模型量出曲線，就能估算「花多少錢、換到多少品質」。<br><a href="./slides.pdf#page=15" target="_blank" rel="noopener noreferrer">查看完整第 15 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>但算力很貴，放大不能只看參數。後來的研究（投影片標示為 2022 年的 Chinchilla）發現：很多大模型其實「吃太少」——參數拚命放大，資料卻沒跟上。一連串實驗得出的經驗法則是：<strong>每 1 個參數，大約配 20 個訓練 Token。</strong>在同樣的計算預算下，吃得夠飽的 70B 模型，可以勝過大它四倍的 280B 模型。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 16 頁 · 裁圖</span><button type="button" data-slide="assets/page-16-crop.webp" data-page="16" data-alt="Chinchilla 2022 的修正：之前參數拚命放大、資料沒跟上；結論是參數與資料等比例，每個參數約配 20 個訓練 Token；70B 勝過 280B。" aria-label="放大第 16 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-16-crop.webp" width="1484" height="473" alt="Chinchilla 2022 的修正：之前參數拚命放大、資料沒跟上；結論是參數與資料等比例，每個參數約配 20 個訓練 Token；70B 勝過 280B。" loading="lazy"><figcaption><b>跟著看：</b>左邊是之前的做法，右邊是修正後的結論。「70B > 280B」比的是同樣計算預算下的表現。<br><a href="./slides.pdf#page=16" target="_blank" rel="noopener noreferrer">查看完整第 16 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>那 Scaling Law 是對的嗎？講者說這有點見仁見智：有人仍然相信它，也有人認為不一定要照著它，也能做出很強的模型。不過對大公司而言，大部分模型仍然遵守 Scaling Law，繼續衝高參數量。投影片把界線寫得更清楚：它是經驗規律，不是物理定律；高品質文字資料有限；想再進步一點，成本要翻好幾倍。<strong>所以這幾年的重心，逐漸從「把預訓練做得更大」，移到後訓練與「回答時多花一點計算」——也就是第三段的推理模型。</strong></p>
+  </div>
+  <aside class="lesson-correction"><strong>閱讀界線 · 「過度擬合」是一種簡化</strong><p>課堂用「參數多、資料少，會過度擬合（overfitting，過度貼合訓練資料）」來說明為什麼要配足資料。Chinchilla 論文的原始問題更精確地說是：在固定的計算預算下，參數量與訓練資料量怎麼分配最划算；它的結論是當時許多大模型「訓練不足」。兩種說法方向一致，但不是同一個論證。</p></aside>
+  <p class="lesson-transition">既然參數量這麼重要，今天看到一個模型的大小，要看哪個數字？答案是兩個。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 38:38–40:46 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:38:38｜Scaling Law 與 Chinchilla</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2318s" target="_blank" rel="noopener noreferrer">00:38:38 ↗</a><br>
+好像我的模型越來越大之後，我的能力越來越好。所以在 2020 年的時候，就有一個曲線叫 scaling law〔原辨識：scaling loss〕，就發現說：我的算力越大的時候，我的模型在訓練過程當中的 loss 越低，相對就會反應出這個模型訓練的成果是越好的。所以從 2020 年開始，所有的公司都導入了軍備競賽。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2348s" target="_blank" rel="noopener noreferrer">00:39:08 ↗</a><br>
+所以當時 Google 有一篇文章〔此句數字辨識不清：原辨識「每一個參數大約有 100 個模型」〕，所以你會有一個更大的模型，他們始終相信〔更大的模型〕能夠換到更好的這種品質的產出。但是因為這個算力實在蠻貴的，在這邊就是會有兩個會影響整個模型〔的因素〕……</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2378s" target="_blank" rel="noopener noreferrer">00:39:38 ↗</a><br>
+所以〔每一個參數〕你必須要配 20 個訓練的 token，因為不然的話，你的資料太少，但是你堆疊了很多的參數，可能會過度的去擬合，就是在 machine learning〔原辨識：machinery〕裡面我們俗稱叫 overfitting，你會過度的去匹配你給的這種輸入的資料。所以當時有做一系列的實驗，得到了大概是 1 比 20，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2408s" target="_blank" rel="noopener noreferrer">00:40:08 ↗</a><br>
+所以這是因為很難去測每一個參數對每一個訓練〔的影響〕。最近就有人討論到，那 scaling law 是對的嗎？就是有一部分人還相信它是對的，有一部分人覺得好像我們不太需要 scaling law 也可以做出類似的很強的這種模型。所以這有點見仁見智，但對大公司而言，他們的模型大部分都還是遵守 Scaling Law 再去衝〔原辨識：充〕他們的整個參數量。</p></div></details>
+</section>
+
+
+<section id="moe" class="lesson-section" data-source-start="2446" data-source-end="2588" data-part="01 · 從 GPT-1 到 GPT-3">
+  <div class="lesson-section-meta">13 · 今日尺度：Dense 與 MoE <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2446s" target="_blank" rel="noopener noreferrer">40:46–43:08 ↗</a></div>
+  <h2>看模型大小，為什麼要看兩個參數數字？</h2>
+  <div class="lesson-prose">
+  <p>現在每個模型通常會公布一個「總參數量」。講者舉例：DeepSeek R1 系列約 1.6 兆；GPT 新世代沒有公布，有人估計在 5 兆到 10 兆之間。但只看總參數不夠，因為模型有兩種不同的結構。</p>
+  <p><strong>Dense（稠密）模型</strong>：每個 Token 都跑完整個模型，總參數就是實際動用的算力。<strong>MoE（Mixture of Experts，混合專家）</strong>：可以想像成一個委員會。你送出一段文字，模型先經過一次分派的計算，決定這段文字交給委員會裡的哪幾位專家；這和上週提到的 Top-K「只保留前幾名」是類似的概念。</p>
+  <p>講者的比喻很生活化：<strong>像去廟裡拜拜。</strong>求身體健康，不確定要拜哪一位神明；求學業進步，大概就找文昌帝君。MoE 每次回覆不需要全體出動，所以「激活參數」會比「總參數」少很多——總參數像知識庫的大小，激活參數才決定這次要花多少算力。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 18 頁 · 裁圖</span><button type="button" data-slide="assets/page-18-crop.webp" data-page="18" data-alt="Dense 與 MoE 比較，以及 DeepSeek R1 系列、Kimi K2.6、Qwen3 235B、Llama 3.1 405B 的總參數、激活參數與架構表。" aria-label="放大第 18 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-18-crop.webp" width="1484" height="767" alt="Dense 與 MoE 比較，以及 DeepSeek R1 系列、Kimi K2.6、Qwen3 235B、Llama 3.1 405B 的總參數、激活參數與架構表。" loading="lazy"><figcaption><b>跟著看：</b>先看上方兩張卡的差別，再對照表中「總參數」與「激活參數」兩欄。表中數字依原投影片，參見下方閱讀界線。<br><a href="./slides.pdf#page=18" target="_blank" rel="noopener noreferrer">查看完整第 18 頁 ↗</a></figcaption></figure>
+  <aside class="lesson-correction"><strong>閱讀界線 · 參數數字請回到官方來源</strong><p>模型版本更新很快，表中數字依投影片呈現，本筆記未逐項查核。例如初版 DeepSeek-R1 在技術報告中公布的是約 6,710 億總參數、約 370 億激活參數，與表中「R1 系列 1.6 兆」不同，可能指的是不同版本。閉源模型的參數量都是外界推估，不是官方數字。</p></aside>
+  <div class="lesson-prose">
+  <p>講完 In-context Learning，講者再強調一次：<strong>和 AI 溝通的文字很重要，因為你可以引導它怎麼產出你要的結果。</strong>投影片上的四件事——任務、範例、限制、預期輸出——這次不用背，之後談 Prompt Engineering 會再說一遍。他也提醒，過去的模型需要寫得很細的提示；現在的模型，往往不需要那麼詳細也能做到類似的事。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 19 頁 · 裁圖</span><button type="button" data-slide="assets/page-19-crop.webp" data-page="19" data-alt="和 AI 溝通時，重要的不是寫得長，而是寫清楚任務、範例、限制與預期輸出四件事。" aria-label="放大第 19 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-19-crop.webp" width="1484" height="390" alt="和 AI 溝通時，重要的不是寫得長，而是寫清楚任務、範例、限制與預期輸出四件事。" loading="lazy"><figcaption><b>跟著看：</b>四欄可以當成寫提示前的檢查表。模型不是看到一篇落落長的作文就被感動，而是從 Context 裡尋找可以延續的模式。<br><a href="./slides.pdf#page=19" target="_blank" rel="noopener noreferrer">查看完整第 19 頁 ↗</a></figcaption></figure>
+  <p class="lesson-transition">第一段說的是模型怎麼長大。可是它讀的那些文字，是直接從網路上抓來的嗎？</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 40:46–43:08 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:40:46｜Dense 與 MoE：看兩個參數數字</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2446s" target="_blank" rel="noopener noreferrer">00:40:46 ↗</a><br>
+所以模型看完了之後，現在如果你看到每一個不同的模型，它基本上會給你一個總參數量。像 DeepSeek〔原辨識：DeepSig〕R1 它是 1.6 兆，那 GPT-5 到 6 沒有公布總參數量，但有人估計大概是 5 兆到 10 兆之間的參數量。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2468s" target="_blank" rel="noopener noreferrer">00:41:08 ↗</a><br>
+這邊就會產生出兩種不同的結構。現在大多數的結構是用 MoE，就是混合專家的模型，你可以把它想像成它是一個委員會。所以當你發出一段文字給語言模型的時候，它會經過一個〔路由〕的計算〔原辨識：出錢的計算〕，來去決定說你這段文字，要發配給委員會的哪幾位專家。所以這個就回到我們上禮拜講的，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2498s" target="_blank" rel="noopener noreferrer">00:41:38 ↗</a><br>
+類似 top-K 的概念，你要選擇每一次的回覆，你要保留幾位專家的意見。Dense 模型就代表它只有一位專家〔此比喻待核：Dense 是每次動用全部參數〕。所以我每次都把它想像成很像拜拜：我們去廟裡面說我要祈求身體健康，但你不知道身體健康到底是要給哪位神明；那你如果要祈求學業進步，那學業進步可能是給文昌帝君〔原辨識：文章地區〕，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2528s" target="_blank" rel="noopener noreferrer">00:42:08 ↗</a><br>
+所以 MoE 是混合專家，它每一次的回覆，它不需要調用全部的人來一起回答，所以它的激活參數量跟總參數量是會有一定的差距。但 Dense 的架構，就是它每一次都一定要調用全部。當學過了 in-context〔原辨識：inconsistency〕之後，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2558s" target="_blank" rel="noopener noreferrer">00:42:38 ↗</a><br>
+和 AI 溝通的文字就會很重要，因為你基本上可以引導 AI 要怎麼樣產出你要的結果。所以這個範例不需要去記，因為到了 prompt engineering 會再跟各位說一遍。prompt engineering 其實是因為像前一代的產品〔需要〕，但到了現在，其實並不需要這麼 detail 的 prompt，可以做到類似的事情。</p></div></details>
+</section>
+
+
+<div class="lesson-part"><p class="lesson-label">第二段 · 43:08–45:48</p><p class="lesson-part-title">網路上的文字，要先清過才能拿來訓練</p><p>模型讀的是整理過的純文字。清理時的每個決定，都在決定它會學到什麼。</p></div>
+<section id="data" class="lesson-section" data-source-start="2588" data-source-end="2748" data-part="02 · 模型吃什麼長大">
+  <div class="lesson-section-meta">14 · 一次最小規模的清理 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2588s" target="_blank" rel="noopener noreferrer">43:08–45:48 ↗</a></div>
+  <h2>網路上的文字，為什麼不能直接拿來訓練？</h2>
+  <div class="lesson-prose">
+  <p>預訓練的資料裡有大量 HTML，也就是網頁的原始格式。直接餵進去不行：要篩選語言、去掉重複、把個資遮起來、刪掉贅字。投影片把它整理成五步。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 21 頁 · 裁圖</span><button type="button" data-slide="assets/page-21-crop.webp" data-page="21" data-alt="預訓練資料清理五步：去標籤、篩語言、去重複、遮個資、去贅句。" aria-label="放大第 21 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-21-crop.webp" width="1484" height="416" alt="預訓練資料清理五步：去標籤、篩語言、去重複、遮個資、去贅句。" loading="lazy"><figcaption><b>跟著看：</b>真實規模大得多，但步驟的種類差不多就是這五類。底下那句是重點：清理的每一個決定，都在決定模型會學到什麼。<br><a href="./slides.pdf#page=21" target="_blank" rel="noopener noreferrer">查看完整第 21 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>講者打開上週的課程筆記網頁當例子。畫面上看起來結構清楚，可是看 HTML 原始碼，文字被一堆標籤語法包住。對機器學習來說，這些都是不需要的文字，第一步就要去掉，只留下純文字，因為模型讀的就是純文字。</p>
+  <p>投影片的例子更小：<code>&lt;p&gt;今天 &lt;b&gt;天氣&lt;/b&gt; 很好！&lt;/p&gt;</code>，真正要留下的只有「今天天氣很好！」。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 22 頁 · 裁圖</span><button type="button" data-slide="assets/page-22-crop.webp" data-page="22" data-alt="程式示範：用 BeautifulSoup 去掉 HTML 標籤得到「今天 天氣 很好！」，再用漢字與假名的數量粗略判斷語言。" aria-label="放大第 22 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-22-crop.webp" width="1480" height="352" alt="程式示範：用 BeautifulSoup 去掉 HTML 標籤得到「今天 天氣 很好！」，再用漢字與假名的數量粗略判斷語言。" loading="lazy"><figcaption><b>跟著看：</b>右邊的輸出就是「今天天氣很好」的例子。左邊判斷語言的做法很粗糙，投影片也提醒：中日夾雜的文件就會被判錯。這份 notebook 在影片中沒有逐行執行。<br><a href="./slides.pdf#page=22" target="_blank" rel="noopener noreferrer">查看完整第 22 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>個資也要遮住，但不一定遮得乾淨。講者舉了一個案例：有人在對話中用「越獄」手法一步步引導，讓 GPT 說出 Microsoft 的產品授權碼——就是安裝正版軟體時那串很複雜的碼。<strong>模型說得出來，代表訓練資料裡有，也代表當時沒有清乾淨。</strong></p>
+  </div>
+  <p class="lesson-small"><span class="lesson-inline-label">整理者補充</span>投影片第 23 頁示範了用 MinHash 找出高度相似的文件（去重複），以及用規則把 Email、卡號、手機號碼換成標記（遮個資），並提醒這只是最基本的一層。影片中這段快速帶過，可<a href="./slides.pdf#page=23" target="_blank" rel="noopener noreferrer">回看第 23 頁</a>。</p>
+  <div class="lesson-pause"><span>回到自己的資料 · 整理者追問</span><p>如果要用自己的研究紀錄或觀測報告訓練模型，哪些欄位算個資？哪些重複的內容會讓模型過度記住同一句話？先列出來，再決定怎麼清理。</p></div>
+  <p class="lesson-transition">資料清理講者說之後還會細談。接下來進入今天最重要的第三段：讓模型把思考的過程寫出來。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 43:08–45:48 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:43:08｜預訓練資料的清理</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2588s" target="_blank" rel="noopener noreferrer">00:43:08 ↗</a><br>
+預訓練〔原辨識：預訓列〕的資料裡面會有很多的 HTML，HTML 就是我們現在的網頁的這種格式。所以可能你需要去篩選語言，你可能要把重複的東西去掉，你需要把個資〔原辨識：各自〕給遮起來，你需要去除掉這一些贅字〔原辨識：罪志〕。所以如果我們開啟一個簡單的 HTML 的格式來看看，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2618s" target="_blank" rel="noopener noreferrer">00:43:38 ↗</a><br>
+這個網頁是長這樣的，基本上這是課堂一的整理的資料。所以你可以知道這個裡面有非常多的結構，但如果你去看 HTML 的話，你就會覺得它其實被一堆 HTML 的語法給包裹住。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2648s" target="_blank" rel="noopener noreferrer">00:44:08 ↗</a><br>
+所以我們對學習來說，對 machine learning 來說，這些都是不需要的文字。所以在第一步的資料清除的過程當中，其實我們就需要把這些東西都給去除掉，只保留我們需要的這些純文字〔原辨識：存文字〕的部分，因為模型〔原辨識：原模型〕它基本上就是讀這些純文字。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2678s" target="_blank" rel="noopener noreferrer">00:44:38 ↗</a><br>
+所以它原則上會有幾個過程，但這是簡化的啦，所以這邊就很快的帶過。就有點像我的文字其實就是「今天天氣很好」，但你如果在 HTML，你可能就會包裹住 HTML 的這些格式，那這些格式就需要被去除掉。那當然就是你在訓練過程中，你需要去遮住個資〔原辨識：掉個資〕，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2708s" target="_blank" rel="noopener noreferrer">00:45:08 ↗</a><br>
+就是個資〔原辨識：各自〕不見得會被遮住。之前有一個案例是，有人在跟 GPT 對話裡面，他使用越獄的手法，慢慢的去引導出 GPT 說出 Microsoft 的授權碼。就有點像我們安裝 Microsoft，如果是正版，它會給你一個非常複雜的碼。所以你就可以知道說，當時在訓練過程當中，它一定是沒有清乾淨。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2738s" target="_blank" rel="noopener noreferrer">00:45:38 ↗</a><br>
+所以這個就是我們在整個訓練的文字的資料庫裡面〔要處理的事〕，所以這個我們到〔後面〕那邊我們會再跟各位說。</p></div></details>
+</section>
+
+
+<div class="lesson-part"><p class="lesson-label">第三段 · 45:48–01:14:20</p><p class="lesson-part-title">Chain-of-Thought 與推理模型</p><p>先把「一步一步想」當成一種問法，再看它怎麼被訓練進模型，最後用地端模型實際觀察它的內心戲。</p></div>
+<section id="cot" class="lesson-section" data-source-start="2748" data-source-end="2918" data-part="03 · 讓 AI 把過程寫出來">
+  <div class="lesson-section-meta">15 · Chain-of-Thought <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2748s" target="_blank" rel="noopener noreferrer">45:48–48:38 ↗</a></div>
+  <h2>多寫幾個中間步驟，模型就變聰明了嗎？</h2>
+  <div class="lesson-prose">
+  <p>先看一題：<strong>商品原價 1,000 元，先打八折，再加上折後價格 5% 的稅金，最後是多少？</strong>直接回答是 840 元——答案對了，但我們不知道它怎麼算的。展開步驟則是：</p>
+  </div>
+  <div class="lesson-recap"><span>一步一步算</span><p>1,000 × 0.8 = 800 → 800 × 0.05 = 40 → 800 + 40 = 840</p></div>
+  <div class="lesson-prose">
+  <p>一步一步算、最後才得到答案，這個精神就是 <strong>Chain-of-Thought（思維鏈，簡稱 CoT）</strong>。沒有 CoT，模型直接給答案；加了 CoT，問題和答案之間多了幾個推理步驟。</p>
+  <p>講者特別強調：<strong>Chain-of-Thought 不是新的模型架構。</strong>它只是在 prompt 裡讓模型多寫幾個中間步驟。模型仍然在預測下一個 Token，只是多了一些可以用來計算、檢查與延續的 Token。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 26 頁 · 裁圖</span><button type="button" data-slide="assets/page-26-crop.webp" data-page="26" data-alt="Chain-of-Thought 不是新的模型架構：原本是問題直接到答案，加上 CoT 後，問題與答案之間多了兩個中間步驟；模型仍然在預測下一個 Token。" aria-label="放大第 26 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-26-crop.webp" width="1028" height="517" alt="Chain-of-Thought 不是新的模型架構：原本是問題直接到答案，加上 CoT 後，問題與答案之間多了兩個中間步驟；模型仍然在預測下一個 Token。" loading="lazy"><figcaption><b>跟著看：</b>比較上下兩列就好：多出來的只是紅色的中間步驟，Transformer 本身沒有多出任何零件。最下面那句說得準確——發了一張計算紙，不代表不會算錯。<br><a href="./slides.pdf#page=26" target="_blank" rel="noopener noreferrer">查看完整第 26 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>這又呼應了前面的主題：你怎麼跟 AI 對話非常重要，因為你可以引導它怎麼思考。講者說，他始終相信不同的人用 AI 會有完全不同的結果；很多人覺得「你會用 AI、我也會用 AI，有什麼了不起」，但實際上差很多。</p>
+  <p>當時還流行一個「都市傳說」：問題打完之後，再多加一句 <em>Let's think step by step</em>。講者記得大約是 GPT-4 前後的事。當時的 AI 沒那麼聰明，還出現各種奇招，像是「你做得好我給你一千塊」「做不好我會被指導老師罵」；很多人驗證後發現真的有用，還有文章把這些說法整理成表格。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 27 頁 · 裁圖</span><button type="button" data-slide="assets/page-27-crop.webp" data-page="27" data-alt="Zero-shot CoT：最初的做法是先給一個完整的推理示範；後來發現只在問題後加一句 Let&#x27;s think step by step 也行。" aria-label="放大第 27 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-27-crop.webp" width="1494" height="462" alt="Zero-shot CoT：最初的做法是先給一個完整的推理示範；後來發現只在問題後加一句 Let&#x27;s think step by step 也行。" loading="lazy"><figcaption><b>跟著看：</b>左邊是先給示範、再讓模型模仿同樣的回答結構；右邊是只加一句話。投影片說得保守：這「也可能」提升大型模型在部分多步驟任務上的表現。<br><a href="./slides.pdf#page=27" target="_blank" rel="noopener noreferrer">查看完整第 27 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>但這些很快就過時了。<strong>Chain-of-Thought 不是萬用咒語</strong>；說穿了，就是用語言去引導 AI 而已。投影片給了一個簡單的判斷標準：這一題，你自己會不會想拿紙筆算一下？計算、規劃、比較多個條件、多步驟判斷值得展開；知識查詢、翻譯、格式轉換只需要一句答案，硬要長篇推理只會更慢、更長。</p>
+  </div>
+  <p class="lesson-small"><span class="lesson-inline-label">整理者補充</span>投影片引用的兩篇研究：Wei 等人（2022）提出以示範引導的 Chain-of-Thought；Kojima 等人（2022）發現只加「Let's think step by step」的 Zero-shot CoT。所以論文出現的時間比課堂回憶的 GPT-4 更早一些。</p>
+  <p class="lesson-transition">這麼簡單的方法，效果又這麼明顯。後來的模型公司乾脆把它直接訓練進模型裡。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 45:48–48:38 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:45:48｜Chain-of-Thought：多寫出中間步驟</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2748s" target="_blank" rel="noopener noreferrer">00:45:48 ↗</a><br>
+所以第三個就是很重要的思考的過程。如果這邊有一個簡單的問題，可能商品原價 1,000 元，打 8 折，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2768s" target="_blank" rel="noopener noreferrer">00:46:08 ↗</a><br>
+〔再加上稅金，〕就是一步一步的去計算，最後再得到答案，這個精神其實就是 Chain of Thought〔原辨識：train of soul〕。如果不用 Chain of Thought，其實模型就是直接回答。所以 Chain of Thought 不是一個模型新的架構，它其實只是在 prompt 裡面讓模型多了幾個中間的步驟。所以如果不加 Chain of Thought 的話，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2795s" target="_blank" rel="noopener noreferrer">00:46:35 ↗</a><br>
+單純就是問題，最後會返回答案；但加了 Chain-of-Thought 之後，就會有問題，中間會多了幾個步驟，這個步驟就是推理的步驟，最後就會有答案。所以從這邊就可以再次呼應前面，就是你跟 AI 怎樣對話非常的重要，因為你完全可以引導 AI 怎樣去思考，那怎麼樣去給出你要的東西。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2826s" target="_blank" rel="noopener noreferrer">00:47:06 ↗</a><br>
+所以我始終相信，不同人用 AI 絕對會有完全不同的結果。雖然很多人說「你用 AI，我也會用 AI，這有什麼了不起的」，我跟你講，差超多的，真的會差非常多。所以在當時就會有一個都市傳說：〔問題〕打完之後你就要再多打一句，就是 Let's think step by step。這個我記得是 GPT 大概 4 左右的時候的都市傳說。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2858s" target="_blank" rel="noopener noreferrer">00:47:38 ↗</a><br>
+都市傳說很多，因為那個時候的 AI 還沒有那麼聰明，你可能還需要 PUA 它，你可能還需要說「你做得好的話我給你一千塊」，或是「你做不好的話我會被我指導老師罵」，有沒有？這種很奇怪的都是當時的都市傳說。很多人去驗證之後就發現說，這個很有用耶。當時有好幾篇文章就把這些東西整理成 table。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2888s" target="_blank" rel="noopener noreferrer">00:48:08 ↗</a><br>
+但那個很快就過時了。Chain of Thought〔原辨識：Channel soul〕不是一個萬用的咒語，但其實主要的過程，就是你要嘗試用語言去引導 AI 而已，它其實很簡單。但是這麼簡單的東西大家覺得很厲害，所以後來的模型原則上就會把……</p></div></details>
+</section>
+
+
+<section id="post-training" class="lesson-section" data-source-start="2918" data-source-end="3068" data-part="03 · 讓 AI 把過程寫出來">
+  <div class="lesson-section-meta">16 · 從用法變成模型 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2918s" target="_blank" rel="noopener noreferrer">48:38–51:08 ↗</a></div>
+  <h2>把「一步一步想」訓練進模型，要靠什麼？</h2>
+  <div class="lesson-prose">
+  <p>把 Chain-of-Thought 的核心概念訓練進模型，訓練出來的就叫 <strong>Reasoning Model（推理模型）</strong>。它的訓練資料裡多了推理的過程，讓模型學會相對應的回答方式。講者說，這是在大家發現「引導步驟會讓 AI 能力大爆發」之後才出現的。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 30 頁 · 裁圖</span><button type="button" data-slide="assets/page-30-crop.webp" data-page="30" data-alt="表格比較 Chain-of-Thought 與 Reasoning Model：核心概念、是否需要特定模型、主要改變與推論時間；並註明 o1 與 DeepSeek-R1 都以大規模強化學習培養推理能力。" aria-label="放大第 30 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-30-crop.webp" width="1484" height="531" alt="表格比較 Chain-of-Thought 與 Reasoning Model：核心概念、是否需要特定模型、主要改變與推論時間；並註明 o1 與 DeepSeek-R1 都以大規模強化學習培養推理能力。" loading="lazy"><figcaption><b>跟著看：</b>一句話記：CoT 是一種用法，任何語言模型都可以試；Reasoning Model 是一種模型，改變的是訓練方式與推論行為。最下方提醒：它們依然逐步生成 Token。<br><a href="./slides.pdf#page=30" target="_blank" rel="noopener noreferrer">查看完整第 30 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>從那之後，訓練進入<strong>後訓練</strong>的階段。GPT-1 的第二階段只是微調——餵一些問答、一些特定任務，稍微調整參數。後訓練則有三種主要方法：</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 32 頁 · 裁圖</span><button type="button" data-slide="assets/page-32-crop.webp" data-page="32" data-alt="後訓練三種方法：SFT 監督微調用標準示範答案，RL 強化學習用分數與對錯獎勵，RLHF 人類回饋用人類的偏好排序；通常先 SFT 打底，再 RL 或 RLHF。" aria-label="放大第 32 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-32-crop.webp" width="1484" height="531" alt="後訓練三種方法：SFT 監督微調用標準示範答案，RL 強化學習用分數與對錯獎勵，RLHF 人類回饋用人類的偏好排序；通常先 SFT 打底，再 RL 或 RLHF。" loading="lazy"><figcaption><b>跟著看：</b>看中間的「訓練訊號」欄：示範、成績、偏好。最右欄把它翻成老師的比喻。<br><a href="./slides.pdf#page=32" target="_blank" rel="noopener noreferrer">查看完整第 32 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p><strong>SFT（監督式微調）</strong>：有問題、有標準答案，像老師示範怎麼解題——就像剛才那題折扣計算，一步一步示範怎麼得到答案。<strong>RL（強化學習）</strong>：有獎勵機制，做題目、自己對答案，答對加一分、答錯扣一分，讓 AI 自主地去解題。<strong>RLHF（人類回饋強化學習）</strong>：由人決定獎勵訊號，也就是人類對回答的偏好——<strong>正是前面示範時那個 A／B 選擇</strong>：你說 A 比 B 好，資料回到 OpenAI，它就知道人類偏好哪一種。</p>
+  <p>這三種可以混著用，不一定哪一種比較好。講者說，模型公司也還在研究、還在收斂應該用什麼順序執行。</p>
+  </div>
+  <details class="lesson-check"><summary><span>停一下 · 整理者練習</span>「後訓練」和「微調」是同一件事嗎？</summary><p>不完全是。投影片第 31 頁的說法是：後訓練是一個階段，指預訓練之後整段讓模型聽得懂指令、守規範、會推理的流程；微調是一種手段，指更新權重的具體技術，是後訓練的主要工具，也能單獨拿來做客製化。</p></details>
+  <p class="lesson-transition">有了推理模型之後，模型的能力發生了什麼變化？講者拿出一張「智商表」。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 48:38–51:08 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:48:38｜Reasoning Model 與後訓練三種方法</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2918s" target="_blank" rel="noopener noreferrer">00:48:38 ↗</a><br>
+……這個核心概念訓練進模型裡面，所以訓練出來的 model，我們就會叫它 reasoning 的 model。所以 reasoning 的 model，它其實資料集裡面會多了幾個推理的過程，原因是因為它需要讓模型去學會相對應的回答的機制。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2948s" target="_blank" rel="noopener noreferrer">00:49:08 ↗</a><br>
+所以這個項目是在 Chain of Thought 之後才出現的，因為大家發現說這個引導的步驟，整個會讓 AI 的能力爆噴。從那次之後，就會進入到後訓練的階段。原本 GPT-1 只是微調，就是餵〔原辨識：微〕一些 QA、餵一些特別任務，讓模型去微調它的參數，但到了 Chain of Thought 之後，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=2978s" target="_blank" rel="noopener noreferrer">00:49:38 ↗</a><br>
+〔後訓練的第一種〕就是 SFT，監督式的微調。監督式微調它就有問題，然後有標準答案，所以這有點像是老師示範怎麼解題，就像我們剛剛那個數學題一樣，老師示範說我們要怎麼樣一步一步的得到答案。那第二個就是強化學習，強化學習就有獎勵機制，就是做題目，然後看答案，自己對答案：你答對的話你就加一分，你答錯的話就扣一分。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3008s" target="_blank" rel="noopener noreferrer">00:50:08 ↗</a><br>
+所以這個可以讓 AI 自主的去進行。所以有了獎勵機制之後，大家整個 AI 就會開始去解題。〔第三種，〕這個對或錯是由人去決定獎勵的訊號，剛才選的就是 RLHF，就是人類對回答偏好的程度。就像我們剛有一個 A/B，〔你〕就會說 A 比 B 好，或者是你喜歡哪一個，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3038s" target="_blank" rel="noopener noreferrer">00:50:38 ↗</a><br>
+我們剛選的，〔會〕回到 OpenAI 的資料庫裡面，它就會知道說人類偏好 A 還是 B。所以後訓練基本上有三種方法，就是這三種，但這三種可以混著去使用，不見得用哪一種比較好。現在整個模型公司也還在做研究，還在收斂說應該用什麼樣的順序來去執行。</p></div></details>
+</section>
+
+
+<section id="iq" class="lesson-section" data-source-start="3068" data-source-end="3158" data-part="03 · 讓 AI 把過程寫出來">
+  <div class="lesson-section-meta">17 · GPT-4 到 o1 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3068s" target="_blank" rel="noopener noreferrer">51:08–52:38 ↗</a></div>
+  <h2>模型學會「思考」之後，變得多聰明？</h2>
+  <div class="lesson-prose">
+  <p>一開始的 GPT-4 沒有思考；到了 o1，模型開始學會思考。講者把思考形容成語言模型的<strong>「內心戲」</strong>：它先自言自語，說完了，再告訴你答案可能是什麼。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 33 頁 · 裁圖</span><button type="button" data-slide="assets/page-33-crop.webp" data-page="33" data-alt="GPT-4 看世界、o1 學思考：Context Window 等於輸入、推理（內心戲）加上輸出；GPT-4 擴展多模態輸入，o1 在輸出前加入隱藏的思考。" aria-label="放大第 33 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-33-crop.webp" width="1525" height="676" alt="GPT-4 看世界、o1 學思考：Context Window 等於輸入、推理（內心戲）加上輸出；GPT-4 擴展多模態輸入，o1 在輸出前加入隱藏的思考。" loading="lazy"><figcaption><b>跟著看：</b>上方那行公式值得記住：推理的內心戲也佔用 Context。兩個方向同時演化——輸入更廣，輸出前的思考更深。<br><a href="./slides.pdf#page=33" target="_blank" rel="noopener noreferrer">查看完整第 33 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>會思考之後，就有了 AI 的「IQ 表」。講者說，2024 年的模型分數普遍偏低；o1 出現後，整體開始往右移；從今年六、七月到九月，右邊「整個大爆發」，現在許多模型的分數都在 110、120、130 以上。他的結論很直接：模型原則上比我們聰明，如果用得不好，真的要想想是我們哪裡用錯了。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 34 頁 · 裁圖</span><button type="button" data-slide="assets/page-34-crop.webp" data-page="34" data-alt="AI IQ Test 圖表：以常態分布曲線呈現多個模型的測驗分數，分數為最近 7 次測驗平均，題庫離線、不在訓練資料中。" aria-label="放大第 34 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-34-crop.webp" width="1470" height="723" alt="AI IQ Test 圖表：以常態分布曲線呈現多個模型的測驗分數，分數為最近 7 次測驗平均，題庫離線、不在訓練資料中。" loading="lazy"><figcaption><b>跟著看：</b>看各模型標記落在曲線右側多遠。這是課堂當下截圖的社群網站數據，分數會隨時間更新。<br><a href="./slides.pdf#page=34" target="_blank" rel="noopener noreferrer">查看完整第 34 頁 ↗</a></figcaption></figure>
+  <aside class="lesson-correction"><strong>閱讀界線 · IQ 分數只是一種量法</strong><p>這個「智商」來自特定測驗網站，衡量的是模型在一組推理題上的表現，並不等於模型在你的專業問題上一定比人可靠。下一節講者就會談到：分數很高的模型，用起來仍可能很笨。</p></aside>
+  <p class="lesson-transition">有聰明的表，自然就有「笨蛋的表」。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 51:08–52:38 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:51:08｜GPT-4 到 o1，以及 AI IQ 表</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3068s" target="_blank" rel="noopener noreferrer">00:51:08 ↗</a><br>
+所以在這個順序的時候，一開始 GPT-4 是沒有思考的，到了 o1 的時候就開始學會了思考。思考其實就是語言模型的內心戲〔原辨識：內心系〕，就是它會自己去自言自語，自言自語完了之後，它就會告訴你說答案可能是什麼。所以會思考之後，就會有這個 IQ 的 table。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3098s" target="_blank" rel="noopener noreferrer">00:51:38 ↗</a><br>
+這就是我們今天要來做的一個比較精彩的〔部分〕。尤其從今年度開始，這邊會有一個 IQ 的 history〔原辨識：black history〕，可以看到 2024 年，模型原則上都處於一個弱智的狀態，但有了 o1，你可以看 o1 出來之後，整個模型的能力開始有點慢慢的往右邊移動。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3128s" target="_blank" rel="noopener noreferrer">00:52:08 ↗</a><br>
+你可以看從 7 月過後，6 月、7 月、8 月、9 月，你發現說右邊整個大爆噴，現在的模型的智商幾乎都是 120 以上，110、120、130，原則上每個模型都比我們聰明。所以如果 AI 用得沒有很好，真的要思考是我們哪個地方用錯了，因為它們這麼聰明，</p></div></details>
+</section>
+
+
+<section id="stupid-meter" class="lesson-section" data-source-start="3158" data-source-end="3306" data-part="03 · 讓 AI 把過程寫出來">
+  <div class="lesson-section-meta">18 · Stupid Meter <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3158s" target="_blank" rel="noopener noreferrer">52:38–55:06 ↗</a></div>
+  <h2>分數這麼高，為什麼用起來還是會覺得笨？</h2>
+  <div class="lesson-prose">
+  <p>Stupid Meter 是社群做的即時看板，想回答一個問題：你用 AI，真的有想像中厲害嗎？前一張表上有模型分數高達 130、140，實際用起來卻常讓人覺得「怎麼會這麼笨」。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 35 頁 · 裁圖</span><button type="button" data-slide="assets/page-35-crop.webp" data-page="35" data-alt="Stupid Meter 即時看板截圖：以分數、波動與退化事件，追蹤各模型表現的變化。" aria-label="放大第 35 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-35-crop.webp" width="1466" height="732" alt="Stupid Meter 即時看板截圖：以分數、波動與退化事件，追蹤各模型表現的變化。" loading="lazy"><figcaption><b>跟著看：</b>看的是「變化」而不是單一分數：同一個模型，在不同時間可能被量到表現下降。<br><a href="./slides.pdf#page=35" target="_blank" rel="noopener noreferrer">查看完整第 35 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>講者提出幾個可能的原因。<strong>第一，有點像掛羊頭賣狗肉：</strong>你選的是一個很聰明的模型，但你怎麼確定用到的就是它？使用者太多、機器不夠時，供應商有可能改給你一個比較省算力的版本。<strong>第二，回答被截斷：</strong>模型本來可以回一千字，卻只允許它回一百字——一千字和一百字，哪個比較能把理論解釋清楚？</p>
+  <p>這對拿雲端模型做產品的人是個大問題：模型一下聰明、一下笨，很難固定出一個完整的輸出格式。講者也分享自己的觀察：有些新模型剛推出時超級聰明，過一陣子就開始變笨，他認為這和全世界算力不足有關；訂閱的額度也越來越快撞到上限。</p>
+  </div>
+  <aside class="lesson-correction"><strong>閱讀界線 · 原因是推測，不是查證結果</strong><p>「供應商換成較弱的版本」「算力不足導致變笨」是講者依使用經驗提出的可能原因，本筆記沒有證據證實特定廠商這樣做。可以確定的是：輸出長度限制、系統負載與版本更新，都可能讓同一個服務的表現前後不一致。</p></aside>
+  <p class="lesson-transition">與其猜雲端模型在想什麼，不如打開一個自己電腦上的模型，直接看它的內心戲。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 52:38–55:06 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:52:38｜Stupid Meter：模型為什麼時好時壞</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3158s" target="_blank" rel="noopener noreferrer">00:52:38 ↗</a><br>
+〔用得〕不好其實都是使用者的錯。所以有聰明的表，自然而然就會有笨蛋的表。笨蛋的表在說什麼呢？原則上是在說，你使用 AI 有沒有你想像中的這麼厲害。你前面看有一些智商高達 130 幾、140，但你用起來你就會覺得說：不是啊，它怎麼會這麼笨？</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3188s" target="_blank" rel="noopener noreferrer">00:53:08 ↗</a><br>
+〔這背後有幾個〕原因，其中一個原因就是有點像掛羊頭賣狗肉：你雖然選的是一個非常聰明的模型，但你怎麼知道你用的是一個非常聰明的模型？模型的供應商有可能給你一個比較笨的，原因是因為背後的算力不足：我現在有太多的使用者要使用這個模型了，但我現在沒有多餘的機器來去承載這個模型，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3218s" target="_blank" rel="noopener noreferrer">00:53:38 ↗</a><br>
+〔所以給你〕比較笨的，它有可能就不需要這麼多的算力。第二個原因，也有可能是在模型回覆的過程當中，我把它截斷了。原本這個模型很厲害〔原辨識：很搞味〕，它可以回 1,000 字，但你今天只允許模型回 100 個字。1,000 字要解釋一個理論比較清楚，還是 100 個字要解釋一個理論比較清楚？當然是你有越長的輸出〔越清楚〕。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3245s" target="_blank" rel="noopener noreferrer">00:54:05 ↗</a><br>
+所以，有時候模型變笨，可能是它輸出被截斷，當然還有很多很多其他的原因。所以這個也是，如果使用雲端模型來做你的產品的時候，會遇到一個很大的問題，就是你的模型一下聰明一下笨，一下聰明一下笨，你沒有辦法固定一個很完整的格式。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3272s" target="_blank" rel="noopener noreferrer">00:54:32 ↗</a><br>
+就像前陣子 GPT-6 的〔名稱辨識不清：Ostrata〕出來之後，超級聰明，但是一個禮拜過後，它就開始變笨〔原辨識：編本〕了。然後 Opus 也是，Opus 5 出來之後很聰明，但現在 Opus 原則上就有點智障，就真的跟白痴〔原辨識：百詞〕一樣。所以這都是因為算力不足的關係。所以現在使用訂閱，其實你會發現額度越來越少，很快其實就撞到上限，這也是呼應全世界的算力還是非常的不夠。</p></div></details>
+</section>
+
+
+<section id="local-demo" class="lesson-section" data-source-start="3306" data-source-end="3545" data-part="03 · 讓 AI 把過程寫出來">
+  <div class="lesson-section-meta">19 · 示範：打開地端模型 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3306s" target="_blank" rel="noopener noreferrer">55:06–59:05 ↗</a></div>
+  <h2>看得到模型的內心戲，就知道它想對了嗎？</h2>
+  <div class="lesson-prose">
+  <p>講者用 Ollama 在自己的 Mac 上打開地端模型；從後面的對話看，這次用的是第 06 節預告過的千問（Qwen）。這個版本針對 Mac 最佳化（MLX），跑起來比較快。先把思考程度調高，然後問一個很台灣的問題：<strong>「如果我在台北飲料都喝半糖，請問我到台南之後，飲料要選什麼樣的甜度？」</strong>這算是一種都市傳說：南部喝得比較甜。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 36 頁 · 裁圖</span><button type="button" data-slide="assets/page-36-crop.webp" data-page="36" data-alt="投影片列出打開地端模型時的觀察清單：拆成哪些步驟、有沒有猶豫或改變解法、推理與答案是否一致、推理完整是否就正確、換成一般模型差在哪；並附台南半糖的示範說明。" aria-label="放大第 36 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-36-crop.webp" width="1484" height="467" alt="投影片列出打開地端模型時的觀察清單：拆成哪些步驟、有沒有猶豫或改變解法、推理與答案是否一致、推理完整是否就正確、換成一般模型差在哪；並附台南半糖的示範說明。" loading="lazy"><figcaption><b>跟著看：</b>右邊五個問題就是看內心戲的方法。左下方寫的是投影片準備時的一次結果；直播中的這次示範走向很不一樣，請以影片為準。最下面的提醒很重要：「內心戲」是比喻，看到的是模型生成的推理軌跡。<br><a href="./slides.pdf#page=36" target="_blank" rel="noopener noreferrer">查看完整第 36 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>講者先提醒一件怪事：模型思考時用中文還是英文，完全說不準。前一次測試它全程用中文自言自語，之前問的時候卻轉成英文。</p>
+  <p>接著內心戲開始失控。它想到「台南比較熱，人比較有禮貌」——完全岔題；再來是「台南人比較慢活、嘴甜，所以多喝半糖」；後來甚至跑去想義大利要吃什麼。思維鏈停不下來，講者只好把它截斷。<strong>思考鏈這麼長，正是因為它根本不知道答案，只能一直掰出各式各樣的說法。</strong></p>
+  <p>講者的解讀是：這說明它的訓練資料裡根本沒有這種知識，所以它不知道要用什麼邏輯推理。<strong>推理模型的幻覺，也可能就是在推理的過程中產生的。</strong>如果原本的訓練資料裡沒有類似的東西，硬要它推出答案，它就會像剛才那樣，連自己在做什麼都不知道。</p>
+  </div>
+  <details class="lesson-check"><summary><span>停一下 · 整理者練習</span>如果模型最後給了一個「看起來合理」的答案，你要怎麼判斷它是知道，還是在掰？</summary><p>先看推理的起點是不是事實：它說「南部比較甜」是從哪裡來的？再看步驟之間有沒有跳躍或岔題，最後找一個不靠模型的來源核對——例如實際店家的甜度標示，或在地人的經驗。</p></details>
+  <p class="lesson-transition">講者把思考程度調低，同一題再問一次。這次，他要大家看的不只是答案，還有模型說服人的方式。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 55:06–59:05 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:55:06｜地端模型示範：台南的飲料甜度</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3306s" target="_blank" rel="noopener noreferrer">00:55:06 ↗</a><br>
+接下來我們就來打開地端的語言模型，拉到這邊。這邊有兩個，都是 3.8〔待核〕，後面有 MLX 的這個。這個模型有對 Mac 的版本進行優化，對 Mac 的電腦進行優化，所以它在 Mac 上跑起來會比較快。所以它一開始載入這個模型會需要一段時間。那先設定讓它變聰明一點。好，我們現在來使用這個問題好了：</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3365s" target="_blank" rel="noopener noreferrer">00:56:05 ↗</a><br>
+如果我在台北飲料都喝半糖，請問我到台南之後，我的飲料要選什麼樣的甜度？這就是一個……算都市傳說嗎？就是南部喝比較甜嗎？所以我們現在來試看看，它會不會答對。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3393s" target="_blank" rel="noopener noreferrer">00:56:33 ↗</a><br>
+你知道有時候這個語言很怪，你完全不知道它什麼時候會英文、有時候會中文。就我前面測試的時候，它明明都是在思考、自言自語的時候，完全都是用中文，但我之前問的時候，它又轉成了英文。所以你看它思考過程當中，它就會想非常多，什麼台南比較熱……</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3428s" target="_blank" rel="noopener noreferrer">00:57:08 ↗</a><br>
+「台南比較熱，人比較有禮貌」——完全岔題〔原辨識：插題〕，它已經完全有點混亂了，開始有點胡言亂語了。這是不是地獄梗？你可以知道它思考鏈非常長，原因是因為它根本不知道答案，所以它一直不斷的去掰各式各樣的結果。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3458s" target="_blank" rel="noopener noreferrer">00:57:38 ↗</a><br>
+「〔辨識不清〕古都，台南人比較慢活，嘴甜」——有嗎？「嘴甜多喝半糖」，它已經開始發瘋了。所以這個完全就說明它訓練資料根本沒有這個東西，所以它其實不知道用什麼樣的邏輯去做推理，所以它原則上只能夠……不對，它已經完全〔失控〕了〔原辨識：剔削〕。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3485s" target="_blank" rel="noopener noreferrer">00:58:05 ↗</a><br>
+也許是因為它已經完全〔失控〕了〔原辨識：Kiss out〕，〔要去〕制止它了。它這個思維鏈〔原辨識：試位鏈〕不會停，原因是因為……它去義大利吃什麼？關義大利什麼事啊？你知道它已經瘋了，所以我們把它截斷。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3511s" target="_blank" rel="noopener noreferrer">00:58:31 ↗</a><br>
+所以有時候，推理模型的幻覺也可能是從它推理的時候來的。所以推理模型不見得回答出來的答案就是對的：如果它原本訓練資料的結構裡面沒有類似的東西，你要讓它強行去推理出答案出來，就如同各位剛看到的，它根本不知道它在幹嘛。所以我今天先把上面的東西給清掉，</p></div></details>
+</section>
+
+
+<section id="persuasion" class="lesson-section" data-source-start="3545" data-source-end="3791" data-part="03 · 讓 AI 把過程寫出來">
+  <div class="lesson-section-meta">20 · 同一題，再問一次 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3545s" target="_blank" rel="noopener noreferrer">59:05–01:03:11 ↗</a></div>
+  <h2>一段讀起來很合理的回答，為什麼還需要領域專家？</h2>
+  <div class="lesson-prose">
+  <p>思考程度調低後重問，模型回到簡體中文作答。從內容可以完全看出它的訓練資料裡沒有這一題——它根本不知道有這種現象，連口感感受都是自己掰出來的。結論就是：它不知道。</p>
+  <p>講者順便解釋一個常見的困擾：AI 產生的文字有時很難讀，滿是井號、星號和直線。<strong>那其實是 Markdown 語法</strong>，本質上是純文字；轉成排版後，就變成標題和表格。從這些輸出也能推測，模型的訓練資料裡應該有大量 Markdown 檔案與這種呈現結構——又一次呼應「模型吃什麼長大」。</p>
+  </div>
+  <div class="lesson-prose">
+  <p>接著他只在問題裡多加了幾個字，思維鏈就完全換了一套：從地理與文化視角、甜度標準、個人口味、消費者習慣，一路談到健康。但答案其實還是不知道。</p>
+  <p>問題在於：<strong>如果你不了解台灣的飲料文化，看了這些敘述，會覺得好像蠻合理的。</strong>這就是為什麼有人說 AI 需要領域專家（domain expert）來判斷答案。模型能把文字接龍接得完全符合統計上的邏輯，讀起來非常順，結果卻可能是錯的——即使用了思維鏈也一樣。</p>
+  <p>講者也指出它說服人的方式：先建議「跟台南的店員可能要大方加糖」，又轉到健康視角，說其實喝飲料就是要健康、半糖或微糖就好。它已經不管對錯，只是開大絕，要你相信它。</p>
+  </div>
+  <div class="lesson-recap"><span>把這個示範接回上週</span><p>流暢 ≠ 合理 ≠ 真實：接龍接得順，只證明統計上接得下去；是否真實，要回到可靠的資料與懂行的人</p></div>
+  <div class="lesson-pause"><span>換成你的領域 · 整理者追問</span><p>想一個你很熟、但網路上資料不多的問題，拿去問 AI。它的回答裡，哪一句是外行人最容易被說服、但你一眼就知道有問題的？</p></div>
+  <p class="lesson-transition">換一個模型呢？講者接著打開 Google 的 Gemma。</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 59:05–01:03:11 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>00:59:05｜同一題再問：Markdown 與說服力</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3545s" target="_blank" rel="noopener noreferrer">00:59:05 ↗</a><br>
+我讓它變笨一點好了，就不要那麼聰明。好，那我們再問一次同樣的問題。欸，這是回到簡中。所以你從上面你可以完完全全的看到，它的訓練資料沒有這一題，因為它根本就不知道可能有這種現象存在。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3578s" target="_blank" rel="noopener noreferrer">00:59:38 ↗</a><br>
+所以它裡面所有的東西都是掰出來的，自己又掰出了口感感受。所以結論就是它不知道。如果回過頭來看 AI 產生的文字，你會發現說，有時候 AI 產生的文字非常的難讀，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3608s" target="_blank" rel="noopener noreferrer">01:00:08 ↗</a><br>
+那這種的文字結構，其實是 Markdown〔原辨識：Muddown〕的語法。我可以貼到這邊給各位看一下，這其實是 Markdown 的語法，這個還是純文字，你把它轉過去，兩個表格對照你就知道了。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3638s" target="_blank" rel="noopener noreferrer">01:00:38 ↗</a><br>
+所以它後來就會變成這種的呈現方式，所以這兩種是不太一樣的。所以從語言模型的輸出，你大概可以知道說，它們在訓練的資料集裡面，應該有很多這種 MD 的檔案，以及這種資料呈現的結構。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3665s" target="_blank" rel="noopener noreferrer">01:01:05 ↗</a><br>
+用另外一種方式來看：如果你只加了幾個字之後，你就會發現說，它的整個思維鏈又完全不一樣了。它先從地理跟文化的視角、從甜度的標準、從個人口味、從消費者習慣、從健康……</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3698s" target="_blank" rel="noopener noreferrer">01:01:38 ↗</a><br>
+所以它其實還是不知道答案，就是代表說它的訓練結構真的是沒有這個東西。可是如果你是不知道台灣有這種文化背景的人，你看了這些敘述之後，你會覺得好像蠻合理的。所以這就回過頭來……</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3728s" target="_blank" rel="noopener noreferrer">01:02:08 ↗</a><br>
+為什麼有些人說 AI 需要 domain expert〔原辨識：Domain Asper〕來去 judge 它的答案，原因就在這：因為它可以把接龍接得非常的符合整個統計上的邏輯，文字讀起來會非常的順暢，但是結果可能是錯的，即使你用了思維鏈還是一樣。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3758s" target="_blank" rel="noopener noreferrer">01:02:38 ↗</a><br>
+〔它會〕嘗試去說服你。所以如果你是一個不知道的人，你看了之後你會覺得說這蠻有道理的：「我要〔跟〕台南的店員〔說〕可能要大方加糖」，這種都是……你看它的健康視角，關注健康，有沒有？嘗試說服你說其實喝飲料就是要健康，對，半糖或微糖。它已經不管了，它開大絕，就是要去說服你說：相信我。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3785s" target="_blank" rel="noopener noreferrer">01:03:05 ↗</a><br>
+所以它現在就開始在〔推理〕，在它的結構裡面，沒有這筆訓練資料的。</p></div></details>
+</section>
+
+
+<section id="gemma" class="lesson-section" data-source-start="3791" data-source-end="4118" data-part="03 · 讓 AI 把過程寫出來">
+  <div class="lesson-section-meta">21 · 換模型、換思考程度 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3791s" target="_blank" rel="noopener noreferrer">01:03:11–01:08:38 ↗</a></div>
+  <h2>同一題換一個模型、換一個思考程度，會差多少？</h2>
+  <div class="lesson-prose">
+  <p>換成 Google 出的 Gemma，一樣先設定起始狀態，再貼上同一題。講者猜測 Gemma 的思維鏈大多用英文；至於有些中文模型為什麼也會用英文思考，他的猜法是：千問（Qwen）可能從 Claude 蒸餾了很多，所以學到不少 Claude 的用法——他有時甚至會打開千問，看它怎麼思考，藉此反推 Claude 的思維鏈。</p>
+  <p>Gemma 的表現聰明許多，雖然還是夾雜一些奇怪的字——講者說這沒辦法，接龍過程中總會有些糟糕的地方。它建議：連鎖品牌照樣點半糖；在地小店可以點三分或五分糖。講者坦白說自己也不知道正確答案，但至少它抓到了台灣「南甜北鹹」的說法。</p>
+  <p>把 Gemma 的思考程度調高再問一次，它的思考變得更長、面向更廣，從生理、味覺、味覺平衡三個維度分析，還提到台南飲食的甜鹹交織。<strong>答案其實還是一樣，但思考的面向與深度不同。</strong>講者提醒：如果一直只用免費模型，可能體會不到現在的模型有多聰明；AI 的表現幾乎每週都在變，去年的印象不一定適用於今天。</p>
+  </div>
+  <div class="lesson-prose">
+  <p>最後換一題偏專業的問題：<strong>「請問我要如何量化地震的風險？」</strong>Gemma 想得比較長；切到千問問同一題，思維鏈大概只有兩行。講者的解釋是：這類議題的文字結構與概念結構，在訓練資料裡本來就非常多，模型幾乎不必思考就能回答。<strong>思考長短，反映的也是訓練資料的樣子；而人的使用方式，會非常重要。</strong></p>
+  </div>
+  <aside class="lesson-correction"><strong>閱讀界線 · 模型之間的「蒸餾」是講者的猜測</strong><p>「千問蒸餾 Claude 最多」是講者自己的推測，課堂中也明說是猜的，本筆記沒有證據支持或否定。這個示範想說明的是：不同模型、不同思考程度，會走出不同的推理路線。</p></aside>
+  <details class="lesson-check"><summary><span>停一下 · 整理者練習</span>思考程度開到最高，一定比較好嗎？</summary><p>不一定。它能擴大思考的面向，但下一節會看到，簡單的任務開到最高反而可能想太多。更根本的是：如果訓練資料裡沒有相關知識，想得再久也可能只是更長的猜測。</p></details>
+  <p class="lesson-transition">看完兩個模型、兩種思考程度，最後回到一個問題：推理越長，就越正確嗎？</p>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 01:03:11–01:08:38 · 1 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>01:03:11｜換成 Gemma：思考程度與專業題</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3791s" target="_blank" rel="noopener noreferrer">01:03:11 ↗</a><br>
+我們現在來看另外一個，Gemma，這個是 Google 所出的這個模型，先把問題貼過來。一樣先給它一個起始的狀態。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3818s" target="_blank" rel="noopener noreferrer">01:03:38 ↗</a><br>
+因為 Google 訓練它的思維鏈一定是英文。為什麼中文〔的模型〕有時候〔思考是〕英文呢？我自己猜啦，因為千問〔原辨識：簽文〕是蒸餾〔原辨識：增六〕Claude〔原辨識：Cloud〕最多的一個模型，所以它在蒸餾 Claude 的過程當中，它會學很多 Claude 的用法。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3845s" target="_blank" rel="noopener noreferrer">01:04:05 ↗</a><br>
+所以有時候我如果要嘗試去反推 Claude 的思維鏈，我就會打開千問的模型，就是 Qwen〔原辨識：Queen〕的模型，來去看一下說它怎麼去思考這個問題，然後來去大致上去推，可能就是 Claude 的模型它們是怎麼做的。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3868s" target="_blank" rel="noopener noreferrer">01:04:28 ↗</a><br>
+好，所以回過頭來，Gemma 就非常的聰明，但是你知道它還是有一些奇奇怪怪的字。那這個沒有辦法，因為可能在接龍的過程當中，它總是會有一些糟糕〔原辨識：糾糕〕的地方。它說如果你是連鎖品牌的話，照樣點半糖——這個我不知道答案，所以如果有知道答案的各位可以說一下——如果你是在地小店，你應該要點三分糖或五分糖。對，所以它大概就知道台灣的南甜北鹹的規則。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3912s" target="_blank" rel="noopener noreferrer">01:05:12 ↗</a><br>
+所以如果你把它調到〔原辨識：回到〕更聰明一點，用一樣的問題，它思考的長度就相對的會變得更長一點，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3938s" target="_blank" rel="noopener noreferrer">01:05:38 ↗</a><br>
+它會想要讓它自己的想法變得更長一點，所以它思考的面向就會相對的比較廣一點。這就〔從〕三個維度來分析：生理、味覺、味覺平衡。所以你看，思考的長度有差。因為第二個，台南的飲食是甜鹹交織〔原辨識：甜鹹膠質〕……</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3968s" target="_blank" rel="noopener noreferrer">01:06:08 ↗</a><br>
+所以它這個模型的訓練過程當中其實還蠻強的。對，所以答案其實還是一樣。所以思考的就是，你開 low 或開 high 或開更強，它思考的面向其實會不一樣，相對它會思考的更深入一點。所以一樣，如果你還是用免費模型的話，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=3995s" target="_blank" rel="noopener noreferrer">01:06:35 ↗</a><br>
+你會沒有辦法去體會說現在的模型到底有多聰明。而且從剛才的 IQ 的表，你可以很清楚的看到說，大概從 7 月、8 月、9 月，那個智商原則上就是一路爆噴。所以如果你現在對 AI 覺得說 AI 就是會有問題，那你這個印象如果是去年到現在都沒有改變，那 AI 的印象原則上是每個禮拜都在改變。所以或許現在你在用，你會有完全不同的感覺。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4029s" target="_blank" rel="noopener noreferrer">01:07:09 ↗</a><br>
+剛才是看到一個很 minor 的例子。所以如果你再給它一個偏專業知識的〔問題〕，假設：請問我要如何去量化地震的風險？</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4058s" target="_blank" rel="noopener noreferrer">01:07:38 ↗</a><br>
+對，不同的模型會有不同的表現。因為 Gemma 它就會想的比較長一點；如果你切到千問去問同樣的一題的話，它基本上的思維鏈大概就是兩行。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4088s" target="_blank" rel="noopener noreferrer">01:08:08 ↗</a><br>
+〔因為這個〕議題的文字結構，或這種議題的概念結構，在它原本的訓練資料裡面就有非常多，所以它幾乎可以不需要去思考，就回答類似的問題。所以這個就是思維鏈的過程，所以人的使用方式會非常的重要。</p></div></details>
+</section>
+
+
+<section id="limits" class="lesson-section" data-source-start="4118" data-source-end="4460" data-part="03 · 讓 AI 把過程寫出來">
+  <div class="lesson-section-meta">22 · 推理的界線與查核 <a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4118s" target="_blank" rel="noopener noreferrer">01:08:38–01:14:20 ↗</a></div>
+  <h2>推理寫得越長，就越可以相信嗎？</h2>
+  <div class="lesson-prose">
+  <p>講者先把示範收尾：我們可以直接看到模型猜了哪些步驟、怎麼推理；但如果訓練資料裡沒有類似的東西，模型再怎麼推理也不一定有答案——除非把資料帶進來重新推理，這就是之後會談的 RAG（先檢索資料、再生成回答的做法）。</p>
+  <p><strong>所以，推理越長就一定越正確嗎？不會。</strong>剛才千問整個失控，根本不知道自己在說什麼。一開始的假設如果錯了，後面每一步都會跟著錯。這又回到上週的 next token prediction：模型一個 Token、一個 Token 地輸出，每個 Token 再接回輸入，產生下一個。最前面的 Token 如果機率「滾」到一個很壞的字，後面就會一路接錯。</p>
+  <p>內心戲也完全一樣。模型出廠時被設定了一段內心戲的過程，但這段過程同樣遵循 Transformer 的 next token prediction，一個字一個字地輸出；等模型判斷「思考完成」，才回頭整理這段思考，再告訴你它的想法。</p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 37 頁 · 裁圖</span><button type="button" data-slide="assets/page-37-crop.webp" data-page="37" data-alt="推理越長就一定越正確嗎？列出五種失敗模式：一開始的假設錯了後面跟著走偏、在簡單問題上過度思考、產生看似合理但無關的步驟、推理流暢但答案錯誤、為錯誤答案補上有說服力的說明。" aria-label="放大第 37 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-37-crop.webp" width="1214" height="514" alt="推理越長就一定越正確嗎？列出五種失敗模式：一開始的假設錯了後面跟著走偏、在簡單問題上過度思考、產生看似合理但無關的步驟、推理流暢但答案錯誤、為錯誤答案補上有說服力的說明。" loading="lazy"><figcaption><b>跟著看：</b>五種失敗模式，前面的示範幾乎都看到了。中間那句比喻很好記：寫滿整張計算紙，只能證明筆很努力。<br><a href="./slides.pdf#page=37" target="_blank" rel="noopener noreferrer">查看完整第 37 頁 ↗</a></figcaption></figure>
+  <div class="lesson-prose">
+  <p>簡單問題反而容易想太多，而「簡單」很難定義。講者舉自己的例子：寫學術文章，對人來說很難，對語言模型來說卻極度簡單。只是要把一篇英文文章的文法改通順，他都開最低的思考程度；開到最高，模型會 overthinking，給出非常複雜、辭藻華麗的結構，寫出來連他自己都看不太懂——但學術文章其實只需要相對簡單、邏輯通順的英文。</p>
+  <p>所以推理需要多方檢核：要知道 AI 的查證來源，也可以用不同模型交叉測試，因為一個模型不一定是對的。<strong>可見的推理，不等於真正的透明。</strong></p>
+  </div>
+  <figure class="lesson-figure"><div class="lesson-figure-top"><span>課堂原圖 · PDF 第 38 頁 · 裁圖</span><button type="button" data-slide="assets/page-38-crop.webp" data-page="38" data-alt="可見的推理不等於真正透明：Chain-of-Thought 本身也是模型生成的文字，看到推理後還要檢查步驟是否符合事實、前後有無矛盾、計算能否重算、引用是否存在、改一個條件推論是否跟著變；下方附 Karpathy 影片導讀連結。" aria-label="放大第 38 頁投影片">放大閱讀 ↗</button></div><img src="assets/page-38-crop.webp" width="1206" height="636" alt="可見的推理不等於真正透明：Chain-of-Thought 本身也是模型生成的文字，看到推理後還要檢查步驟是否符合事實、前後有無矛盾、計算能否重算、引用是否存在、改一個條件推論是否跟著變；下方附 Karpathy 影片導讀連結。" loading="lazy"><figcaption><b>跟著看：</b>五個檢查問題可以直接拿去用。最後一句是本堂的收尾：推理讓我們多了一個可以觀察的對象，但查核責任沒有消失。<br><a href="./slides.pdf#page=38" target="_blank" rel="noopener noreferrer">查看完整第 38 頁 ↗</a></figcaption></figure>
+  <details class="lesson-check"><summary><span>讀完試著說說看 · 整理者練習</span>你能用自己的話，把「GPT-1 到推理模型」這條路串起來嗎？</summary><p>可以這樣串：GPT-1 先用大量無標籤文字預訓練，再用有標籤的資料微調；GPT-2 放大模型與資料，出現了 Zero-shot；GPT-3 再放大，讓我們能直接在 Context 裡給指令和範例（In-context Learning），任務於是從訓練流程移到了我們手上。Scaling Law 描述放大的好處與界線，重心因此轉向後訓練與推論時的計算；Chain-of-Thought 先是一種問法，後來透過 SFT、RL、RLHF 被訓練進模型，成為推理模型。</p><p>但一路走來，模型仍然在預測下一個 Token。推理寫得再長，也可能從錯的假設出發；看得到過程，不代表可以省掉查核。</p></details>
+  <div class="lesson-prose">
+  <p>下課前，講者補充兩份延伸資料：一是上週 Grok 團隊三天直播的完整紀錄，內容很細；二是想更完整理解 LLM 的人，可以看 Andrej Karpathy 去年錄的三個半小時影片，他把它整理成有標題與導讀的文字版。講者笑說，這也可以順便測試自己的專注力有沒有被短影音影響——如果能沉下心一次看完，代表注意力還蠻集中的。</p>
+  </div>
+  <details class="lesson-source"><summary>核對這一段的逐字稿 · 01:08:38–01:14:20 · 2 個小標</summary><div class="lesson-source-content"><p class="lesson-small">以下取自本週整理逐字稿：語音辨識後補上標點、改正明顯誤辨的專有名詞，無法確定處以〔〕標記；不是人工逐秒校稿。時間連到 YouTube 直播，正文的銜接與練習不包含在此。</p><h3>01:08:38｜推理越長越正確嗎？</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4118s" target="_blank" rel="noopener noreferrer">01:08:38 ↗</a><br>
+〔句首辨識不完整〕……所以這個就會回到我們之後的 Prompt Engineering。所以回過頭來呢，你應該會直接看到說，它猜的哪一些步驟，然後它怎麼樣去做推理的。如果在它訓練的資料裡面沒有類似的東西的話，那模型再怎麼推理，也不見得會有答案。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4148s" target="_blank" rel="noopener noreferrer">01:09:08 ↗</a><br>
+〔除非把資料帶〕進來重新去做推理，所以這個就回到後面我們會提到的，像 RAG〔原辨識：Rank〕的這個東西。所以推理的越長就一定越正確嗎？不會。就你剛剛看到千問〔原辨識：Cream〕剛剛整個失控〔原辨識：Key 笑〕，它根本也不知道它在說什麼。所以一開始的假設如果是錯的，後面每一步其實都是錯的，這就回到我們上禮拜說的</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4178s" target="_blank" rel="noopener noreferrer">01:09:38 ↗</a><br>
+next token prediction 的概念：因為它本來就是一個 token、一個 token 不斷的 print 出來之後，那個 token 再接回到 input，再產生下一個 token。所以在最前面的 token，它如果那個機率滾到一個很壞的字的時候，它在後面原則上就會開始接錯〔原辨識：接觸〕。所以內心戲的部分其實完全一樣，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4208s" target="_blank" rel="noopener noreferrer">01:10:08 ↗</a><br>
+只是它們在模型出廠的過程當中，會設定一段內心戲的過程。這個過程其實完全是遵照 Transformer 的 next token prediction，它還是一個字、一個字的輸出。等到模型覺得「我的 thinking 是 done 了」之後，它就會回過頭來去整理它 thinking 這段過程的文字，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4238s" target="_blank" rel="noopener noreferrer">01:10:38 ↗</a><br>
+告訴使用者說我的想法是如何。所以在簡單的問題，有可能容易過度思考。簡單的問題非常難定義：假設你要寫一篇學術文章的話，這種文字的撰寫，我們的想像是非常難的，但對語言模型來說，這個是簡單問題，而且極度簡單。所以如果你要去改寫一篇英文文章的〔文法〕，</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4268s" target="_blank" rel="noopener noreferrer">01:11:08 ↗</a><br>
+你要讓它文法合理的話，我自己都開最低的那個程度就可以解決。你如果開到最高呢，它會 overthinking。所以 overthinking 呢，它有可能會針對你的文字，給予非常複雜、辭藻華麗〔原辨識：遲早華麗〕的結構。我之前試過非常多次，就是寫出來的連我自己都有點看不太懂，因為有時候學術文章其實就是相對簡單的英文，邏輯通順〔就好〕。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4298s" target="_blank" rel="noopener noreferrer">01:11:38 ↗</a><br>
+它就會 overthinking，所以有時候產生會看似合理，但實際是完全沒有關係的，這個剛才各位也都看到了。所以推理這個東西，就是要多方的去檢核，你必須要知道 AI 的查證的來源。當然你也可以用不同的模型做交叉的測試，因為不見得一個模型〔就是對的〕。</p><h3>01:12:08｜延伸資料與下課</h3><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4328s" target="_blank" rel="noopener noreferrer">01:12:08 ↗</a><br>
+所以當然，可見的推理不等於真正的透明。所以這邊有一個東西需要補充一下：這邊是上禮拜 Grok 的活動，我是有把三天的紀錄全部放在這，這個很細，這個可能會看不完。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4358s" target="_blank" rel="noopener noreferrer">01:12:38 ↗</a><br>
+如果有興趣的人可以自己去看。針對這兩堂課，如果你覺得你想更完全的去理解 LLM 的話，你可以看這一份檔案。這份檔案它是很有名的 Andrej Karpathy〔原辨識：NG KABATO〕，他在去年所錄的影片，這影片有三個半小時，非常非常長，那我把它轉成有點像一個主要的文字，就是一個 title</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4388s" target="_blank" rel="noopener noreferrer">01:13:08 ↗</a><br>
+然後文字的導讀〔原辨識：導度〕。所以這個也可以順便測試一下，各位自己的腦袋有沒有受短影音〔原辨識：端隱隱〕所污染，因為這個不是一般人一天一次可以看得完的。如果你可以沉下心來一次把內容看完的話，就代表說你的腦袋其實沒有受短影音所污染，你的注意力的集中程度還蠻高的。</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4418s" target="_blank" rel="noopener noreferrer">01:13:38 ↗</a><br>
+今天大概就到這邊，我們今天從 GPT-1 到 GPT-3，然後也拆解了 Reasoning 的這個 model。所以如果你覺得內容有用的話，你可以一樣 Buy Me a Coffee，但它需要用街口支付〔原辨識：接口支付〕去掃描它。好，所以有人有想要討論什麼問題嗎？還是沒有？</p><p><a href="https://www.youtube.com/watch?v=u2-M1ab8RGE&amp;t=4448s" target="_blank" rel="noopener noreferrer">01:14:08 ↗</a><br>
+到這邊結束囉，好，謝謝各位。〔聽眾：〕謝謝阿明，感謝。</p></div></details>
+  <div class="lesson-end"><p>這堂讀完，可以用一份長一點的導讀，把兩週的內容接起來。</p><a href="https://geomingical.github.io/knowledge-library/2025_karpathy/index.html" target="_blank" rel="noopener noreferrer">開啟 Karpathy 影片導讀 ↗</a><p class="lesson-small">連結取自投影片第 38 頁。本頁的原圖與示範描述不會執行任何模型；自己重跑示範時，結果可能與直播不同。</p></div>
+</section>
+
+
+<section id="reading-notes" class="lesson-section lesson-notes">
+  <h2>來源與閱讀說明</h2>
+  <p>本筆記依 Week 2 直播的逐字稿順序整理，涵蓋 YouTube 直播 06:08 至結尾（01:14:20）。直播開始前的片頭音樂未納入。完整內容請回到<a href="https://www.youtube.com/live/u2-M1ab8RGE" target="_blank" rel="noopener noreferrer">影片</a>或逐字稿。</p>
+  <p>時間與連結：逐字稿由本機錄影辨識而來。本機錄影比 YouTube 直播早 4 分 52 秒開始，所以頁面上的時間都已換算成 YouTube 時間。換算依據是兩個檔案的長度差，並用五個可辨認的片段（回顧、Transformer、stage 2、Zero-shot、Sakana）交叉比對。逐字稿段落時間是每段約 30 秒的起點，不是逐句對時；誤差大約數秒。</p>
+  <p>逐字稿：原始逐字稿有數段辨識失敗，包括重複迴圈、把背景音樂辨識成歌詞、句子被截斷等，約佔十幾分鐘。這些段落已用另一個辨識模型重新處理補上。整理時補了標點；明顯誤辨的專有名詞已改正並以〔原辨識：…〕標示，例如 GBT→GPT、train of soul→Chain of Thought。仍無法確定的地方以〔…〕或「待核」標記，全文未經人工逐秒校稿。</p>
+  <p>正文依來源重寫，銜接句、追問與練習由整理者新增，並非直播中的示範。課中的新聞、產品方案、模型比較、IQ 分數與「模型變笨」的原因，都保留課堂當時的語境與講者觀點；本筆記未逐項查核，也不當成已驗證的現況。外部技術補充另以「整理者補充」或「閱讀界線」標示。</p>
+  <p>投影片：26 張 PDF 裁圖保留原內容，只裁去頁首、頁尾與 QR code；各圖都可放大，或開啟完整原頁。封面、三張章節頁，以及第 6、11、17、23、25、28、29、31、39 頁沒有單獨成圖，內容併入正文。其中第 23、29 頁的 notebook 程式碼，以及第 28、31 頁的部分說明，影片中沒有逐頁講解；正文引用時已標明出自投影片。原圖內的重字或排版問題可能存在。</p>
+  <div class="lesson-links"><a href="./transcript.md" target="_blank" rel="noopener noreferrer">完整整理逐字稿</a><a href="./transcript-raw.md" target="_blank" rel="noopener noreferrer">原始辨識文字</a><a href="./slides.pdf" target="_blank" rel="noopener noreferrer">課堂 PDF</a><button id="preview-comments" type="button">預覽閱讀回饋</button></div>
+  <p class="lesson-small">可選取文字留下評論，再預覽與複製回饋。評論只保存在目前瀏覽器，不會自動傳送。樣式沿用 Week 1 課程筆記；<a href="../../THIRD_PARTY_NOTICES.txt" target="_blank" rel="noopener noreferrer">html-visualizer 第三方聲明</a>。</p>
+</section>
+</main></div>
+<footer class="foot"><span>AI × Earth Education · Week 2 課程筆記</span><a href="#lesson-main">回到正文 ↑</a></footer>
+</div>
+<dialog id="slide-dialog" class="lesson-image-dialog" aria-labelledby="slide-dialog-title"><div class="lesson-dialog-head"><strong id="slide-dialog-title">投影片裁圖</strong><button id="close-slide" type="button">關閉</button></div><p class="lesson-small">窄螢幕可在圖內左右滑動，查看原尺寸文字。</p><div class="lesson-image-scroll" tabindex="0" role="region" aria-label="放大的投影片，可水平捲動"><img id="slide-large" alt=""></div><a id="slide-original" target="_blank" rel="noopener noreferrer">開啟完整 PDF 原頁 ↗</a></dialog>
+<dialog id="export-dialog" class="ae-export-dialog" aria-labelledby="export-title"><h3 id="export-title">批註匯出預覽</h3><p id="export-status">先確認內容，再複製或下載。這不會自動送出給任何人。</p><textarea id="export-text" aria-label="批註匯出文字" readonly></textarea><div class="ae-export-actions"><button type="button" id="export-copy">複製文字</button><button type="button" id="export-download">下載文字檔</button><button type="button" id="export-close">關閉</button></div></dialog>    <style>
+      .vt-comment-trigger {
+        position: fixed;
+        z-index: 9998;
+        background: var(--paper);
+        border: 1.5px solid var(--clay);
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 12px;
+        color: var(--clay);
+        font-family: var(--mono);
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+        display: none;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.15s;
+      }
+      .vt-comment-trigger:hover {
+        background: var(--clay);
+        color: var(--paper);
+      }
+      .vt-comment-popup {
+        position: fixed;
+        z-index: 9999;
+        background: var(--paper);
+        border: 1.5px solid var(--g300);
+        border-radius: 12px;
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.15);
+        padding: 14px 16px;
+        width: 340px;
+        display: none;
+      }
+      .vt-comment-popup .quote {
+        background: var(--g100);
+        border-left: 3px solid var(--clay);
+        padding: 8px 10px;
+        font-size: 12.5px;
+        color: var(--g700);
+        line-height: 1.45;
+        margin-bottom: 10px;
+        max-height: 80px;
+        overflow-y: auto;
+      }
+      .vt-comment-popup textarea {
+        width: 100%;
+        border: 1.5px solid var(--g300);
+        border-radius: 8px;
+        padding: 8px 10px;
+        font-size: 13px;
+        font-family: var(--sans);
+        resize: vertical;
+        min-height: 60px;
+        color: var(--slate);
+        box-sizing: border-box;
+      }
+      .vt-comment-popup textarea:focus {
+        outline: none;
+        border-color: var(--clay);
+      }
+      .vt-comment-popup .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 11.5px;
+      }
+      .vt-comment-popup .hint {
+        color: var(--g500);
+        font-family: var(--mono);
+      }
+      .vt-comment-popup button.send {
+        background: var(--clay);
+        color: var(--paper);
+        border: none;
+        border-radius: 8px;
+        padding: 6px 14px;
+        font-size: 12.5px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .vt-comment-popup button.send:hover {
+        background: var(--clay-d);
+      }
+      .vt-comment-popup button.cancel {
+        background: transparent;
+        border: 1px solid var(--g300);
+        color: var(--g500);
+        border-radius: 8px;
+        padding: 6px 12px;
+        font-size: 12.5px;
+        cursor: pointer;
+        margin-right: 8px;
+      }
+      mark.vt-comment-mark {
+        background: var(--oat);
+        padding: 0 2px;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      mark.vt-comment-mark:hover {
+        background: #c7d2fe;
+      }
+      .vt-comment-pill {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 9990;
+        background: var(--paper);
+        border: 1.5px solid var(--clay);
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-family: var(--mono);
+        font-size: 12px;
+        color: var(--clay);
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+        display: none;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.15s;
+      }
+      .vt-comment-pill.is-active {
+        display: inline-flex;
+      }
+      .vt-comment-pill:hover {
+        background: var(--clay);
+        color: var(--paper);
+      }
+      .vt-comment-pill strong {
+        font-weight: 600;
+      }
+      .vt-comment-list {
+        position: fixed;
+        right: 16px;
+        bottom: 60px;
+        width: 360px;
+        max-height: 60vh;
+        z-index: 9991;
+        background: var(--paper);
+        border: 1.5px solid var(--g300);
+        border-radius: 14px;
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.15);
+        display: none;
+        flex-direction: column;
+      }
+      .vt-comment-list.is-open {
+        display: flex;
+      }
+      .vt-comment-list-header {
+        background: var(--paper);
+        border-bottom: 1.5px solid var(--g200);
+        padding: 12px 16px;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--g500);
+        font-weight: 600;
+        border-radius: 14px 14px 0 0;
+      }
+      .vt-comment-list-items {
+        overflow-y: auto;
+        flex: 1;
+      }
+      .vt-comment-item {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--g200);
+      }
+      .vt-comment-item:last-child {
+        border-bottom: none;
+      }
+      .vt-comment-item .item-quote {
+        font-size: 11.5px;
+        color: var(--g500);
+        font-style: italic;
+        border-left: 2px solid var(--oat);
+        padding-left: 8px;
+        line-height: 1.4;
+        margin-bottom: 6px;
+      }
+      .vt-comment-item .item-body {
+        font-size: 13px;
+        color: var(--slate);
+        line-height: 1.5;
+      }
+      .vt-comment-item .item-del {
+        font-size: 11px;
+        color: var(--g500);
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-top: 4px;
+        padding: 0;
+        font-family: inherit;
+      }
+      .vt-comment-item .item-del:hover {
+        color: var(--red);
+      }
+      .vt-comment-list-footer {
+        border-top: 1.5px solid var(--g200);
+        padding: 10px 16px;
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        border-radius: 0 0 14px 14px;
+        background: var(--g100);
+      }
+      .vt-comment-list-footer button {
+        background: transparent;
+        border: 1.5px solid var(--g300);
+        border-radius: 8px;
+        padding: 6px 12px;
+        font-size: 12px;
+        color: var(--g700);
+        cursor: pointer;
+        font-family: inherit;
+      }
+      .vt-comment-list-footer button:hover {
+        border-color: var(--slate);
+        color: var(--slate);
+      }
+      .vt-comment-list-footer button.copy {
+        background: var(--clay);
+        color: var(--paper);
+        border-color: var(--clay);
+      }
+      .vt-comment-list-footer button.copy:hover {
+        background: var(--clay-d);
+      }
+      body.vt-has-existing-export .vt-comment-list-footer button.copy {
+        display: none;
+      }
+    </style>
+    <button class="vt-comment-trigger" id="vt-comment-trigger"> 評論</button>
+    <div class="vt-comment-popup" id="vt-comment-popup">
+      <div class="quote" id="vt-popup-quote"></div>
+      <textarea id="vt-popup-textarea" placeholder="對這段文字的評論 / 疑問 / 補充..."></textarea>
+      <div class="actions">
+        <span class="hint">⌘ + Enter 儲存 · Esc 取消</span>
+        <div>
+          <button class="cancel" id="vt-popup-cancel">取消</button><button class="send" id="vt-popup-send">儲存評論</button>
+        </div>
+      </div>
+    </div>
+    <button class="vt-comment-pill" id="vt-comment-pill">
+       <strong id="vt-count">0</strong>
+    </button>
+    <div class="vt-comment-list" id="vt-comment-list">
+      <div class="vt-comment-list-header">— 我的評論</div>
+      <div class="vt-comment-list-items" id="vt-comment-list-items"></div>
+      <div class="vt-comment-list-footer">
+        <button id="vt-clear-all">全部清除</button>
+        <button class="copy" id="vt-copy-fallback"> 複製評論</button>
+      </div>
+    </div>
+    <script>
+      // 三段式：clipboard API → execCommand 備援 → 都失敗回 false（不假報成功）
+      window.vtCopyText = async function (text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          try {
+            await navigator.clipboard.writeText(text);
+            return true;
+          } catch (err) {
+            // 落到 execCommand 備援
+          }
+        }
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.top = "-9999px";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        try {
+          ta.select();
+          ta.setSelectionRange(0, ta.value.length);
+          return document.execCommand("copy") === true;
+        } catch (err) {
+          return false;
+        } finally {
+          ta.remove();
+        }
+      };
+
+      // 複製失敗時的出路：把文字放進可選取區域並全選，使用者按一次 Cmd+C 即可
+      // target 有給就用頁面既有的預覽區（wrap 為它的外層、會自動展開）；
+      // 沒有預覽區就建一個臨時可選取區（雙擊可關閉）。
+      window.vtSelectForManualCopy = function (text, target, wrap) {
+        let node = target;
+        if (node) {
+          node.textContent = text;
+          if (wrap) wrap.classList.remove("hidden");
+        } else {
+          node = document.getElementById("vt-manual-copy-box");
+          if (!node) {
+            node = document.createElement("pre");
+            node.id = "vt-manual-copy-box";
+            node.title = "雙擊關閉";
+            node.style.cssText =
+              "position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:10000;" +
+              "max-width:min(720px,92vw);max-height:40vh;overflow:auto;white-space:pre-wrap;" +
+              "background:#fff;color:#111;border:1.5px solid #999;border-radius:10px;" +
+              "padding:14px 16px;font-size:12.5px;line-height:1.6;" +
+              "box-shadow:0 12px 40px rgba(0,0,0,.28)";
+            node.addEventListener("dblclick", function () {
+              node.remove();
+            });
+            document.body.appendChild(node);
+          }
+          node.textContent = text;
+        }
+        node.scrollIntoView({ block: "nearest" });
+        const sel = window.getSelection();
+        if (sel) {
+          const range = document.createRange();
+          range.selectNodeContents(node);
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
+        return node;
+      };
+    </script>
+
+    <script>
+      (function () {
+        const S = "vt-comments-" + location.pathname,
+          L = 80;
+        let c = (() => { try { const value = JSON.parse(localStorage.getItem(S) || "[]"); return Array.isArray(value) ? value : []; } catch { return []; } })(),
+          sel = null;
+        const $ = (i) => document.getElementById(i),
+          tr = $("vt-comment-trigger"),
+          p = $("vt-comment-popup"),
+          pq = $("vt-popup-quote"),
+          pt = $("vt-popup-textarea"),
+          pi = $("vt-comment-pill"),
+          ce = $("vt-count"),
+          le = $("vt-comment-list"),
+          li = $("vt-comment-list-items");
+        window.vtCollectComments = function () {
+          if (!c.length) return "";
+          return (
+            "\n\n---\n\n" +
+            c
+              .map((x) => {
+                const q =
+                  x.quote.length > L ? x.quote.slice(0, L) + "…" : x.quote;
+                return `@評論「${q}」\n  → ${x.body}`;
+              })
+              .join("\n\n")
+          );
+        };
+        function hs(e) {
+          if (
+            e.target.closest(
+              ".vt-comment-popup,.vt-comment-trigger,.vt-comment-pill,.vt-comment-list,button,input,select,textarea",
+            )
+          )
+            return;
+          setTimeout(() => {
+            const s = getSelection(),
+              t = s.toString().trim();
+            if (!t || t.length < 2) {
+              tr.style.display = "none";
+              return;
+            }
+            const r = s.getRangeAt(0),
+              b = r.getBoundingClientRect();
+            sel = { text: t, range: r.cloneRange() };
+            tr.style.display = "inline-flex";
+            tr.style.top = Math.max(8, b.top - 38) + "px";
+            tr.style.left = Math.max(8, b.left + b.width / 2 - 40) + "px";
+          }, 10);
+        }
+        document.addEventListener("mouseup", hs);
+        document.addEventListener("touchend", hs);
+        tr.addEventListener("click", op);
+        function op() {
+          if (!sel) return;
+          const q = sel.text.length > L ? sel.text.slice(0, L) + "…" : sel.text;
+          pq.textContent = q;
+          pt.value = "";
+          const t = tr.getBoundingClientRect();
+          let l = t.left;
+          if (l + 340 > innerWidth - 16) l = innerWidth - 356;
+          let to = t.bottom + 6;
+          if (to + 220 > innerHeight) to = t.top - 230;
+          p.style.left = Math.max(8, l) + "px";
+          p.style.top = Math.max(8, to) + "px";
+          tr.style.display = "none";
+          p.style.display = "block";
+          setTimeout(() => pt.focus(), 50);
+        }
+        $("vt-popup-cancel").addEventListener("click", cp);
+        $("vt-popup-send").addEventListener("click", sc);
+        pt.addEventListener("keydown", (e) => {
+          if (e.isComposing || e.keyCode === 229) return;
+          if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) {
+            e.preventDefault();
+            e.stopPropagation();
+            sc();
+          }
+          if (e.key === "Escape") cp();
+        });
+        function cp() {
+          p.style.display = "none";
+          sel = null;
+        }
+        function sc() {
+          const b = pt.value.trim();
+          if (!b || !sel) return cp();
+          const id = "c-" + Date.now(),
+            q = sel.text;
+          try {
+            const m = document.createElement("mark");
+            m.className = "vt-comment-mark";
+            m.dataset.commentId = id;
+            sel.range.surroundContents(m);
+          } catch (e) {}
+          c.push({ id, quote: q, body: b, ts: Date.now() });
+          ps();
+          rn();
+          cp();
+          getSelection().removeAllRanges();
+        }
+        function ps() {
+          localStorage.setItem(S, JSON.stringify(c));
+        }
+        function rn() {
+          ce.textContent = c.length;
+          pi.classList.toggle("is-active", c.length > 0);
+          if (!c.length) le.classList.remove("is-open");
+          li.innerHTML = c
+            .map((x) => {
+              const q =
+                x.quote.length > 60 ? x.quote.slice(0, 60) + "…" : x.quote;
+              return `<div class="vt-comment-item" data-id="${x.id}"><div class="item-quote">「${eh(q)}」</div><div class="item-body">${eh(x.body)}</div><button class="item-del" data-del="${x.id}">刪除</button></div>`;
+            })
+            .join("");
+          li.querySelectorAll("[data-del]").forEach((b) =>
+            b.addEventListener("click", () => dc(b.dataset.del)),
+          );
+        }
+        function dc(id) {
+          c = c.filter((x) => x.id !== id);
+          document
+            .querySelectorAll(`mark.vt-comment-mark[data-comment-id="${id}"]`)
+            .forEach((m) => {
+              const pr = m.parentNode;
+              while (m.firstChild) pr.insertBefore(m.firstChild, m);
+              pr.removeChild(m);
+              pr.normalize();
+            });
+          ps();
+          rn();
+        }
+        function eh(s) {
+          return String(s).replace(
+            /[&<>"']/g,
+            (ch) =>
+              ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;",
+              })[ch],
+          );
+        }
+        pi.addEventListener("click", () => le.classList.toggle("is-open"));
+        $("vt-clear-all").addEventListener("click", () => {
+          if (!c.length) return;
+          if (!confirm("確定清除全部 " + c.length + " 條評論？")) return;
+          document.querySelectorAll("mark.vt-comment-mark").forEach((m) => {
+            const pr = m.parentNode;
+            while (m.firstChild) pr.insertBefore(m.firstChild, m);
+            pr.removeChild(m);
+            pr.normalize();
+          });
+          c = [];
+          ps();
+          rn();
+        });
+        $("vt-copy-fallback").addEventListener("click", async (e) => {
+          if (!c.length) return;
+          const t = window.vtCollectComments().replace(/^\n\n---\n\n/, ""),
+            b = e.currentTarget,
+            o = b.textContent;
+          const ok = await window.vtCopyText(t);
+          if (ok) {
+            b.textContent = " 已複製";
+          } else {
+            // 複製不到就不假報成功：把評論放進臨時區域並全選
+            window.vtSelectForManualCopy(t);
+            b.textContent = "已選取 → 請按 Cmd+C";
+          }
+          setTimeout(() => (b.textContent = o), ok ? 2000 : 6000);
+        });
+        setTimeout(() => {
+          if (typeof window.vtBuildDecisionExport === "function")
+            document.body.classList.add("vt-has-existing-export");
+        }, 100);
+        document.addEventListener("click", (e) => {
+          if (
+            p.style.display === "block" &&
+            !e.target.closest(".vt-comment-popup,.vt-comment-trigger")
+          )
+            cp();
+        });
+        rn();
+      })();
+    </script>
+
+    <script>window.VT_SESSION = {label:"AI × Earth Education · Week 2",id:"week2",project:"Education"};</script>
+    <style>
+      .vt-session-badge {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        padding: 5px 16px;
+        background: var(--vt-session-color, #666);
+        color: #fff;
+        font-family: var(--mono, ui-monospace, monospace);
+        font-size: 11.5px;
+        letter-spacing: 0.06em;
+      }
+      .vt-session-badge .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #fff;
+        opacity: 0.85;
+        flex-shrink: 0;
+      }
+      .vt-session-badge .lb {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .vt-session-badge .id {
+        margin-left: auto;
+        opacity: 0.75;
+      }
+    </style>
+    <script>
+      (function () {
+        const s = window.VT_SESSION || {};
+        if (!s.label) return;
+        const seed = s.id || s.label;
+        let hue = 7;
+        for (const c of seed) hue = (hue * 31 + c.charCodeAt(0)) % 360;
+        const col = `hsl(${hue} 58% 42%)`;
+        document.title = `${s.label} · ${document.title}`;
+        try {
+          const cv = document.createElement("canvas");
+          cv.width = cv.height = 64;
+          const g = cv.getContext("2d");
+          g.fillStyle = col;
+          if (g.roundRect) {
+            g.beginPath();
+            g.roundRect(2, 2, 60, 60, 14);
+            g.fill();
+          } else {
+            g.fillRect(2, 2, 60, 60);
+          }
+          g.fillStyle = "#fff";
+          g.font = '700 38px ui-sans-serif, system-ui, "PingFang TC"';
+          g.textAlign = "center";
+          g.textBaseline = "middle";
+          const ch = (s.label.match(/[A-Za-z0-9\u4e00-\u9fff]/) || ["?"])[0];
+          g.fillText(ch.toUpperCase(), 32, 36);
+          const link = document.createElement("link");
+          link.rel = "icon";
+          link.href = cv.toDataURL();
+          document.head.appendChild(link);
+        } catch (e) {}
+        const b = document.createElement("div");
+        b.className = "vt-session-badge";
+        b.style.setProperty("--vt-session-color", col);
+        b.innerHTML =
+          '<span class="dot"></span><span class="lb"></span><span class="id"></span>';
+        b.querySelector(".lb").textContent = s.label;
+        b.querySelector(".id").textContent = s.id || "";
+        const host = document.querySelector("header") || document.body;
+        host.insertBefore(b, host.firstChild);
+      })();
+    </script>
+  <style>/* Teaching notes: reuse Week 1 tokens and shared controls, keep prose as the reading spine. */
+.lesson-wrap {--lesson-reading-width:680px;--lesson-sidebar-width:215px;--lesson-gap:52px;--lesson-gutter:24px;--lesson-inset:20px;width:min(94vw,calc(var(--lesson-reading-width) + var(--lesson-sidebar-width) + var(--lesson-gap) + var(--lesson-gutter) + var(--lesson-gutter)));padding:0 var(--lesson-gutter) 50px}
+.lesson-header.masthead {padding:38px 0 42px;margin:0;border-bottom:1px solid var(--border)}
+.lesson-header h1 {max-width:24ch;font-size:clamp(36px,4.3vw,62px);line-height:1.3;font-weight:650;letter-spacing:-.035em;margin:26px 0 20px}
+.lesson-header .eyebrow {font-size:12px;margin:24px 0 14px;letter-spacing:.09em}
+.lesson-dek {font-size:20px;line-height:1.85;max-width:36em;color:var(--text-muted)}
+.lesson-meta {display:flex;flex-wrap:wrap;gap:10px 24px;font:12px var(--mono);color:var(--text-soft);margin:24px 0 18px}
+.lesson-links {display:flex;flex-wrap:wrap;gap:10px}
+.lesson-links a,.lesson-links button {font-size:14px;line-height:1.7;padding:10px 15px;border:1px solid var(--border);border-radius:8px;background:var(--bg-card);text-decoration:none;min-height:44px;color:var(--accent)}
+.lesson-links a:hover,.lesson-links button:hover {border-color:var(--accent);color:var(--text)}
+.lesson-source-note {max-width:54em;font-size:14px;line-height:1.85;color:var(--text-muted);margin:22px 0 0}
+.lesson-layout {display:grid;grid-template-columns:var(--lesson-sidebar-width) minmax(0,1fr);gap:var(--lesson-gap)}
+.lesson-sidebar {position:sticky;top:24px;align-self:start;padding:35px 0;max-height:calc(100vh - 48px);overflow:auto}
+.lesson-nav-title {font-size:12px;color:var(--accent);letter-spacing:.06em;padding:0 14px;margin:0 0 18px}
+.lesson-nav {display:grid;gap:3px}
+.lesson-nav-group {font-size:12px;line-height:1.7;color:var(--accent);margin:18px 0 8px;padding:0 14px}
+.lesson-nav-group:first-child {margin-top:0}
+.lesson-nav a {display:block;padding:11px 12px;text-decoration:none;font-size:14px;line-height:1.65;border-left:2px solid transparent;border-radius:0 6px 6px 0;color:var(--text-muted)}
+.lesson-nav a small {display:block;font:11px var(--mono);color:var(--text-soft);margin-top:5px}
+.lesson-nav a:hover,.lesson-nav a[aria-current="location"] {border-left-color:var(--accent);background:var(--accent-soft);color:var(--text)}
+.lesson-sidebar-note {font-size:13px;line-height:1.8;color:var(--text-soft);padding:15px 14px}
+.lesson-main {min-width:0;width:100%;max-width:var(--lesson-reading-width)}
+.lesson-part {padding:35px 0 24px;border-bottom:1px solid var(--border);color:var(--text-muted)}
+.lesson-part .lesson-part-title {font-size:24px;font-weight:600;line-height:1.55;color:var(--text);margin:12px 0}
+.lesson-part > p:last-child {font-size:16px;line-height:1.9;margin:12px 0}
+.lesson-bridge {margin:35px 0 0;padding:22px var(--lesson-inset);border-left:2px solid var(--accent);color:var(--text-muted);font-size:17px;line-height:1.95}
+.lesson-bridge p {margin:0 0 12px}
+.lesson-bridge p:last-child {margin-bottom:0}
+.lesson-main > .lesson-section {padding:48px 0;margin:0;border-top:0;border-bottom:1px solid var(--border);scroll-margin-top:24px}
+.lesson-section-meta {font:12px var(--mono);color:var(--text-soft);display:flex;flex-wrap:wrap;gap:10px 24px;margin:0 0 17px;line-height:1.7}
+.lesson-section h2 {font-size:clamp(25px,2.3vw,34px);line-height:1.5;font-weight:620;letter-spacing:-.02em;margin:0 0 27px;text-wrap:pretty}
+.lesson-prose {font-size:18px;line-height:2.05;color:var(--text-muted)}
+.lesson-prose p {margin:0 0 24px;text-wrap:pretty}
+.lesson-prose strong {color:var(--text);font-weight:620}
+.lesson-prose code {font: .9em var(--mono);color:var(--text);overflow-wrap:anywhere}
+.lesson-figure {margin:32px 0 34px;width:100%;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--bg-card)}
+.lesson-figure-top {display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:12px var(--lesson-inset);font:12px var(--mono);color:var(--text-soft)}
+.lesson-figure-top button {font:inherit;background:var(--bg-card);border:1px solid var(--text-soft);border-radius:6px;color:var(--text);padding:7px 12px;min-height:36px}
+.lesson-figure img {display:block;width:100%;height:auto}
+.lesson-figure figcaption {padding:15px var(--lesson-inset);font-size:15px;line-height:1.85;color:var(--text-muted)}
+.lesson-figure figcaption b {color:var(--accent);font-weight:550}
+.lesson-figure figcaption a {display:inline-block;font-size:12px;margin-top:8px}
+.lesson-transition {font-size:17px;line-height:1.95;margin:28px 0 20px;padding:3px var(--lesson-inset);border-left:2px solid var(--accent);color:var(--text)}
+.lesson-pause {background:var(--bg-card);padding:22px var(--lesson-inset);margin:28px 0;border-left:3px solid var(--green)}
+.lesson-pause > span {font-size:12px;color:var(--green)}
+.lesson-pause p {font-size:17px;line-height:1.95;margin:9px 0 0;color:var(--text)}
+.lesson-check {margin:24px 0;background:var(--bg-card);border:1px solid var(--border);border-radius:9px;padding:0}
+.lesson-check summary {cursor:pointer;padding:18px var(--lesson-inset);font-size:17px;line-height:1.85}
+.lesson-check summary > span {display:block;font-size:12px;color:var(--green)}
+.lesson-check p {padding:0 var(--lesson-inset) 18px;font-size:16px;line-height:1.9;color:var(--text-muted);margin:0}
+.lesson-correction {border-left:3px solid var(--yellow);padding:17px var(--lesson-inset);margin:25px 0;background:var(--yellow-soft);font-size:15px;line-height:1.95;color:var(--text-muted)}
+.lesson-correction > strong {color:var(--yellow);font-size:14px}
+.lesson-correction p {margin:8px 0 0}
+.lesson-inline-label {font-size:12px;color:var(--green);margin-right:8px;border-bottom:1px solid var(--green)}
+.lesson-source {margin:24px 0 0;border-top:1px dashed var(--border);padding-top:9px;color:var(--text-muted)}
+.lesson-source summary {font-size:13px;padding:10px 0;cursor:pointer;line-height:1.8;color:var(--text-soft)}
+.lesson-source-content {font-size:15px;line-height:1.95;padding:8px var(--lesson-inset) 15px;background:var(--bg-card);border-left:2px solid var(--border)}
+.lesson-source-content h3 {font-size:16px;margin:25px 0 12px;line-height:1.8}
+.lesson-source-content p {margin:14px 0;max-width:50em;overflow-wrap:anywhere}
+.lesson-source-content a {font:12px var(--mono)}
+.lesson-route {list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:30px 0}
+.lesson-route li {border-top:2px solid var(--accent);padding-top:12px}
+.lesson-route span {display:block;font-size:12px;color:var(--accent);margin-bottom:12px}
+.lesson-route b {font-size:17px;font-weight:550;line-height:1.8}
+.lesson-recap {border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 0;margin:26px 0}
+.lesson-recap > span,.lesson-label {font-size:12px;color:var(--accent)}
+.lesson-recap p {font-size:18px;line-height:1.8}
+.lesson-order {background:var(--bg-card);border:1px solid var(--border);padding:22px var(--lesson-inset);margin:25px 0;border-radius:8px}
+.lesson-order-line {display:flex;flex-wrap:wrap;gap:18px 30px;align-items:center}
+.lesson-order-line strong {font-size:28px;font-weight:550}
+.lesson-order-line button {background:var(--bg);border:1px solid var(--accent);border-radius:6px;padding:11px 15px;font-size:14px;color:var(--accent);min-height:44px}
+.lesson-order-line button[aria-pressed="true"] {background:var(--accent-soft);color:var(--text)}
+.lesson-end {margin:32px 0 0;padding:25px 0 0;border-top:1px solid var(--border);font-size:17px;line-height:1.9}
+.lesson-end > a {display:inline-block;margin:9px 0;font-size:18px}
+.lesson-small {font-size:13px;line-height:1.85;color:var(--text-soft)}
+.lesson-notes > p {font-size:14px;line-height:1.95;color:var(--text-muted);margin:18px 0}
+.lesson-notes h2 {font-size:22px}
+.lesson-mobile-toc {display:none}
+.lesson-image-dialog {width:min(96vw,1600px);max-width:96vw;max-height:92vh;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:20px}
+.lesson-image-dialog::backdrop {background:#000c}
+.lesson-dialog-head {display:flex;gap:16px;align-items:center;justify-content:space-between}
+.lesson-dialog-head button {padding:9px 18px;min-height:44px;border:1px solid var(--text-soft);border-radius:6px;background:var(--bg-card);color:var(--text)}
+.lesson-image-scroll {overflow:auto;max-height:65vh;margin:14px 0;border:1px solid var(--border)}
+.lesson-image-scroll img {display:block;width:100%;min-width:1100px;height:auto;max-width:none}
+.lesson-skip {position:fixed;left:15px;top:-90px;z-index:10001;padding:14px;background:var(--bg-card);color:var(--accent)}
+.lesson-skip:focus {top:10px}
+.lesson-wrap .vt-session-badge {margin:0;padding:8px 0;background:var(--bg-card);color:var(--text-muted)}
+.vt-comment-list {width:min(360px,calc(100vw - 24px));right:12px}
+.vt-comment-popup {max-width:calc(100vw - 24px)}
+.ae-export-dialog {width:min(800px,94vw);max-height:90vh;overflow:auto}
+.ae-export-dialog textarea {width:100%;min-height:220px;font:15px var(--sans);line-height:1.8;padding:12px}
+:focus-visible {outline:3px solid var(--accent);outline-offset:4px}
+@media (max-width:1100px) {.lesson-wrap{--lesson-sidebar-width:174px;--lesson-gap:26px;--lesson-gutter:8px}.lesson-nav a{font-size:13px}.lesson-prose{font-size:17px}}
+@media (max-width:760px) {.lesson-wrap{--lesson-inset:16px;width:min(calc(100% - 36px),var(--lesson-reading-width));padding:0 0 36px}.lesson-header.masthead{padding:16px 0 29px}.lesson-header h1{font-size:clamp(32px,8.2vw,42px);line-height:1.42}.lesson-header .eyebrow{font-size:10px;letter-spacing:.03em;gap:6px}.lesson-dek{font-size:18px}.lesson-source-note{font-size:13px}.lesson-meta{font-size:11px;gap:9px 16px}.lesson-layout{display:block}.lesson-sidebar{display:none}.lesson-main > .lesson-section{padding:35px 0}.lesson-section h2{font-size:25px;margin-bottom:22px}.lesson-section-meta{font-size:11px;gap:5px 12px}.lesson-mobile-toc{display:block;margin:24px 0 4px;border:1px solid var(--border);border-radius:8px;background:var(--bg-card);padding:0 var(--lesson-inset)}.lesson-mobile-toc > summary{font-size:14px;line-height:1.8;padding:15px 0;cursor:pointer}.lesson-mobile-toc .lesson-nav{padding-bottom:12px}.lesson-prose{font-size:17px;line-height:2.02}.lesson-prose p{margin-bottom:23px}.lesson-figure{margin:26px 0}.lesson-figure-top{padding:10px var(--lesson-inset);font-size:11px}.lesson-figure figcaption{padding:14px var(--lesson-inset);font-size:14px}.lesson-figure-top button{font-size:12px;min-height:42px}.lesson-pause{padding:18px var(--lesson-inset)}.lesson-pause p{font-size:16px}.lesson-transition{font-size:16px}.lesson-correction{padding:14px var(--lesson-inset);font-size:14px}.lesson-route{grid-template-columns:1fr;gap:20px}.lesson-route b{font-size:16px}.lesson-check summary{padding:15px var(--lesson-inset);font-size:16px}.lesson-check p{padding:0 var(--lesson-inset) 15px}.lesson-image-dialog{padding:14px}.lesson-end > a{font-size:17px}.lesson-recap p{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style><script>(() => {
+  const slideDialog = document.getElementById('slide-dialog');
+  document.querySelectorAll('[data-slide]').forEach(button => button.addEventListener('click', () => {
+    const img = document.getElementById('slide-large');
+    img.src = button.dataset.slide;
+    img.alt = button.dataset.alt;
+    document.getElementById('slide-dialog-title').textContent = 'PDF 第 ' + button.dataset.page + ' 頁 · 教學內容裁圖';
+    document.getElementById('slide-original').href = './slides.pdf#page=' + button.dataset.page;
+    slideDialog.showModal();
+    document.getElementById('close-slide').focus();
+  }));
+  document.getElementById('close-slide').addEventListener('click', () => slideDialog.close());
+  const swap = document.getElementById('swap-order');
+  if (swap) swap.addEventListener('click', () => {
+    const reversed = swap.getAttribute('aria-pressed') !== 'true';
+    swap.setAttribute('aria-pressed', String(reversed));
+    document.getElementById('order-example').textContent = reversed ? '人 → 咬 → 狗' : '狗 → 咬 → 人';
+    document.getElementById('order-meaning').textContent = reversed ? '現在是人做出「咬」的動作。字沒有增加，只是順序改變了。' : '現在是狗做出「咬」的動作。';
+  });
+  const navLinks = Array.from(document.querySelectorAll('.lesson-nav a'));
+  const sections = Array.from(document.querySelectorAll('.lesson-main > .lesson-section'));
+  let pending = false;
+  function markSection() {
+    pending = false;
+    let current = sections[0];
+    for (const section of sections) if (section.getBoundingClientRect().top <= window.innerHeight * .32) current = section;
+    navLinks.forEach(link => {
+      if (link.hash === '#' + current.id) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  addEventListener('scroll', () => { if (!pending) { pending = true; requestAnimationFrame(markSection); } }, { passive: true });
+  markSection();
+  const mobileNav = document.querySelector('.lesson-mobile-toc');
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobileNav.open = false; }));
+  const dialog = document.getElementById('export-dialog');
+  const exportText = document.getElementById('export-text');
+  const status = document.getElementById('export-status');
+  function feedback() {
+    const comments = window.vtCollectComments?.() || '';
+    return comments ? '# ' + document.querySelector('h1').innerText.replace(/\n/g,' ') + comments : '';
+  }
+  window.vtBuildDecisionExport = feedback;
+  document.body.classList.add('vt-has-existing-export');
+  document.getElementById('preview-comments').addEventListener('click', () => {
+    exportText.value = feedback();
+    status.textContent = exportText.value ? '先確認內容，再複製或下載。這不會自動傳送。' : '目前沒有評論。先選取正文文字，再使用浮出的評論按鈕。';
+    dialog.showModal();
+  });
+  document.getElementById('export-close').addEventListener('click', () => dialog.close());
+  document.getElementById('export-copy').addEventListener('click', async () => {
+    if (!exportText.value) { status.textContent = '目前沒有可複製的評論。'; return; }
+    const ok = window.vtCopyText ? await window.vtCopyText(exportText.value) : false;
+    status.textContent = ok ? '已複製；尚未傳送到任何地方。' : '瀏覽器未允許自動複製，請在下方文字框手動複製。';
+    if (!ok) { exportText.focus(); exportText.select(); }
+  });
+  document.getElementById('export-download').addEventListener('click', () => {
+    if (!exportText.value) { status.textContent = '目前沒有可下載的評論。'; return; }
+    const url = URL.createObjectURL(new Blob([exportText.value], { type: 'text/plain;charset=utf-8' }));
+    const link = document.createElement('a'); link.href = url; link.download = 'AI_Earth_Week2_筆記回饋.txt'; link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+})();
+</script></body></html>
