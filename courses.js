@@ -1,5 +1,6 @@
 // One entry per released week. Each week folder uses the same layout:
 // Material/WeekNN/index.html (notes), slides.pdf, transcript.md, assets/.
+// After editing this list, bump ?v= on courses.js in index.html so browsers load the new list at once.
 window.AI_EARTH_COURSES = [
   {
     week: 1,

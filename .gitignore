@@ -23,11 +23,6 @@
 !/Material/Week*/transcript-visual.html
 !/Material/Week*/assets/
 
-# Redirect pages that keep the original Week 1 addresses working.
-!/Material/Week1/
-!/Material/Week1/AI_Earth_課程筆記.html
-!/Material/Week1/AI_Earth_課程前言_逐字稿-視覺化.html
-
 # macOS metadata and Office temporary files.
 .DS_Store
 ~$*
