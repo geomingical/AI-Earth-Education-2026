@@ -14,7 +14,7 @@ AI × Earth Education 2026 課程教材，每週上傳更新一次，整理完�
 
 ## 下載教材
 
-如需保留檔案，可在本 repo 選 **Code → Download ZIP**，解壓縮後到 `Material/` 取得各週教材。HTML 檔案可用 Chrome、Safari 或 Edge 開啟；GitHub 的 HTML 檔案頁本身顯示原始碼，不是完整網頁。
+如需保留檔案，可在本 repo 選 **Code → Download ZIP**，解壓縮後到 `Material/` 取得各週教材。每週一個資料夾（`Week01`、`Week02`⋯），裡面的 `index.html` 是課程筆記，`slides.pdf` 是簡報，`transcript.md` 是整理逐字稿。HTML 檔案可用 Chrome、Safari 或 Edge 開啟；GitHub 的 HTML 檔案頁本身顯示原始碼，不是完整網頁。
 
 影片需要網路連線；部分 HTML 樣式也引用線上資源，建議連網閱讀。本 repo 提供影片連結，不包含影片檔案。
 
