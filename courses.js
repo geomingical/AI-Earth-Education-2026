@@ -17,5 +17,13 @@ window.AI_EARTH_COURSES = [
     notes: "Material/Week02/index.html",
     pdf: "Material/Week02/slides.pdf",
     video: "https://www.youtube.com/watch?v=u2-M1ab8RGE&t=368s"
+  },
+  {
+    week: 3,
+    title: "AI 術語、工具呼叫與資料格式",
+    description: "用同一件工作理解 Agent、Function Calling 與 MCP，再以 Markdown、JSON、HTML 保存和交付成果；搭配現場操作，檢查工具是否真的完成任務。",
+    notes: "Material/Week03/index.html",
+    pdf: "Material/Week03/slides.pdf",
+    video: "https://www.youtube.com/watch?v=ePvBxgtSc6A&t=588s"
   }
 ];

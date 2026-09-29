@@ -13,6 +13,7 @@
 /Material/*
 !/Material/Week01/
 !/Material/Week02/
+!/Material/Week03/
 
 # Inside each released week, publish only the standard files; drafts stay local.
 /Material/Week*/*
@@ -22,6 +23,10 @@
 !/Material/Week*/transcript-raw.*
 !/Material/Week*/transcript-visual.html
 !/Material/Week*/assets/
+
+# Week 3 images are embedded; only these source downloads are public.
+/Material/Week03/assets/
+!/Material/Week03/transcript-timed.json
 
 # macOS metadata and Office temporary files.
 .DS_Store
