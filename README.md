@@ -1,6 +1,6 @@
 # AI × Earth Education 2026
 
-AI × Earth Education 2026 課程教材，每週上傳更新一次，整理完成後陸續公開。
+AI × Earth Education 2026 課程教材，每週上傳更新一次。目前提供第 1 至第 4 週教材，後續週次整理完成後陸續公開。
 
 ## 線上閱讀
 
