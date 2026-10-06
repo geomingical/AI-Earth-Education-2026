@@ -25,5 +25,13 @@ window.AI_EARTH_COURSES = [
     notes: "Material/Week03/index.html",
     pdf: "Material/Week03/slides.pdf",
     video: "https://www.youtube.com/watch?v=ePvBxgtSc6A&t=588s"
+  },
+  {
+    week: 4,
+    title: "Prompt Engineering：交代工作與驗收",
+    description: "從文章導讀、語音問答與四版影片修改，練習說清楚需求、觀察落差並驗收成果，再以雨量分析理解工具、流程與分工。",
+    notes: "Material/Week04/index.html",
+    pdf: "Material/Week04/slides.pdf",
+    video: "https://www.youtube.com/watch?v=NsszuRc5JC8&t=689s"
   }
 ];
