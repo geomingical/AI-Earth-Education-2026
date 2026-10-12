@@ -33,5 +33,13 @@ window.AI_EARTH_COURSES = [
     notes: "Material/Week04/index.html",
     pdf: "Material/Week04/slides.pdf",
     video: "https://www.youtube.com/watch?v=NsszuRc5JC8&t=689s"
+  },
+  {
+    week: 5,
+    title: "AI 看到了什麼，又該聽誰的？",
+    description: "從模型越獄、提示詞注入與權限，理解 AI 該相信哪些資料；再以分支對話、子代理與故事壓縮示範，練習整理上下文及保留重要決策。",
+    notes: "Material/Week05/index.html",
+    pdf: "Material/Week05/slides.pdf",
+    video: "https://www.youtube.com/watch?v=FZjB68Za5i4&t=654s"
   }
 ];
