@@ -41,5 +41,13 @@ window.AI_EARTH_COURSES = [
     notes: "Material/Week05/index.html",
     pdf: "Material/Week05/slides.pdf",
     video: "https://www.youtube.com/watch?v=FZjB68Za5i4&t=654s"
+  },
+  {
+    week: 6,
+    title: "打開 Harness：替 AI 搭好工作環境",
+    description: "從 AGENTS.md、Hooks、MCP 與 Skills，理解規則、工具和方法如何合作；搭配網站實作、權限限制與改版示範，練習觀察過程並驗證成果。",
+    notes: "Material/Week06/index.html",
+    pdf: "Material/Week06/slides.pdf",
+    video: "https://www.youtube.com/watch?v=GmBZMaWsAqM&t=604s"
   }
 ];

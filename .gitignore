@@ -16,6 +16,7 @@
 !/Material/Week03/
 !/Material/Week04/
 !/Material/Week05/
+!/Material/Week06/
 
 # Inside each released week, publish only the standard files; drafts stay local.
 /Material/Week*/*
@@ -45,6 +46,14 @@
 !/Material/Week05/transcript.md
 !/Material/Week05/transcript-raw.md
 !/Material/Week05/transcript-timed.json
+
+# Week 6: exactly five publication files; source media, images and working notes stay local.
+/Material/Week06/*
+!/Material/Week06/index.html
+!/Material/Week06/slides.pdf
+!/Material/Week06/transcript.md
+!/Material/Week06/transcript-raw.md
+!/Material/Week06/transcript-timed.json
 
 # macOS metadata and Office temporary files.
 .DS_Store

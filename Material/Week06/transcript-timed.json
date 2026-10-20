@@ -1,0 +1,7315 @@
+{
+  "video_id": "GmBZMaWsAqM",
+  "title": "AI × Earth Education｜Harness-MCP, AGENTS.md,Skill",
+  "source": "https://www.youtube.com/watch?v=GmBZMaWsAqM",
+  "language": "zh",
+  "youtube_metadata_duration_seconds": 4285,
+  "audio_duration_seconds": 4285.010438,
+  "video_duration_seconds": 4285.0,
+  "result_duration_seconds": 4285.01,
+  "model": "medium",
+  "backend": "faster-whisper",
+  "vad_filter": true,
+  "chunk_duration_ms": 900000,
+  "chunk_overlap_ms": 30000,
+  "method": "video_script CLI cache; faster-whisper medium zh VAD; existing AudioChunker and original merge; no additional filtering",
+  "chunks": [
+    {
+      "index": 0,
+      "start_ms": 0,
+      "end_ms": 899710
+    },
+    {
+      "index": 1,
+      "start_ms": 869710,
+      "end_ms": 1769344
+    },
+    {
+      "index": 2,
+      "start_ms": 1739344,
+      "end_ms": 2638755
+    },
+    {
+      "index": 3,
+      "start_ms": 2608755,
+      "end_ms": 3507606
+    },
+    {
+      "index": 4,
+      "start_ms": 3477606,
+      "end_ms": 4285010
+    }
+  ],
+  "segments": [
+    {
+      "start_seconds": 117.84,
+      "end_seconds": 119.84,
+      "text": "I walk by the old oak door"
+    },
+    {
+      "start_seconds": 119.84,
+      "end_seconds": 123.84,
+      "text": "And I step onto the moss on the forest floor"
+    },
+    {
+      "start_seconds": 123.84,
+      "end_seconds": 126.84,
+      "text": "The air is thick with the scent of pine and rain"
+    },
+    {
+      "start_seconds": 126.84,
+      "end_seconds": 130.84,
+      "text": "Washing away the weight of a world in pain"
+    },
+    {
+      "start_seconds": 130.84,
+      "end_seconds": 133.84,
+      "text": "I press my palms to the damp and dark soil"
+    },
+    {
+      "start_seconds": 133.84,
+      "end_seconds": 137.84,
+      "text": "Feeling the life that breathes beneath the torn"
+    },
+    {
+      "start_seconds": 137.84,
+      "end_seconds": 140.84,
+      "text": "It's not just a place where we lay our head"
+    },
+    {
+      "start_seconds": 140.84,
+      "end_seconds": 143.84,
+      "text": "It's the very blood, it's the daily bread"
+    },
+    {
+      "start_seconds": 143.84,
+      "end_seconds": 146.84,
+      "text": "Oh, we don't just live here, we belong"
+    },
+    {
+      "start_seconds": 146.84,
+      "end_seconds": 148.84,
+      "text": "To the whisper of the trees and the river song"
+    },
+    {
+      "start_seconds": 148.84,
+      "end_seconds": 151.84,
+      "text": "We've made of the dust and the ocean spray"
+    },
+    {
+      "start_seconds": 151.84,
+      "end_seconds": 154.84,
+      "text": "A part of the earth that won't fade away"
+    },
+    {
+      "start_seconds": 154.84,
+      "end_seconds": 158.84,
+      "text": "Yes, we are home in the dirt, in the sky"
+    },
+    {
+      "start_seconds": 158.84,
+      "end_seconds": 162.84,
+      "text": "This is where we live and where we lie"
+    },
+    {
+      "start_seconds": 162.84,
+      "end_seconds": 165.84,
+      "text": "I climb the ridge as the afternoon blows"
+    },
+    {
+      "start_seconds": 165.84,
+      "end_seconds": 169.84,
+      "text": "And I let the ocean wind take what it knows"
+    },
+    {
+      "start_seconds": 169.84,
+      "end_seconds": 172.84,
+      "text": "It carries the salt and the secrets of old"
+    },
+    {
+      "start_seconds": 172.84,
+      "end_seconds": 177.25,
+      "text": "The story in every cold breath that is told"
+    },
+    {
+      "start_seconds": 177.25,
+      "end_seconds": 180.25,
+      "text": "The hands in the creases I see"
+    },
+    {
+      "start_seconds": 180.25,
+      "end_seconds": 183.25,
+      "text": "The very same lines that are etched in the tree"
+    },
+    {
+      "start_seconds": 183.25,
+      "end_seconds": 186.25,
+      "text": "We aren't just visitors passing on through"
+    },
+    {
+      "start_seconds": 186.25,
+      "end_seconds": 190.25,
+      "text": "I am a part of this earth and so are you"
+    },
+    {
+      "start_seconds": 190.25,
+      "end_seconds": 194.25,
+      "text": "Oh, we don't just live here, we belong"
+    },
+    {
+      "start_seconds": 194.25,
+      "end_seconds": 196.25,
+      "text": "To the whisper of the trees and the river song"
+    },
+    {
+      "start_seconds": 196.25,
+      "end_seconds": 199.25,
+      "text": "We've made of the dust and the ocean spray"
+    },
+    {
+      "start_seconds": 199.25,
+      "end_seconds": 201.25,
+      "text": "A part of the earth that won't fade away"
+    },
+    {
+      "start_seconds": 201.25,
+      "end_seconds": 205.53,
+      "text": "Yes, we are home in the dirt, in the sky"
+    },
+    {
+      "start_seconds": 205.53,
+      "end_seconds": 208.53,
+      "text": "This is where we live and where we lie"
+    },
+    {
+      "start_seconds": 208.53,
+      "end_seconds": 210.53,
+      "text": "Yes, we are home"
+    },
+    {
+      "start_seconds": 210.53,
+      "end_seconds": 613.91,
+      "text": "We started from the soil and the sun"
+    },
+    {
+      "start_seconds": 638.35,
+      "end_seconds": 639.35,
+      "text": "的图像记录师"
+    },
+    {
+      "start_seconds": 639.35,
+      "end_seconds": 642.35,
+      "text": "他专门在记录整个"
+    },
+    {
+      "start_seconds": 642.35,
+      "end_seconds": 645.35,
+      "text": "就是可能是研讨会的过程啊"
+    },
+    {
+      "start_seconds": 645.35,
+      "end_seconds": 646.35,
+      "text": "或是演讲的过程"
+    },
+    {
+      "start_seconds": 646.35,
+      "end_seconds": 649.35,
+      "text": "那他把整个重点呢给视觉化"
+    },
+    {
+      "start_seconds": 649.35,
+      "end_seconds": 651.35,
+      "text": "我自己是觉得蛮酷的啦"
+    },
+    {
+      "start_seconds": 651.35,
+      "end_seconds": 653.35,
+      "text": "对,然后因为我跟他认识"
+    },
+    {
+      "start_seconds": 653.35,
+      "end_seconds": 655.35,
+      "text": "那就是Ruby呢"
+    },
+    {
+      "start_seconds": 655.35,
+      "end_seconds": 657.35,
+      "text": "就是这个记录师呢"
+    },
+    {
+      "start_seconds": 657.35,
+      "end_seconds": 660.35,
+      "text": "就是他也蛮愿意来现场"
+    },
+    {
+      "start_seconds": 660.35,
+      "end_seconds": 663.35,
+      "text": "就是针对三个讲题来做话"
+    },
+    {
+      "start_seconds": 663.35,
+      "end_seconds": 665.35,
+      "text": "对,所以如果各位礼拜三"
+    },
+    {
+      "start_seconds": 665.35,
+      "end_seconds": 667.35,
+      "text": "晚上有空的话呢"
+    },
+    {
+      "start_seconds": 667.35,
+      "end_seconds": 669.35,
+      "text": "就可以过来看看"
+    },
+    {
+      "start_seconds": 669.35,
+      "end_seconds": 670.35,
+      "text": "如果临时才有空的呢"
+    },
+    {
+      "start_seconds": 670.35,
+      "end_seconds": 671.35,
+      "text": "也可以过来看看"
+    },
+    {
+      "start_seconds": 671.35,
+      "end_seconds": 673.35,
+      "text": "就是我们接受"
+    },
+    {
+      "start_seconds": 673.35,
+      "end_seconds": 676.35,
+      "text": "先上车后不飘的过程"
+    },
+    {
+      "start_seconds": 677.35,
+      "end_seconds": 680.35,
+      "text": "今天呢就会跟各位简单的"
+    },
+    {
+      "start_seconds": 680.35,
+      "end_seconds": 682.35,
+      "text": "说明一下Honest"
+    },
+    {
+      "start_seconds": 682.35,
+      "end_seconds": 684.35,
+      "text": "因为上礼拜我们其实有"
+    },
+    {
+      "start_seconds": 684.35,
+      "end_seconds": 686.35,
+      "text": "谈过Contest Window"
+    },
+    {
+      "start_seconds": 686.35,
+      "end_seconds": 690.35,
+      "text": "Contest其实就是Honest的其中一环"
+    },
+    {
+      "start_seconds": 690.35,
+      "end_seconds": 693.35,
+      "text": "所以我想说这礼拜其实就延续着"
+    },
+    {
+      "start_seconds": 693.35,
+      "end_seconds": 695.35,
+      "text": "上礼拜的话题"
+    },
+    {
+      "start_seconds": 695.35,
+      "end_seconds": 698.35,
+      "text": "就我们把Honest的其他部分呢"
+    },
+    {
+      "start_seconds": 698.35,
+      "end_seconds": 701.35,
+      "text": "给稍微的讲完整一点点"
+    },
+    {
+      "start_seconds": 701.35,
+      "end_seconds": 702.35,
+      "text": "然后上礼拜"
+    },
+    {
+      "start_seconds": 702.35,
+      "end_seconds": 704.35,
+      "text": "就是有人有给我一个Feedback"
+    },
+    {
+      "start_seconds": 704.35,
+      "end_seconds": 706.35,
+      "text": "就是他觉得"
+    },
+    {
+      "start_seconds": 706.35,
+      "end_seconds": 708.35,
+      "text": "就是有一些内容呢"
+    },
+    {
+      "start_seconds": 708.35,
+      "end_seconds": 710.35,
+      "text": "跟他真实的场景"
+    },
+    {
+      "start_seconds": 710.35,
+      "end_seconds": 712.35,
+      "text": "比较难去做连接"
+    },
+    {
+      "start_seconds": 712.35,
+      "end_seconds": 715.35,
+      "text": "对,那这个问题其实我也知道"
+    },
+    {
+      "start_seconds": 715.35,
+      "end_seconds": 717.35,
+      "text": "就是我偷渡一下我明天"
+    },
+    {
+      "start_seconds": 717.35,
+      "end_seconds": 719.35,
+      "text": "其中一页的投影片"
+    },
+    {
+      "start_seconds": 720.35,
+      "end_seconds": 721.35,
+      "text": "就是我也想办法"
+    },
+    {
+      "start_seconds": 721.35,
+      "end_seconds": 723.35,
+      "text": "想要去解决这个问题"
+    },
+    {
+      "start_seconds": 723.35,
+      "end_seconds": 725.35,
+      "text": "但这个问题其实很难的点"
+    },
+    {
+      "start_seconds": 725.35,
+      "end_seconds": 726.35,
+      "text": "是在于说"
+    },
+    {
+      "start_seconds": 726.35,
+      "end_seconds": 729.35,
+      "text": "我很难理解你们每一个人"
+    },
+    {
+      "start_seconds": 729.35,
+      "end_seconds": 731.35,
+      "text": "所使用的情境"
+    },
+    {
+      "start_seconds": 732.35,
+      "end_seconds": 734.35,
+      "text": "那我也很难去理解"
+    },
+    {
+      "start_seconds": 734.35,
+      "end_seconds": 736.35,
+      "text": "你们每一个人用AI的程度"
+    },
+    {
+      "start_seconds": 736.35,
+      "end_seconds": 738.35,
+      "text": "所以有时候可能我会漏掉"
+    },
+    {
+      "start_seconds": 738.35,
+      "end_seconds": 740.35,
+      "text": "某一些部分"
+    },
+    {
+      "start_seconds": 740.35,
+      "end_seconds": 741.35,
+      "text": "或我很难进入到"
+    },
+    {
+      "start_seconds": 741.35,
+      "end_seconds": 743.35,
+      "text": "你们使用的情境呢"
+    },
+    {
+      "start_seconds": 743.35,
+      "end_seconds": 745.35,
+      "text": "来去做说明"
+    },
+    {
+      "start_seconds": 745.35,
+      "end_seconds": 747.35,
+      "text": "所以回过头来就是如果"
+    },
+    {
+      "start_seconds": 747.35,
+      "end_seconds": 749.35,
+      "text": "有任何的问题呢"
+    },
+    {
+      "start_seconds": 749.35,
+      "end_seconds": 750.35,
+      "text": "其实你都可以留言给我"
+    },
+    {
+      "start_seconds": 750.35,
+      "end_seconds": 752.35,
+      "text": "或你就"
+    },
+    {
+      "start_seconds": 752.35,
+      "end_seconds": 754.35,
+      "text": "反正应该你可以随便找到"
+    },
+    {
+      "start_seconds": 754.35,
+      "end_seconds": 756.35,
+      "text": "我的脸书或Discord"
+    },
+    {
+      "start_seconds": 756.35,
+      "end_seconds": 758.35,
+      "text": "或是可能"
+    },
+    {
+      "start_seconds": 758.35,
+      "end_seconds": 759.35,
+      "text": "Whatever的Message"
+    },
+    {
+      "start_seconds": 759.35,
+      "end_seconds": 760.35,
+      "text": "你都可以丢"
+    },
+    {
+      "start_seconds": 760.35,
+      "end_seconds": 761.35,
+      "text": "讯息给我"
+    },
+    {
+      "start_seconds": 761.35,
+      "end_seconds": 764.35,
+      "text": "因为既然大家都愿意花这个时间了"
+    },
+    {
+      "start_seconds": 764.35,
+      "end_seconds": 766.35,
+      "text": "那其实就"
+    },
+    {
+      "start_seconds": 766.35,
+      "end_seconds": 769.35,
+      "text": "我觉得也需要花时间好好去理解"
+    },
+    {
+      "start_seconds": 769.35,
+      "end_seconds": 771.35,
+      "text": "这个东西"
+    },
+    {
+      "start_seconds": 771.35,
+      "end_seconds": 776.91,
+      "text": "今天主要会有三个部分"
+    },
+    {
+      "start_seconds": 776.91,
+      "end_seconds": 778.91,
+      "text": "在Honest最重要的"
+    },
+    {
+      "start_seconds": 778.91,
+      "end_seconds": 779.91,
+      "text": "是维奥的三个"
+    },
+    {
+      "start_seconds": 779.91,
+      "end_seconds": 780.91,
+      "text": "第一个呢"
+    },
+    {
+      "start_seconds": 780.91,
+      "end_seconds": 781.91,
+      "text": "第一个呢"
+    },
+    {
+      "start_seconds": 781.91,
+      "end_seconds": 783.91,
+      "text": "就是我们的AI的规则"
+    },
+    {
+      "start_seconds": 783.91,
+      "end_seconds": 784.91,
+      "text": "那第二个呢"
+    },
+    {
+      "start_seconds": 784.91,
+      "end_seconds": 788.91,
+      "text": "就是呼叫工具的规格"
+    },
+    {
+      "start_seconds": 788.91,
+      "end_seconds": 789.91,
+      "text": "那第三个呢"
+    },
+    {
+      "start_seconds": 789.91,
+      "end_seconds": 792.91,
+      "text": "就是可能AI做事的风格"
+    },
+    {
+      "start_seconds": 792.91,
+      "end_seconds": 793.91,
+      "text": "所以这三个呢"
+    },
+    {
+      "start_seconds": 793.91,
+      "end_seconds": 795.91,
+      "text": "都会在Honest"
+    },
+    {
+      "start_seconds": 795.91,
+      "end_seconds": 797.91,
+      "text": "就是这个东西里面"
+    },
+    {
+      "start_seconds": 797.91,
+      "end_seconds": 798.91,
+      "text": "Honest这个名词呢"
+    },
+    {
+      "start_seconds": 798.91,
+      "end_seconds": 801.91,
+      "text": "其实在今年才出现"
+    },
+    {
+      "start_seconds": 801.91,
+      "end_seconds": 804.91,
+      "text": "它叫马鞍的那个安具"
+    },
+    {
+      "start_seconds": 804.91,
+      "end_seconds": 805.91,
+      "text": "原因是因为"
+    },
+    {
+      "start_seconds": 805.91,
+      "end_seconds": 806.91,
+      "text": "Agent呢"
+    },
+    {
+      "start_seconds": 806.91,
+      "end_seconds": 809.91,
+      "text": "其实就是一个会做事的AI"
+    },
+    {
+      "start_seconds": 809.91,
+      "end_seconds": 811.91,
+      "text": "会工作的一个AI"
+    },
+    {
+      "start_seconds": 811.91,
+      "end_seconds": 812.91,
+      "text": "你可以把它想成"
+    },
+    {
+      "start_seconds": 812.91,
+      "end_seconds": 813.91,
+      "text": "它是一个工具人"
+    },
+    {
+      "start_seconds": 813.91,
+      "end_seconds": 814.91,
+      "text": "那工具人呢"
+    },
+    {
+      "start_seconds": 814.91,
+      "end_seconds": 816.91,
+      "text": "其实就是我们之前讲过的"
+    },
+    {
+      "start_seconds": 816.91,
+      "end_seconds": 818.91,
+      "text": "是模型本身这个大脑"
+    },
+    {
+      "start_seconds": 818.91,
+      "end_seconds": 820.91,
+      "text": "加上它外面所环绕的"
+    },
+    {
+      "start_seconds": 820.91,
+      "end_seconds": 822.91,
+      "text": "这些所有的东西"
+    },
+    {
+      "start_seconds": 822.91,
+      "end_seconds": 824.91,
+      "text": "那这些所有的东西呢"
+    },
+    {
+      "start_seconds": 824.91,
+      "end_seconds": 825.91,
+      "text": "就包含了"
+    },
+    {
+      "start_seconds": 825.91,
+      "end_seconds": 827.91,
+      "text": "就是给AI的规则"
+    },
+    {
+      "start_seconds": 827.91,
+      "end_seconds": 828.91,
+      "text": "那给AI的工具"
+    },
+    {
+      "start_seconds": 828.91,
+      "end_seconds": 831.91,
+      "text": "那以及给AI做事的风格"
+    },
+    {
+      "start_seconds": 831.91,
+      "end_seconds": 832.91,
+      "text": "这三种"
+    },
+    {
+      "start_seconds": 832.91,
+      "end_seconds": 835.91,
+      "text": "那还有上礼拜的contest window"
+    },
+    {
+      "start_seconds": 836.91,
+      "end_seconds": 837.91,
+      "text": "这礼拜呢"
+    },
+    {
+      "start_seconds": 837.91,
+      "end_seconds": 839.91,
+      "text": "的AI News呢"
+    },
+    {
+      "start_seconds": 839.91,
+      "end_seconds": 841.91,
+      "text": "全部几乎环绕在于"
+    },
+    {
+      "start_seconds": 841.91,
+      "end_seconds": 843.91,
+      "text": "就是治安的部分"
+    },
+    {
+      "start_seconds": 843.91,
+      "end_seconds": 844.91,
+      "text": "就第一个呢"
+    },
+    {
+      "start_seconds": 844.91,
+      "end_seconds": 845.91,
+      "text": "则是"
+    },
+    {
+      "start_seconds": 845.91,
+      "end_seconds": 846.91,
+      "text": "Zebra这个是"
+    },
+    {
+      "start_seconds": 846.91,
+      "end_seconds": 848.91,
+      "text": "台湾一个新创团队"
+    },
+    {
+      "start_seconds": 848.91,
+      "end_seconds": 851.91,
+      "text": "他们做的一个一间公司"
+    },
+    {
+      "start_seconds": 851.91,
+      "end_seconds": 852.91,
+      "text": "那创办人很年轻"
+    },
+    {
+      "start_seconds": 852.91,
+      "end_seconds": 856.91,
+      "text": "好像才25还26岁而已"
+    },
+    {
+      "start_seconds": 856.91,
+      "end_seconds": 858.91,
+      "text": "那这个产品呢"
+    },
+    {
+      "start_seconds": 858.91,
+      "end_seconds": 861.91,
+      "text": "是他大学做专题的时候"
+    },
+    {
+      "start_seconds": 861.91,
+      "end_seconds": 862.91,
+      "text": "的一个专案"
+    },
+    {
+      "start_seconds": 862.91,
+      "end_seconds": 864.91,
+      "text": "那他把它弄成是一个"
+    },
+    {
+      "start_seconds": 864.91,
+      "end_seconds": 865.91,
+      "text": "服务"
+    },
+    {
+      "start_seconds": 865.91,
+      "end_seconds": 867.91,
+      "text": "这个服务主要是在解决说"
+    },
+    {
+      "start_seconds": 867.91,
+      "end_seconds": 871.91,
+      "text": "过去可能我们做软体的人"
+    },
+    {
+      "start_seconds": 871.91,
+      "end_seconds": 874.91,
+      "text": "那有非常非常多需要设定的地方"
+    },
+    {
+      "start_seconds": 874.91,
+      "end_seconds": 876.91,
+      "text": "那他们把这些设定的地方呢"
+    },
+    {
+      "start_seconds": 876.91,
+      "end_seconds": 877.91,
+      "text": "给搞定"
+    },
+    {
+      "start_seconds": 877.91,
+      "end_seconds": 878.91,
+      "text": "就像我自己有用龙虾"
+    },
+    {
+      "start_seconds": 878.91,
+      "end_seconds": 879.91,
+      "text": "那我的龙虾呢"
+    },
+    {
+      "start_seconds": 879.91,
+      "end_seconds": 882.91,
+      "text": "也是部署在Zebra上面"
+    },
+    {
+      "start_seconds": 882.91,
+      "end_seconds": 884.91,
+      "text": "它其实就是一个面板"
+    },
+    {
+      "start_seconds": 884.91,
+      "end_seconds": 885.91,
+      "text": "然后你按龙虾"
+    },
+    {
+      "start_seconds": 885.91,
+      "end_seconds": 887.91,
+      "text": "它就帮你装好了"
+    },
+    {
+      "start_seconds": 887.91,
+      "end_seconds": 889.91,
+      "text": "对所以这其实是一个非常"
+    },
+    {
+      "start_seconds": 889.91,
+      "end_seconds": 893.91,
+      "text": "台湾也蛮多人在使用的一个服务"
+    },
+    {
+      "start_seconds": 893.91,
+      "end_seconds": 896.91,
+      "text": "但是因为它在8月的时候呢"
+    },
+    {
+      "start_seconds": 896.91,
+      "end_seconds": 898.91,
+      "text": "有遭受过駭客的入侵"
+    },
+    {
+      "start_seconds": 869.71,
+      "end_seconds": 872.51,
+      "text": "我們做軟體的人"
+    },
+    {
+      "start_seconds": 872.51,
+      "end_seconds": 875.21,
+      "text": "有非常多需要設定的地方"
+    },
+    {
+      "start_seconds": 875.21,
+      "end_seconds": 878.01,
+      "text": "他們把這些設定的地方給搞定"
+    },
+    {
+      "start_seconds": 878.01,
+      "end_seconds": 879.8100000000001,
+      "text": "就像我自己有用龍蝦"
+    },
+    {
+      "start_seconds": 879.8100000000001,
+      "end_seconds": 883.71,
+      "text": "我的龍蝦也是部署在Ziver上面"
+    },
+    {
+      "start_seconds": 883.71,
+      "end_seconds": 885.01,
+      "text": "它其實就是一個面板"
+    },
+    {
+      "start_seconds": 885.01,
+      "end_seconds": 886.21,
+      "text": "然後你按龍蝦"
+    },
+    {
+      "start_seconds": 886.21,
+      "end_seconds": 888.01,
+      "text": "它就幫你裝好了"
+    },
+    {
+      "start_seconds": 888.01,
+      "end_seconds": 890.01,
+      "text": "所以這其實是一個非常"
+    },
+    {
+      "start_seconds": 890.01,
+      "end_seconds": 893.9100000000001,
+      "text": "台灣也蠻多人在使用的一個服務"
+    },
+    {
+      "start_seconds": 893.9100000000001,
+      "end_seconds": 897.21,
+      "text": "但是因為它在8月的時候"
+    },
+    {
+      "start_seconds": 897.21,
+      "end_seconds": 899.61,
+      "text": "有遭受過駭客的入侵"
+    },
+    {
+      "start_seconds": 899.9100000000001,
+      "end_seconds": 904.8100000000001,
+      "text": "那在10月也就是前幾天的時候"
+    },
+    {
+      "start_seconds": 904.8100000000001,
+      "end_seconds": 907.3100000000001,
+      "text": "又再度遭受到駭客的入侵"
+    },
+    {
+      "start_seconds": 907.3100000000001,
+      "end_seconds": 908.9100000000001,
+      "text": "就是它已經被打到"
+    },
+    {
+      "start_seconds": 908.9100000000001,
+      "end_seconds": 911.71,
+      "text": "連用戶都對它喪失了信任感"
+    },
+    {
+      "start_seconds": 911.71,
+      "end_seconds": 915.8100000000001,
+      "text": "所以它決定就是關閉整個的服務"
+    },
+    {
+      "start_seconds": 915.8100000000001,
+      "end_seconds": 919.71,
+      "text": "再來就是OpenCode也有此案的問題"
+    },
+    {
+      "start_seconds": 919.71,
+      "end_seconds": 924.3100000000001,
+      "text": "OpenCode它其實是一個Honest的一個"
+    },
+    {
+      "start_seconds": 924.3100000000001,
+      "end_seconds": 925.3100000000001,
+      "text": "也不能說是軟體"
+    },
+    {
+      "start_seconds": 925.3100000000001,
+      "end_seconds": 928.21,
+      "text": "它就是一個專門做Honest的"
+    },
+    {
+      "start_seconds": 928.3100000000001,
+      "end_seconds": 930.11,
+      "text": "那它也有它自己的APP"
+    },
+    {
+      "start_seconds": 930.11,
+      "end_seconds": 932.71,
+      "text": "所以你可以用OpenCode的Honest"
+    },
+    {
+      "start_seconds": 932.71,
+      "end_seconds": 935.9100000000001,
+      "text": "來去接各種不同的模型"
+    },
+    {
+      "start_seconds": 935.9100000000001,
+      "end_seconds": 937.9100000000001,
+      "text": "你可以接GPT的模型"
+    },
+    {
+      "start_seconds": 937.9100000000001,
+      "end_seconds": 939.51,
+      "text": "你可以接GrimLine的模型"
+    },
+    {
+      "start_seconds": 939.51,
+      "end_seconds": 941.8100000000001,
+      "text": "你也可以接Code的模型"
+    },
+    {
+      "start_seconds": 942.61,
+      "end_seconds": 945.71,
+      "text": "所以第三個就是台灣一間上市公司"
+    },
+    {
+      "start_seconds": 945.71,
+      "end_seconds": 947.71,
+      "text": "叫Joye APP"
+    },
+    {
+      "start_seconds": 947.71,
+      "end_seconds": 950.8100000000001,
+      "text": "就是他們專門在做軟體服務的"
+    },
+    {
+      "start_seconds": 950.8100000000001,
+      "end_seconds": 952.8100000000001,
+      "text": "所以就是上禮拜"
+    },
+    {
+      "start_seconds": 952.8100000000001,
+      "end_seconds": 955.8100000000001,
+      "text": "簡直是資安的一個大災難"
+    },
+    {
+      "start_seconds": 955.9100000000001,
+      "end_seconds": 959.71,
+      "text": "就是有很多公司都受到資安的攻擊"
+    },
+    {
+      "start_seconds": 959.71,
+      "end_seconds": 963.8100000000001,
+      "text": "那這種狀況在未來只會越來越多"
+    },
+    {
+      "start_seconds": 963.8100000000001,
+      "end_seconds": 965.51,
+      "text": "除了資安以外"
+    },
+    {
+      "start_seconds": 965.51,
+      "end_seconds": 967.3100000000001,
+      "text": "唯一的好消息就是"
+    },
+    {
+      "start_seconds": 967.3100000000001,
+      "end_seconds": 970.71,
+      "text": "GrimLine的Model聽說整個壓起來了"
+    },
+    {
+      "start_seconds": 970.71,
+      "end_seconds": 973.21,
+      "text": "突然感覺好像變強了"
+    },
+    {
+      "start_seconds": 973.21,
+      "end_seconds": 974.8100000000001,
+      "text": "但這個我沒有辦法去測試"
+    },
+    {
+      "start_seconds": 974.8100000000001,
+      "end_seconds": 977.01,
+      "text": "因為我的GrimLine的Model"
+    },
+    {
+      "start_seconds": 977.01,
+      "end_seconds": 978.8100000000001,
+      "text": "被Googleban掉了"
+    },
+    {
+      "start_seconds": 978.8100000000001,
+      "end_seconds": 980.8100000000001,
+      "text": "我那個帳戶不能使用"
+    },
+    {
+      "start_seconds": 980.8100000000001,
+      "end_seconds": 982.71,
+      "text": "就是GrimLine的Model"
+    },
+    {
+      "start_seconds": 982.71,
+      "end_seconds": 984.21,
+      "text": "原因是因為"
+    },
+    {
+      "start_seconds": 984.21,
+      "end_seconds": 987.21,
+      "text": "我過去曾經把GrimLine的Model"
+    },
+    {
+      "start_seconds": 987.21,
+      "end_seconds": 989.71,
+      "text": "接到OpenCode的Hannes"
+    },
+    {
+      "start_seconds": 989.71,
+      "end_seconds": 993.21,
+      "text": "但這個是違反Google的原則"
+    },
+    {
+      "start_seconds": 993.21,
+      "end_seconds": 995.21,
+      "text": "所以他們就把我的帳戶ban掉"
+    },
+    {
+      "start_seconds": 995.21,
+      "end_seconds": 1000.6,
+      "text": "然後完全沒有辦法恢復"
+    },
+    {
+      "start_seconds": 1000.6,
+      "end_seconds": 1003.1,
+      "text": "所以回到今天"
+    },
+    {
+      "start_seconds": 1003.1,
+      "end_seconds": 1006.1,
+      "text": "就是過去我們一直在講AI的模型"
+    },
+    {
+      "start_seconds": 1006.1,
+      "end_seconds": 1009.1,
+      "text": "所以模型它其實負責的事情"
+    },
+    {
+      "start_seconds": 1009.1,
+      "end_seconds": 1011.6,
+      "text": "就是文字的接絡而已"
+    },
+    {
+      "start_seconds": 1011.6,
+      "end_seconds": 1014.1,
+      "text": "所以你可以把它簡化成"
+    },
+    {
+      "start_seconds": 1014.1,
+      "end_seconds": 1016.6,
+      "text": "它其實就是一個AI的腦袋"
+    },
+    {
+      "start_seconds": 1016.6,
+      "end_seconds": 1018.1,
+      "text": "它去理解你的文字"
+    },
+    {
+      "start_seconds": 1018.1,
+      "end_seconds": 1019.6,
+      "text": "然後它去生成文字"
+    },
+    {
+      "start_seconds": 1019.6,
+      "end_seconds": 1022.1,
+      "text": "然後它可能給你一個建議"
+    },
+    {
+      "start_seconds": 1022.1,
+      "end_seconds": 1027.1,
+      "text": "但你如果有某一個專案的狀態之下"
+    },
+    {
+      "start_seconds": 1027.1,
+      "end_seconds": 1030.1,
+      "text": "假設你這個專案可能是建造一個網頁"
+    },
+    {
+      "start_seconds": 1030.1,
+      "end_seconds": 1032.6,
+      "text": "那你call一個AI的模型進來"
+    },
+    {
+      "start_seconds": 1032.6,
+      "end_seconds": 1035.6,
+      "text": "它完全會不知道說你這個專案"
+    },
+    {
+      "start_seconds": 1035.6,
+      "end_seconds": 1038.6,
+      "text": "到底在做什麼樣的事情"
+    },
+    {
+      "start_seconds": 1038.6,
+      "end_seconds": 1039.6,
+      "text": "所以這個時候"
+    },
+    {
+      "start_seconds": 1039.6,
+      "end_seconds": 1042.1,
+      "text": "我們就需要有一個Agent MD"
+    },
+    {
+      "start_seconds": 1042.1,
+      "end_seconds": 1044.6,
+      "text": "它其實就是員工守則"
+    },
+    {
+      "start_seconds": 1045.1,
+      "end_seconds": 1047.6,
+      "text": "就是告訴這個AI模型說"
+    },
+    {
+      "start_seconds": 1047.6,
+      "end_seconds": 1051.1,
+      "text": "好 我今天的這個專案"
+    },
+    {
+      "start_seconds": 1051.1,
+      "end_seconds": 1055.1,
+      "text": "那可能是做網頁專用的"
+    },
+    {
+      "start_seconds": 1055.1,
+      "end_seconds": 1057.6,
+      "text": "那你可能需要遵守"
+    },
+    {
+      "start_seconds": 1057.6,
+      "end_seconds": 1059.6,
+      "text": "我喜歡用什麼樣的字體"
+    },
+    {
+      "start_seconds": 1059.6,
+      "end_seconds": 1061.6,
+      "text": "那字體是多大"
+    },
+    {
+      "start_seconds": 1061.6,
+      "end_seconds": 1063.6,
+      "text": "那第二個則是"
+    },
+    {
+      "start_seconds": 1063.6,
+      "end_seconds": 1067.6,
+      "text": "工具可能是製作網頁的工具"
+    },
+    {
+      "start_seconds": 1067.6,
+      "end_seconds": 1070.6,
+      "text": "第三個可能是製作網頁視覺的"
+    },
+    {
+      "start_seconds": 1070.6,
+      "end_seconds": 1073.6,
+      "text": "工作的法則"
+    },
+    {
+      "start_seconds": 1073.6,
+      "end_seconds": 1076.1,
+      "text": "對 呼應就是剛剛最前面說"
+    },
+    {
+      "start_seconds": 1076.1,
+      "end_seconds": 1078.1,
+      "text": "有時候可能用講的"
+    },
+    {
+      "start_seconds": 1078.1,
+      "end_seconds": 1079.6,
+      "text": "你們比較難去想像"
+    },
+    {
+      "start_seconds": 1079.6,
+      "end_seconds": 1081.6,
+      "text": "所以在頓片部分"
+    },
+    {
+      "start_seconds": 1081.6,
+      "end_seconds": 1085.1,
+      "text": "我今天會就是先全部一起帶過之後"
+    },
+    {
+      "start_seconds": 1085.1,
+      "end_seconds": 1087.1,
+      "text": "統一回到我的電腦"
+    },
+    {
+      "start_seconds": 1087.1,
+      "end_seconds": 1090.6,
+      "text": "那我會用一個很簡單的"
+    },
+    {
+      "start_seconds": 1090.6,
+      "end_seconds": 1092.1,
+      "text": "可能做一個網頁"
+    },
+    {
+      "start_seconds": 1092.1,
+      "end_seconds": 1095.1,
+      "text": "然後把這三個給串在一起"
+    },
+    {
+      "start_seconds": 1095.1,
+      "end_seconds": 1096.6,
+      "text": "然後讓各位看到說"
+    },
+    {
+      "start_seconds": 1096.6,
+      "end_seconds": 1100.1,
+      "text": "如何建立一個簡單的Agent MD"
+    },
+    {
+      "start_seconds": 1100.1,
+      "end_seconds": 1103.6,
+      "text": "那如何去接一個製作網頁的工具"
+    },
+    {
+      "start_seconds": 1103.6,
+      "end_seconds": 1107.1,
+      "text": "那如何讓一個視覺化的方法"
+    },
+    {
+      "start_seconds": 1107.1,
+      "end_seconds": 1112.77,
+      "text": "去影響到整個網頁的這個呈現"
+    },
+    {
+      "start_seconds": 1112.77,
+      "end_seconds": 1115.27,
+      "text": "在規則的部分"
+    },
+    {
+      "start_seconds": 1115.27,
+      "end_seconds": 1117.27,
+      "text": "它其實就很簡單"
+    },
+    {
+      "start_seconds": 1117.27,
+      "end_seconds": 1119.27,
+      "text": "假設你今天有一個工作的目錄"
+    },
+    {
+      "start_seconds": 1119.27,
+      "end_seconds": 1120.77,
+      "text": "我這個工作目錄"
+    },
+    {
+      "start_seconds": 1120.77,
+      "end_seconds": 1122.77,
+      "text": "主要是做一個類似"
+    },
+    {
+      "start_seconds": 1122.77,
+      "end_seconds": 1125.77,
+      "text": "知識的圖書館的一個概念"
+    },
+    {
+      "start_seconds": 1125.77,
+      "end_seconds": 1126.77,
+      "text": "所以進來之後"
+    },
+    {
+      "start_seconds": 1126.77,
+      "end_seconds": 1129.77,
+      "text": "你可能就會有一個Agent MD"
+    },
+    {
+      "start_seconds": 1129.77,
+      "end_seconds": 1131.77,
+      "text": "那這個Agent MD"
+    },
+    {
+      "start_seconds": 1131.77,
+      "end_seconds": 1133.77,
+      "text": "主要就是告訴AI說"
+    },
+    {
+      "start_seconds": 1133.77,
+      "end_seconds": 1135.77,
+      "text": "這個專案在幹嘛的"
+    },
+    {
+      "start_seconds": 1135.77,
+      "end_seconds": 1138.77,
+      "text": "那你這個工作流程是如何"
+    },
+    {
+      "start_seconds": 1138.77,
+      "end_seconds": 1142.27,
+      "text": "那我這個Knowledge Library這個工作流程是"
+    },
+    {
+      "start_seconds": 1142.27,
+      "end_seconds": 1146.27,
+      "text": "我其實只要給它一個YouTube的連結"
+    },
+    {
+      "start_seconds": 1146.27,
+      "end_seconds": 1148.77,
+      "text": "它最後就可以做成一個"
+    },
+    {
+      "start_seconds": 1148.77,
+      "end_seconds": 1152.27,
+      "text": "HTML版本視覺化的筆記"
+    },
+    {
+      "start_seconds": 1152.27,
+      "end_seconds": 1155.27,
+      "text": "所以在這個狀態之下"
+    },
+    {
+      "start_seconds": 1155.27,
+      "end_seconds": 1156.77,
+      "text": "我這個Agent MD"
+    },
+    {
+      "start_seconds": 1156.77,
+      "end_seconds": 1158.27,
+      "text": "要說的就是"
+    },
+    {
+      "start_seconds": 1158.27,
+      "end_seconds": 1159.27,
+      "text": "第一個"
+    },
+    {
+      "start_seconds": 1159.27,
+      "end_seconds": 1162.77,
+      "text": "我這個專案在做什麼事"
+    },
+    {
+      "start_seconds": 1162.77,
+      "end_seconds": 1166.27,
+      "text": "第二個就是我這個專案的工作流程"
+    },
+    {
+      "start_seconds": 1166.27,
+      "end_seconds": 1169.27,
+      "text": "所以一旦你有一個新的Model進來之後"
+    },
+    {
+      "start_seconds": 1169.27,
+      "end_seconds": 1171.27,
+      "text": "它會快速知道說"
+    },
+    {
+      "start_seconds": 1171.27,
+      "end_seconds": 1173.77,
+      "text": "你只要丟一個連結給我"
+    },
+    {
+      "start_seconds": 1173.77,
+      "end_seconds": 1176.27,
+      "text": "那我就要想辦法去抽取"
+    },
+    {
+      "start_seconds": 1176.27,
+      "end_seconds": 1179.27,
+      "text": "這個YouTube連結背後的聲音"
+    },
+    {
+      "start_seconds": 1179.27,
+      "end_seconds": 1181.27,
+      "text": "聲音要轉成文字"
+    },
+    {
+      "start_seconds": 1181.27,
+      "end_seconds": 1183.77,
+      "text": "那文字要轉成"
+    },
+    {
+      "start_seconds": 1183.77,
+      "end_seconds": 1187.77,
+      "text": "整理成一份很好的筆記"
+    },
+    {
+      "start_seconds": 1187.77,
+      "end_seconds": 1189.77,
+      "text": "所以因應不同的專案"
+    },
+    {
+      "start_seconds": 1189.77,
+      "end_seconds": 1193.77,
+      "text": "其實我們會有不同脈絡的Agent MD"
+    },
+    {
+      "start_seconds": 1193.77,
+      "end_seconds": 1196.27,
+      "text": "但主要的核心就是在於說"
+    },
+    {
+      "start_seconds": 1196.27,
+      "end_seconds": 1199.27,
+      "text": "你這個案子是要做什麼的"
+    },
+    {
+      "start_seconds": 1199.27,
+      "end_seconds": 1205.15,
+      "text": "你這個工作目錄是要幹嘛的"
+    },
+    {
+      "start_seconds": 1205.15,
+      "end_seconds": 1208.65,
+      "text": "過去除了Cloud Code以外"
+    },
+    {
+      "start_seconds": 1208.65,
+      "end_seconds": 1213.15,
+      "text": "所有的工作手則都叫Agent MD"
+    },
+    {
+      "start_seconds": 1213.15,
+      "end_seconds": 1214.65,
+      "text": "你如果用Gem9"
+    },
+    {
+      "start_seconds": 1214.65,
+      "end_seconds": 1216.65,
+      "text": "你如果用GPT"
+    },
+    {
+      "start_seconds": 1216.65,
+      "end_seconds": 1220.15,
+      "text": "那甚至你用其他小的模型"
+    },
+    {
+      "start_seconds": 1220.15,
+      "end_seconds": 1222.15,
+      "text": "他們所共同有的"
+    },
+    {
+      "start_seconds": 1222.15,
+      "end_seconds": 1226.15,
+      "text": "就是Agent MD的這個資料夾"
+    },
+    {
+      "start_seconds": 1226.15,
+      "end_seconds": 1228.15,
+      "text": "那過去只有Cloud Code"
+    },
+    {
+      "start_seconds": 1228.15,
+      "end_seconds": 1232.15,
+      "text": "會單獨使用一個叫Cloud.MD的規則檔"
+    },
+    {
+      "start_seconds": 1232.15,
+      "end_seconds": 1235.65,
+      "text": "他們兩個的意義是完全一模一樣的"
+    },
+    {
+      "start_seconds": 1235.65,
+      "end_seconds": 1238.65,
+      "text": "但Cloud Code過去就是想要特立獨行"
+    },
+    {
+      "start_seconds": 1238.65,
+      "end_seconds": 1239.65,
+      "text": "它想要"
+    },
+    {
+      "start_seconds": 1239.65,
+      "end_seconds": 1240.65,
+      "text": "我不曉得它要幹嘛"
+    },
+    {
+      "start_seconds": 1240.65,
+      "end_seconds": 1243.15,
+      "text": "但它就替它自己模型"
+    },
+    {
+      "start_seconds": 1243.15,
+      "end_seconds": 1245.15,
+      "text": "的Honest還有Model"
+    },
+    {
+      "start_seconds": 1245.15,
+      "end_seconds": 1247.65,
+      "text": "建立了一個叫Cloud.MD"
+    },
+    {
+      "start_seconds": 1247.65,
+      "end_seconds": 1249.65,
+      "text": "但在幾個禮拜之前"
+    },
+    {
+      "start_seconds": 1249.65,
+      "end_seconds": 1251.15,
+      "text": "我記得幾個禮拜之前"
+    },
+    {
+      "start_seconds": 1251.15,
+      "end_seconds": 1252.65,
+      "text": "幾個月之前"
+    },
+    {
+      "start_seconds": 1252.65,
+      "end_seconds": 1254.15,
+      "text": "就是Cloud Code也改了"
+    },
+    {
+      "start_seconds": 1254.15,
+      "end_seconds": 1258.15,
+      "text": "就是他們已經可以接受Agent MD"
+    },
+    {
+      "start_seconds": 1258.15,
+      "end_seconds": 1261.15,
+      "text": "所以其實你在創一個新的目錄的時候"
+    },
+    {
+      "start_seconds": 1261.15,
+      "end_seconds": 1265.15,
+      "text": "你只要建立一個Agent MD就可以了"
+    },
+    {
+      "start_seconds": 1265.15,
+      "end_seconds": 1267.15,
+      "text": "那在這個目錄之下"
+    },
+    {
+      "start_seconds": 1267.15,
+      "end_seconds": 1269.65,
+      "text": "你可以用任何的模型"
+    },
+    {
+      "start_seconds": 1269.65,
+      "end_seconds": 1271.15,
+      "text": "進入到這個目錄"
+    },
+    {
+      "start_seconds": 1271.15,
+      "end_seconds": 1273.15,
+      "text": "然後來工作"
+    },
+    {
+      "start_seconds": 1273.15,
+      "end_seconds": 1277.19,
+      "text": "規則檔一開始很簡單"
+    },
+    {
+      "start_seconds": 1277.19,
+      "end_seconds": 1279.69,
+      "text": "就千萬不要複雜"
+    },
+    {
+      "start_seconds": 1279.69,
+      "end_seconds": 1281.19,
+      "text": "就是其實如果"
+    },
+    {
+      "start_seconds": 1281.19,
+      "end_seconds": 1282.69,
+      "text": "建立一個初始專案的話"
+    },
+    {
+      "start_seconds": 1282.69,
+      "end_seconds": 1284.19,
+      "text": "你只要告訴它"
+    },
+    {
+      "start_seconds": 1284.19,
+      "end_seconds": 1285.69,
+      "text": "你這個專案在幹嘛"
+    },
+    {
+      "start_seconds": 1285.69,
+      "end_seconds": 1287.19,
+      "text": "你想要幹嘛"
+    },
+    {
+      "start_seconds": 1287.19,
+      "end_seconds": 1291.19,
+      "text": "然後你請AI去建立一個"
+    },
+    {
+      "start_seconds": 1291.19,
+      "end_seconds": 1295.69,
+      "text": "很簡單的Agent MD的檔案"
+    },
+    {
+      "start_seconds": 1295.69,
+      "end_seconds": 1299.69,
+      "text": "但隨著你工作的時間拉長"
+    },
+    {
+      "start_seconds": 1299.69,
+      "end_seconds": 1304.19,
+      "text": "你有越來越多的這些資料進來的話"
+    },
+    {
+      "start_seconds": 1304.19,
+      "end_seconds": 1307.19,
+      "text": "你的Agent MD的專案目錄"
+    },
+    {
+      "start_seconds": 1307.19,
+      "end_seconds": 1309.69,
+      "text": "就會越來越肥厚"
+    },
+    {
+      "start_seconds": 1309.69,
+      "end_seconds": 1311.69,
+      "text": "原因是因為裡面會建立了"
+    },
+    {
+      "start_seconds": 1311.69,
+      "end_seconds": 1313.69,
+      "text": "非常非常多新的"
+    },
+    {
+      "start_seconds": 1313.69,
+      "end_seconds": 1315.69,
+      "text": "員工的工作守則"
+    },
+    {
+      "start_seconds": 1315.69,
+      "end_seconds": 1318.69,
+      "text": "有可能AI一直同樣犯"
+    },
+    {
+      "start_seconds": 1318.69,
+      "end_seconds": 1320.69,
+      "text": "很多一樣的錯誤"
+    },
+    {
+      "start_seconds": 1320.69,
+      "end_seconds": 1324.19,
+      "text": "這種東西就可以叫AI把它寫進"
+    },
+    {
+      "start_seconds": 1324.19,
+      "end_seconds": 1325.69,
+      "text": "員工守則裡面"
+    },
+    {
+      "start_seconds": 1325.69,
+      "end_seconds": 1328.19,
+      "text": "原因是因為這個錯誤是常犯的"
+    },
+    {
+      "start_seconds": 1328.19,
+      "end_seconds": 1330.19,
+      "text": "所以他下次讀到這個守則的時候"
+    },
+    {
+      "start_seconds": 1330.19,
+      "end_seconds": 1332.19,
+      "text": "他就會知道說"
+    },
+    {
+      "start_seconds": 1332.19,
+      "end_seconds": 1334.19,
+      "text": "他過去犯了什麼樣的錯"
+    },
+    {
+      "start_seconds": 1334.19,
+      "end_seconds": 1340.5,
+      "text": "之後我就不能再犯同樣的錯誤"
+    },
+    {
+      "start_seconds": 1340.5,
+      "end_seconds": 1343.5,
+      "text": "再來就是規則不是越多越好"
+    },
+    {
+      "start_seconds": 1343.5,
+      "end_seconds": 1345.5,
+      "text": "因為你的規則會一直不斷的"
+    },
+    {
+      "start_seconds": 1345.5,
+      "end_seconds": 1347.5,
+      "text": "慢慢的長大"
+    },
+    {
+      "start_seconds": 1347.5,
+      "end_seconds": 1349.5,
+      "text": "而且這個有時候膨脹的速度"
+    },
+    {
+      "start_seconds": 1349.5,
+      "end_seconds": 1351.5,
+      "text": "會蠻快的"
+    },
+    {
+      "start_seconds": 1351.5,
+      "end_seconds": 1354.0,
+      "text": "所以其實在開發的過程"
+    },
+    {
+      "start_seconds": 1354.0,
+      "end_seconds": 1356.5,
+      "text": "或在運行的過程當中"
+    },
+    {
+      "start_seconds": 1356.5,
+      "end_seconds": 1358.5,
+      "text": "有時候我們要稍微去看一下"
+    },
+    {
+      "start_seconds": 1358.5,
+      "end_seconds": 1361.5,
+      "text": "Agent MD是不是太長了"
+    },
+    {
+      "start_seconds": 1361.5,
+      "end_seconds": 1365.5,
+      "text": "就有一個比較基本的一個概念"
+    },
+    {
+      "start_seconds": 1365.5,
+      "end_seconds": 1366.5,
+      "text": "概念大概"
+    },
+    {
+      "start_seconds": 1366.5,
+      "end_seconds": 1369.5,
+      "text": "我們大概都會鎖在200行以內"
+    },
+    {
+      "start_seconds": 1369.5,
+      "end_seconds": 1372.5,
+      "text": "因為有時候可能會有一些"
+    },
+    {
+      "start_seconds": 1372.5,
+      "end_seconds": 1375.5,
+      "text": "就是可能如果AI會很常去記錄"
+    },
+    {
+      "start_seconds": 1375.5,
+      "end_seconds": 1378.5,
+      "text": "在這個專案他到底犯了什麼樣的錯"
+    },
+    {
+      "start_seconds": 1378.5,
+      "end_seconds": 1381.5,
+      "text": "如果這種東西可能超過100行"
+    },
+    {
+      "start_seconds": 1381.5,
+      "end_seconds": 1385.5,
+      "text": "那個錯誤就可以把它移出Agent MD"
+    },
+    {
+      "start_seconds": 1385.5,
+      "end_seconds": 1388.5,
+      "text": "你就可以開成另外一個MD檔"
+    },
+    {
+      "start_seconds": 1388.5,
+      "end_seconds": 1391.5,
+      "text": "然後在Agent MD裡面只要告訴他說"
+    },
+    {
+      "start_seconds": 1391.5,
+      "end_seconds": 1393.5,
+      "text": "你可以去參照哪一個檔案"
+    },
+    {
+      "start_seconds": 1393.5,
+      "end_seconds": 1397.5,
+      "text": "那個檔案是我們常犯的一個錯誤"
+    },
+    {
+      "start_seconds": 1397.5,
+      "end_seconds": 1400.5,
+      "text": "所以這個地方你需要去注意一下"
+    },
+    {
+      "start_seconds": 1400.5,
+      "end_seconds": 1404.5,
+      "text": "所以Agent MD它是需要時間去維護的"
+    },
+    {
+      "start_seconds": 1404.5,
+      "end_seconds": 1407.5,
+      "text": "就最好大概控制在200行以內"
+    },
+    {
+      "start_seconds": 1407.5,
+      "end_seconds": 1411.5,
+      "text": "會是一個比較舒服的長度"
+    },
+    {
+      "start_seconds": 1411.5,
+      "end_seconds": 1418.16,
+      "text": "所以規則檔它大概就像一張地圖一樣"
+    },
+    {
+      "start_seconds": 1418.16,
+      "end_seconds": 1423.16,
+      "text": "就如果回到前面的這個工作目錄來說的話"
+    },
+    {
+      "start_seconds": 1423.16,
+      "end_seconds": 1427.16,
+      "text": "可能我的Agent MD裡面就會去說明說"
+    },
+    {
+      "start_seconds": 1427.16,
+      "end_seconds": 1431.16,
+      "text": "我這個assets這個folder裡面"
+    },
+    {
+      "start_seconds": 1431.16,
+      "end_seconds": 1433.16,
+      "text": "它是代表什麼意思"
+    },
+    {
+      "start_seconds": 1433.16,
+      "end_seconds": 1436.16,
+      "text": "這個licenses裡面的folder代表什麼意思"
+    },
+    {
+      "start_seconds": 1436.16,
+      "end_seconds": 1439.16,
+      "text": "這四個可能是我的專案"
+    },
+    {
+      "start_seconds": 1439.16,
+      "end_seconds": 1444.16,
+      "text": "這個專案他們可能各自的原始來源是哪裡"
+    },
+    {
+      "start_seconds": 1444.16,
+      "end_seconds": 1448.16,
+      "text": "他們各自可能又代表什麼樣的內容"
+    },
+    {
+      "start_seconds": 1448.16,
+      "end_seconds": 1454.16,
+      "text": "所以Agent MD也同樣會是一個"
+    },
+    {
+      "start_seconds": 1454.16,
+      "end_seconds": 1458.51,
+      "text": "就是像一張地圖一樣"
+    },
+    {
+      "start_seconds": 1458.51,
+      "end_seconds": 1462.51,
+      "text": "它在說明你這整個專案裡面的每一個folder"
+    },
+    {
+      "start_seconds": 1462.51,
+      "end_seconds": 1464.51,
+      "text": "或是很重要的folder"
+    },
+    {
+      "start_seconds": 1464.51,
+      "end_seconds": 1468.51,
+      "text": "它到底是代表什麼樣的概念"
+    },
+    {
+      "start_seconds": 1468.51,
+      "end_seconds": 1475.51,
+      "text": "所以有可能你整個的專案的內容越來越大的時候"
+    },
+    {
+      "start_seconds": 1475.51,
+      "end_seconds": 1478.51,
+      "text": "你就會需要去分層"
+    },
+    {
+      "start_seconds": 1478.51,
+      "end_seconds": 1481.51,
+      "text": "再進入到剛開始的目錄"
+    },
+    {
+      "start_seconds": 1481.51,
+      "end_seconds": 1483.51,
+      "text": "你可能會有一個Agent MD"
+    },
+    {
+      "start_seconds": 1483.51,
+      "end_seconds": 1486.51,
+      "text": "那裡面你可能在這個folder裡面"
+    },
+    {
+      "start_seconds": 1486.51,
+      "end_seconds": 1488.51,
+      "text": "你還有一個叫Lab"
+    },
+    {
+      "start_seconds": 1488.51,
+      "end_seconds": 1492.51,
+      "text": "那Lab裡面也可以有自己的Agent MD"
+    },
+    {
+      "start_seconds": 1492.51,
+      "end_seconds": 1494.51,
+      "text": "所以這個Agent MD"
+    },
+    {
+      "start_seconds": 1494.51,
+      "end_seconds": 1497.51,
+      "text": "就是只有for這個labs"
+    },
+    {
+      "start_seconds": 1497.51,
+      "end_seconds": 1501.51,
+      "text": "這個目錄所使用的規則"
+    },
+    {
+      "start_seconds": 1501.51,
+      "end_seconds": 1505.51,
+      "text": "所以總規則控制著全部的內容"
+    },
+    {
+      "start_seconds": 1505.51,
+      "end_seconds": 1509.51,
+      "text": "labs的規則只控制labs的內容"
+    },
+    {
+      "start_seconds": 1509.51,
+      "end_seconds": 1513.51,
+      "text": "所以這個是當你的專案變大之後再慢慢的分工"
+    },
+    {
+      "start_seconds": 1513.51,
+      "end_seconds": 1519.51,
+      "text": "這種分工的方式你都可以請AI來做協助"
+    },
+    {
+      "start_seconds": 1519.51,
+      "end_seconds": 1523.3000000000002,
+      "text": "所以這個是一個很簡單的"
+    },
+    {
+      "start_seconds": 1523.3000000000002,
+      "end_seconds": 1528.3000000000002,
+      "text": "如果你不知道你的Agent MD"
+    },
+    {
+      "start_seconds": 1528.3000000000002,
+      "end_seconds": 1530.3000000000002,
+      "text": "到底有沒有被AI讀過"
+    },
+    {
+      "start_seconds": 1530.3000000000002,
+      "end_seconds": 1533.3000000000002,
+      "text": "那你就可以在一個folder裡面"
+    },
+    {
+      "start_seconds": 1533.3000000000002,
+      "end_seconds": 1538.3000000000002,
+      "text": "最後加上你自己可以辨識的字"
+    },
+    {
+      "start_seconds": 1538.3000000000002,
+      "end_seconds": 1541.3000000000002,
+      "text": "因為像我就會加各式各樣奇奇怪怪的字"
+    },
+    {
+      "start_seconds": 1541.3000000000002,
+      "end_seconds": 1546.3000000000002,
+      "text": "什麼Tawaii 沙拉紐油這種"
+    },
+    {
+      "start_seconds": 1546.3000000000002,
+      "end_seconds": 1547.3000000000002,
+      "text": "或這種奇怪的字"
+    },
+    {
+      "start_seconds": 1547.3000000000002,
+      "end_seconds": 1550.3000000000002,
+      "text": "我每個folder都有自己專屬的字"
+    },
+    {
+      "start_seconds": 1550.3000000000002,
+      "end_seconds": 1551.3000000000002,
+      "text": "我就會告訴他說"
+    },
+    {
+      "start_seconds": 1551.3000000000002,
+      "end_seconds": 1553.3000000000002,
+      "text": "如果你讀完整個工作守則"
+    },
+    {
+      "start_seconds": 1553.3000000000002,
+      "end_seconds": 1557.3000000000002,
+      "text": "請你一定要列印出什麼什麼字"
+    },
+    {
+      "start_seconds": 1557.3000000000002,
+      "end_seconds": 1558.3000000000002,
+      "text": "所以我在工作過程當中"
+    },
+    {
+      "start_seconds": 1558.3000000000002,
+      "end_seconds": 1560.3000000000002,
+      "text": "我只要看到那種很奇怪的字"
+    },
+    {
+      "start_seconds": 1560.3000000000002,
+      "end_seconds": 1565.3000000000002,
+      "text": "我就知道說AI已經讀過了整份工作守則"
+    },
+    {
+      "start_seconds": 1565.3000000000002,
+      "end_seconds": 1566.3000000000002,
+      "text": "所以理論上"
+    },
+    {
+      "start_seconds": 1566.3000000000002,
+      "end_seconds": 1571.3000000000002,
+      "text": "它應該就要照著整個工作守則的脈絡下去走"
+    },
+    {
+      "start_seconds": 1571.3000000000002,
+      "end_seconds": 1576.47,
+      "text": "這個也是我其中一個"
+    },
+    {
+      "start_seconds": 1576.47,
+      "end_seconds": 1578.47,
+      "text": "就是我會在最後面寫"
+    },
+    {
+      "start_seconds": 1578.47,
+      "end_seconds": 1580.47,
+      "text": "如果你讀完這份規則"
+    },
+    {
+      "start_seconds": 1580.47,
+      "end_seconds": 1583.47,
+      "text": "那你就要回覆一個什麼樣的東西"
+    },
+    {
+      "start_seconds": 1583.47,
+      "end_seconds": 1587.47,
+      "text": "所以這有點像是只是一個可以觀察的訊號"
+    },
+    {
+      "start_seconds": 1587.47,
+      "end_seconds": 1591.47,
+      "text": "你要確定AI是不是真的有讀過了"
+    },
+    {
+      "start_seconds": 1591.47,
+      "end_seconds": 1593.47,
+      "text": "這個東西而已"
+    },
+    {
+      "start_seconds": 1593.47,
+      "end_seconds": 1599.71,
+      "text": "但這邊有一個很重要的概念是"
+    },
+    {
+      "start_seconds": 1599.71,
+      "end_seconds": 1602.71,
+      "text": "它有時候可能它"
+    },
+    {
+      "start_seconds": 1602.71,
+      "end_seconds": 1603.71,
+      "text": "你會看到"
+    },
+    {
+      "start_seconds": 1603.71,
+      "end_seconds": 1608.71,
+      "text": "假設我這個叫吉他娃的密碼按碼"
+    },
+    {
+      "start_seconds": 1608.71,
+      "end_seconds": 1611.71,
+      "text": "假設我今天在工作的時候看到吉他娃"
+    },
+    {
+      "start_seconds": 1611.71,
+      "end_seconds": 1613.71,
+      "text": "我會知道說AI讀過這個規則"
+    },
+    {
+      "start_seconds": 1613.71,
+      "end_seconds": 1616.71,
+      "text": "但AI會不會照這個規則走呢"
+    },
+    {
+      "start_seconds": 1616.71,
+      "end_seconds": 1618.71,
+      "text": "不一定"
+    },
+    {
+      "start_seconds": 1618.71,
+      "end_seconds": 1619.71,
+      "text": "這有點像是說"
+    },
+    {
+      "start_seconds": 1619.71,
+      "end_seconds": 1621.71,
+      "text": "你今天進宣是第一天"
+    },
+    {
+      "start_seconds": 1621.71,
+      "end_seconds": 1624.71,
+      "text": "可能你的指導老師或老師們"
+    },
+    {
+      "start_seconds": 1624.71,
+      "end_seconds": 1628.71,
+      "text": "拿了一個實驗室工作守則給你看"
+    },
+    {
+      "start_seconds": 1628.71,
+      "end_seconds": 1632.71,
+      "text": "但這個工作守則假設有一百行"
+    },
+    {
+      "start_seconds": 1632.71,
+      "end_seconds": 1636.71,
+      "text": "你看完之後你會不會照著守則去執行"
+    },
+    {
+      "start_seconds": 1636.71,
+      "end_seconds": 1638.71,
+      "text": "有時候是不一定的"
+    },
+    {
+      "start_seconds": 1638.71,
+      "end_seconds": 1641.71,
+      "text": "所以這個可能也是需要注意"
+    },
+    {
+      "start_seconds": 1641.71,
+      "end_seconds": 1645.71,
+      "text": "所以常態上你大概要知道說"
+    },
+    {
+      "start_seconds": 1645.71,
+      "end_seconds": 1648.71,
+      "text": "你工作守則的脈絡是什麼"
+    },
+    {
+      "start_seconds": 1648.71,
+      "end_seconds": 1650.71,
+      "text": "在AI執行的過程當中"
+    },
+    {
+      "start_seconds": 1650.71,
+      "end_seconds": 1652.71,
+      "text": "你需要一直不斷去觀察"
+    },
+    {
+      "start_seconds": 1652.71,
+      "end_seconds": 1654.71,
+      "text": "就是AI就是它讀了"
+    },
+    {
+      "start_seconds": 1654.71,
+      "end_seconds": 1656.71,
+      "text": "但到底有沒有照做"
+    },
+    {
+      "start_seconds": 1656.71,
+      "end_seconds": 1658.71,
+      "text": "如果沒有照做的話"
+    },
+    {
+      "start_seconds": 1658.71,
+      "end_seconds": 1661.71,
+      "text": "你就要再寫進工作守則裡面"
+    },
+    {
+      "start_seconds": 1661.71,
+      "end_seconds": 1662.71,
+      "text": "你就要告訴它說"
+    },
+    {
+      "start_seconds": 1662.71,
+      "end_seconds": 1664.71,
+      "text": "為什麼你都沒有照做"
+    },
+    {
+      "start_seconds": 1664.71,
+      "end_seconds": 1668.71,
+      "text": "所以這個也是很需要注意的一個狀況"
+    },
+    {
+      "start_seconds": 1668.71,
+      "end_seconds": 1672.51,
+      "text": "另外一個就是"
+    },
+    {
+      "start_seconds": 1672.51,
+      "end_seconds": 1675.51,
+      "text": "這個有點像是"
+    },
+    {
+      "start_seconds": 1675.51,
+      "end_seconds": 1677.51,
+      "text": "這個是Hook"
+    },
+    {
+      "start_seconds": 1677.51,
+      "end_seconds": 1681.51,
+      "text": "Hook跟Agents.md又不太一樣"
+    },
+    {
+      "start_seconds": 1681.51,
+      "end_seconds": 1684.51,
+      "text": "假設我們把Agents.md"
+    },
+    {
+      "start_seconds": 1684.51,
+      "end_seconds": 1689.51,
+      "text": "當作是一個工作守則來看的話"
+    },
+    {
+      "start_seconds": 1689.51,
+      "end_seconds": 1694.51,
+      "text": "那Hook就是一個很硬性的規則"
+    },
+    {
+      "start_seconds": 1694.51,
+      "end_seconds": 1697.51,
+      "text": "就是它遇到某一種狀況"
+    },
+    {
+      "start_seconds": 1697.51,
+      "end_seconds": 1701.51,
+      "text": "它一定會執行某一個動作或程序"
+    },
+    {
+      "start_seconds": 1701.51,
+      "end_seconds": 1704.51,
+      "text": "舉例來說"
+    },
+    {
+      "start_seconds": 1704.51,
+      "end_seconds": 1709.51,
+      "text": "假設你今天是公司最後一個離開的"
+    },
+    {
+      "start_seconds": 1709.51,
+      "end_seconds": 1711.51,
+      "text": "當你關燈的時候"
+    },
+    {
+      "start_seconds": 1711.51,
+      "end_seconds": 1714.51,
+      "text": "你可能觸發的規則就是你燈一關"
+    },
+    {
+      "start_seconds": 1714.51,
+      "end_seconds": 1717.51,
+      "text": "鐵門就會拉下去"
+    },
+    {
+      "start_seconds": 1717.51,
+      "end_seconds": 1721.51,
+      "text": "所以這個Hook就已經幾乎是被挾持的"
+    },
+    {
+      "start_seconds": 1721.51,
+      "end_seconds": 1725.51,
+      "text": "所以這邊會有一個簡單的概念"
+    },
+    {
+      "start_seconds": 1725.51,
+      "end_seconds": 1727.51,
+      "text": "就是如果你原本的要求是"
+    },
+    {
+      "start_seconds": 1727.51,
+      "end_seconds": 1729.51,
+      "text": "執行Agents.md建議哪一些"
+    },
+    {
+      "start_seconds": 1729.51,
+      "end_seconds": 1733.51,
+      "text": "信可以刪除或者是封存"
+    },
+    {
+      "start_seconds": 1733.51,
+      "end_seconds": 1737.51,
+      "text": "信件太多的時候可能會觸發"
+    },
+    {
+      "start_seconds": 1737.51,
+      "end_seconds": 1741.51,
+      "text": "就是我們之前說過的上下文押說"
+    },
+    {
+      "start_seconds": 1741.51,
+      "end_seconds": 1745.51,
+      "text": "所以先確認這件事就有可能會被漏掉"
+    },
+    {
+      "start_seconds": 1745.51,
+      "end_seconds": 1749.51,
+      "text": "所以Agents.md有可能會直接動手去"
+    },
+    {
+      "start_seconds": 1749.51,
+      "end_seconds": 1752.51,
+      "text": "刪除你的信件"
+    },
+    {
+      "start_seconds": 1752.51,
+      "end_seconds": 1755.51,
+      "text": "所以這時候Hook就可以發揮作用"
+    },
+    {
+      "start_seconds": 1755.51,
+      "end_seconds": 1757.51,
+      "text": "Hook裡面就可以寫到說"
+    },
+    {
+      "start_seconds": 1757.51,
+      "end_seconds": 1762.51,
+      "text": "當Agents.md執行移除的程序的時候"
+    },
+    {
+      "start_seconds": 1762.51,
+      "end_seconds": 1766.51,
+      "text": "我需要跳出訊息來詢問使用者"
+    },
+    {
+      "start_seconds": 1766.51,
+      "end_seconds": 1769.51,
+      "text": "這個到底要不要刪除"
+    },
+    {
+      "start_seconds": 1739.344,
+      "end_seconds": 1741.344,
+      "text": "或者上下文押說"
+    },
+    {
+      "start_seconds": 1746.344,
+      "end_seconds": 1752.344,
+      "text": "所以Agent有可能會直接動手去刪除你的信件"
+    },
+    {
+      "start_seconds": 1757.344,
+      "end_seconds": 1762.344,
+      "text": "當Agent執行移除的程序的時候"
+    },
+    {
+      "start_seconds": 1769.344,
+      "end_seconds": 1771.344,
+      "text": "所以這種就是Hook的一種"
+    },
+    {
+      "start_seconds": 1771.344,
+      "end_seconds": 1776.344,
+      "text": "就是它AI運行到某一個狀態之下"
+    },
+    {
+      "start_seconds": 1776.344,
+      "end_seconds": 1779.344,
+      "text": "它可以完全的執行一個命令"
+    },
+    {
+      "start_seconds": 1779.344,
+      "end_seconds": 1781.344,
+      "text": "就Hook你們會比較少用到"
+    },
+    {
+      "start_seconds": 1781.344,
+      "end_seconds": 1787.344,
+      "text": "因為Hook這個東西對初學者來說比較不好懂"
+    },
+    {
+      "start_seconds": 1787.344,
+      "end_seconds": 1792.344,
+      "text": "如果你們對這個東西也不是那麼理解"
+    },
+    {
+      "start_seconds": 1792.344,
+      "end_seconds": 1794.344,
+      "text": "其實就把它跳過就好了"
+    },
+    {
+      "start_seconds": 1794.344,
+      "end_seconds": 1801.344,
+      "text": "所以主要是在執行一個危險的動作的時候"
+    },
+    {
+      "start_seconds": 1801.344,
+      "end_seconds": 1805.344,
+      "text": "可以讓整個系統在關鍵時刻"
+    },
+    {
+      "start_seconds": 1805.344,
+      "end_seconds": 1809.344,
+      "text": "把這個Agent要進行危險的動作給擋住"
+    },
+    {
+      "start_seconds": 1809.344,
+      "end_seconds": 1811.344,
+      "text": "就我們剛才說過"
+    },
+    {
+      "start_seconds": 1811.344,
+      "end_seconds": 1813.344,
+      "text": "就是如果要刪除檔案"
+    },
+    {
+      "start_seconds": 1813.344,
+      "end_seconds": 1818.344,
+      "text": "或要去讀一些你不想讓AI讀的檔案的時候"
+    },
+    {
+      "start_seconds": 1818.344,
+      "end_seconds": 1821.344,
+      "text": "那工具它就會自己去執行"
+    },
+    {
+      "start_seconds": 1821.344,
+      "end_seconds": 1824.344,
+      "text": "它就會觸發整個工具"
+    },
+    {
+      "start_seconds": 1824.344,
+      "end_seconds": 1834.9940000000001,
+      "text": "這邊大致上整理AgentMD跟Hook的一個時機點"
+    },
+    {
+      "start_seconds": 1834.9940000000001,
+      "end_seconds": 1838.9940000000001,
+      "text": "所以你可能是先讓Agent去做事"
+    },
+    {
+      "start_seconds": 1838.9940000000001,
+      "end_seconds": 1842.9940000000001,
+      "text": "做事之後你會觀察到Agent可能犯的錯誤"
+    },
+    {
+      "start_seconds": 1842.9940000000001,
+      "end_seconds": 1845.9940000000001,
+      "text": "同樣在犯一次錯誤的時候"
+    },
+    {
+      "start_seconds": 1845.9940000000001,
+      "end_seconds": 1848.9940000000001,
+      "text": "你就可以把它寫進規則裡面"
+    },
+    {
+      "start_seconds": 1848.9940000000001,
+      "end_seconds": 1853.9940000000001,
+      "text": "那Hook則是你完全不能失敗的時候"
+    },
+    {
+      "start_seconds": 1853.9940000000001,
+      "end_seconds": 1856.9940000000001,
+      "text": "如果像AI要刪除檔案的時候"
+    },
+    {
+      "start_seconds": 1856.9940000000001,
+      "end_seconds": 1860.9940000000001,
+      "text": "這個就是不被允許的"
+    },
+    {
+      "start_seconds": 1860.9940000000001,
+      "end_seconds": 1862.9940000000001,
+      "text": "或是你今天要壓縮上下文的時候"
+    },
+    {
+      "start_seconds": 1862.9940000000001,
+      "end_seconds": 1865.9940000000001,
+      "text": "你希望AI可以告訴你說"
+    },
+    {
+      "start_seconds": 1865.9940000000001,
+      "end_seconds": 1867.9940000000001,
+      "text": "可能我要壓縮上下文了"
+    },
+    {
+      "start_seconds": 1867.9940000000001,
+      "end_seconds": 1870.9940000000001,
+      "text": "那這種也可以去寫一個Hook"
+    },
+    {
+      "start_seconds": 1870.9940000000001,
+      "end_seconds": 1873.9940000000001,
+      "text": "或是可能你要壓縮之前的5%"
+    },
+    {
+      "start_seconds": 1873.9940000000001,
+      "end_seconds": 1875.9940000000001,
+      "text": "可以出動這個Hook"
+    },
+    {
+      "start_seconds": 1875.9940000000001,
+      "end_seconds": 1881.9940000000001,
+      "text": "讓你可以即時把可能上下文用別的方式給保留下來"
+    },
+    {
+      "start_seconds": 1881.9940000000001,
+      "end_seconds": 1888.884,
+      "text": "所以上面這個大概是AgentMD跟Hook的概念"
+    },
+    {
+      "start_seconds": 1888.884,
+      "end_seconds": 1892.884,
+      "text": "你其實只要記得AgentMD這個東西就好了"
+    },
+    {
+      "start_seconds": 1892.884,
+      "end_seconds": 1896.884,
+      "text": "Hook可以大致上先挑過它"
+    },
+    {
+      "start_seconds": 1896.884,
+      "end_seconds": 1902.884,
+      "text": "再來則是MCP的內容"
+    },
+    {
+      "start_seconds": 1902.884,
+      "end_seconds": 1904.884,
+      "text": "MCP它最一開始"
+    },
+    {
+      "start_seconds": 1904.884,
+      "end_seconds": 1907.884,
+      "text": "我們之前有說過Tool Calling"
+    },
+    {
+      "start_seconds": 1907.884,
+      "end_seconds": 1912.884,
+      "text": "就是AI它可以自己去使用這些工具"
+    },
+    {
+      "start_seconds": 1912.884,
+      "end_seconds": 1916.884,
+      "text": "但最一開始會出現MCP的概念是"
+    },
+    {
+      "start_seconds": 1916.884,
+      "end_seconds": 1918.884,
+      "text": "如果你是Cloud Code的使用者"
+    },
+    {
+      "start_seconds": 1918.884,
+      "end_seconds": 1921.884,
+      "text": "如果你是Codex的使用者"
+    },
+    {
+      "start_seconds": 1921.884,
+      "end_seconds": 1924.884,
+      "text": "或是你是其他Agent的使用者"
+    },
+    {
+      "start_seconds": 1924.884,
+      "end_seconds": 1928.884,
+      "text": "你所需要的工具假設是查詢天氣"
+    },
+    {
+      "start_seconds": 1928.884,
+      "end_seconds": 1931.884,
+      "text": "所以Cloud Code對查詢天氣"
+    },
+    {
+      "start_seconds": 1931.884,
+      "end_seconds": 1934.884,
+      "text": "可能會有自己的一套運用工具的規則"
+    },
+    {
+      "start_seconds": 1934.884,
+      "end_seconds": 1937.884,
+      "text": "Codex可能也會有自己的一套"
+    },
+    {
+      "start_seconds": 1937.884,
+      "end_seconds": 1941.884,
+      "text": "其他的Agent也可能會有自己的一套"
+    },
+    {
+      "start_seconds": 1941.884,
+      "end_seconds": 1944.884,
+      "text": "所以你在開發工具的時候"
+    },
+    {
+      "start_seconds": 1944.884,
+      "end_seconds": 1946.884,
+      "text": "在這個狀態之下"
+    },
+    {
+      "start_seconds": 1946.884,
+      "end_seconds": 1949.884,
+      "text": "你就會需要考慮到"
+    },
+    {
+      "start_seconds": 1949.884,
+      "end_seconds": 1951.884,
+      "text": "Cloud Code它是怎麼樣"
+    },
+    {
+      "start_seconds": 1951.884,
+      "end_seconds": 1954.884,
+      "text": "就是做他們這個工具的規則"
+    },
+    {
+      "start_seconds": 1954.884,
+      "end_seconds": 1956.884,
+      "text": "Codex是怎麼做的"
+    },
+    {
+      "start_seconds": 1956.884,
+      "end_seconds": 1958.884,
+      "text": "其他Agent是怎麼做的"
+    },
+    {
+      "start_seconds": 1958.884,
+      "end_seconds": 1959.884,
+      "text": "到行程的時候"
+    },
+    {
+      "start_seconds": 1959.884,
+      "end_seconds": 1962.884,
+      "text": "它一樣要考慮這三個路線"
+    },
+    {
+      "start_seconds": 1962.884,
+      "end_seconds": 1966.884,
+      "text": "所以隨著AI的模型越來越多的時候"
+    },
+    {
+      "start_seconds": 1966.884,
+      "end_seconds": 1969.884,
+      "text": "這些工具呼叫的規則"
+    },
+    {
+      "start_seconds": 1969.884,
+      "end_seconds": 1972.884,
+      "text": "會以線性的"
+    },
+    {
+      "start_seconds": 1974.884,
+      "end_seconds": 1977.884,
+      "text": "以線性的去增長整個的複雜程度"
+    },
+    {
+      "start_seconds": 1977.884,
+      "end_seconds": 1979.884,
+      "text": "所以這個時候"
+    },
+    {
+      "start_seconds": 1979.884,
+      "end_seconds": 1982.884,
+      "text": "就是在忘記去年來前年年底的時候"
+    },
+    {
+      "start_seconds": 1982.884,
+      "end_seconds": 1985.884,
+      "text": "就提出了一個叫MCP"
+    },
+    {
+      "start_seconds": 1985.884,
+      "end_seconds": 1988.884,
+      "text": "就是共用同一個規則"
+    },
+    {
+      "start_seconds": 1988.884,
+      "end_seconds": 1992.884,
+      "text": "讓AI來去呼叫這一些工具"
+    },
+    {
+      "start_seconds": 1992.884,
+      "end_seconds": 1996.884,
+      "text": "所以MCP它只是一個格式而已"
+    },
+    {
+      "start_seconds": 1996.884,
+      "end_seconds": 1999.884,
+      "text": "就是一個標準的格式"
+    },
+    {
+      "start_seconds": 1999.884,
+      "end_seconds": 2002.884,
+      "text": "就是它沒有其他的任何的能力"
+    },
+    {
+      "start_seconds": 2002.884,
+      "end_seconds": 2005.884,
+      "text": "那MCP我們在之前有說過"
+    },
+    {
+      "start_seconds": 2005.884,
+      "end_seconds": 2007.884,
+      "text": "它其實就是一個"
+    },
+    {
+      "start_seconds": 2007.884,
+      "end_seconds": 2011.884,
+      "text": "可以用JSON的方式來去呼叫某一個工具"
+    },
+    {
+      "start_seconds": 2011.884,
+      "end_seconds": 2012.884,
+      "text": "就是它在電腦裡面"
+    },
+    {
+      "start_seconds": 2012.884,
+      "end_seconds": 2015.884,
+      "text": "是用JSON的方式來去做呈現的"
+    },
+    {
+      "start_seconds": 2015.884,
+      "end_seconds": 2019.884,
+      "text": "所以你可以把MCP想成USB"
+    },
+    {
+      "start_seconds": 2019.884,
+      "end_seconds": 2023.884,
+      "text": "那這個也是你如果去打MCP"
+    },
+    {
+      "start_seconds": 2023.884,
+      "end_seconds": 2025.884,
+      "text": "MCP就是大家都會告訴你"
+    },
+    {
+      "start_seconds": 2025.884,
+      "end_seconds": 2027.884,
+      "text": "同樣的類比的方式"
+    },
+    {
+      "start_seconds": 2027.884,
+      "end_seconds": 2030.884,
+      "text": "原因是因為它就有點像是"
+    },
+    {
+      "start_seconds": 2030.884,
+      "end_seconds": 2034.884,
+      "text": "統一一個完全固定格式的插座"
+    },
+    {
+      "start_seconds": 2034.884,
+      "end_seconds": 2036.884,
+      "text": "不管你要運用到什麼樣的工具"
+    },
+    {
+      "start_seconds": 2036.884,
+      "end_seconds": 2040.884,
+      "text": "都是用這種規格來去做連接"
+    },
+    {
+      "start_seconds": 2040.884,
+      "end_seconds": 2043.884,
+      "text": "這個是Codex自己找的圖"
+    },
+    {
+      "start_seconds": 2043.884,
+      "end_seconds": 2045.884,
+      "text": "我覺得蠻醜的"
+    },
+    {
+      "start_seconds": 2045.884,
+      "end_seconds": 2050.414,
+      "text": "所以你可以把MCP想像成"
+    },
+    {
+      "start_seconds": 2050.414,
+      "end_seconds": 2054.414,
+      "text": "它大概是一個簡單的服務櫃台"
+    },
+    {
+      "start_seconds": 2054.414,
+      "end_seconds": 2056.414,
+      "text": "就你說使用Agent"
+    },
+    {
+      "start_seconds": 2056.414,
+      "end_seconds": 2059.414,
+      "text": "透過MCP的Server去連接"
+    },
+    {
+      "start_seconds": 2059.414,
+      "end_seconds": 2061.414,
+      "text": "那當然這個MCP的Server"
+    },
+    {
+      "start_seconds": 2061.414,
+      "end_seconds": 2064.414,
+      "text": "會取決於說你的供應商是誰"
+    },
+    {
+      "start_seconds": 2064.414,
+      "end_seconds": 2067.414,
+      "text": "如果你的供應商是否"
+    },
+    {
+      "start_seconds": 2067.414,
+      "end_seconds": 2071.414,
+      "text": "把圖片繪製得很漂亮的這些工具"
+    },
+    {
+      "start_seconds": 2071.414,
+      "end_seconds": 2074.414,
+      "text": "那你就要去接到對方的MCP Server"
+    },
+    {
+      "start_seconds": 2074.414,
+      "end_seconds": 2077.414,
+      "text": "那有一些MCP Server可能是走"
+    },
+    {
+      "start_seconds": 2077.414,
+      "end_seconds": 2079.414,
+      "text": "文件的寫作"
+    },
+    {
+      "start_seconds": 2079.414,
+      "end_seconds": 2082.414,
+      "text": "那你就要去接到對方的MCP Server"
+    },
+    {
+      "start_seconds": 2082.414,
+      "end_seconds": 2084.414,
+      "text": "所以你在做一個東西的時候"
+    },
+    {
+      "start_seconds": 2084.414,
+      "end_seconds": 2086.414,
+      "text": "你就需要去想說"
+    },
+    {
+      "start_seconds": 2086.414,
+      "end_seconds": 2090.414,
+      "text": "那你可能需要拿幾項不同的工具"
+    },
+    {
+      "start_seconds": 2090.414,
+      "end_seconds": 2092.414,
+      "text": "那有人做好這些工具的時候"
+    },
+    {
+      "start_seconds": 2092.414,
+      "end_seconds": 2096.414,
+      "text": "其實你就可以把它拿進來使用"
+    },
+    {
+      "start_seconds": 2096.414,
+      "end_seconds": 2099.414,
+      "text": "那一樣有一些MCP的說明檔"
+    },
+    {
+      "start_seconds": 2099.414,
+      "end_seconds": 2102.414,
+      "text": "會進入到你的Context裡面"
+    },
+    {
+      "start_seconds": 2102.414,
+      "end_seconds": 2105.414,
+      "text": "所以東西不是越多越好"
+    },
+    {
+      "start_seconds": 2105.414,
+      "end_seconds": 2109.414,
+      "text": "不是你今天可能接100個MCP Server"
+    },
+    {
+      "start_seconds": 2109.414,
+      "end_seconds": 2111.414,
+      "text": "那接進來之後"
+    },
+    {
+      "start_seconds": 2111.414,
+      "end_seconds": 2114.414,
+      "text": "就是你的上下文就很容易被汙染"
+    },
+    {
+      "start_seconds": 2114.414,
+      "end_seconds": 2117.414,
+      "text": "所以在初期要做的時候"
+    },
+    {
+      "start_seconds": 2117.414,
+      "end_seconds": 2118.414,
+      "text": "就要去決定說"
+    },
+    {
+      "start_seconds": 2118.414,
+      "end_seconds": 2121.414,
+      "text": "看你需要什麼樣的內容"
+    },
+    {
+      "start_seconds": 2121.414,
+      "end_seconds": 2124.414,
+      "text": "那你再去抓什麼樣的工具進來就可以"
+    },
+    {
+      "start_seconds": 2124.414,
+      "end_seconds": 2132.334,
+      "text": "所以MCP Server它其實提供了三種不同的能力"
+    },
+    {
+      "start_seconds": 2132.334,
+      "end_seconds": 2134.334,
+      "text": "第一個則是工具"
+    },
+    {
+      "start_seconds": 2134.334,
+      "end_seconds": 2138.334,
+      "text": "就是這個Server它有工具可以使用"
+    },
+    {
+      "start_seconds": 2138.334,
+      "end_seconds": 2141.334,
+      "text": "那這個Server它也提供一些資源"
+    },
+    {
+      "start_seconds": 2141.334,
+      "end_seconds": 2143.334,
+      "text": "有可能是文字的資源"
+    },
+    {
+      "start_seconds": 2143.334,
+      "end_seconds": 2146.334,
+      "text": "或是它可以提供一些資料"
+    },
+    {
+      "start_seconds": 2146.334,
+      "end_seconds": 2149.334,
+      "text": "或是它可以提供一些什麼樣的檔案"
+    },
+    {
+      "start_seconds": 2149.334,
+      "end_seconds": 2151.334,
+      "text": "那這些都算資源"
+    },
+    {
+      "start_seconds": 2151.334,
+      "end_seconds": 2156.334,
+      "text": "那第三個它可能有一個很Default的提示詞"
+    },
+    {
+      "start_seconds": 2156.334,
+      "end_seconds": 2159.334,
+      "text": "它可能就會告訴你說這個MCP Server"
+    },
+    {
+      "start_seconds": 2159.334,
+      "end_seconds": 2162.334,
+      "text": "可以提供什麼樣的工具"
+    },
+    {
+      "start_seconds": 2162.334,
+      "end_seconds": 2165.334,
+      "text": "那你可以用什麼樣的方式來去詢問"
+    },
+    {
+      "start_seconds": 2165.334,
+      "end_seconds": 2169.334,
+      "text": "所以MCP Server它可以提供這三種不同的"
+    },
+    {
+      "start_seconds": 2169.334,
+      "end_seconds": 2172.334,
+      "text": "那待會我可以開一個網站"
+    },
+    {
+      "start_seconds": 2172.334,
+      "end_seconds": 2175.334,
+      "text": "就它有它們自己的MCP Server"
+    },
+    {
+      "start_seconds": 2175.334,
+      "end_seconds": 2177.334,
+      "text": "那我們就可以來去看一下說"
+    },
+    {
+      "start_seconds": 2177.334,
+      "end_seconds": 2179.334,
+      "text": "它大概提供了什麼樣的工具"
+    },
+    {
+      "start_seconds": 2179.334,
+      "end_seconds": 2183.924,
+      "text": "那怎麼樣的資源"
+    },
+    {
+      "start_seconds": 2183.924,
+      "end_seconds": 2189.924,
+      "text": "這邊是在說明MCP跟Function Calling的差別"
+    },
+    {
+      "start_seconds": 2189.924,
+      "end_seconds": 2193.924,
+      "text": "MCP只是讓模型接上這個工具而已"
+    },
+    {
+      "start_seconds": 2193.924,
+      "end_seconds": 2196.924,
+      "text": "那如果要使用這個工具"
+    },
+    {
+      "start_seconds": 2196.924,
+      "end_seconds": 2199.924,
+      "text": "模型還是透過Function Calling的方式"
+    },
+    {
+      "start_seconds": 2199.924,
+      "end_seconds": 2202.924,
+      "text": "來去呼叫整個工具"
+    },
+    {
+      "start_seconds": 2202.924,
+      "end_seconds": 2205.924,
+      "text": "所以這兩種不是衝突"
+    },
+    {
+      "start_seconds": 2205.924,
+      "end_seconds": 2207.924,
+      "text": "就是它其實是一個順序的"
+    },
+    {
+      "start_seconds": 2207.924,
+      "end_seconds": 2210.924,
+      "text": "你先用MCP去接到工具本身"
+    },
+    {
+      "start_seconds": 2210.924,
+      "end_seconds": 2215.924,
+      "text": "那再用Function Calling去呼叫你接上去的工具"
+    },
+    {
+      "start_seconds": 2216.924,
+      "end_seconds": 2222.924,
+      "text": "當然這跟我們之前說的agents.md是類似的"
+    },
+    {
+      "start_seconds": 2222.924,
+      "end_seconds": 2224.924,
+      "text": "就是讀了agents.md"
+    },
+    {
+      "start_seconds": 2224.924,
+      "end_seconds": 2228.924,
+      "text": "不代表模型會照agents.md的方式去走"
+    },
+    {
+      "start_seconds": 2228.924,
+      "end_seconds": 2232.924,
+      "text": "那你接了工具不代表你這個東西就會做得好"
+    },
+    {
+      "start_seconds": 2232.924,
+      "end_seconds": 2237.924,
+      "text": "也不代表這個工具就是一個非常好用的工具"
+    },
+    {
+      "start_seconds": 2237.924,
+      "end_seconds": 2241.924,
+      "text": "所以後續的檢核其實是非常的需要的"
+    },
+    {
+      "start_seconds": 2241.924,
+      "end_seconds": 2248.684,
+      "text": "MCP它可以在自己的電腦裡面"
+    },
+    {
+      "start_seconds": 2248.684,
+      "end_seconds": 2252.684,
+      "text": "你如果自己的電腦裡面有非常多大量的工具"
+    },
+    {
+      "start_seconds": 2252.684,
+      "end_seconds": 2256.684,
+      "text": "假設這些工具可能是你們實驗室本身"
+    },
+    {
+      "start_seconds": 2256.684,
+      "end_seconds": 2259.684,
+      "text": "自己所有分析數據的"
+    },
+    {
+      "start_seconds": 2260.684,
+      "end_seconds": 2263.684,
+      "text": "假設是Python的檔案好了"
+    },
+    {
+      "start_seconds": 2263.684,
+      "end_seconds": 2268.684,
+      "text": "那就可以透過可能Local的MCP去做連接"
+    },
+    {
+      "start_seconds": 2268.684,
+      "end_seconds": 2270.684,
+      "text": "假設你要畫線性圖"
+    },
+    {
+      "start_seconds": 2270.684,
+      "end_seconds": 2273.684,
+      "text": "那你要畫趨勢圖或你要畫熱點圖"
+    },
+    {
+      "start_seconds": 2273.684,
+      "end_seconds": 2277.684,
+      "text": "那你們實驗室可能已經有線型的這些工具了"
+    },
+    {
+      "start_seconds": 2277.684,
+      "end_seconds": 2281.684,
+      "text": "那其實你們就可以架組自己的MCP的server"
+    },
+    {
+      "start_seconds": 2281.684,
+      "end_seconds": 2285.684,
+      "text": "那所有的人都可以呼叫這個MCP server的東西"
+    },
+    {
+      "start_seconds": 2285.684,
+      "end_seconds": 2287.684,
+      "text": "來去做使用"
+    },
+    {
+      "start_seconds": 2287.684,
+      "end_seconds": 2290.684,
+      "text": "那這個也另外一個好處是避免"
+    },
+    {
+      "start_seconds": 2290.684,
+      "end_seconds": 2293.684,
+      "text": "就是有時候可能新進來的人他們不懂"
+    },
+    {
+      "start_seconds": 2293.684,
+      "end_seconds": 2296.684,
+      "text": "那他們就會去上網去抓一些奇奇怪怪的城市"
+    },
+    {
+      "start_seconds": 2296.684,
+      "end_seconds": 2299.684,
+      "text": "或奇奇怪怪的工具來做使用"
+    },
+    {
+      "start_seconds": 2299.684,
+      "end_seconds": 2301.684,
+      "text": "那第二個則是Remote的MCP"
+    },
+    {
+      "start_seconds": 2301.684,
+      "end_seconds": 2304.684,
+      "text": "那這個就是別人開發好的工具"
+    },
+    {
+      "start_seconds": 2304.684,
+      "end_seconds": 2308.684,
+      "text": "那你只是接別人的工具來做使用而已"
+    },
+    {
+      "start_seconds": 2308.684,
+      "end_seconds": 2310.684,
+      "text": "所以如果要接別人工具"
+    },
+    {
+      "start_seconds": 2310.684,
+      "end_seconds": 2313.684,
+      "text": "那接別人工具你就要去確保說"
+    },
+    {
+      "start_seconds": 2313.684,
+      "end_seconds": 2315.684,
+      "text": "這個工具的提供方式是誰"
+    },
+    {
+      "start_seconds": 2315.684,
+      "end_seconds": 2319.684,
+      "text": "然後這個工具它會用到你什麼樣的內容"
+    },
+    {
+      "start_seconds": 2319.684,
+      "end_seconds": 2324.684,
+      "text": "它會不會進入到你的電腦本身去讀某一些資料"
+    },
+    {
+      "start_seconds": 2324.684,
+      "end_seconds": 2327.684,
+      "text": "那它需要你授權什麼樣的憑證"
+    },
+    {
+      "start_seconds": 2327.684,
+      "end_seconds": 2332.684,
+      "text": "因為只要連到外面去就會有資安的問題"
+    },
+    {
+      "start_seconds": 2332.684,
+      "end_seconds": 2339.974,
+      "text": "好所以這個就是我們可以跳過"
+    },
+    {
+      "start_seconds": 2339.974,
+      "end_seconds": 2345.974,
+      "text": "那有興趣可以到Deals的Practice自己去看"
+    },
+    {
+      "start_seconds": 2345.974,
+      "end_seconds": 2349.974,
+      "text": "所以如果你想要使用MCP"
+    },
+    {
+      "start_seconds": 2349.974,
+      "end_seconds": 2353.974,
+      "text": "你可以去選一件你想要做的事"
+    },
+    {
+      "start_seconds": 2353.974,
+      "end_seconds": 2356.974,
+      "text": "那你讓AI去搜尋說"
+    },
+    {
+      "start_seconds": 2356.974,
+      "end_seconds": 2360.974,
+      "text": "基於這件事你有什麼樣成熟的工具可以去使用"
+    },
+    {
+      "start_seconds": 2360.974,
+      "end_seconds": 2363.974,
+      "text": "那對方可能就會有提供MCP"
+    },
+    {
+      "start_seconds": 2363.974,
+      "end_seconds": 2367.974,
+      "text": "那你就可以去讓AI先去讀過說"
+    },
+    {
+      "start_seconds": 2367.974,
+      "end_seconds": 2370.974,
+      "text": "這個MCP到底有哪一些工具"
+    },
+    {
+      "start_seconds": 2370.974,
+      "end_seconds": 2373.974,
+      "text": "那以及什麼資料是可信賴的"
+    },
+    {
+      "start_seconds": 2373.974,
+      "end_seconds": 2377.974,
+      "text": "那這個工具提供什麼樣的權限"
+    },
+    {
+      "start_seconds": 2377.974,
+      "end_seconds": 2381.974,
+      "text": "所以這個是一個最簡單的一個路徑"
+    },
+    {
+      "start_seconds": 2381.974,
+      "end_seconds": 2385.704,
+      "text": "當然就是MCP讓能力變多"
+    },
+    {
+      "start_seconds": 2385.704,
+      "end_seconds": 2388.704,
+      "text": "但是權限也更重要"
+    },
+    {
+      "start_seconds": 2388.704,
+      "end_seconds": 2390.704,
+      "text": "原因是因為你要去接別人的東西"
+    },
+    {
+      "start_seconds": 2390.704,
+      "end_seconds": 2395.704,
+      "text": "所以別人的東西代表它可能就會有風險"
+    },
+    {
+      "start_seconds": 2395.704,
+      "end_seconds": 2400.704,
+      "text": "所以資安不是只在於我們上禮拜談過"
+    },
+    {
+      "start_seconds": 2400.704,
+      "end_seconds": 2404.704,
+      "text": "像Jailbreak或是Prom Injection的部分"
+    },
+    {
+      "start_seconds": 2404.704,
+      "end_seconds": 2407.704,
+      "text": "有可能資安會去攻擊別人的MCP Server"
+    },
+    {
+      "start_seconds": 2407.704,
+      "end_seconds": 2412.704,
+      "text": "那在別人的MCP裡面去藏奇奇怪怪的提示詞"
+    },
+    {
+      "start_seconds": 2412.704,
+      "end_seconds": 2414.704,
+      "text": "所以當你接上別人的MCP的時候"
+    },
+    {
+      "start_seconds": 2414.704,
+      "end_seconds": 2418.704,
+      "text": "等到撈回來你就發現說就是事情大條"
+    },
+    {
+      "start_seconds": 2418.704,
+      "end_seconds": 2423.704,
+      "text": "就是好像你的電腦發生了某一些奇奇怪怪的事故"
+    },
+    {
+      "start_seconds": 2423.704,
+      "end_seconds": 2426.704,
+      "text": "所以這些都是需要去小心的"
+    },
+    {
+      "start_seconds": 2426.704,
+      "end_seconds": 2431.704,
+      "text": "所以MCP要接就要接那種很大間的廠商"
+    },
+    {
+      "start_seconds": 2431.704,
+      "end_seconds": 2436.704,
+      "text": "他們所提供的MCP或他們所提供的工具"
+    },
+    {
+      "start_seconds": 2436.704,
+      "end_seconds": 2439.704,
+      "text": "原因是因為越大間的就代表說"
+    },
+    {
+      "start_seconds": 2439.704,
+      "end_seconds": 2442.704,
+      "text": "可能會有越多人去使用"
+    },
+    {
+      "start_seconds": 2442.704,
+      "end_seconds": 2448.704,
+      "text": "所以你會馬上遇到的風險就會比較低一點點"
+    },
+    {
+      "start_seconds": 2448.704,
+      "end_seconds": 2453.304,
+      "text": "再來就會進入到Skill"
+    },
+    {
+      "start_seconds": 2453.304,
+      "end_seconds": 2462.304,
+      "text": "Skill這個已經很難去定義說Skill到底可以做什麼"
+    },
+    {
+      "start_seconds": 2462.304,
+      "end_seconds": 2470.304,
+      "text": "因為現在變得是好像什麼東西全部都可以變成Skill"
+    },
+    {
+      "start_seconds": 2470.304,
+      "end_seconds": 2474.304,
+      "text": "就你要讓它模擬一個人的風格"
+    },
+    {
+      "start_seconds": 2474.304,
+      "end_seconds": 2475.304,
+      "text": "可以用Skill"
+    },
+    {
+      "start_seconds": 2475.304,
+      "end_seconds": 2479.304,
+      "text": "那Skill同樣也可以去雕用一個工具"
+    },
+    {
+      "start_seconds": 2479.304,
+      "end_seconds": 2484.304,
+      "text": "那Skill也可以還原一整個流程的脈絡"
+    },
+    {
+      "start_seconds": 2484.304,
+      "end_seconds": 2489.304,
+      "text": "所以Skill這個東西現在非常非常非常難去定義"
+    },
+    {
+      "start_seconds": 2489.304,
+      "end_seconds": 2495.304,
+      "text": "像這個GreenMe它是一個很熱門的一個Skill"
+    },
+    {
+      "start_seconds": 2495.304,
+      "end_seconds": 2498.304,
+      "text": "它其實就是AI會一直問你問題"
+    },
+    {
+      "start_seconds": 2498.304,
+      "end_seconds": 2504.304,
+      "text": "問到就是你跟AI的想法完全對齊為止"
+    },
+    {
+      "start_seconds": 2504.304,
+      "end_seconds": 2506.304,
+      "text": "假設你要去建一個網站"
+    },
+    {
+      "start_seconds": 2507.304,
+      "end_seconds": 2510.304,
+      "text": "然後它就會問你說你要什麼顏色"
+    },
+    {
+      "start_seconds": 2510.304,
+      "end_seconds": 2513.304,
+      "text": "然後你決定好之後它就會再問你說"
+    },
+    {
+      "start_seconds": 2513.304,
+      "end_seconds": 2515.304,
+      "text": "那你的字要多大"
+    },
+    {
+      "start_seconds": 2515.304,
+      "end_seconds": 2517.304,
+      "text": "那你要什麼樣的風格"
+    },
+    {
+      "start_seconds": 2517.304,
+      "end_seconds": 2519.304,
+      "text": "那你要不要有圖片"
+    },
+    {
+      "start_seconds": 2519.304,
+      "end_seconds": 2521.304,
+      "text": "那你的文字密度要多高"
+    },
+    {
+      "start_seconds": 2521.304,
+      "end_seconds": 2524.304,
+      "text": "所以它會問你問到很煩"
+    },
+    {
+      "start_seconds": 2524.304,
+      "end_seconds": 2527.304,
+      "text": "所以這個就是其中一個Skill"
+    },
+    {
+      "start_seconds": 2527.304,
+      "end_seconds": 2531.304,
+      "text": "它的Skill就是每一次都只會問你一個問題"
+    },
+    {
+      "start_seconds": 2531.304,
+      "end_seconds": 2534.304,
+      "text": "每一題都提供你建議的答案和理由"
+    },
+    {
+      "start_seconds": 2534.304,
+      "end_seconds": 2539.304,
+      "text": "然後你要一直不斷的追問到它覺得滿意為止"
+    },
+    {
+      "start_seconds": 2539.304,
+      "end_seconds": 2543.304,
+      "text": "所以這種東西也可以是一個Skill"
+    },
+    {
+      "start_seconds": 2543.304,
+      "end_seconds": 2546.304,
+      "text": "所以現在的Skill非常非常難去定義"
+    },
+    {
+      "start_seconds": 2546.304,
+      "end_seconds": 2551.304,
+      "text": "那我們之前有說過Skill的前面它的格式是用Yaml"
+    },
+    {
+      "start_seconds": 2551.304,
+      "end_seconds": 2556.304,
+      "text": "那後面的格式是用Mutton的格式來去做呈現"
+    },
+    {
+      "start_seconds": 2556.304,
+      "end_seconds": 2563.224,
+      "text": "Skill這個東西當然也不是裝越多越好"
+    },
+    {
+      "start_seconds": 2563.224,
+      "end_seconds": 2565.224,
+      "text": "因為你裝越多的Skill"
+    },
+    {
+      "start_seconds": 2565.224,
+      "end_seconds": 2569.224,
+      "text": "其實它們的名字和這個描述Description"
+    },
+    {
+      "start_seconds": 2569.224,
+      "end_seconds": 2573.224,
+      "text": "都同時會進入到整個Context裡面"
+    },
+    {
+      "start_seconds": 2573.224,
+      "end_seconds": 2576.224,
+      "text": "所以你有太多的Skill的話"
+    },
+    {
+      "start_seconds": 2576.224,
+      "end_seconds": 2580.224,
+      "text": "這個AI在還沒運作的Idle"
+    },
+    {
+      "start_seconds": 2580.224,
+      "end_seconds": 2584.224,
+      "text": "就會被塞進很多Skill的名字"
+    },
+    {
+      "start_seconds": 2584.224,
+      "end_seconds": 2588.224,
+      "text": "那當然這個Skill怎麼樣可以被觸發"
+    },
+    {
+      "start_seconds": 2588.224,
+      "end_seconds": 2592.224,
+      "text": "通常是用關鍵字來被觸發"
+    },
+    {
+      "start_seconds": 2592.224,
+      "end_seconds": 2596.224,
+      "text": "假設你提到設計這個字的話"
+    },
+    {
+      "start_seconds": 2596.224,
+      "end_seconds": 2599.224,
+      "text": "你想要去設計一個好看的網頁"
+    },
+    {
+      "start_seconds": 2599.224,
+      "end_seconds": 2603.224,
+      "text": "所以在最一開始AI可能偵測到設計"
+    },
+    {
+      "start_seconds": 2603.224,
+      "end_seconds": 2606.224,
+      "text": "那它就會去你的Skill裡面去撈"
+    },
+    {
+      "start_seconds": 2606.224,
+      "end_seconds": 2610.224,
+      "text": "有哪一個的描述是跟設計相關的"
+    },
+    {
+      "start_seconds": 2610.224,
+      "end_seconds": 2613.224,
+      "text": "那它就會把這個Skill全部都給撈回來"
+    },
+    {
+      "start_seconds": 2613.224,
+      "end_seconds": 2617.224,
+      "text": "所以它會先撈整個名字"
+    },
+    {
+      "start_seconds": 2617.224,
+      "end_seconds": 2618.224,
+      "text": "看這個敘述"
+    },
+    {
+      "start_seconds": 2618.224,
+      "end_seconds": 2622.224,
+      "text": "假設敘述跟設計相關"
+    },
+    {
+      "start_seconds": 2622.224,
+      "end_seconds": 2626.224,
+      "text": "那它就會解放讀下面所有的內容"
+    },
+    {
+      "start_seconds": 2626.224,
+      "end_seconds": 2629.224,
+      "text": "然後進到你的Context裡面"
+    },
+    {
+      "start_seconds": 2629.224,
+      "end_seconds": 2634.224,
+      "text": "所以Skill有時候要保持它的乾淨性"
+    },
+    {
+      "start_seconds": 2634.224,
+      "end_seconds": 2636.224,
+      "text": "因為如果你有兩個Skill"
+    },
+    {
+      "start_seconds": 2636.224,
+      "end_seconds": 2638.224,
+      "text": "它是有點互相"
+    },
+    {
+      "start_seconds": 2608.755,
+      "end_seconds": 2609.835,
+      "text": "設計相關的"
+    },
+    {
+      "start_seconds": 2610.275,
+      "end_seconds": 2613.315,
+      "text": "那他就會把這個skill全部都給撈回來"
+    },
+    {
+      "start_seconds": 2613.5150000000003,
+      "end_seconds": 2615.0350000000003,
+      "text": "所以他會先撈"
+    },
+    {
+      "start_seconds": 2616.355,
+      "end_seconds": 2618.395,
+      "text": "整個名字看這個敘述"
+    },
+    {
+      "start_seconds": 2618.715,
+      "end_seconds": 2620.235,
+      "text": "假設敘述呢跟"
+    },
+    {
+      "start_seconds": 2621.355,
+      "end_seconds": 2622.275,
+      "text": "設計相關"
+    },
+    {
+      "start_seconds": 2622.5550000000003,
+      "end_seconds": 2626.5550000000003,
+      "text": "那他就會開始解放讀下面的所有的內容"
+    },
+    {
+      "start_seconds": 2626.755,
+      "end_seconds": 2629.0350000000003,
+      "text": "然後進到你的contest裡面"
+    },
+    {
+      "start_seconds": 2629.915,
+      "end_seconds": 2633.355,
+      "text": "所以skill有時候呢要保持他的"
+    },
+    {
+      "start_seconds": 2633.835,
+      "end_seconds": 2634.635,
+      "text": "乾淨性"
+    },
+    {
+      "start_seconds": 2636.835,
+      "end_seconds": 2638.275,
+      "text": "他是有點互相"
+    },
+    {
+      "start_seconds": 2639.315,
+      "end_seconds": 2641.315,
+      "text": "就是功能有點互相重疊"
+    },
+    {
+      "start_seconds": 2642.235,
+      "end_seconds": 2644.755,
+      "text": "假設你有一個skill是設計圖片"
+    },
+    {
+      "start_seconds": 2645.0350000000003,
+      "end_seconds": 2646.915,
+      "text": "有一個skill是設計網站"
+    },
+    {
+      "start_seconds": 2647.5150000000003,
+      "end_seconds": 2649.715,
+      "text": "所以你今天下一個prompt呢是說"
+    },
+    {
+      "start_seconds": 2649.955,
+      "end_seconds": 2653.0350000000003,
+      "text": "我想要做一個漂亮的網站設計"
+    },
+    {
+      "start_seconds": 2653.315,
+      "end_seconds": 2655.355,
+      "text": "他可能同時觸發兩個skill"
+    },
+    {
+      "start_seconds": 2655.715,
+      "end_seconds": 2656.755,
+      "text": "所以兩個skill呢"
+    },
+    {
+      "start_seconds": 2656.755,
+      "end_seconds": 2659.395,
+      "text": "同時都會灌到你的contest window裡面"
+    },
+    {
+      "start_seconds": 2659.795,
+      "end_seconds": 2662.355,
+      "text": "所以這個時候呢就很容易會有"
+    },
+    {
+      "start_seconds": 2662.5150000000003,
+      "end_seconds": 2664.155,
+      "text": "我們之前說過的"
+    },
+    {
+      "start_seconds": 2664.435,
+      "end_seconds": 2665.915,
+      "text": "contest pollution"
+    },
+    {
+      "start_seconds": 2666.155,
+      "end_seconds": 2668.155,
+      "text": "的這種現象出現"
+    },
+    {
+      "start_seconds": 2669.675,
+      "end_seconds": 2670.355,
+      "text": "所以"
+    },
+    {
+      "start_seconds": 2670.915,
+      "end_seconds": 2671.475,
+      "text": "就是"
+    },
+    {
+      "start_seconds": 2672.315,
+      "end_seconds": 2674.675,
+      "text": "這個東西呢自己可以再注意一下"
+    },
+    {
+      "start_seconds": 2674.675,
+      "end_seconds": 2676.475,
+      "text": "那你如果不知道這個東西怎麼拿"
+    },
+    {
+      "start_seconds": 2676.475,
+      "end_seconds": 2677.355,
+      "text": "你就問AI"
+    },
+    {
+      "start_seconds": 2678.1150000000002,
+      "end_seconds": 2680.875,
+      "text": "你就請他去針對你的skill"
+    },
+    {
+      "start_seconds": 2681.395,
+      "end_seconds": 2683.955,
+      "text": "的使用庫來去做"
+    },
+    {
+      "start_seconds": 2684.315,
+      "end_seconds": 2685.635,
+      "text": "深度的調查"
+    },
+    {
+      "start_seconds": 2685.915,
+      "end_seconds": 2687.5150000000003,
+      "text": "或自我的健康體檢"
+    },
+    {
+      "start_seconds": 2687.635,
+      "end_seconds": 2689.275,
+      "text": "你覺得說這個東西會不會太多"
+    },
+    {
+      "start_seconds": 2689.5150000000003,
+      "end_seconds": 2693.235,
+      "text": "那有哪些東西呢是我不需要用到的"
+    },
+    {
+      "start_seconds": 2693.275,
+      "end_seconds": 2696.1150000000002,
+      "text": "我自己的skill大概是維持在20到"
+    },
+    {
+      "start_seconds": 2696.435,
+      "end_seconds": 2697.235,
+      "text": "30個"
+    },
+    {
+      "start_seconds": 2697.755,
+      "end_seconds": 2698.275,
+      "text": "左右"
+    },
+    {
+      "start_seconds": 2701.855,
+      "end_seconds": 2703.0550000000003,
+      "text": "所以剛那個呢"
+    },
+    {
+      "start_seconds": 2703.335,
+      "end_seconds": 2703.895,
+      "text": "就是"
+    },
+    {
+      "start_seconds": 2704.5750000000003,
+      "end_seconds": 2706.135,
+      "text": "可以自己去玩你可以打"
+    },
+    {
+      "start_seconds": 2706.455,
+      "end_seconds": 2707.135,
+      "text": "grill me"
+    },
+    {
+      "start_seconds": 2707.255,
+      "end_seconds": 2708.0550000000003,
+      "text": "然後skill"
+    },
+    {
+      "start_seconds": 2708.0950000000003,
+      "end_seconds": 2709.5350000000003,
+      "text": "那你就可以找到這個skill"
+    },
+    {
+      "start_seconds": 2709.975,
+      "end_seconds": 2712.175,
+      "text": "就是如果沒有這個skill的時候呢"
+    },
+    {
+      "start_seconds": 2712.415,
+      "end_seconds": 2714.135,
+      "text": "你打一個很簡單的prompt"
+    },
+    {
+      "start_seconds": 2714.5350000000003,
+      "end_seconds": 2716.655,
+      "text": "那AI可能就馬上開始做網站"
+    },
+    {
+      "start_seconds": 2717.215,
+      "end_seconds": 2720.0550000000003,
+      "text": "那你有這個skill呢就跟剛我們說的"
+    },
+    {
+      "start_seconds": 2720.0550000000003,
+      "end_seconds": 2721.695,
+      "text": "就是他會瘋狂的問你問你"
+    },
+    {
+      "start_seconds": 2722.0150000000003,
+      "end_seconds": 2724.295,
+      "text": "會問到你覺得很煩為止"
+    },
+    {
+      "start_seconds": 2727.0550000000003,
+      "end_seconds": 2728.695,
+      "text": "那每一件事呢其實"
+    },
+    {
+      "start_seconds": 2729.135,
+      "end_seconds": 2730.895,
+      "text": "幾乎都被skill化了"
+    },
+    {
+      "start_seconds": 2731.135,
+      "end_seconds": 2733.415,
+      "text": "你的提問的方式像剛的grill me"
+    },
+    {
+      "start_seconds": 2733.735,
+      "end_seconds": 2735.0950000000003,
+      "text": "已經可以變成skill"
+    },
+    {
+      "start_seconds": 2735.495,
+      "end_seconds": 2737.775,
+      "text": "那工作流程也可以變成skill"
+    },
+    {
+      "start_seconds": 2738.0550000000003,
+      "end_seconds": 2739.415,
+      "text": "你可以切換視角"
+    },
+    {
+      "start_seconds": 2739.455,
+      "end_seconds": 2740.815,
+      "text": "這也可以是一個skill"
+    },
+    {
+      "start_seconds": 2741.135,
+      "end_seconds": 2742.695,
+      "text": "那你也可以徵溜"
+    },
+    {
+      "start_seconds": 2743.0150000000003,
+      "end_seconds": 2743.815,
+      "text": "某一個人"
+    },
+    {
+      "start_seconds": 2744.295,
+      "end_seconds": 2746.295,
+      "text": "有可能是你覺得你們"
+    },
+    {
+      "start_seconds": 2746.655,
+      "end_seconds": 2748.295,
+      "text": "老師的meeting太煩了"
+    },
+    {
+      "start_seconds": 2748.335,
+      "end_seconds": 2749.6150000000002,
+      "text": "但是他每一次的"
+    },
+    {
+      "start_seconds": 2749.895,
+      "end_seconds": 2751.215,
+      "text": "決策就熱熱等"
+    },
+    {
+      "start_seconds": 2751.255,
+      "end_seconds": 2752.375,
+      "text": "那你就可以錄音"
+    },
+    {
+      "start_seconds": 2752.735,
+      "end_seconds": 2754.6150000000002,
+      "text": "也可以把meeting的過程整個錄下來"
+    },
+    {
+      "start_seconds": 2754.855,
+      "end_seconds": 2756.815,
+      "text": "然後你去徵溜你們老師這個人"
+    },
+    {
+      "start_seconds": 2757.0550000000003,
+      "end_seconds": 2759.175,
+      "text": "對那你就可以得到跟他相同"
+    },
+    {
+      "start_seconds": 2759.5750000000003,
+      "end_seconds": 2761.335,
+      "text": "類似概念想法"
+    },
+    {
+      "start_seconds": 2761.5350000000003,
+      "end_seconds": 2762.135,
+      "text": "的可能"
+    },
+    {
+      "start_seconds": 2762.295,
+      "end_seconds": 2764.135,
+      "text": "maybe是一些評論之類的"
+    },
+    {
+      "start_seconds": 2764.5350000000003,
+      "end_seconds": 2767.215,
+      "text": "對所以skill使用的場景呢"
+    },
+    {
+      "start_seconds": 2767.415,
+      "end_seconds": 2769.775,
+      "text": "五花八門就取決說你要"
+    },
+    {
+      "start_seconds": 2770.0150000000003,
+      "end_seconds": 2771.135,
+      "text": "用在哪一個地方"
+    },
+    {
+      "start_seconds": 2773.315,
+      "end_seconds": 2773.995,
+      "text": "對所以"
+    },
+    {
+      "start_seconds": 2775.315,
+      "end_seconds": 2777.795,
+      "text": "這個呢就是AI其實在改變呢"
+    },
+    {
+      "start_seconds": 2777.795,
+      "end_seconds": 2779.435,
+      "text": "是很多的SOP"
+    },
+    {
+      "start_seconds": 2779.675,
+      "end_seconds": 2780.5150000000003,
+      "text": "因為過去"
+    },
+    {
+      "start_seconds": 2780.755,
+      "end_seconds": 2782.0350000000003,
+      "text": "有一些東西呢"
+    },
+    {
+      "start_seconds": 2782.195,
+      "end_seconds": 2784.235,
+      "text": "越資深的人可能越有經驗"
+    },
+    {
+      "start_seconds": 2784.5550000000003,
+      "end_seconds": 2785.635,
+      "text": "但這些經驗呢"
+    },
+    {
+      "start_seconds": 2785.635,
+      "end_seconds": 2787.795,
+      "text": "其實完全都可以轉化成"
+    },
+    {
+      "start_seconds": 2788.195,
+      "end_seconds": 2790.675,
+      "text": "AI可以讀的文字檔"
+    },
+    {
+      "start_seconds": 2791.395,
+      "end_seconds": 2793.635,
+      "text": "就他其實已經是可以變成一個"
+    },
+    {
+      "start_seconds": 2793.915,
+      "end_seconds": 2795.435,
+      "text": "新的SOP"
+    },
+    {
+      "start_seconds": 2795.835,
+      "end_seconds": 2798.235,
+      "text": "但現在還沒有辦法這麼普及呢"
+    },
+    {
+      "start_seconds": 2798.235,
+      "end_seconds": 2799.675,
+      "text": "第一個是因為AI的"
+    },
+    {
+      "start_seconds": 2799.875,
+      "end_seconds": 2800.755,
+      "text": "滲透率不足"
+    },
+    {
+      "start_seconds": 2801.0350000000003,
+      "end_seconds": 2802.315,
+      "text": "那第二個是因為"
+    },
+    {
+      "start_seconds": 2802.5950000000003,
+      "end_seconds": 2804.1150000000002,
+      "text": "大家沒有想到可以這樣用"
+    },
+    {
+      "start_seconds": 2804.5150000000003,
+      "end_seconds": 2806.435,
+      "text": "這個才是最大的問題"
+    },
+    {
+      "start_seconds": 2806.635,
+      "end_seconds": 2808.195,
+      "text": "因為原則上呢"
+    },
+    {
+      "start_seconds": 2808.355,
+      "end_seconds": 2810.835,
+      "text": "幾乎所有會用到電腦"
+    },
+    {
+      "start_seconds": 2811.315,
+      "end_seconds": 2813.955,
+      "text": "以及手機的所有的工作流程"
+    },
+    {
+      "start_seconds": 2814.395,
+      "end_seconds": 2815.995,
+      "text": "都可以用到AI"
+    },
+    {
+      "start_seconds": 2816.315,
+      "end_seconds": 2817.5950000000003,
+      "text": "就像農夫也可以"
+    },
+    {
+      "start_seconds": 2817.635,
+      "end_seconds": 2819.435,
+      "text": "你可以有一個智慧農場"
+    },
+    {
+      "start_seconds": 2819.435,
+      "end_seconds": 2820.875,
+      "text": "你可以用AI來去控制"
+    },
+    {
+      "start_seconds": 2821.1150000000002,
+      "end_seconds": 2821.995,
+      "text": "你整個農場"
+    },
+    {
+      "start_seconds": 2822.235,
+      "end_seconds": 2822.755,
+      "text": "所以"
+    },
+    {
+      "start_seconds": 2823.5950000000003,
+      "end_seconds": 2824.195,
+      "text": "整個"
+    },
+    {
+      "start_seconds": 2824.435,
+      "end_seconds": 2826.355,
+      "text": "受限會在於說人的想像力呢"
+    },
+    {
+      "start_seconds": 2826.355,
+      "end_seconds": 2827.275,
+      "text": "會決定一切"
+    },
+    {
+      "start_seconds": 2827.275,
+      "end_seconds": 2827.795,
+      "text": "所以"
+    },
+    {
+      "start_seconds": 2828.0750000000003,
+      "end_seconds": 2829.315,
+      "text": "要用AI的時候呢"
+    },
+    {
+      "start_seconds": 2829.315,
+      "end_seconds": 2831.1150000000002,
+      "text": "你可以盡量去想像很多場景"
+    },
+    {
+      "start_seconds": 2831.155,
+      "end_seconds": 2833.235,
+      "text": "然後你就拿去問AI說我可以這樣用嗎"
+    },
+    {
+      "start_seconds": 2833.475,
+      "end_seconds": 2834.435,
+      "text": "或可以怎麼用"
+    },
+    {
+      "start_seconds": 2834.715,
+      "end_seconds": 2836.755,
+      "text": "對這是一個很簡單的方式"
+    },
+    {
+      "start_seconds": 2837.235,
+      "end_seconds": 2837.795,
+      "text": "所以"
+    },
+    {
+      "start_seconds": 2838.0350000000003,
+      "end_seconds": 2839.715,
+      "text": "過去就是很多經驗呢"
+    },
+    {
+      "start_seconds": 2839.715,
+      "end_seconds": 2840.955,
+      "text": "其實都可以已經可以"
+    },
+    {
+      "start_seconds": 2841.1150000000002,
+      "end_seconds": 2843.275,
+      "text": "被轉成文字的方式"
+    },
+    {
+      "start_seconds": 2843.5950000000003,
+      "end_seconds": 2844.635,
+      "text": "來去做表達"
+    },
+    {
+      "start_seconds": 2845.955,
+      "end_seconds": 2847.0750000000003,
+      "text": "對那這邊呢"
+    },
+    {
+      "start_seconds": 2847.395,
+      "end_seconds": 2849.155,
+      "text": "只是在提醒各位說"
+    },
+    {
+      "start_seconds": 2849.155,
+      "end_seconds": 2851.435,
+      "text": "如果你看到一個很熱門的skill"
+    },
+    {
+      "start_seconds": 2851.715,
+      "end_seconds": 2852.795,
+      "text": "那你要先"
+    },
+    {
+      "start_seconds": 2853.435,
+      "end_seconds": 2854.395,
+      "text": "知道說"
+    },
+    {
+      "start_seconds": 2854.635,
+      "end_seconds": 2857.0350000000003,
+      "text": "就是這個skill是在幹嘛的"
+    },
+    {
+      "start_seconds": 2857.275,
+      "end_seconds": 2858.835,
+      "text": "因為呼應鋼的問題"
+    },
+    {
+      "start_seconds": 2858.835,
+      "end_seconds": 2860.795,
+      "text": "就skill這個東西不是"
+    },
+    {
+      "start_seconds": 2861.235,
+      "end_seconds": 2862.1150000000002,
+      "text": "越多越好"
+    },
+    {
+      "start_seconds": 2862.235,
+      "end_seconds": 2863.875,
+      "text": "就你拿著別人的skill呢"
+    },
+    {
+      "start_seconds": 2864.1150000000002,
+      "end_seconds": 2866.0750000000003,
+      "text": "那人家可能是做coding的"
+    },
+    {
+      "start_seconds": 2866.235,
+      "end_seconds": 2867.955,
+      "text": "但你可能是做science的"
+    },
+    {
+      "start_seconds": 2868.155,
+      "end_seconds": 2869.5950000000003,
+      "text": "這兩個東西就完全"
+    },
+    {
+      "start_seconds": 2869.915,
+      "end_seconds": 2870.4750000000004,
+      "text": "不一樣"
+    },
+    {
+      "start_seconds": 2870.635,
+      "end_seconds": 2872.0750000000003,
+      "text": "所以你拿著別人的方法呢"
+    },
+    {
+      "start_seconds": 2872.0750000000003,
+      "end_seconds": 2873.155,
+      "text": "不代表你可以用"
+    },
+    {
+      "start_seconds": 2873.5550000000003,
+      "end_seconds": 2875.955,
+      "text": "而且現在很多很熱門的skill"
+    },
+    {
+      "start_seconds": 2875.955,
+      "end_seconds": 2876.915,
+      "text": "其實都是"
+    },
+    {
+      "start_seconds": 2877.315,
+      "end_seconds": 2880.435,
+      "text": "從工程師身上過來的"
+    },
+    {
+      "start_seconds": 2880.875,
+      "end_seconds": 2883.5150000000003,
+      "text": "所以工程師的身份跟你的身份呢"
+    },
+    {
+      "start_seconds": 2883.5150000000003,
+      "end_seconds": 2884.5150000000003,
+      "text": "其實是不一樣的"
+    },
+    {
+      "start_seconds": 2884.795,
+      "end_seconds": 2887.795,
+      "text": "所以不見得就是這個東西是適用"
+    },
+    {
+      "start_seconds": 2888.435,
+      "end_seconds": 2889.755,
+      "text": "所以今天很快呢"
+    },
+    {
+      "start_seconds": 2889.755,
+      "end_seconds": 2891.4750000000004,
+      "text": "就跟各位說就是"
+    },
+    {
+      "start_seconds": 2892.355,
+      "end_seconds": 2893.355,
+      "text": "Agents.md呢"
+    },
+    {
+      "start_seconds": 2893.355,
+      "end_seconds": 2894.995,
+      "text": "他其實建立的呢"
+    },
+    {
+      "start_seconds": 2894.995,
+      "end_seconds": 2896.435,
+      "text": "就是一個規則"
+    },
+    {
+      "start_seconds": 2896.795,
+      "end_seconds": 2897.635,
+      "text": "mcp呢"
+    },
+    {
+      "start_seconds": 2897.635,
+      "end_seconds": 2900.275,
+      "text": "他其實就是連接工具的方式"
+    },
+    {
+      "start_seconds": 2900.4750000000004,
+      "end_seconds": 2901.435,
+      "text": "那skill呢"
+    },
+    {
+      "start_seconds": 2901.435,
+      "end_seconds": 2902.235,
+      "text": "很難去定義"
+    },
+    {
+      "start_seconds": 2902.235,
+      "end_seconds": 2903.035,
+      "text": "他可以是方法"
+    },
+    {
+      "start_seconds": 2903.035,
+      "end_seconds": 2903.995,
+      "text": "他可以是風格"
+    },
+    {
+      "start_seconds": 2904.235,
+      "end_seconds": 2905.4750000000004,
+      "text": "他可以是任何"
+    },
+    {
+      "start_seconds": 2905.955,
+      "end_seconds": 2906.875,
+      "text": "有的沒有的"
+    },
+    {
+      "start_seconds": 2906.875,
+      "end_seconds": 2908.5950000000003,
+      "text": "現在其實很多東西呢"
+    },
+    {
+      "start_seconds": 2908.835,
+      "end_seconds": 2911.995,
+      "text": "都已經可以變成是一個skill"
+    },
+    {
+      "start_seconds": 2913.235,
+      "end_seconds": 2913.875,
+      "text": "好所以"
+    },
+    {
+      "start_seconds": 2914.1150000000002,
+      "end_seconds": 2916.395,
+      "text": "等一下會做一個很"
+    },
+    {
+      "start_seconds": 2916.755,
+      "end_seconds": 2917.915,
+      "text": "簡單的一個"
+    },
+    {
+      "start_seconds": 2918.315,
+      "end_seconds": 2918.675,
+      "text": "live"
+    },
+    {
+      "start_seconds": 2919.155,
+      "end_seconds": 2919.5550000000003,
+      "text": "的"
+    },
+    {
+      "start_seconds": 2920.235,
+      "end_seconds": 2920.755,
+      "text": "demo"
+    },
+    {
+      "start_seconds": 2921.275,
+      "end_seconds": 2923.1150000000002,
+      "text": "那當然後面這個東西就是"
+    },
+    {
+      "start_seconds": 2923.195,
+      "end_seconds": 2924.395,
+      "text": "欸反正有powerpoint"
+    },
+    {
+      "start_seconds": 2924.395,
+      "end_seconds": 2925.915,
+      "text": "就是各位可以留著"
+    },
+    {
+      "start_seconds": 2926.235,
+      "end_seconds": 2926.875,
+      "text": "再去看"
+    },
+    {
+      "start_seconds": 2927.195,
+      "end_seconds": 2928.635,
+      "text": "所以我們回到"
+    },
+    {
+      "start_seconds": 2934.375,
+      "end_seconds": 2935.375,
+      "text": "回到這邊好了"
+    },
+    {
+      "start_seconds": 2935.815,
+      "end_seconds": 2938.0550000000003,
+      "text": "這個呢就是我自己的"
+    },
+    {
+      "start_seconds": 2938.255,
+      "end_seconds": 2940.215,
+      "text": "幾個agents.md"
+    },
+    {
+      "start_seconds": 2941.0150000000003,
+      "end_seconds": 2942.5750000000003,
+      "text": "第一個這個agents.md呢"
+    },
+    {
+      "start_seconds": 2942.5750000000003,
+      "end_seconds": 2944.375,
+      "text": "他是專門for research"
+    },
+    {
+      "start_seconds": 2944.735,
+      "end_seconds": 2945.735,
+      "text": "那research呢"
+    },
+    {
+      "start_seconds": 2945.735,
+      "end_seconds": 2947.415,
+      "text": "他可能就有資料先行"
+    },
+    {
+      "start_seconds": 2948.0550000000003,
+      "end_seconds": 2949.335,
+      "text": "那他可能就有"
+    },
+    {
+      "start_seconds": 2949.5750000000003,
+      "end_seconds": 2950.735,
+      "text": "不好的結果呢"
+    },
+    {
+      "start_seconds": 2950.735,
+      "end_seconds": 2952.175,
+      "text": "是最重要的"
+    },
+    {
+      "start_seconds": 2952.6150000000002,
+      "end_seconds": 2954.335,
+      "text": "那他很多東西呢"
+    },
+    {
+      "start_seconds": 2954.335,
+      "end_seconds": 2955.9750000000004,
+      "text": "是需要做討論的"
+    },
+    {
+      "start_seconds": 2956.255,
+      "end_seconds": 2957.815,
+      "text": "所以這種完全就是看"
+    },
+    {
+      "start_seconds": 2957.9750000000004,
+      "end_seconds": 2960.175,
+      "text": "你這個專案本身是在"
+    },
+    {
+      "start_seconds": 2960.495,
+      "end_seconds": 2961.0950000000003,
+      "text": "做什麼"
+    },
+    {
+      "start_seconds": 2961.535,
+      "end_seconds": 2962.735,
+      "text": "那做什麼決定"
+    },
+    {
+      "start_seconds": 2962.935,
+      "end_seconds": 2964.415,
+      "text": "你這個agents.md呢"
+    },
+    {
+      "start_seconds": 2964.415,
+      "end_seconds": 2965.135,
+      "text": "需要用什麼"
+    },
+    {
+      "start_seconds": 2965.775,
+      "end_seconds": 2967.495,
+      "text": "那我這個專案呢也是"
+    },
+    {
+      "start_seconds": 2967.855,
+      "end_seconds": 2969.255,
+      "text": "這個已經比較多了"
+    },
+    {
+      "start_seconds": 2969.255,
+      "end_seconds": 2970.0150000000003,
+      "text": "三百多行"
+    },
+    {
+      "start_seconds": 2970.375,
+      "end_seconds": 2971.6150000000002,
+      "text": "對那一樣最後面呢"
+    },
+    {
+      "start_seconds": 2971.6150000000002,
+      "end_seconds": 2973.535,
+      "text": "我會加很多奇奇怪怪的字"
+    },
+    {
+      "start_seconds": 2973.935,
+      "end_seconds": 2976.295,
+      "text": "所以我的ai看完了整份文件之後呢"
+    },
+    {
+      "start_seconds": 2976.295,
+      "end_seconds": 2977.255,
+      "text": "他就會輸出"
+    },
+    {
+      "start_seconds": 2977.255,
+      "end_seconds": 2978.815,
+      "text": "像這個就會輸出kawaii"
+    },
+    {
+      "start_seconds": 2978.815,
+      "end_seconds": 2979.855,
+      "text": "那我就知道說"
+    },
+    {
+      "start_seconds": 2980.0150000000003,
+      "end_seconds": 2981.815,
+      "text": "他已經把整個規則給"
+    },
+    {
+      "start_seconds": 2982.295,
+      "end_seconds": 2982.935,
+      "text": "看完了"
+    },
+    {
+      "start_seconds": 2985.195,
+      "end_seconds": 2985.755,
+      "text": "對那"
+    },
+    {
+      "start_seconds": 2986.1150000000002,
+      "end_seconds": 2987.715,
+      "text": "這個呢也是另外一個"
+    },
+    {
+      "start_seconds": 2987.715,
+      "end_seconds": 2990.5150000000003,
+      "text": "就是剛才知識庫的這個"
+    },
+    {
+      "start_seconds": 2990.875,
+      "end_seconds": 2992.675,
+      "text": "agents.md"
+    },
+    {
+      "start_seconds": 2992.835,
+      "end_seconds": 2994.195,
+      "text": "那這個agents.md呢"
+    },
+    {
+      "start_seconds": 2994.195,
+      "end_seconds": 2996.195,
+      "text": "他就清楚的記載著"
+    },
+    {
+      "start_seconds": 2996.435,
+      "end_seconds": 2996.995,
+      "text": "整個"
+    },
+    {
+      "start_seconds": 2997.635,
+      "end_seconds": 3000.5550000000003,
+      "text": "整個folder工作的這個流程"
+    },
+    {
+      "start_seconds": 3001.0750000000003,
+      "end_seconds": 3002.355,
+      "text": "那常態上呢"
+    },
+    {
+      "start_seconds": 3002.5150000000003,
+      "end_seconds": 3003.795,
+      "text": "你會有兩個"
+    },
+    {
+      "start_seconds": 3004.235,
+      "end_seconds": 3005.435,
+      "text": "agents.md"
+    },
+    {
+      "start_seconds": 3005.915,
+      "end_seconds": 3008.0750000000003,
+      "text": "影響著你的工作"
+    },
+    {
+      "start_seconds": 3009.395,
+      "end_seconds": 3010.755,
+      "text": "第一個呢則是"
+    },
+    {
+      "start_seconds": 3011.395,
+      "end_seconds": 3013.5550000000003,
+      "text": "你們自己的工作目錄"
+    },
+    {
+      "start_seconds": 3014.235,
+      "end_seconds": 3015.1150000000002,
+      "text": "第二個呢"
+    },
+    {
+      "start_seconds": 3015.275,
+      "end_seconds": 3017.235,
+      "text": "則是最上層的"
+    },
+    {
+      "start_seconds": 3017.995,
+      "end_seconds": 3019.315,
+      "text": "agents.md"
+    },
+    {
+      "start_seconds": 3024.335,
+      "end_seconds": 3024.815,
+      "text": "所以"
+    },
+    {
+      "start_seconds": 3025.695,
+      "end_seconds": 3027.5750000000003,
+      "text": "好我上層的假設是這個好了"
+    },
+    {
+      "start_seconds": 3028.255,
+      "end_seconds": 3029.815,
+      "text": "那上層的呢就是"
+    },
+    {
+      "start_seconds": 3030.135,
+      "end_seconds": 3032.0950000000003,
+      "text": "這個東西呢會影響到你"
+    },
+    {
+      "start_seconds": 3032.135,
+      "end_seconds": 3035.5750000000003,
+      "text": "整台電腦全部的工作目錄"
+    },
+    {
+      "start_seconds": 3036.895,
+      "end_seconds": 3039.255,
+      "text": "如果你要進入到知識庫的時候呢"
+    },
+    {
+      "start_seconds": 3039.255,
+      "end_seconds": 3042.375,
+      "text": "他會讀這一份加這一份進來"
+    },
+    {
+      "start_seconds": 3043.535,
+      "end_seconds": 3043.9750000000004,
+      "text": "所以"
+    },
+    {
+      "start_seconds": 3044.895,
+      "end_seconds": 3047.6150000000002,
+      "text": "最初始的那一份工作目錄呢"
+    },
+    {
+      "start_seconds": 3047.6150000000002,
+      "end_seconds": 3049.775,
+      "text": "其實越精簡越好"
+    },
+    {
+      "start_seconds": 3049.895,
+      "end_seconds": 3052.0950000000003,
+      "text": "你可能可以設定你個人的風格"
+    },
+    {
+      "start_seconds": 3052.455,
+      "end_seconds": 3054.695,
+      "text": "那你需要用繁體中文回覆"
+    },
+    {
+      "start_seconds": 3054.855,
+      "end_seconds": 3057.175,
+      "text": "這是整台電腦的規則"
+    },
+    {
+      "start_seconds": 3057.495,
+      "end_seconds": 3059.255,
+      "text": "但進入到了單一的"
+    },
+    {
+      "start_seconds": 3059.815,
+      "end_seconds": 3061.0550000000003,
+      "text": "工作目錄裡面呢"
+    },
+    {
+      "start_seconds": 3061.0550000000003,
+      "end_seconds": 3062.135,
+      "text": "每一個folder呢"
+    },
+    {
+      "start_seconds": 3062.135,
+      "end_seconds": 3064.815,
+      "text": "都有他自己的工作的流程"
+    },
+    {
+      "start_seconds": 3065.135,
+      "end_seconds": 3067.655,
+      "text": "所以這邊要特別記得就是你"
+    },
+    {
+      "start_seconds": 3068.175,
+      "end_seconds": 3069.895,
+      "text": "開一個新的專案的時候呢"
+    },
+    {
+      "start_seconds": 3069.895,
+      "end_seconds": 3070.735,
+      "text": "你同時會有"
+    },
+    {
+      "start_seconds": 3071.0550000000003,
+      "end_seconds": 3073.455,
+      "text": "AI同時會讀兩份不同的"
+    },
+    {
+      "start_seconds": 3073.855,
+      "end_seconds": 3074.935,
+      "text": "agents.md"
+    },
+    {
+      "start_seconds": 3076.295,
+      "end_seconds": 3078.655,
+      "text": "對那這個呢就是我們之前說過的"
+    },
+    {
+      "start_seconds": 3078.9750000000004,
+      "end_seconds": 3080.9750000000004,
+      "text": "JSON的這種MCP"
+    },
+    {
+      "start_seconds": 3080.9750000000004,
+      "end_seconds": 3082.5750000000003,
+      "text": "那待會呢就會示範"
+    },
+    {
+      "start_seconds": 3082.815,
+      "end_seconds": 3083.335,
+      "text": "Figma"
+    },
+    {
+      "start_seconds": 3083.5750000000003,
+      "end_seconds": 3084.815,
+      "text": "是個很簡單的"
+    },
+    {
+      "start_seconds": 3085.335,
+      "end_seconds": 3088.415,
+      "text": "MCP這個Figma呢是來做設計"
+    },
+    {
+      "start_seconds": 3088.655,
+      "end_seconds": 3089.375,
+      "text": "做使用"
+    },
+    {
+      "start_seconds": 3090.375,
+      "end_seconds": 3093.455,
+      "text": "好同時呢也可以回到這邊"
+    },
+    {
+      "start_seconds": 3093.935,
+      "end_seconds": 3094.695,
+      "text": "這個是"
+    },
+    {
+      "start_seconds": 3095.295,
+      "end_seconds": 3096.495,
+      "text": "我們整個"
+    },
+    {
+      "start_seconds": 3096.815,
+      "end_seconds": 3097.535,
+      "text": "活動"
+    },
+    {
+      "start_seconds": 3098.0950000000003,
+      "end_seconds": 3100.295,
+      "text": "所看到的就是可能AI Earth"
+    },
+    {
+      "start_seconds": 3100.535,
+      "end_seconds": 3102.415,
+      "text": "的整個活動的內容"
+    },
+    {
+      "start_seconds": 3103.335,
+      "end_seconds": 3104.6150000000002,
+      "text": "這個內容過去呢"
+    },
+    {
+      "start_seconds": 3104.6150000000002,
+      "end_seconds": 3106.535,
+      "text": "你要建立每一個block呢"
+    },
+    {
+      "start_seconds": 3106.655,
+      "end_seconds": 3107.535,
+      "text": "會很麻煩"
+    },
+    {
+      "start_seconds": 3107.855,
+      "end_seconds": 3110.455,
+      "text": "原因是因為你可能要回到後台"
+    },
+    {
+      "start_seconds": 3110.775,
+      "end_seconds": 3114.0950000000003,
+      "text": "那你可能會有很多不同的區塊"
+    },
+    {
+      "start_seconds": 3114.655,
+      "end_seconds": 3116.0150000000003,
+      "text": "這個每一個區塊呢"
+    },
+    {
+      "start_seconds": 3116.0150000000003,
+      "end_seconds": 3117.655,
+      "text": "其實都是一個"
+    },
+    {
+      "start_seconds": 3117.895,
+      "end_seconds": 3118.935,
+      "text": "工具本身"
+    },
+    {
+      "start_seconds": 3119.815,
+      "end_seconds": 3121.135,
+      "text": "這個工具本身呢"
+    },
+    {
+      "start_seconds": 3121.135,
+      "end_seconds": 3122.6150000000002,
+      "text": "你要去每一個每一個點"
+    },
+    {
+      "start_seconds": 3122.695,
+      "end_seconds": 3123.935,
+      "text": "然後每一個修改"
+    },
+    {
+      "start_seconds": 3124.255,
+      "end_seconds": 3125.695,
+      "text": "在AI時代下呢"
+    },
+    {
+      "start_seconds": 3125.895,
+      "end_seconds": 3127.0950000000003,
+      "text": "這個平台呢"
+    },
+    {
+      "start_seconds": 3127.5750000000003,
+      "end_seconds": 3129.9750000000004,
+      "text": "他就有提供了MCP"
+    },
+    {
+      "start_seconds": 3130.655,
+      "end_seconds": 3133.255,
+      "text": "這個MCP呢他有可用的工具是"
+    },
+    {
+      "start_seconds": 3133.255,
+      "end_seconds": 3136.335,
+      "text": "第一個他要做首頁的設計"
+    },
+    {
+      "start_seconds": 3136.895,
+      "end_seconds": 3138.215,
+      "text": "那他可以做活動"
+    },
+    {
+      "start_seconds": 3138.415,
+      "end_seconds": 3140.335,
+      "text": "他可以做名單他可以做商城"
+    },
+    {
+      "start_seconds": 3140.6150000000002,
+      "end_seconds": 3144.495,
+      "text": "所以他幾乎可以用自然的語言去描述"
+    },
+    {
+      "start_seconds": 3144.735,
+      "end_seconds": 3146.935,
+      "text": "你前面的這一個頁面"
+    },
+    {
+      "start_seconds": 3147.175,
+      "end_seconds": 3151.0550000000003,
+      "text": "到底要長成什麼樣子的樣態"
+    },
+    {
+      "start_seconds": 3152.0150000000003,
+      "end_seconds": 3153.895,
+      "text": "所以這個就是MCP的"
+    },
+    {
+      "start_seconds": 3154.0150000000003,
+      "end_seconds": 3155.495,
+      "text": "相對的一個好處"
+    },
+    {
+      "start_seconds": 3155.495,
+      "end_seconds": 3158.295,
+      "text": "就你省除了人一個一個去點"
+    },
+    {
+      "start_seconds": 3158.295,
+      "end_seconds": 3159.135,
+      "text": "每一個東西"
+    },
+    {
+      "start_seconds": 3159.135,
+      "end_seconds": 3160.9750000000004,
+      "text": "尤其因為這個東西多的時候"
+    },
+    {
+      "start_seconds": 3160.9750000000004,
+      "end_seconds": 3162.6150000000002,
+      "text": "你根本就沒有辦法去"
+    },
+    {
+      "start_seconds": 3162.855,
+      "end_seconds": 3165.455,
+      "text": "去處理很多的細節"
+    },
+    {
+      "start_seconds": 3165.855,
+      "end_seconds": 3169.0150000000003,
+      "text": "所以才會用MCP的方式"
+    },
+    {
+      "start_seconds": 3169.255,
+      "end_seconds": 3170.895,
+      "text": "讓AI自己去做處理"
+    },
+    {
+      "start_seconds": 3171.815,
+      "end_seconds": 3175.0150000000003,
+      "text": "那他這個MCP呢也有提供resources"
+    },
+    {
+      "start_seconds": 3175.415,
+      "end_seconds": 3177.655,
+      "text": "那他會自動把你品牌的資料呢"
+    },
+    {
+      "start_seconds": 3177.655,
+      "end_seconds": 3179.535,
+      "text": "帶進上下文裡面"
+    },
+    {
+      "start_seconds": 3180.0150000000003,
+      "end_seconds": 3182.135,
+      "text": "假設因為我們這邊是AI Earth"
+    },
+    {
+      "start_seconds": 3182.295,
+      "end_seconds": 3185.0550000000003,
+      "text": "那我們AI Earth的內容可能是"
+    },
+    {
+      "start_seconds": 3185.815,
+      "end_seconds": 3188.175,
+      "text": "for地球科學的社群"
+    },
+    {
+      "start_seconds": 3188.175,
+      "end_seconds": 3189.935,
+      "text": "那我們可能有固定的圖片"
+    },
+    {
+      "start_seconds": 3190.335,
+      "end_seconds": 3192.0950000000003,
+      "text": "所以他就會把這些資料呢"
+    },
+    {
+      "start_seconds": 3192.135,
+      "end_seconds": 3193.535,
+      "text": "自己內建帶進"
+    },
+    {
+      "start_seconds": 3194.0550000000003,
+      "end_seconds": 3196.735,
+      "text": "整個像CloudCode或Codex裡面"
+    },
+    {
+      "start_seconds": 3196.935,
+      "end_seconds": 3198.415,
+      "text": "當成是上下文"
+    },
+    {
+      "start_seconds": 3199.0550000000003,
+      "end_seconds": 3200.0150000000003,
+      "text": "來去做處理"
+    },
+    {
+      "start_seconds": 3200.495,
+      "end_seconds": 3202.135,
+      "text": "所以這個就是Hyperlink"
+    },
+    {
+      "start_seconds": 3202.135,
+      "end_seconds": 3205.375,
+      "text": "他們自己的MCP的server"
+    },
+    {
+      "start_seconds": 3205.855,
+      "end_seconds": 3208.0550000000003,
+      "text": "那也有單純是resources的"
+    },
+    {
+      "start_seconds": 3208.0950000000003,
+      "end_seconds": 3211.895,
+      "text": "就像中央社他們也有他們自己的MCP"
+    },
+    {
+      "start_seconds": 3212.215,
+      "end_seconds": 3213.415,
+      "text": "那他們的MCP呢"
+    },
+    {
+      "start_seconds": 3213.415,
+      "end_seconds": 3215.655,
+      "text": "有很多都是他們過去"
+    },
+    {
+      "start_seconds": 3216.135,
+      "end_seconds": 3218.775,
+      "text": "所有的這些新聞的內容"
+    },
+    {
+      "start_seconds": 3219.855,
+      "end_seconds": 3221.5750000000003,
+      "text": "所以你可以去接他們的MCP"
+    },
+    {
+      "start_seconds": 3221.5750000000003,
+      "end_seconds": 3222.655,
+      "text": "但這個MCP要錢"
+    },
+    {
+      "start_seconds": 3223.295,
+      "end_seconds": 3224.815,
+      "text": "你可以去做說"
+    },
+    {
+      "start_seconds": 3224.815,
+      "end_seconds": 3226.855,
+      "text": "像他有一個簡單的例子就是"
+    },
+    {
+      "start_seconds": 3226.9750000000004,
+      "end_seconds": 3228.0550000000003,
+      "text": "他可以去做一個"
+    },
+    {
+      "start_seconds": 3228.0550000000003,
+      "end_seconds": 3229.735,
+      "text": "台北捷運通車30年來"
+    },
+    {
+      "start_seconds": 3230.0950000000003,
+      "end_seconds": 3233.0950000000003,
+      "text": "歷史新聞和老照片的專題回顧"
+    },
+    {
+      "start_seconds": 3233.455,
+      "end_seconds": 3236.735,
+      "text": "他可以把台北捷運過去30年的所有新聞呢"
+    },
+    {
+      "start_seconds": 3236.735,
+      "end_seconds": 3237.735,
+      "text": "都找出來"
+    },
+    {
+      "start_seconds": 3238.135,
+      "end_seconds": 3240.655,
+      "text": "然後做成一個專業的網站"
+    },
+    {
+      "start_seconds": 3241.135,
+      "end_seconds": 3242.695,
+      "text": "所以如果你是防災的話呢"
+    },
+    {
+      "start_seconds": 3242.695,
+      "end_seconds": 3243.655,
+      "text": "你就可以把"
+    },
+    {
+      "start_seconds": 3244.335,
+      "end_seconds": 3246.775,
+      "text": "去做說過去20年來"
+    },
+    {
+      "start_seconds": 3246.775,
+      "end_seconds": 3249.655,
+      "text": "台灣山坡地發生的災害有哪些"
+    },
+    {
+      "start_seconds": 3249.935,
+      "end_seconds": 3251.375,
+      "text": "那也可以做成一個網站"
+    },
+    {
+      "start_seconds": 3251.6150000000002,
+      "end_seconds": 3253.855,
+      "text": "對但前期就是不要做20年"
+    },
+    {
+      "start_seconds": 3253.855,
+      "end_seconds": 3256.295,
+      "text": "因為這個錢燒蠻快的"
+    },
+    {
+      "start_seconds": 3256.295,
+      "end_seconds": 3257.775,
+      "text": "就是你可能很快就沒錢了"
+    },
+    {
+      "start_seconds": 3258.175,
+      "end_seconds": 3259.455,
+      "text": "對所以這種呢"
+    },
+    {
+      "start_seconds": 3259.455,
+      "end_seconds": 3261.695,
+      "text": "像中央社他們就會提供MCP"
+    },
+    {
+      "start_seconds": 3261.9750000000004,
+      "end_seconds": 3262.9750000000004,
+      "text": "那我有邀請"
+    },
+    {
+      "start_seconds": 3263.455,
+      "end_seconds": 3266.0550000000003,
+      "text": "中央社做MCP的這個"
+    },
+    {
+      "start_seconds": 3266.0550000000003,
+      "end_seconds": 3267.455,
+      "text": "他們資訊室的主任"
+    },
+    {
+      "start_seconds": 3267.935,
+      "end_seconds": 3270.0950000000003,
+      "text": "然後他們資訊室主任會"
+    },
+    {
+      "start_seconds": 3270.455,
+      "end_seconds": 3273.6150000000002,
+      "text": "來參加下一次的AI Earth的Meetup"
+    },
+    {
+      "start_seconds": 3273.815,
+      "end_seconds": 3276.215,
+      "text": "就是他們會是下一個講者"
+    },
+    {
+      "start_seconds": 3276.215,
+      "end_seconds": 3279.6150000000002,
+      "text": "因為我覺得這個東西對整個社群蠻重要的"
+    },
+    {
+      "start_seconds": 3279.6150000000002,
+      "end_seconds": 3280.495,
+      "text": "就是我們要"
+    },
+    {
+      "start_seconds": 3281.135,
+      "end_seconds": 3283.815,
+      "text": "就是在這麼多資料的狀態之下"
+    },
+    {
+      "start_seconds": 3284.175,
+      "end_seconds": 3286.895,
+      "text": "那中央社他們是怎麼樣去整理"
+    },
+    {
+      "start_seconds": 3287.295,
+      "end_seconds": 3288.215,
+      "text": "這些資料"
+    },
+    {
+      "start_seconds": 3288.5750000000003,
+      "end_seconds": 3290.175,
+      "text": "那怎麼樣把這些資料呢"
+    },
+    {
+      "start_seconds": 3290.175,
+      "end_seconds": 3292.375,
+      "text": "做成是一個MCP的Server"
+    },
+    {
+      "start_seconds": 3292.695,
+      "end_seconds": 3295.495,
+      "text": "然後來給使用的人或民眾"
+    },
+    {
+      "start_seconds": 3295.695,
+      "end_seconds": 3296.6150000000002,
+      "text": "來去做使用"
+    },
+    {
+      "start_seconds": 3296.855,
+      "end_seconds": 3298.855,
+      "text": "所以我覺得這個東西蠻重要"
+    },
+    {
+      "start_seconds": 3298.855,
+      "end_seconds": 3299.255,
+      "text": "所以"
+    },
+    {
+      "start_seconds": 3300.0950000000003,
+      "end_seconds": 3301.495,
+      "text": "下一次的AI Earth呢"
+    },
+    {
+      "start_seconds": 3301.495,
+      "end_seconds": 3303.335,
+      "text": "就是對方會過來"
+    },
+    {
+      "start_seconds": 3303.5750000000003,
+      "end_seconds": 3305.895,
+      "text": "好那回到"
+    },
+    {
+      "start_seconds": 3306.535,
+      "end_seconds": 3308.935,
+      "text": "Codex這邊我們做一個最"
+    },
+    {
+      "start_seconds": 3309.5750000000003,
+      "end_seconds": 3311.695,
+      "text": "最簡單的運用"
+    },
+    {
+      "start_seconds": 3312.895,
+      "end_seconds": 3313.6150000000002,
+      "text": "假設呢"
+    },
+    {
+      "start_seconds": 3313.935,
+      "end_seconds": 3315.295,
+      "text": "我們開個新的對話"
+    },
+    {
+      "start_seconds": 3315.695,
+      "end_seconds": 3318.255,
+      "text": "那我就可以跟他說"
+    },
+    {
+      "start_seconds": 3320.0550000000003,
+      "end_seconds": 3321.5750000000003,
+      "text": "我現在想要做一個"
+    },
+    {
+      "start_seconds": 3322.0950000000003,
+      "end_seconds": 3323.0150000000003,
+      "text": "Live Demo"
+    },
+    {
+      "start_seconds": 3323.455,
+      "end_seconds": 3325.175,
+      "text": "那這個Live Demo呢"
+    },
+    {
+      "start_seconds": 3325.175,
+      "end_seconds": 3326.335,
+      "text": "主要是想要"
+    },
+    {
+      "start_seconds": 3326.735,
+      "end_seconds": 3330.295,
+      "text": "介紹Skills的單頁網站"
+    },
+    {
+      "start_seconds": 3330.695,
+      "end_seconds": 3333.535,
+      "text": "所以你先幫我建立一個很簡單的"
+    },
+    {
+      "start_seconds": 3333.895,
+      "end_seconds": 3334.935,
+      "text": "AgenceDMD"
+    },
+    {
+      "start_seconds": 3335.455,
+      "end_seconds": 3337.5750000000003,
+      "text": "就專門for這個專案使用"
+    },
+    {
+      "start_seconds": 3347.295,
+      "end_seconds": 3347.9750000000004,
+      "text": "好所以"
+    },
+    {
+      "start_seconds": 3348.9750000000004,
+      "end_seconds": 3350.5750000000003,
+      "text": "現在整個呢就是"
+    },
+    {
+      "start_seconds": 3351.0550000000003,
+      "end_seconds": 3352.815,
+      "text": "我想要去做一個"
+    },
+    {
+      "start_seconds": 3353.175,
+      "end_seconds": 3354.775,
+      "text": "介紹Skills的網站"
+    },
+    {
+      "start_seconds": 3356.175,
+      "end_seconds": 3356.9750000000004,
+      "text": "所以我請"
+    },
+    {
+      "start_seconds": 3357.295,
+      "end_seconds": 3360.0550000000003,
+      "text": "AI Earth先幫我建立一個很簡單的"
+    },
+    {
+      "start_seconds": 3360.535,
+      "end_seconds": 3361.5750000000003,
+      "text": "AgenceDMD"
+    },
+    {
+      "start_seconds": 3361.895,
+      "end_seconds": 3362.455,
+      "text": "我用"
+    },
+    {
+      "start_seconds": 3363.375,
+      "end_seconds": 3365.0150000000003,
+      "text": "最輕度的推理就好"
+    },
+    {
+      "start_seconds": 3375.775,
+      "end_seconds": 3376.495,
+      "text": "對所以"
+    },
+    {
+      "start_seconds": 3377.0150000000003,
+      "end_seconds": 3378.5750000000003,
+      "text": "你看到他一開始會先"
+    },
+    {
+      "start_seconds": 3378.895,
+      "end_seconds": 3381.695,
+      "text": "偵測就是這個專案有沒有這個AgenceDMD"
+    },
+    {
+      "start_seconds": 3382.0150000000003,
+      "end_seconds": 3384.495,
+      "text": "如果沒有的話其實你就把需求告訴他"
+    },
+    {
+      "start_seconds": 3385.335,
+      "end_seconds": 3386.935,
+      "text": "那這個就是他"
+    },
+    {
+      "start_seconds": 3387.375,
+      "end_seconds": 3388.455,
+      "text": "做出來的"
+    },
+    {
+      "start_seconds": 3389.0950000000003,
+      "end_seconds": 3390.0950000000003,
+      "text": "AgenceDMD"
+    },
+    {
+      "start_seconds": 3391.0950000000003,
+      "end_seconds": 3393.6150000000002,
+      "text": "他的目標他就是告訴你專案的目標"
+    },
+    {
+      "start_seconds": 3393.895,
+      "end_seconds": 3395.495,
+      "text": "然後協同的原則"
+    },
+    {
+      "start_seconds": 3395.5750000000003,
+      "end_seconds": 3397.135,
+      "text": "還有實作的範圍"
+    },
+    {
+      "start_seconds": 3397.5750000000003,
+      "end_seconds": 3400.215,
+      "text": "那這些你當然可以仔細的看過每一條"
+    },
+    {
+      "start_seconds": 3401.0550000000003,
+      "end_seconds": 3402.6150000000002,
+      "text": "再來修改"
+    },
+    {
+      "start_seconds": 3403.455,
+      "end_seconds": 3404.135,
+      "text": "好所以"
+    },
+    {
+      "start_seconds": 3404.455,
+      "end_seconds": 3405.695,
+      "text": "這個好了之後呢"
+    },
+    {
+      "start_seconds": 3406.175,
+      "end_seconds": 3407.375,
+      "text": "我們就可以去"
+    },
+    {
+      "start_seconds": 3407.735,
+      "end_seconds": 3408.175,
+      "text": "用"
+    },
+    {
+      "start_seconds": 3408.5750000000003,
+      "end_seconds": 3409.335,
+      "text": "MCP"
+    },
+    {
+      "start_seconds": 3409.495,
+      "end_seconds": 3410.0550000000003,
+      "text": "如果"
+    },
+    {
+      "start_seconds": 3410.5750000000003,
+      "end_seconds": 3412.0950000000003,
+      "text": "要做網站"
+    },
+    {
+      "start_seconds": 3413.415,
+      "end_seconds": 3415.935,
+      "text": "你不呼叫MCP的時候呢"
+    },
+    {
+      "start_seconds": 3417.0550000000003,
+      "end_seconds": 3418.815,
+      "text": "你會到了這個"
+    },
+    {
+      "start_seconds": 3418.9750000000004,
+      "end_seconds": 3419.495,
+      "text": "Site"
+    },
+    {
+      "start_seconds": 3419.495,
+      "end_seconds": 3420.455,
+      "text": "Site這個是"
+    },
+    {
+      "start_seconds": 3420.735,
+      "end_seconds": 3422.295,
+      "text": "Hodas裡面專門做"
+    },
+    {
+      "start_seconds": 3422.455,
+      "end_seconds": 3424.0150000000003,
+      "text": "網站的一個工具"
+    },
+    {
+      "start_seconds": 3424.255,
+      "end_seconds": 3425.335,
+      "text": "你可以先選他"
+    },
+    {
+      "start_seconds": 3426.0950000000003,
+      "end_seconds": 3427.735,
+      "text": "然後我們可以到外掛這邊"
+    },
+    {
+      "start_seconds": 3428.135,
+      "end_seconds": 3430.255,
+      "text": "就可以有很多的MCP"
+    },
+    {
+      "start_seconds": 3430.695,
+      "end_seconds": 3431.375,
+      "text": "可以去"
+    },
+    {
+      "start_seconds": 3432.0150000000003,
+      "end_seconds": 3432.6150000000002,
+      "text": "連接"
+    },
+    {
+      "start_seconds": 3433.0150000000003,
+      "end_seconds": 3434.655,
+      "text": "那我們這次的MCP呢"
+    },
+    {
+      "start_seconds": 3435.375,
+      "end_seconds": 3437.0550000000003,
+      "text": "用剛才說的"
+    },
+    {
+      "start_seconds": 3437.535,
+      "end_seconds": 3438.0550000000003,
+      "text": "Figma"
+    },
+    {
+      "start_seconds": 3442.935,
+      "end_seconds": 3443.775,
+      "text": "Figma呢"
+    },
+    {
+      "start_seconds": 3444.0550000000003,
+      "end_seconds": 3445.6150000000002,
+      "text": "就是這個工具"
+    },
+    {
+      "start_seconds": 3446.0950000000003,
+      "end_seconds": 3447.175,
+      "text": "就他專門做"
+    },
+    {
+      "start_seconds": 3447.495,
+      "end_seconds": 3448.135,
+      "text": "設計的"
+    },
+    {
+      "start_seconds": 3448.535,
+      "end_seconds": 3450.815,
+      "text": "那當然這邊有非常非常多的"
+    },
+    {
+      "start_seconds": 3451.295,
+      "end_seconds": 3453.855,
+      "text": "MCP非常非常多的工具可以去連接"
+    },
+    {
+      "start_seconds": 3453.855,
+      "end_seconds": 3454.175,
+      "text": "但"
+    },
+    {
+      "start_seconds": 3454.815,
+      "end_seconds": 3457.135,
+      "text": "回到剛才說的就是不要亂"
+    },
+    {
+      "start_seconds": 3457.335,
+      "end_seconds": 3457.695,
+      "text": "接"
+    },
+    {
+      "start_seconds": 3457.935,
+      "end_seconds": 3458.9750000000004,
+      "text": "這些工具"
+    },
+    {
+      "start_seconds": 3459.175,
+      "end_seconds": 3459.535,
+      "text": "因為"
+    },
+    {
+      "start_seconds": 3460.415,
+      "end_seconds": 3462.9750000000004,
+      "text": "你要先確定說這些工具去"
+    },
+    {
+      "start_seconds": 3463.495,
+      "end_seconds": 3464.415,
+      "text": "確實是你"
+    },
+    {
+      "start_seconds": 3464.775,
+      "end_seconds": 3465.455,
+      "text": "用得到的"
+    },
+    {
+      "start_seconds": 3465.775,
+      "end_seconds": 3466.775,
+      "text": "因為這些工具"
+    },
+    {
+      "start_seconds": 3466.9750000000004,
+      "end_seconds": 3468.335,
+      "text": "有很多很奇怪的"
+    },
+    {
+      "start_seconds": 3468.5750000000003,
+      "end_seconds": 3469.735,
+      "text": "都可以給你Google"
+    },
+    {
+      "start_seconds": 3471.735,
+      "end_seconds": 3473.735,
+      "text": "我今天看到一個超怪的你看這個"
+    },
+    {
+      "start_seconds": 3474.135,
+      "end_seconds": 3475.415,
+      "text": "這個工具叫做"
+    },
+    {
+      "start_seconds": 3477.175,
+      "end_seconds": 3478.215,
+      "text": "產生一張"
+    },
+    {
+      "start_seconds": 3478.535,
+      "end_seconds": 3479.175,
+      "text": "爸爸的"
+    },
+    {
+      "start_seconds": 3479.335,
+      "end_seconds": 3479.775,
+      "text": "圖片"
+    },
+    {
+      "start_seconds": 3480.375,
+      "end_seconds": 3482.295,
+      "text": "你知道這是誰敢裝啊"
+    },
+    {
+      "start_seconds": 3482.455,
+      "end_seconds": 3484.0950000000003,
+      "text": "這聽起來整個超怪的好不好"
+    },
+    {
+      "start_seconds": 3484.695,
+      "end_seconds": 3484.9750000000004,
+      "text": "好"
+    },
+    {
+      "start_seconds": 3485.0950000000003,
+      "end_seconds": 3486.5750000000003,
+      "text": "所以回到首頁呢"
+    },
+    {
+      "start_seconds": 3486.935,
+      "end_seconds": 3488.0950000000003,
+      "text": "你就可以跟他說"
+    },
+    {
+      "start_seconds": 3490.375,
+      "end_seconds": 3490.9750000000004,
+      "text": "用"
+    },
+    {
+      "start_seconds": 3491.895,
+      "end_seconds": 3493.0150000000003,
+      "text": "搭配"
+    },
+    {
+      "start_seconds": 3477.606,
+      "end_seconds": 3479.606,
+      "text": "像一張爸爸的圖片"
+    },
+    {
+      "start_seconds": 3479.606,
+      "end_seconds": 3481.606,
+      "text": "你知道,這誰敢裝啊"
+    },
+    {
+      "start_seconds": 3483.606,
+      "end_seconds": 3485.606,
+      "text": "好,所以回到首頁呢"
+    },
+    {
+      "start_seconds": 3487.606,
+      "end_seconds": 3491.1760000000004,
+      "text": "用"
+    },
+    {
+      "start_seconds": 3491.1760000000004,
+      "end_seconds": 3493.1760000000004,
+      "text": "搭配"
+    },
+    {
+      "start_seconds": 3493.1760000000004,
+      "end_seconds": 3519.9060000000004,
+      "text": "幫我設計"
+    },
+    {
+      "start_seconds": 3519.9060000000004,
+      "end_seconds": 3521.9060000000004,
+      "text": "網站"
+    },
+    {
+      "start_seconds": 3521.9060000000004,
+      "end_seconds": 3527.396,
+      "text": "因為這兩個其實它是不太一樣"
+    },
+    {
+      "start_seconds": 3527.396,
+      "end_seconds": 3529.396,
+      "text": "因為Side是專門"
+    },
+    {
+      "start_seconds": 3529.396,
+      "end_seconds": 3531.396,
+      "text": "在專門做"
+    },
+    {
+      "start_seconds": 3531.396,
+      "end_seconds": 3533.396,
+      "text": "網站的工具"
+    },
+    {
+      "start_seconds": 3533.396,
+      "end_seconds": 3535.396,
+      "text": "那Figma呢是協助"
+    },
+    {
+      "start_seconds": 3535.396,
+      "end_seconds": 3537.396,
+      "text": "設計的工具"
+    },
+    {
+      "start_seconds": 3537.396,
+      "end_seconds": 3539.396,
+      "text": "所以這其實是兩個不太一樣的"
+    },
+    {
+      "start_seconds": 3539.396,
+      "end_seconds": 3541.396,
+      "text": "工具,如果沒有用Figma"
+    },
+    {
+      "start_seconds": 3541.396,
+      "end_seconds": 3543.396,
+      "text": "你有可能做出來的網站"
+    },
+    {
+      "start_seconds": 3543.396,
+      "end_seconds": 3545.396,
+      "text": "或許會稍微醜一點"
+    },
+    {
+      "start_seconds": 3545.396,
+      "end_seconds": 3547.396,
+      "text": "但這個也不一定"
+    },
+    {
+      "start_seconds": 3547.396,
+      "end_seconds": 3549.396,
+      "text": "所以這個就要"
+    },
+    {
+      "start_seconds": 3549.396,
+      "end_seconds": 3551.396,
+      "text": "讓它跑一下"
+    },
+    {
+      "start_seconds": 3551.396,
+      "end_seconds": 3553.396,
+      "text": "就它會"
+    },
+    {
+      "start_seconds": 3553.396,
+      "end_seconds": 3555.396,
+      "text": "你看它這邊已經使用了Figma"
+    },
+    {
+      "start_seconds": 3555.396,
+      "end_seconds": 3557.396,
+      "text": "的工具"
+    },
+    {
+      "start_seconds": 3557.396,
+      "end_seconds": 3559.396,
+      "text": "它已經載入了相關的工具"
+    },
+    {
+      "start_seconds": 3559.396,
+      "end_seconds": 3561.396,
+      "text": "這邊一樣"
+    },
+    {
+      "start_seconds": 3561.396,
+      "end_seconds": 3563.396,
+      "text": "讀取了Side的技能"
+    },
+    {
+      "start_seconds": 3563.396,
+      "end_seconds": 3565.396,
+      "text": "讀取了Figma Use的技能"
+    },
+    {
+      "start_seconds": 3565.396,
+      "end_seconds": 3567.396,
+      "text": "所以它這個"
+    },
+    {
+      "start_seconds": 3567.396,
+      "end_seconds": 3569.396,
+      "text": "MCP裡面就有包含了"
+    },
+    {
+      "start_seconds": 3569.396,
+      "end_seconds": 3571.396,
+      "text": "一些Skill還有一些Tool"
+    },
+    {
+      "start_seconds": 3571.396,
+      "end_seconds": 3574.6760000000004,
+      "text": "的部分"
+    },
+    {
+      "start_seconds": 3574.6760000000004,
+      "end_seconds": 3576.6760000000004,
+      "text": "在這邊有一個需要"
+    },
+    {
+      "start_seconds": 3576.6760000000004,
+      "end_seconds": 3578.6760000000004,
+      "text": "注意的是"
+    },
+    {
+      "start_seconds": 3578.6760000000004,
+      "end_seconds": 3580.6760000000004,
+      "text": "有時候MCP跟Skill"
+    },
+    {
+      "start_seconds": 3580.6760000000004,
+      "end_seconds": 3582.6760000000004,
+      "text": "這些東西它可能是同一個"
+    },
+    {
+      "start_seconds": 3582.6760000000004,
+      "end_seconds": 3584.6760000000004,
+      "text": "工具的來源,那兩個合在一起"
+    },
+    {
+      "start_seconds": 3584.6760000000004,
+      "end_seconds": 3586.6760000000004,
+      "text": "有時候它們會叫Prime In"
+    },
+    {
+      "start_seconds": 3586.6760000000004,
+      "end_seconds": 3591.4260000000004,
+      "text": "就是"
+    },
+    {
+      "start_seconds": 3591.4260000000004,
+      "end_seconds": 3593.4260000000004,
+      "text": "這個名詞,那這個名詞"
+    },
+    {
+      "start_seconds": 3593.4260000000004,
+      "end_seconds": 3595.4260000000004,
+      "text": "基本上有點像是一個全家桶的概念"
+    },
+    {
+      "start_seconds": 3595.4260000000004,
+      "end_seconds": 3597.4260000000004,
+      "text": "你就享有了"
+    },
+    {
+      "start_seconds": 3597.4260000000004,
+      "end_seconds": 3599.4260000000004,
+      "text": "整個Figma這裡"
+    },
+    {
+      "start_seconds": 3599.4260000000004,
+      "end_seconds": 3601.4260000000004,
+      "text": "所有的工具"
+    },
+    {
+      "start_seconds": 3601.4260000000004,
+      "end_seconds": 3603.4260000000004,
+      "text": "那以及它們所有的"
+    },
+    {
+      "start_seconds": 3603.4260000000004,
+      "end_seconds": 3605.4260000000004,
+      "text": "技能,所以現在有時候"
+    },
+    {
+      "start_seconds": 3605.4260000000004,
+      "end_seconds": 3607.4260000000004,
+      "text": "有些東西已經不是那麼好"
+    },
+    {
+      "start_seconds": 3607.4260000000004,
+      "end_seconds": 3609.4260000000004,
+      "text": "去辨認,就是什麼"
+    },
+    {
+      "start_seconds": 3609.4260000000004,
+      "end_seconds": 3611.4260000000004,
+      "text": "是Prime In,那什麼是MCP"
+    },
+    {
+      "start_seconds": 3611.4260000000004,
+      "end_seconds": 3613.4260000000004,
+      "text": "對,所以這些"
+    },
+    {
+      "start_seconds": 3613.4260000000004,
+      "end_seconds": 3615.4260000000004,
+      "text": "很多都是Prime In"
+    },
+    {
+      "start_seconds": 3615.4260000000004,
+      "end_seconds": 3622.1360000000004,
+      "text": "對,它還在思考"
+    },
+    {
+      "start_seconds": 3622.1360000000004,
+      "end_seconds": 3624.1360000000004,
+      "text": "我覺得我應該不應該"
+    },
+    {
+      "start_seconds": 3624.1360000000004,
+      "end_seconds": 3626.1360000000004,
+      "text": "給它Figma"
+    },
+    {
+      "start_seconds": 3626.1360000000004,
+      "end_seconds": 3628.1360000000004,
+      "text": "它可能會做得比較快"
+    },
+    {
+      "start_seconds": 3628.1360000000004,
+      "end_seconds": 3630.1360000000004,
+      "text": "因為有時候"
+    },
+    {
+      "start_seconds": 3630.1360000000004,
+      "end_seconds": 3632.1360000000004,
+      "text": "你給它太多東西"
+    },
+    {
+      "start_seconds": 3632.1360000000004,
+      "end_seconds": 3634.1360000000004,
+      "text": "就是它都會做得"
+    },
+    {
+      "start_seconds": 3634.1360000000004,
+      "end_seconds": 3636.1360000000004,
+      "text": "滿,所以你可以"
+    },
+    {
+      "start_seconds": 3636.1360000000004,
+      "end_seconds": 3638.1360000000004,
+      "text": "完全的看到它在這個過程當中"
+    },
+    {
+      "start_seconds": 3640.1360000000004,
+      "end_seconds": 3642.1360000000004,
+      "text": "就是它讀了什麼"
+    },
+    {
+      "start_seconds": 3642.1360000000004,
+      "end_seconds": 3644.1360000000004,
+      "text": "所以它用我的Mail"
+    },
+    {
+      "start_seconds": 3644.1360000000004,
+      "end_seconds": 3646.1360000000004,
+      "text": "來去連接Figma"
+    },
+    {
+      "start_seconds": 3646.1360000000004,
+      "end_seconds": 3648.1360000000004,
+      "text": "的這個MCP"
+    },
+    {
+      "start_seconds": 3648.1360000000004,
+      "end_seconds": 3650.1360000000004,
+      "text": "因為我之前有授權給它了"
+    },
+    {
+      "start_seconds": 3650.1360000000004,
+      "end_seconds": 3652.1360000000004,
+      "text": "所以這是它"
+    },
+    {
+      "start_seconds": 3652.1360000000004,
+      "end_seconds": 3654.1360000000004,
+      "text": "整個授權過程"
+    },
+    {
+      "start_seconds": 3654.1360000000004,
+      "end_seconds": 3656.1360000000004,
+      "text": "當中的一個"
+    },
+    {
+      "start_seconds": 3656.1360000000004,
+      "end_seconds": 3658.1360000000004,
+      "text": "執行檔"
+    },
+    {
+      "start_seconds": 3658.1360000000004,
+      "end_seconds": 3660.1360000000004,
+      "text": "那這個是它整個命令的"
+    },
+    {
+      "start_seconds": 3660.1360000000004,
+      "end_seconds": 3663.476,
+      "text": "執行檔"
+    },
+    {
+      "start_seconds": 3663.476,
+      "end_seconds": 3667.4260000000004,
+      "text": "所以其實"
+    },
+    {
+      "start_seconds": 3667.4260000000004,
+      "end_seconds": 3669.4260000000004,
+      "text": "裡面你可以很清楚的看到說"
+    },
+    {
+      "start_seconds": 3669.4260000000004,
+      "end_seconds": 3671.4260000000004,
+      "text": "就是AI在做"
+    },
+    {
+      "start_seconds": 3671.4260000000004,
+      "end_seconds": 3673.4260000000004,
+      "text": "整個的過程當中"
+    },
+    {
+      "start_seconds": 3673.4260000000004,
+      "end_seconds": 3675.4260000000004,
+      "text": "它到底看了什麼樣的東西"
+    },
+    {
+      "start_seconds": 3675.4260000000004,
+      "end_seconds": 3677.4260000000004,
+      "text": "就它到底走了什麼樣的路徑"
+    },
+    {
+      "start_seconds": 3677.4260000000004,
+      "end_seconds": 3679.4260000000004,
+      "text": "就它有沒有讀到"
+    },
+    {
+      "start_seconds": 3679.4260000000004,
+      "end_seconds": 3681.4260000000004,
+      "text": "與不該讀的檔案"
+    },
+    {
+      "start_seconds": 3681.4260000000004,
+      "end_seconds": 3683.4260000000004,
+      "text": "就像這裡"
+    },
+    {
+      "start_seconds": 3683.4260000000004,
+      "end_seconds": 3685.4260000000004,
+      "text": "它確定有讀了Agents.d"
+    },
+    {
+      "start_seconds": 3685.4260000000004,
+      "end_seconds": 3687.4260000000004,
+      "text": "那這個Agents.d呢"
+    },
+    {
+      "start_seconds": 3687.4260000000004,
+      "end_seconds": 3694.3860000000004,
+      "text": "就是我們剛才做的這個"
+    },
+    {
+      "start_seconds": 3694.3860000000004,
+      "end_seconds": 3696.3860000000004,
+      "text": "這個真的是"
+    },
+    {
+      "start_seconds": 3696.3860000000004,
+      "end_seconds": 3701.0460000000003,
+      "text": "有點慢喔"
+    },
+    {
+      "start_seconds": 3701.0460000000003,
+      "end_seconds": 3712.516,
+      "text": "欸,跑了喔"
+    },
+    {
+      "start_seconds": 3712.516,
+      "end_seconds": 3715.866,
+      "text": "太麻煩了"
+    },
+    {
+      "start_seconds": 3715.866,
+      "end_seconds": 3717.866,
+      "text": "等一下喔"
+    },
+    {
+      "start_seconds": 3717.866,
+      "end_seconds": 3719.866,
+      "text": "欸"
+    },
+    {
+      "start_seconds": 3719.866,
+      "end_seconds": 3721.866,
+      "text": "所以你看這個"
+    },
+    {
+      "start_seconds": 3721.866,
+      "end_seconds": 3723.866,
+      "text": "好像還"
+    },
+    {
+      "start_seconds": 3723.866,
+      "end_seconds": 3725.866,
+      "text": "還不差喔"
+    },
+    {
+      "start_seconds": 3725.866,
+      "end_seconds": 3727.866,
+      "text": "這看起來滿"
+    },
+    {
+      "start_seconds": 3727.866,
+      "end_seconds": 3733.9860000000003,
+      "text": "漂亮的"
+    },
+    {
+      "start_seconds": 3733.9860000000003,
+      "end_seconds": 3735.9860000000003,
+      "text": "所以它其實做網站會非常非常的"
+    },
+    {
+      "start_seconds": 3735.9860000000003,
+      "end_seconds": 3737.9860000000003,
+      "text": "快"
+    },
+    {
+      "start_seconds": 3737.9860000000003,
+      "end_seconds": 3739.9860000000003,
+      "text": "把外部的skill"
+    },
+    {
+      "start_seconds": 3739.9860000000003,
+      "end_seconds": 3741.9860000000003,
+      "text": "拉進來"
+    },
+    {
+      "start_seconds": 3741.9860000000003,
+      "end_seconds": 3743.9860000000003,
+      "text": "我們剛才是用"
+    },
+    {
+      "start_seconds": 3743.9860000000003,
+      "end_seconds": 3745.9860000000003,
+      "text": "Figma"
+    },
+    {
+      "start_seconds": 3745.9860000000003,
+      "end_seconds": 3747.9860000000003,
+      "text": "它自己內建的一個skill"
+    },
+    {
+      "start_seconds": 3747.9860000000003,
+      "end_seconds": 3749.9860000000003,
+      "text": "所以我們如果"
+    },
+    {
+      "start_seconds": 3749.9860000000003,
+      "end_seconds": 3751.9860000000003,
+      "text": "想要去更改它的設計"
+    },
+    {
+      "start_seconds": 3751.9860000000003,
+      "end_seconds": 3753.9860000000003,
+      "text": "我拉另外一個skill進來"
+    },
+    {
+      "start_seconds": 3753.9860000000003,
+      "end_seconds": 3760.2760000000003,
+      "text": "給各位看"
+    },
+    {
+      "start_seconds": 3760.2760000000003,
+      "end_seconds": 3762.2760000000003,
+      "text": "我這邊有一個skill"
+    },
+    {
+      "start_seconds": 3762.2760000000003,
+      "end_seconds": 3764.2760000000003,
+      "text": "叫mono color的skill"
+    },
+    {
+      "start_seconds": 3764.2760000000003,
+      "end_seconds": 3766.2760000000003,
+      "text": "這個skill"
+    },
+    {
+      "start_seconds": 3766.2760000000003,
+      "end_seconds": 3768.2760000000003,
+      "text": "主要在幹嘛"
+    },
+    {
+      "start_seconds": 3768.2760000000003,
+      "end_seconds": 3770.2760000000003,
+      "text": "可以把這個skill.md的檔案"
+    },
+    {
+      "start_seconds": 3770.2760000000003,
+      "end_seconds": 3772.2760000000003,
+      "text": "拉過來看一下"
+    },
+    {
+      "start_seconds": 3772.2760000000003,
+      "end_seconds": 3774.2760000000003,
+      "text": "還有"
+    },
+    {
+      "start_seconds": 3774.2760000000003,
+      "end_seconds": 3776.2760000000003,
+      "text": "它整個專案的remit"
+    },
+    {
+      "start_seconds": 3776.2760000000003,
+      "end_seconds": 3780.4260000000004,
+      "text": "這個skill呢"
+    },
+    {
+      "start_seconds": 3780.4260000000004,
+      "end_seconds": 3782.4260000000004,
+      "text": "主要是在做"
+    },
+    {
+      "start_seconds": 3782.4260000000004,
+      "end_seconds": 3784.4260000000004,
+      "text": "單色編輯印刷"
+    },
+    {
+      "start_seconds": 3784.4260000000004,
+      "end_seconds": 3786.4260000000004,
+      "text": "就它做很多"
+    },
+    {
+      "start_seconds": 3786.4260000000004,
+      "end_seconds": 3788.4260000000004,
+      "text": "可能單一顏色"
+    },
+    {
+      "start_seconds": 3788.4260000000004,
+      "end_seconds": 3790.4260000000004,
+      "text": "的這種海報輸出"
+    },
+    {
+      "start_seconds": 3790.4260000000004,
+      "end_seconds": 3792.4260000000004,
+      "text": "就是"
+    },
+    {
+      "start_seconds": 3792.4260000000004,
+      "end_seconds": 3794.4260000000004,
+      "text": "那主要都是講求"
+    },
+    {
+      "start_seconds": 3794.4260000000004,
+      "end_seconds": 3796.4260000000004,
+      "text": "單色系或雙色系"
+    },
+    {
+      "start_seconds": 3796.4260000000004,
+      "end_seconds": 3798.4260000000004,
+      "text": "所以如果"
+    },
+    {
+      "start_seconds": 3798.4260000000004,
+      "end_seconds": 3800.4260000000004,
+      "text": "回到"
+    },
+    {
+      "start_seconds": 3800.4260000000004,
+      "end_seconds": 3802.4260000000004,
+      "text": "可以去這個網站"
+    },
+    {
+      "start_seconds": 3802.4260000000004,
+      "end_seconds": 3804.4260000000004,
+      "text": "讓各位看一下"
+    },
+    {
+      "start_seconds": 3816.936,
+      "end_seconds": 3818.936,
+      "text": "這個就是它最原始的skill"
+    },
+    {
+      "start_seconds": 3818.936,
+      "end_seconds": 3820.936,
+      "text": "這個是一位設計師"
+    },
+    {
+      "start_seconds": 3820.936,
+      "end_seconds": 3822.936,
+      "text": "他所做的"
+    },
+    {
+      "start_seconds": 3822.936,
+      "end_seconds": 3824.936,
+      "text": "所以他做的這一些"
+    },
+    {
+      "start_seconds": 3824.936,
+      "end_seconds": 3826.936,
+      "text": "就是"
+    },
+    {
+      "start_seconds": 3826.936,
+      "end_seconds": 3828.936,
+      "text": "都是很簡樸"
+    },
+    {
+      "start_seconds": 3828.936,
+      "end_seconds": 3830.936,
+      "text": "風格"
+    },
+    {
+      "start_seconds": 3830.936,
+      "end_seconds": 3832.936,
+      "text": "單色或雙色"
+    },
+    {
+      "start_seconds": 3832.936,
+      "end_seconds": 3834.936,
+      "text": "的這種規則"
+    },
+    {
+      "start_seconds": 3834.936,
+      "end_seconds": 3836.936,
+      "text": "所以這個就是它"
+    },
+    {
+      "start_seconds": 3836.936,
+      "end_seconds": 3838.936,
+      "text": "圖片的風格"
+    },
+    {
+      "start_seconds": 3840.936,
+      "end_seconds": 3842.936,
+      "text": "所以我們可以用這個skill"
+    },
+    {
+      "start_seconds": 3842.936,
+      "end_seconds": 3844.936,
+      "text": "來讓它寫看看"
+    },
+    {
+      "start_seconds": 3844.936,
+      "end_seconds": 3846.936,
+      "text": "那這個mono color"
+    },
+    {
+      "start_seconds": 3846.936,
+      "end_seconds": 3848.936,
+      "text": "它也是"
+    },
+    {
+      "start_seconds": 3848.936,
+      "end_seconds": 3850.936,
+      "text": "我們meetup"
+    },
+    {
+      "start_seconds": 3850.936,
+      "end_seconds": 3852.936,
+      "text": "的這個海報"
+    },
+    {
+      "start_seconds": 3852.936,
+      "end_seconds": 3854.936,
+      "text": "整個海報就是搭載著"
+    },
+    {
+      "start_seconds": 3854.936,
+      "end_seconds": 3856.936,
+      "text": "mono color的skill"
+    },
+    {
+      "start_seconds": 3856.936,
+      "end_seconds": 3858.936,
+      "text": "來做設計的"
+    },
+    {
+      "start_seconds": 3858.936,
+      "end_seconds": 3860.936,
+      "text": "因為我不是設計的人"
+    },
+    {
+      "start_seconds": 3860.936,
+      "end_seconds": 3862.936,
+      "text": "所以有時候做出來的東西"
+    },
+    {
+      "start_seconds": 3862.936,
+      "end_seconds": 3864.936,
+      "text": "就蠻醜的"
+    },
+    {
+      "start_seconds": 3864.936,
+      "end_seconds": 3866.936,
+      "text": "我會借一下別人的東西"
+    },
+    {
+      "start_seconds": 3866.936,
+      "end_seconds": 3868.936,
+      "text": "來做處理"
+    },
+    {
+      "start_seconds": 3868.936,
+      "end_seconds": 3870.936,
+      "text": "所以這個好了之後"
+    },
+    {
+      "start_seconds": 3870.936,
+      "end_seconds": 3872.936,
+      "text": "因為我沒有安裝這個skill"
+    },
+    {
+      "start_seconds": 3872.936,
+      "end_seconds": 3877.4660000000003,
+      "text": "所以我就"
+    },
+    {
+      "start_seconds": 3877.4660000000003,
+      "end_seconds": 3879.4660000000003,
+      "text": "因為很少用"
+    },
+    {
+      "start_seconds": 3879.4660000000003,
+      "end_seconds": 3881.4660000000003,
+      "text": "所以我也不是那麼想去安裝"
+    },
+    {
+      "start_seconds": 3881.4660000000003,
+      "end_seconds": 3888.8360000000002,
+      "text": "這個skill"
+    },
+    {
+      "start_seconds": 3888.8360000000002,
+      "end_seconds": 3890.8360000000002,
+      "text": "幫我用這個skill"
+    },
+    {
+      "start_seconds": 3890.8360000000002,
+      "end_seconds": 3892.8360000000002,
+      "text": "來去快速的"
+    },
+    {
+      "start_seconds": 3892.8360000000002,
+      "end_seconds": 3904.306,
+      "text": "修改這個網站"
+    },
+    {
+      "start_seconds": 3904.306,
+      "end_seconds": 3906.306,
+      "text": "所以它其實就已經"
+    },
+    {
+      "start_seconds": 3906.306,
+      "end_seconds": 3908.306,
+      "text": "讀了整個的skill"
+    },
+    {
+      "start_seconds": 3908.306,
+      "end_seconds": 3910.306,
+      "text": "它就會說這個skill"
+    },
+    {
+      "start_seconds": 3910.306,
+      "end_seconds": 3912.306,
+      "text": "然後"
+    },
+    {
+      "start_seconds": 3912.306,
+      "end_seconds": 3914.306,
+      "text": "編輯式的印刷感"
+    },
+    {
+      "start_seconds": 3914.306,
+      "end_seconds": 3916.306,
+      "text": "那留白還有嚴格限制"
+    },
+    {
+      "start_seconds": 3916.306,
+      "end_seconds": 3918.306,
+      "text": "顏色"
+    },
+    {
+      "start_seconds": 3918.306,
+      "end_seconds": 3920.306,
+      "text": "主要是用在海報的設計"
+    },
+    {
+      "start_seconds": 3920.306,
+      "end_seconds": 3922.306,
+      "text": "但是我這個是主要讓它"
+    },
+    {
+      "start_seconds": 3922.306,
+      "end_seconds": 3924.306,
+      "text": "做網站"
+    },
+    {
+      "start_seconds": 3924.306,
+      "end_seconds": 3926.306,
+      "text": "所以它需要做一點風格的"
+    },
+    {
+      "start_seconds": 3926.306,
+      "end_seconds": 3928.306,
+      "text": "轉換"
+    },
+    {
+      "start_seconds": 3928.306,
+      "end_seconds": 3930.306,
+      "text": "如果回來看原本的網站的時候"
+    },
+    {
+      "start_seconds": 3930.306,
+      "end_seconds": 3932.306,
+      "text": "你會發現說"
+    },
+    {
+      "start_seconds": 3932.306,
+      "end_seconds": 3934.306,
+      "text": "它其實有些東西沒有做好"
+    },
+    {
+      "start_seconds": 3934.306,
+      "end_seconds": 3936.306,
+      "text": "這邊跟這個圖"
+    },
+    {
+      "start_seconds": 3936.306,
+      "end_seconds": 3938.306,
+      "text": "其實就重疊了"
+    },
+    {
+      "start_seconds": 3938.306,
+      "end_seconds": 3940.306,
+      "text": "然後它再去"
+    },
+    {
+      "start_seconds": 3940.306,
+      "end_seconds": 3942.306,
+      "text": "修正"
+    },
+    {
+      "start_seconds": 3942.306,
+      "end_seconds": 3944.306,
+      "text": "所以我也不確定說它整個"
+    },
+    {
+      "start_seconds": 3944.306,
+      "end_seconds": 3946.306,
+      "text": "做出來的感覺是如何"
+    },
+    {
+      "start_seconds": 3946.306,
+      "end_seconds": 3948.306,
+      "text": "因為我也沒測試過"
+    },
+    {
+      "start_seconds": 3948.306,
+      "end_seconds": 3950.306,
+      "text": "所以就稍微"
+    },
+    {
+      "start_seconds": 3950.306,
+      "end_seconds": 3954.646,
+      "text": "等一下它"
+    },
+    {
+      "start_seconds": 3954.646,
+      "end_seconds": 3956.646,
+      "text": "在這邊你如果打"
+    },
+    {
+      "start_seconds": 3956.646,
+      "end_seconds": 3958.646,
+      "text": "一般你如果"
+    },
+    {
+      "start_seconds": 3958.646,
+      "end_seconds": 3960.646,
+      "text": "打斜線"
+    },
+    {
+      "start_seconds": 3960.646,
+      "end_seconds": 3962.646,
+      "text": "你就可以"
+    },
+    {
+      "start_seconds": 3962.646,
+      "end_seconds": 3964.646,
+      "text": "找到你"
+    },
+    {
+      "start_seconds": 3964.646,
+      "end_seconds": 3966.646,
+      "text": "原本安裝的skill"
+    },
+    {
+      "start_seconds": 3966.646,
+      "end_seconds": 3968.646,
+      "text": "它會用這種符號來"
+    },
+    {
+      "start_seconds": 3968.646,
+      "end_seconds": 3970.646,
+      "text": "做表示"
+    },
+    {
+      "start_seconds": 3970.646,
+      "end_seconds": 3972.646,
+      "text": "當然你也可以去建造自己的skill"
+    },
+    {
+      "start_seconds": 3972.646,
+      "end_seconds": 3974.646,
+      "text": "你可以用skill creator"
+    },
+    {
+      "start_seconds": 3974.646,
+      "end_seconds": 3976.646,
+      "text": "然後去說明說你想要"
+    },
+    {
+      "start_seconds": 3976.646,
+      "end_seconds": 3978.646,
+      "text": "做什麼樣的skill"
+    },
+    {
+      "start_seconds": 3978.646,
+      "end_seconds": 3993.476,
+      "text": "所以它好了"
+    },
+    {
+      "start_seconds": 3993.476,
+      "end_seconds": 3995.476,
+      "text": "好像沒有比較好"
+    },
+    {
+      "start_seconds": 3997.476,
+      "end_seconds": 3999.476,
+      "text": "但這個就承襲了它"
+    },
+    {
+      "start_seconds": 3999.476,
+      "end_seconds": 4001.476,
+      "text": "剛剛的"
+    },
+    {
+      "start_seconds": 4001.476,
+      "end_seconds": 4003.476,
+      "text": "風格"
+    },
+    {
+      "start_seconds": 4003.476,
+      "end_seconds": 4005.476,
+      "text": "單色系單色調"
+    },
+    {
+      "start_seconds": 4005.476,
+      "end_seconds": 4007.476,
+      "text": "的風格"
+    },
+    {
+      "start_seconds": 4007.476,
+      "end_seconds": 4009.476,
+      "text": "所以這個可以"
+    },
+    {
+      "start_seconds": 4009.476,
+      "end_seconds": 4011.476,
+      "text": "各位可以"
+    },
+    {
+      "start_seconds": 4011.476,
+      "end_seconds": 4013.476,
+      "text": "有興趣也可以自己去玩看看"
+    },
+    {
+      "start_seconds": 4013.476,
+      "end_seconds": 4015.476,
+      "text": "剛才有說你可以用skill creator"
+    },
+    {
+      "start_seconds": 4015.476,
+      "end_seconds": 4017.476,
+      "text": "去做自己的skill"
+    },
+    {
+      "start_seconds": 4017.476,
+      "end_seconds": 4019.476,
+      "text": "skill creator這個東西"
+    },
+    {
+      "start_seconds": 4019.476,
+      "end_seconds": 4021.476,
+      "text": "就是"
+    },
+    {
+      "start_seconds": 4021.476,
+      "end_seconds": 4023.476,
+      "text": "萬物都可以變成skill"
+    },
+    {
+      "start_seconds": 4023.476,
+      "end_seconds": 4025.476,
+      "text": "最簡單的例子"
+    },
+    {
+      "start_seconds": 4025.476,
+      "end_seconds": 4029.206,
+      "text": "可以拿"
+    },
+    {
+      "start_seconds": 4029.206,
+      "end_seconds": 4031.206,
+      "text": "我今天"
+    },
+    {
+      "start_seconds": 4031.206,
+      "end_seconds": 4033.206,
+      "text": "可能發在臉書上的一篇文章"
+    },
+    {
+      "start_seconds": 4033.206,
+      "end_seconds": 4038.8860000000004,
+      "text": "先進入到我的頁面"
+    },
+    {
+      "start_seconds": 4038.8860000000004,
+      "end_seconds": 4042.8060000000005,
+      "text": "我今天看的一篇文章"
+    },
+    {
+      "start_seconds": 4042.8060000000005,
+      "end_seconds": 4044.8060000000005,
+      "text": "它主要是在說"
+    },
+    {
+      "start_seconds": 4044.8060000000005,
+      "end_seconds": 4049.8160000000003,
+      "text": "卡內基美農"
+    },
+    {
+      "start_seconds": 4049.8160000000003,
+      "end_seconds": 4051.8160000000003,
+      "text": "大學跟微軟"
+    },
+    {
+      "start_seconds": 4051.8160000000003,
+      "end_seconds": 4053.8160000000003,
+      "text": "去合作"
+    },
+    {
+      "start_seconds": 4053.8160000000003,
+      "end_seconds": 4055.8160000000003,
+      "text": "它主要是想要去培育"
+    },
+    {
+      "start_seconds": 4055.8160000000003,
+      "end_seconds": 4057.8160000000003,
+      "text": "新人的工程師"
+    },
+    {
+      "start_seconds": 4057.8160000000003,
+      "end_seconds": 4059.8160000000003,
+      "text": "所以我這邊舉了一個"
+    },
+    {
+      "start_seconds": 4059.8160000000003,
+      "end_seconds": 4061.8160000000003,
+      "text": "很簡單的"
+    },
+    {
+      "start_seconds": 4061.8160000000003,
+      "end_seconds": 4063.8160000000003,
+      "text": "例子"
+    },
+    {
+      "start_seconds": 4063.8160000000003,
+      "end_seconds": 4065.8160000000003,
+      "text": "過去我們在繪製一個"
+    },
+    {
+      "start_seconds": 4065.8160000000003,
+      "end_seconds": 4067.8160000000003,
+      "text": "科學圖表的過程當中"
+    },
+    {
+      "start_seconds": 4067.8160000000003,
+      "end_seconds": 4069.8160000000003,
+      "text": "我們會需要先了解資料的格式"
+    },
+    {
+      "start_seconds": 4069.8160000000003,
+      "end_seconds": 4071.8160000000003,
+      "text": "上網去"
+    },
+    {
+      "start_seconds": 4071.8160000000003,
+      "end_seconds": 4073.8160000000003,
+      "text": "搜尋程式之後"
+    },
+    {
+      "start_seconds": 4073.8160000000003,
+      "end_seconds": 4075.8160000000003,
+      "text": "再改成自己的版本"
+    },
+    {
+      "start_seconds": 4075.8160000000003,
+      "end_seconds": 4077.8160000000003,
+      "text": "進入成果之後"
+    },
+    {
+      "start_seconds": 4077.8160000000003,
+      "end_seconds": 4079.8160000000003,
+      "text": "你開始會逐漸的去優化"
+    },
+    {
+      "start_seconds": 4079.8160000000003,
+      "end_seconds": 4081.8160000000003,
+      "text": "整個的圖表"
+    },
+    {
+      "start_seconds": 4081.8160000000003,
+      "end_seconds": 4083.8160000000003,
+      "text": "可是AI時代來臨"
+    },
+    {
+      "start_seconds": 4083.8160000000003,
+      "end_seconds": 4085.8160000000003,
+      "text": "整個流程就會變成是提示紙"
+    },
+    {
+      "start_seconds": 4085.8160000000003,
+      "end_seconds": 4087.8160000000003,
+      "text": "直接變成是一個漂亮的圖表"
+    },
+    {
+      "start_seconds": 4087.8160000000003,
+      "end_seconds": 4089.8160000000003,
+      "text": "但是從這邊到這邊"
+    },
+    {
+      "start_seconds": 4089.8160000000003,
+      "end_seconds": 4091.8160000000003,
+      "text": "你會喪失著"
+    },
+    {
+      "start_seconds": 4091.8160000000003,
+      "end_seconds": 4093.8160000000003,
+      "text": "就是怎麼做工具"
+    },
+    {
+      "start_seconds": 4093.8160000000003,
+      "end_seconds": 4095.8160000000003,
+      "text": "的那個過程"
+    },
+    {
+      "start_seconds": 4095.8160000000003,
+      "end_seconds": 4097.816000000001,
+      "text": "以及你會有點喪失了"
+    },
+    {
+      "start_seconds": 4097.816000000001,
+      "end_seconds": 4099.816000000001,
+      "text": "從美的這個過程"
+    },
+    {
+      "start_seconds": 4099.816000000001,
+      "end_seconds": 4101.816000000001,
+      "text": "所以你看這個只是一個"
+    },
+    {
+      "start_seconds": 4101.816000000001,
+      "end_seconds": 4103.816000000001,
+      "text": "很簡單的概念而已"
+    },
+    {
+      "start_seconds": 4103.816000000001,
+      "end_seconds": 4114.226000000001,
+      "text": "你可以去閱讀一下"
+    },
+    {
+      "start_seconds": 4114.226000000001,
+      "end_seconds": 4116.226000000001,
+      "text": "下面的文字"
+    },
+    {
+      "start_seconds": 4116.226000000001,
+      "end_seconds": 4118.226000000001,
+      "text": "我是一個AI的"
+    },
+    {
+      "start_seconds": 4118.226000000001,
+      "end_seconds": 4120.226000000001,
+      "text": "副學者"
+    },
+    {
+      "start_seconds": 4120.226000000001,
+      "end_seconds": 4122.226000000001,
+      "text": "你可以想辦法把這個文字"
+    },
+    {
+      "start_seconds": 4122.226000000001,
+      "end_seconds": 4124.226000000001,
+      "text": "變成是一個很"
+    },
+    {
+      "start_seconds": 4124.226000000001,
+      "end_seconds": 4126.226000000001,
+      "text": "簡單skill的描述嗎"
+    },
+    {
+      "start_seconds": 4126.226000000001,
+      "end_seconds": 4128.226000000001,
+      "text": "我要把整個"
+    },
+    {
+      "start_seconds": 4128.226000000001,
+      "end_seconds": 4130.226000000001,
+      "text": "敘述丟進codex"
+    },
+    {
+      "start_seconds": 4130.226000000001,
+      "end_seconds": 4132.226000000001,
+      "text": "做成是一個適合使用者"
+    },
+    {
+      "start_seconds": 4132.226000000001,
+      "end_seconds": 4136.536,
+      "text": "使用的skill"
+    },
+    {
+      "start_seconds": 4136.536,
+      "end_seconds": 4141.796,
+      "text": "好開最底就好"
+    },
+    {
+      "start_seconds": 4141.796,
+      "end_seconds": 4143.796,
+      "text": "你看開始公圍了"
+    },
+    {
+      "start_seconds": 4143.796,
+      "end_seconds": 4145.796,
+      "text": "這種屁話就不要聽了"
+    },
+    {
+      "start_seconds": 4145.796,
+      "end_seconds": 4147.796,
+      "text": "你看就是"
+    },
+    {
+      "start_seconds": 4147.796,
+      "end_seconds": 4149.796,
+      "text": "我要把這個修掉"
+    },
+    {
+      "start_seconds": 4149.796,
+      "end_seconds": 4151.796,
+      "text": "我的AI最近越來越會講這種"
+    },
+    {
+      "start_seconds": 4151.796,
+      "end_seconds": 4153.796,
+      "text": "奇怪的屁話"
+    },
+    {
+      "start_seconds": 4153.796,
+      "end_seconds": 4155.796,
+      "text": "所以它這個也沒有不好"
+    },
+    {
+      "start_seconds": 4155.796,
+      "end_seconds": 4157.796,
+      "text": "你看就是"
+    },
+    {
+      "start_seconds": 4157.796,
+      "end_seconds": 4159.796,
+      "text": "幫使用者完成任務"
+    },
+    {
+      "start_seconds": 4159.796,
+      "end_seconds": 4161.796,
+      "text": "所以任務開始之前"
+    },
+    {
+      "start_seconds": 4161.796,
+      "end_seconds": 4163.796,
+      "text": "使用者提出任務的時候"
+    },
+    {
+      "start_seconds": 4163.796,
+      "end_seconds": 4165.796,
+      "text": "會先用簡單的語言描述"
+    },
+    {
+      "start_seconds": 4167.796,
+      "end_seconds": 4169.796,
+      "text": "任務執行過程當中"
+    },
+    {
+      "start_seconds": 4169.796,
+      "end_seconds": 4171.796,
+      "text": "邊做邊教"
+    },
+    {
+      "start_seconds": 4171.796,
+      "end_seconds": 4173.796,
+      "text": "任務完成後教使用者如何去"
+    },
+    {
+      "start_seconds": 4173.796,
+      "end_seconds": 4175.796,
+      "text": "驗證"
+    },
+    {
+      "start_seconds": 4175.796,
+      "end_seconds": 4177.796,
+      "text": "這些內容確實也是那篇文章"
+    },
+    {
+      "start_seconds": 4177.796,
+      "end_seconds": 4179.796,
+      "text": "所提供的內容"
+    },
+    {
+      "start_seconds": 4179.796,
+      "end_seconds": 4181.796,
+      "text": "因為當產出一個結果"
+    },
+    {
+      "start_seconds": 4181.796,
+      "end_seconds": 4183.796,
+      "text": "之後你要怎麼樣去做驗證"
+    },
+    {
+      "start_seconds": 4183.796,
+      "end_seconds": 4185.796,
+      "text": "你要如何去培養"
+    },
+    {
+      "start_seconds": 4185.796,
+      "end_seconds": 4187.796,
+      "text": "整個的判斷力"
+    },
+    {
+      "start_seconds": 4189.526,
+      "end_seconds": 4191.526,
+      "text": "你看"
+    },
+    {
+      "start_seconds": 4191.526,
+      "end_seconds": 4193.526,
+      "text": "很多"
+    },
+    {
+      "start_seconds": 4193.526,
+      "end_seconds": 4195.526,
+      "text": "所以這種東西"
+    },
+    {
+      "start_seconds": 4195.526,
+      "end_seconds": 4197.526,
+      "text": "你可以把它複製"
+    },
+    {
+      "start_seconds": 4197.526,
+      "end_seconds": 4199.526,
+      "text": "然後你就丟到codex裡面"
+    },
+    {
+      "start_seconds": 4199.526,
+      "end_seconds": 4201.526,
+      "text": "然後貼上用skill creator"
+    },
+    {
+      "start_seconds": 4201.526,
+      "end_seconds": 4203.526,
+      "text": "所以全部的內容"
+    },
+    {
+      "start_seconds": 4203.526,
+      "end_seconds": 4205.526,
+      "text": "變成是一個AI mentor"
+    },
+    {
+      "start_seconds": 4205.526,
+      "end_seconds": 4207.526,
+      "text": "的模式"
+    },
+    {
+      "start_seconds": 4207.526,
+      "end_seconds": 4209.526,
+      "text": "你可以有陪跑模式"
+    },
+    {
+      "start_seconds": 4209.526,
+      "end_seconds": 4211.526,
+      "text": "學習模式跟快速的"
+    },
+    {
+      "start_seconds": 4211.526,
+      "end_seconds": 4213.526,
+      "text": "模式"
+    },
+    {
+      "start_seconds": 4213.526,
+      "end_seconds": 4215.526,
+      "text": "當然就是skill做完之後"
+    },
+    {
+      "start_seconds": 4215.526,
+      "end_seconds": 4217.526,
+      "text": "你需要不斷的去"
+    },
+    {
+      "start_seconds": 4217.526,
+      "end_seconds": 4219.526,
+      "text": "疊帶修正"
+    },
+    {
+      "start_seconds": 4219.526,
+      "end_seconds": 4221.526,
+      "text": "因為第一個版本一定"
+    },
+    {
+      "start_seconds": 4221.526,
+      "end_seconds": 4223.526,
+      "text": "通常會有很多很多的問題"
+    },
+    {
+      "start_seconds": 4223.526,
+      "end_seconds": 4225.526,
+      "text": "所以在AI時代下"
+    },
+    {
+      "start_seconds": 4225.526,
+      "end_seconds": 4227.526,
+      "text": "最重要的其實是"
+    },
+    {
+      "start_seconds": 4227.526,
+      "end_seconds": 4229.526,
+      "text": "你要知道你的問題在哪裡"
+    },
+    {
+      "start_seconds": 4229.526,
+      "end_seconds": 4231.526,
+      "text": "那你如何把你的問題"
+    },
+    {
+      "start_seconds": 4231.526,
+      "end_seconds": 4233.526,
+      "text": "想辦法"
+    },
+    {
+      "start_seconds": 4233.526,
+      "end_seconds": 4235.526,
+      "text": "描述的清楚"
+    },
+    {
+      "start_seconds": 4235.526,
+      "end_seconds": 4237.526,
+      "text": "等到真正可以開始"
+    },
+    {
+      "start_seconds": 4237.526,
+      "end_seconds": 4239.526,
+      "text": "做的時候你又要"
+    },
+    {
+      "start_seconds": 4239.526,
+      "end_seconds": 4241.526,
+      "text": "知道說哪裡"
+    },
+    {
+      "start_seconds": 4241.526,
+      "end_seconds": 4243.526,
+      "text": "會有問題"
+    },
+    {
+      "start_seconds": 4243.526,
+      "end_seconds": 4245.526,
+      "text": "所以回過最一開始"
+    },
+    {
+      "start_seconds": 4245.526,
+      "end_seconds": 4247.526,
+      "text": "我們常說的就是"
+    },
+    {
+      "start_seconds": 4247.526,
+      "end_seconds": 4249.526,
+      "text": "所有的東西最難"
+    },
+    {
+      "start_seconds": 4249.526,
+      "end_seconds": 4251.526,
+      "text": "就是在於觀察"
+    },
+    {
+      "start_seconds": 4251.526,
+      "end_seconds": 4253.526,
+      "text": "你要很清楚的知道你現在"
+    },
+    {
+      "start_seconds": 4253.526,
+      "end_seconds": 4255.526,
+      "text": "的每一個狀態"
+    },
+    {
+      "start_seconds": 4255.526,
+      "end_seconds": 4257.526,
+      "text": "到底代表了什麼樣的意思"
+    },
+    {
+      "start_seconds": 4257.526,
+      "end_seconds": 4259.526,
+      "text": "所以今天"
+    },
+    {
+      "start_seconds": 4259.526,
+      "end_seconds": 4261.526,
+      "text": "大致上就到這邊為止"
+    },
+    {
+      "start_seconds": 4261.526,
+      "end_seconds": 4263.526,
+      "text": "那我會再把"
+    },
+    {
+      "start_seconds": 4263.526,
+      "end_seconds": 4265.526,
+      "text": "PDF跟筆記"
+    },
+    {
+      "start_seconds": 4265.526,
+      "end_seconds": 4267.526,
+      "text": "放上網路"
+    },
+    {
+      "start_seconds": 4267.526,
+      "end_seconds": 4269.526,
+      "text": "所以應該"
+    },
+    {
+      "start_seconds": 4269.526,
+      "end_seconds": 4271.526,
+      "text": "應該沒有問題"
+    },
+    {
+      "start_seconds": 4271.526,
+      "end_seconds": 4273.526,
+      "text": "就到這邊囉"
+    },
+    {
+      "start_seconds": 4273.526,
+      "end_seconds": 4275.526,
+      "text": "掰掰"
+    }
+  ]
+}
