@@ -1,5 +1,4 @@
-// One entry per released week. Each week folder uses the same layout:
-// Material/WeekNN/index.html (notes), slides.pdf, transcript.md, assets/.
+// One entry per released week. PDF is optional; notes points to the week overview.
 // After editing this list, bump ?v= on courses.js in index.html so browsers load the new list at once.
 window.AI_EARTH_COURSES = [
   {
@@ -49,5 +48,12 @@ window.AI_EARTH_COURSES = [
     notes: "Material/Week06/index.html",
     pdf: "Material/Week06/slides.pdf",
     video: "https://www.youtube.com/watch?v=GmBZMaWsAqM&t=604s"
+  },
+  {
+    week: 7,
+    title: "AI 工具介紹與網頁作品",
+    description: "認識 AI 工具，搭配課程影片瀏覽五組以 Skill 為題的網頁作品。",
+    notes: "Material/week07/index.html",
+    video: "https://www.youtube.com/live/DQHXLdIPeD4"
   }
 ];

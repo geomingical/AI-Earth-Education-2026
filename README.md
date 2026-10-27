@@ -1,20 +1,20 @@
 # AI × Earth Education 2026
 
-AI × Earth Education 2026 課程教材，每週上傳更新一次。目前提供第 1 至第 6 週教材，後續週次整理完成後陸續公開。
+AI × Earth Education 2026 課程教材，每週上傳更新一次。目前提供第 1 至第 7 週教材，後續週次整理完成後陸續公開。
 
 ## 線上閱讀
 
 **[前往課程網站：每週筆記、簡報與影片](https://geomingical.github.io/AI-Earth-Education-2026/)**
 
 - **閱讀筆記**：點選當週卡片，直接開啟 HTML 圖解導讀，不必下載。筆記內的影片與時間連結可跳到 YouTube 對應段落。
-- **PDF 簡報**：可在支援的瀏覽器內閱讀，也可以下載留存。
+- **PDF 簡報**：有提供簡報的週次可在支援的瀏覽器內閱讀，也可以下載留存。
 - **課程影片**：從教材卡片前往 YouTube 觀看。
 
 各週主題、內容介紹與教材連結統一放在課程網站，這裡不另外維護重複索引。
 
 ## 下載教材
 
-如需保留檔案，可在本 repo 選 **Code → Download ZIP**，解壓縮後到 `Material/` 取得各週教材。每週一個資料夾（`Week01`、`Week02`⋯），裡面的 `index.html` 是課程筆記，`slides.pdf` 是簡報，`transcript.md` 是整理逐字稿。HTML 檔案可用 Chrome、Safari 或 Edge 開啟；GitHub 的 HTML 檔案頁本身顯示原始碼，不是完整網頁。
+如需保留檔案，可在本 repo 選 **Code → Download ZIP**，解壓縮後到 `Material/` 取得各週教材。第 1 至第 6 週使用 `Week01` 至 `Week06` 資料夾，裡面的 `index.html` 是課程筆記，`slides.pdf` 是簡報，`transcript.md` 是整理逐字稿。第 7 週位於 `week07`，提供簡單課程介紹與五個網頁作品範例，不含 PDF 簡報或逐字稿。HTML 檔案可用 Chrome、Safari 或 Edge 開啟；GitHub 的 HTML 檔案頁本身顯示原始碼，不是完整網頁。
 
 影片需要網路連線；部分 HTML 樣式也引用線上資源，建議連網閱讀。本 repo 提供影片連結，不包含影片檔案。
 

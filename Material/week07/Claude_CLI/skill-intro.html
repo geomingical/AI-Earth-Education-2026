@@ -1,0 +1,642 @@
+<title>認識 AI Skill</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700;900&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: 一本雙色孔版印刷（Risograph）的入門小冊。鈷藍 + 螢光粉兩個專色疊印；
+   開場就是互動書架，之後五章沿著「書脊 → 打開 → 附錄」的比喻往下走。 */
+:root {
+  --paper: #EDF0F6;
+  --paper-2: #E1E6F1;
+  --ink: #141C64;
+  --ink-soft: #4A5390;
+  --blue: #2B44DE;
+  --pink: #FF4E8A;
+  --on-blue: #F3F5FF;
+  --rule: color-mix(in srgb, var(--ink) 18%, transparent);
+  --blend: multiply;
+  --grain-opacity: .10;
+
+  --f-display: "Noto Serif TC", "Songti TC", serif;
+  --f-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --f-latin: "Bricolage Grotesque", "Noto Sans TC", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --wide: 1140px;
+  --text: 660px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0C1030; --paper-2: #151B47; --ink: #DCE2FF; --ink-soft: #9EA8DA;
+    --blue: #7B8CFF; --pink: #FF6CA2; --on-blue: #0C1030;
+    --blend: screen; --grain-opacity: .06; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0C1030; --paper-2: #151B47; --ink: #DCE2FF; --ink-soft: #9EA8DA;
+  --blue: #7B8CFF; --pink: #FF6CA2; --on-blue: #0C1030;
+  --blend: screen; --grain-opacity: .06; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--f-body); font-size: 17px; line-height: 1.85;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+/* 紙張顆粒 */
+body::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 50;
+  opacity: var(--grain-opacity); mix-blend-mode: var(--blend);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.08  0 0 0 0 0.1  0 0 0 0 0.4  0 0 0 1.2 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+.wrap { max-width: var(--wide); margin: 0 auto; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+h2 { font-family: var(--f-display); font-weight: 900; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.2; letter-spacing: -.01em; }
+h3 { font-family: var(--f-body); font-weight: 900; font-size: 1.15rem; line-height: 1.4; }
+code { font-family: var(--f-mono); font-size: .86em; background: color-mix(in srgb, var(--blue) 12%, transparent); padding: 1px 6px; border-radius: 3px; }
+mark { color: inherit; background: linear-gradient(transparent 52%, color-mix(in srgb, var(--pink) 45%, transparent) 52%, color-mix(in srgb, var(--pink) 45%, transparent) 92%, transparent 92%); padding: 0 .1em; }
+button, input, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
+
+/* ---------- 刊頭 ---------- */
+.masthead { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-block: 22px; border-bottom: 2px solid var(--ink); font-family: var(--f-latin); font-weight: 700; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; }
+.masthead nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.masthead a { color: var(--ink); text-decoration: none; }
+.masthead a:hover { color: var(--blue); }
+.masthead .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--pink); margin-right: 8px; vertical-align: 0; mix-blend-mode: var(--blend); box-shadow: 4px 0 0 var(--blue); }
+
+/* ---------- 開場 ---------- */
+.hero { position: relative; padding-block: clamp(40px, 7vw, 88px) 28px; display: grid; gap: 28px; }
+.hero::before { /* 網點大圓 */
+  content: ""; position: absolute; z-index: -1; right: -8%; top: 2%; width: min(520px, 70vw); aspect-ratio: 1; border-radius: 50%;
+  background-image: radial-gradient(var(--blue) 1.6px, transparent 1.9px); background-size: 9px 9px;
+  -webkit-mask-image: radial-gradient(circle, #000 30%, transparent 70%); mask-image: radial-gradient(circle, #000 30%, transparent 70%);
+  opacity: .55;
+}
+.kicker { font-family: var(--f-latin); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: .82rem; color: var(--blue); }
+.riso { position: relative; font-family: var(--f-display); font-weight: 900; color: var(--blue); line-height: 1.02; letter-spacing: -.02em; font-size: clamp(3.4rem, 12.5vw, 9.4rem); white-space: pre-line; }
+.riso::after {
+  content: attr(data-text); position: absolute; inset: 0; color: var(--pink); mix-blend-mode: var(--blend);
+  transform: translate(.05em, .035em); white-space: pre-line; pointer-events: none;
+  animation: register 1.4s cubic-bezier(.2,.8,.2,1) both;
+}
+@keyframes register { from { transform: translate(.16em, .1em); } to { transform: translate(.05em, .035em); } }
+.hero-foot { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 28px 48px; align-items: end; }
+.lede { font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.75; max-width: 30em; }
+.hero-def { border-top: 2px solid var(--ink); padding-top: 14px; font-size: .95rem; color: var(--ink-soft); display: grid; gap: 6px; }
+.hero-def b { font-family: var(--f-latin); color: var(--ink); letter-spacing: .06em; font-size: .8rem; text-transform: uppercase; }
+
+/* ---------- 書架互動 ---------- */
+.stage { margin-top: 12px; border: 2px solid var(--ink); background: var(--paper); position: relative; }
+.stage-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding: 16px 18px; border-bottom: 2px solid var(--ink); }
+.stage-head .say { font-family: var(--f-latin); font-weight: 800; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { border: 1.5px solid var(--ink); background: transparent; border-radius: 999px; padding: 5px 14px; font-size: .92rem; cursor: pointer; transition: background .2s, color .2s, transform .2s; }
+.chip:hover { transform: translateY(-1px); background: color-mix(in srgb, var(--blue) 10%, transparent); }
+.chip[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: var(--on-blue); }
+.stage-body { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); }
+.shelf-col { padding: 22px 22px 0; border-right: 2px solid var(--ink); display: grid; grid-template-rows: auto 1fr; gap: 12px; }
+.col-label { font-family: var(--f-latin); font-weight: 800; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
+.col-label span { font-family: var(--f-body); letter-spacing: .04em; text-transform: none; font-weight: 500; }
+.shelf { display: flex; align-items: flex-end; gap: 6px; min-height: 250px; border-bottom: 6px solid var(--ink); padding-inline: 4px; }
+.spine {
+  flex: 1 1 0; min-width: 0; border: 2px solid var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+  padding: 12px 0 10px; font-family: var(--f-display); font-weight: 900; font-size: 1.05rem; line-height: 1.15;
+  transition: transform .5s cubic-bezier(.2,.9,.25,1.2), background .3s, color .3s; position: relative;
+}
+.spine .t { writing-mode: vertical-rl; letter-spacing: .12em; }
+.spine .no { font-family: var(--f-latin); font-size: .72rem; font-weight: 800; }
+.spine:nth-child(1) { height: 230px; background: var(--blue); color: var(--on-blue); }
+.spine:nth-child(2) { height: 196px; background: transparent; }
+.spine:nth-child(3) { height: 214px; background-image: radial-gradient(var(--blue) 1.3px, transparent 1.6px); background-size: 6px 6px; }
+.spine:nth-child(4) { height: 182px; background: transparent; }
+.spine:nth-child(5) { height: 222px; background: var(--ink); color: var(--paper); }
+.spine:nth-child(3) .t { background: var(--paper); padding: 6px 0; }
+.spine.pulled { transform: translateY(-34px) rotate(-3deg); background: var(--pink); color: #160A2A; z-index: 1; }
+.spine.pulled .t { background: transparent; }
+.spine.pulled::after { content: "打開！"; position: absolute; top: -30px; font-family: var(--f-body); font-size: .72rem; font-weight: 900; color: var(--pink); writing-mode: horizontal-tb; letter-spacing: .1em; }
+
+.desk-col { padding: 22px; display: grid; gap: 14px; align-content: start; min-width: 0; }
+.desk { display: grid; gap: 12px; min-height: 250px; align-content: start; }
+.note { border: 1.5px solid var(--ink); padding: 10px 14px; display: grid; gap: 2px; background: var(--paper); }
+.note small { font-family: var(--f-latin); font-weight: 800; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
+.labels { display: flex; flex-wrap: wrap; gap: 6px; }
+.label { font-family: var(--f-mono); font-size: .76rem; border: 1px dashed var(--ink-soft); padding: 2px 8px; color: var(--ink-soft); transition: all .3s; }
+.label.hit { border: 1px solid var(--pink); color: var(--ink); background: color-mix(in srgb, var(--pink) 18%, transparent); }
+.book { border: 2px solid var(--ink); background: var(--paper-2); box-shadow: 8px 8px 0 color-mix(in srgb, var(--pink) 75%, transparent); padding: 14px 16px; font-family: var(--f-mono); font-size: .8rem; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; animation: slidein .55s cubic-bezier(.2,.8,.2,1); }
+.book .bt { display: block; font-family: var(--f-body); font-weight: 900; font-size: .95rem; margin-bottom: 6px; color: var(--blue); }
+@keyframes slidein { from { transform: translateX(-40px) rotate(-2deg); } to { transform: none; } }
+.empty-desk { border: 2px dashed var(--rule); padding: 18px; color: var(--ink-soft); font-size: .92rem; }
+.meter { display: grid; gap: 6px; padding-top: 8px; border-top: 1.5px solid var(--rule); }
+.meter-row { display: flex; justify-content: space-between; gap: 12px; font-size: .84rem; flex-wrap: wrap; }
+.meter-row b { font-family: var(--f-latin); font-variant-numeric: tabular-nums; font-size: 1rem; }
+.bar { height: 14px; border: 1.5px solid var(--ink); position: relative; background-image: repeating-linear-gradient(90deg, transparent 0 9px, var(--rule) 9px 10px); }
+.bar i { position: absolute; inset: 0 auto 0 0; background: var(--blue); transition: width .6s cubic-bezier(.2,.8,.2,1); }
+.bar-cap { font-size: .78rem; color: var(--ink-soft); }
+.caption { padding: 14px 18px; border-top: 2px solid var(--ink); background: var(--ink); color: var(--paper); font-size: .95rem; min-height: 3.6em; }
+
+/* ---------- 章節通用 ---------- */
+.chapter { padding-block: clamp(72px, 10vw, 128px) 0; display: grid; gap: 32px; }
+.ch-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 28px; align-items: start; }
+.ch-no { font-family: var(--f-latin); font-weight: 800; font-size: clamp(3.5rem, 9vw, 6.5rem); line-height: .85; color: var(--pink); mix-blend-mode: var(--blend); letter-spacing: -.04em; }
+.ch-head .kicker { display: block; margin-bottom: 8px; }
+.ch-intro { max-width: var(--text); font-size: 1.08rem; }
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 56px; align-items: start; }
+
+/* 第一章：比喻 */
+.story { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
+.story > div { padding: 20px 22px 6px 0; display: grid; gap: 10px; align-content: start; }
+.story > div + div { padding-left: 22px; border-left: 1.5px solid var(--rule); }
+.story .who { font-family: var(--f-latin); font-weight: 800; font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+.pull { font-family: var(--f-display); font-weight: 900; font-size: clamp(1.5rem, 3.4vw, 2.3rem); line-height: 1.45; max-width: 22em; }
+
+/* 第二章：拆解檔案 */
+.tree { font-family: var(--f-mono); font-size: .84rem; line-height: 1.9; border: 2px solid var(--ink); padding: 16px 18px; overflow-x: auto; white-space: pre; margin: 0; }
+.tree .c { color: var(--ink-soft); }
+.tree .req { background: var(--pink); color: #160A2A; padding: 0 4px; }
+.sheet-wrap { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.sheet { background: var(--blue); color: var(--on-blue); padding: 22px 22px 26px; font-family: var(--f-mono); font-size: .84rem; line-height: 1.85; overflow-x: auto; position: relative; min-width: 0; }
+.sheet .fname { display: block; font-size: .72rem; letter-spacing: .1em; opacity: .75; margin-bottom: 10px; text-transform: uppercase; }
+.sheet pre { margin: 0; font: inherit; white-space: pre-wrap; overflow-wrap: anywhere; }
+.zone { transition: background .25s, color .25s, box-shadow .25s; border-radius: 2px; cursor: default; }
+.zone.lit { background: var(--pink); color: #160A2A; box-shadow: 0 0 0 3px var(--pink); }
+.pin { display: inline-grid; place-items: center; width: 1.45em; height: 1.45em; border-radius: 50%; background: var(--pink); color: #160A2A; font-family: var(--f-latin); font-weight: 800; font-size: .78rem; vertical-align: .1em; margin-right: .3em; }
+.notes { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 2px solid var(--ink); }
+.notes li { border-bottom: 1.5px solid var(--rule); padding: 14px 4px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; cursor: pointer; transition: background .2s; }
+.notes li:hover, .notes li.lit { background: color-mix(in srgb, var(--pink) 14%, transparent); }
+.notes li p { font-size: .95rem; }
+.notes li h3 { font-size: 1rem; margin-bottom: 2px; }
+
+/* 第三章：三層 */
+.layers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 2px solid var(--ink); }
+.layer { padding: 24px 22px 26px; display: grid; gap: 12px; align-content: start; position: relative; }
+.layer + .layer { border-left: 2px solid var(--ink); }
+.layer svg { width: 100%; max-width: 180px; height: 120px; display: block; }
+.layer .step { font-family: var(--f-latin); font-weight: 800; font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+.layer .load { display: flex; align-items: center; gap: 10px; font-size: .82rem; color: var(--ink-soft); border-top: 1.5px solid var(--rule); padding-top: 10px; }
+.layer .load i { display: block; height: 8px; background: var(--pink); mix-blend-mode: var(--blend); }
+.layer:nth-child(2) { background: color-mix(in srgb, var(--blue) 7%, transparent); }
+
+/* 第四章：四件物品 */
+.objects { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.obj { border-top: 6px solid var(--ink); padding-top: 16px; display: grid; gap: 10px; align-content: start; }
+.obj.is-skill { border-top-color: var(--pink); }
+.obj svg { width: 64px; height: 64px; }
+.obj .nm { font-family: var(--f-display); font-weight: 900; font-size: 1.35rem; line-height: 1.3; }
+.obj .nm small { display: block; font-family: var(--f-latin); font-size: .74rem; letter-spacing: .1em; color: var(--ink-soft); font-weight: 700; text-transform: uppercase; }
+.obj dl { margin: 0; display: grid; gap: 6px; font-size: .9rem; }
+.obj dt { font-size: .74rem; font-weight: 700; color: var(--ink-soft); letter-spacing: .06em; }
+.obj dd { margin: 0; }
+.motto { font-family: var(--f-display); font-weight: 900; font-size: clamp(1.6rem, 4.4vw, 3rem); line-height: 1.35; padding: 28px 0; border-block: 2px solid var(--ink); text-wrap: balance; }
+.motto em { font-style: normal; color: var(--blue); }
+.motto strong { color: var(--pink); mix-blend-mode: var(--blend); }
+
+/* 第五章：寫寫看 */
+.builder { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); border: 2px solid var(--ink); }
+.form { padding: 24px; display: grid; gap: 18px; align-content: start; border-right: 2px solid var(--ink); }
+.field { display: grid; gap: 6px; }
+.field label { font-weight: 700; font-size: .95rem; }
+.field .hint { font-size: .8rem; color: var(--ink-soft); }
+.field input, .field textarea { width: 100%; border: 1.5px solid var(--ink); background: var(--paper); padding: 10px 12px; font-size: .95rem; border-radius: 0; line-height: 1.6; }
+.field textarea { min-height: 150px; resize: vertical; }
+.field input:focus, .field textarea:focus { outline: none; box-shadow: 4px 4px 0 var(--pink); }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .88rem; }
+.checks li { display: flex; gap: 8px; align-items: baseline; }
+.checks li::before { content: "○"; font-weight: 900; color: var(--ink-soft); }
+.checks li.ok::before { content: "●"; color: var(--blue); }
+.preview { background: var(--ink); color: var(--paper); padding: 24px; display: grid; gap: 14px; align-content: start; min-width: 0; }
+.preview-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.path { font-family: var(--f-mono); font-size: .78rem; opacity: .8; overflow-wrap: anywhere; }
+.copy { background: var(--pink); color: #160A2A; border: 0; padding: 8px 16px; font-weight: 900; cursor: pointer; font-size: .88rem; }
+.copy:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--paper); }
+#out { margin: 0; font-family: var(--f-mono); font-size: .84rem; line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; min-height: 260px; }
+.status { font-size: .82rem; min-height: 1.3em; color: var(--pink); }
+
+/* 守則 */
+.rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.rule { border-top: 2px solid var(--ink); padding: 18px 0 26px; display: grid; gap: 8px; align-content: start; }
+.rule h3 { font-family: var(--f-display); font-size: 1.35rem; }
+.rule.warn h3 { color: var(--pink); mix-blend-mode: var(--blend); }
+
+footer { margin-top: clamp(80px, 10vw, 140px); padding-block: 24px 48px; border-top: 2px solid var(--ink); display: flex; justify-content: space-between; gap: 16px 32px; flex-wrap: wrap; font-size: .84rem; color: var(--ink-soft); }
+footer b { font-family: var(--f-latin); color: var(--ink); letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; }
+
+/* ---------- 窄螢幕 ---------- */
+@media (max-width: 880px) {
+  .hero-foot, .two, .sheet-wrap, .builder { grid-template-columns: minmax(0, 1fr); }
+  .stage-body { grid-template-columns: minmax(0, 1fr); }
+  .shelf-col { border-right: 0; border-bottom: 2px solid var(--ink); padding-bottom: 0; }
+  .shelf { min-height: 230px; }
+  .form { border-right: 0; border-bottom: 2px solid var(--ink); }
+  .layers { grid-template-columns: minmax(0, 1fr); }
+  .layer + .layer { border-left: 0; border-top: 2px solid var(--ink); }
+  .objects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .story { grid-template-columns: minmax(0, 1fr); }
+  .story > div + div { padding-left: 0; border-left: 0; border-top: 1.5px solid var(--rule); }
+  .rules { grid-template-columns: minmax(0, 1fr); }
+  .masthead nav { display: none; }
+}
+@media (max-width: 520px) {
+  .objects { grid-template-columns: minmax(0, 1fr); }
+  .ch-head { grid-template-columns: minmax(0, 1fr); }
+  .spine { font-size: .92rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .riso::after, .book { animation: none; }
+  .spine, .bar i, .chip { transition: none; }
+}
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <span><span class="dot"></span>AI Skill 入門手冊</span>
+    <nav aria-label="章節">
+      <a href="#ch1">01 比喻</a><a href="#ch2">02 拆解</a><a href="#ch3">03 原理</a><a href="#ch4">04 比較</a><a href="#ch5">05 動手寫</a>
+    </nav>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <span class="kicker">For AI beginners · Agent Skills</span>
+    <h1 id="hero-title" class="riso" data-text="給 AI&#10;一本說明書">給 AI
+一本說明書</h1>
+    <div class="hero-foot">
+      <p class="lede">每次都要重新交代 AI「月報要這樣排」「回信要用這個語氣」？把這些做法寫成一本說明書放上書架，<mark>AI 遇到對應的工作，會自己抽出來照著做。</mark>這本說明書，就叫做 Skill。</p>
+      <div class="hero-def"><b>一句話記住</b>Skill ＝ 放在書架上、需要時才打開的工作說明書。</div>
+    </div>
+
+    <div class="stage" id="stage">
+      <div class="stage-head">
+        <span class="say">對 AI 說 →</span>
+        <div class="chips" role="group" aria-label="選一句要對 AI 說的話" id="chips"></div>
+      </div>
+      <div class="stage-body">
+        <div class="shelf-col">
+          <span class="col-label">書架 <span>· 已安裝 5 個 Skill</span></span>
+          <div class="shelf" id="shelf" aria-hidden="true"></div>
+        </div>
+        <div class="desk-col">
+          <span class="col-label">AI 的桌面 <span>· 這一刻它看得到的內容</span></span>
+          <div class="desk" id="desk" aria-live="polite"></div>
+          <div class="meter">
+            <div class="meter-row"><span>桌面上的字數（示意）</span><span><b id="used">0</b> 字，全部攤開會是 <b id="full">0</b> 字</span></div>
+            <div class="bar"><i id="bar" style="width:0"></i></div>
+            <span class="bar-cap">數字是為了說明而估的，實際長度依每個 Skill 而定。</span>
+          </div>
+        </div>
+      </div>
+      <p class="caption" id="caption"></p>
+    </div>
+  </section>
+
+  <!-- 01 -->
+  <section class="chapter" id="ch1" aria-labelledby="ch1-title">
+    <div class="ch-head">
+      <span class="ch-no">01</span>
+      <div><span class="kicker">先用生活比喻</span><h2 id="ch1-title">像帶一位聰明的新同事</h2></div>
+    </div>
+    <p class="pull">他什麼都會一點，就是不知道你們團隊的習慣。你不會每天重講一遍，你會給他一疊標好名字的 SOP。</p>
+    <div class="story">
+      <div><span class="who">新同事</span><h3>就是 AI</h3><p>例如 Claude。知識很多，但不認識你的工作方式。</p></div>
+      <div><span class="who">每一份 SOP</span><h3>就是一個 Skill</h3><p>一份只講一類工作：月報、PDF 處理、品牌設計、程式檢查。</p></div>
+      <div><span class="who">SOP 的封面標題</span><h3>就是 Skill 的描述</h3><p>AI 只看封面就能判斷「現在要不要翻開這份」。所以標題寫得好不好，決定 AI 找不找得到它。</p></div>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section class="chapter" id="ch2" aria-labelledby="ch2-title">
+    <div class="ch-head">
+      <span class="ch-no">02</span>
+      <div><span class="kicker">拆開一個 Skill</span><h2 id="ch2-title">其實就是一個資料夾</h2></div>
+    </div>
+    <div class="two">
+      <p class="ch-intro">資料夾裡只有一個檔案是必備的：<code>SKILL.md</code>。<code>.md</code> 是 Markdown 格式，可以想成「有標題和條列的純文字筆記」，用記事本就能打開。範本、小程式這些都是選配，需要時再放。</p>
+<pre class="tree">monthly-report/        <span class="c">← 資料夾名稱 = Skill 的代號</span>
+├── <span class="req">SKILL.md</span>           <span class="c">← 必備：說明書本體</span>
+├── template.docx      <span class="c">← 選配：要套用的範本</span>
+└── scripts/
+    └── make_chart.py  <span class="c">← 選配：AI 可以執行的小程式</span></pre>
+    </div>
+
+    <div class="sheet-wrap">
+      <div class="sheet" id="sheet">
+        <span class="fname">monthly-report / SKILL.md</span>
+<pre><span class="zone" data-pin="1"><span class="pin">1</span>---
+name: monthly-report</span>
+<span class="zone" data-pin="2"><span class="pin">2</span>description: 製作部門月報。當使用者提到
+「月報」「每月業績整理」時使用。
+---</span>
+
+<span class="zone" data-pin="3"><span class="pin">3</span># 月報製作步驟
+
+1. 先問這個月的業績數字和三件重點事項。
+2. 標題一律用「YYYY 年 M 月部門月報」。
+3. 結尾加「下月目標」，不超過三點。
+4. 語氣精簡正式，不用驚嘆號。</span>
+
+<span class="zone" data-pin="4"><span class="pin">4</span>排版請套用 template.docx。
+業績長條圖：執行 scripts/make_chart.py</span></pre>
+      </div>
+      <ol class="notes" id="notes">
+        <li data-pin="1"><span class="pin">1</span><div><h3>名字</h3><p>上下兩條 <code>---</code> 夾住的區塊是「封面資訊」。<code>name</code> 只能用英文小寫、數字和連字號。</p></div></li>
+        <li data-pin="2"><span class="pin">2</span><div><h3>描述：最重要的一行</h3><p>寫清楚「做什麼」和「什麼時候用」。AI 平常只讀這一段，靠它決定要不要翻開。</p></div></li>
+        <li data-pin="3"><span class="pin">3</span><div><h3>步驟</h3><p>就是你平常會口頭交代的那些話。越具體，AI 做得越穩。</p></div></li>
+        <li data-pin="4"><span class="pin">4</span><div><h3>指向附件</h3><p>告訴 AI 資料夾裡還有什麼可以用。它做到那一步才會去打開。</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section class="chapter" id="ch3" aria-labelledby="ch3-title">
+    <div class="ch-head">
+      <span class="ch-no">03</span>
+      <div><span class="kicker">它聰明在哪裡</span><h2 id="ch3-title">需要時才打開，<br>不會塞爆 AI 的桌面</h2></div>
+    </div>
+    <p class="ch-intro">AI 一次能看的內容有上限，這個上限叫做<mark>上下文視窗</mark>，可以想成 AI 的工作桌面大小。桌上堆太多東西，它就容易分心或漏看。所以 Skill 分成三層，只有用得到的那層才會攤上桌：</p>
+    <div class="layers">
+      <div class="layer">
+        <svg viewBox="0 0 180 120" aria-hidden="true"><rect x="24" y="14" width="22" height="96" fill="var(--blue)"/><rect x="52" y="26" width="22" height="84" fill="none" stroke="var(--ink)" stroke-width="2.5"/><rect x="80" y="20" width="22" height="90" fill="var(--pink)" style="mix-blend-mode:var(--blend)"/><rect x="108" y="32" width="22" height="78" fill="none" stroke="var(--ink)" stroke-width="2.5"/><rect x="136" y="18" width="22" height="92" fill="var(--ink)"/><line x1="10" y1="112" x2="170" y2="112" stroke="var(--ink)" stroke-width="5"/></svg>
+        <span class="step">第一層 · 只看書脊</span>
+        <h3>每次對話一開始</h3>
+        <p>AI 只讀每個 Skill 的名字和描述，一個大約一兩行。裝了幾十個，也只佔一點點空間。</p>
+        <div class="load"><i style="width:8%"></i>佔用很少</div>
+      </div>
+      <div class="layer">
+        <svg viewBox="0 0 180 120" aria-hidden="true"><path d="M90 26 C70 16 40 16 20 22 V104 C40 98 70 98 90 108 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.5"/><path d="M90 26 C110 16 140 16 160 22 V104 C140 98 110 98 90 108 Z" fill="var(--blue)"/><g stroke="var(--ink)" stroke-width="2"><line x1="32" y1="40" x2="78" y2="42"/><line x1="32" y1="54" x2="78" y2="56"/><line x1="32" y1="68" x2="70" y2="70"/><line x1="32" y1="82" x2="76" y2="84"/></g><g stroke="var(--on-blue)" stroke-width="2"><line x1="102" y1="42" x2="148" y2="40"/><line x1="102" y1="56" x2="148" y2="54"/><line x1="102" y1="70" x2="140" y2="68"/></g></svg>
+        <span class="step">第二層 · 打開讀全文</span>
+        <h3>任務對得上描述時</h3>
+        <p>你的要求跟某個描述吻合，AI 才把那份 <code>SKILL.md</code> 整份讀進來。其他的繼續留在書架上。</p>
+        <div class="load"><i style="width:40%"></i>只多一本</div>
+      </div>
+      <div class="layer">
+        <svg viewBox="0 0 180 120" aria-hidden="true"><rect x="30" y="22" width="74" height="88" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.5"/><rect x="62" y="12" width="74" height="88" fill="var(--pink)" style="mix-blend-mode:var(--blend)"/><text x="99" y="62" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="600" fill="#160A2A">.py</text><path d="M140 30 l14 0 l0 60 a8 8 0 0 1 -16 0 l0 -48" fill="none" stroke="var(--ink)" stroke-width="3"/></svg>
+        <span class="step">第三層 · 翻到附錄</span>
+        <h3>做到那一步時</h3>
+        <p>說明書裡提到的範本、資料或小程式，等真的要用才打開或執行。小程式執行完，只有結果會回到桌上。</p>
+        <div class="load"><i style="width:22%"></i>用到才拿</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="chapter" id="ch4" aria-labelledby="ch4-title">
+    <div class="ch-head">
+      <span class="ch-no">04</span>
+      <div><span class="kicker">容易搞混的名詞</span><h2 id="ch4-title">AI 工作桌上的四樣東西</h2></div>
+    </div>
+    <div class="objects">
+      <div class="obj">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 8 H56 V44 L44 56 H8 Z" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2.5"/><path d="M44 56 V44 H56" fill="none" stroke="var(--ink)" stroke-width="2.5"/><line x1="16" y1="22" x2="46" y2="22" stroke="var(--blue)" stroke-width="3"/><line x1="16" y1="32" x2="38" y2="32" stroke="var(--blue)" stroke-width="3"/></svg>
+        <span class="nm"><small>Prompt</small>提示詞＝便利貼</span>
+        <dl><dt>是什麼</dt><dd>你在對話框裡打的那句話</dd><dt>何時生效</dt><dd>只有這一次</dd></dl>
+      </div>
+      <div class="obj">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="10" width="40" height="48" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2.5"/><circle cx="32" cy="10" r="5" fill="var(--blue)"/><g stroke="var(--ink)" stroke-width="2.5"><line x1="20" y1="26" x2="44" y2="26"/><line x1="20" y1="35" x2="44" y2="35"/><line x1="20" y1="44" x2="36" y2="44"/></g></svg>
+        <span class="nm"><small>CLAUDE.md</small>專案說明檔＝桌上守則</span>
+        <dl><dt>是什麼</dt><dd>永遠貼在桌上的規矩，例如「用繁體中文回答」</dd><dt>何時生效</dt><dd>每次都讀</dd></dl>
+      </div>
+      <div class="obj is-skill">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="8" width="14" height="50" fill="var(--blue)"/><rect x="26" y="14" width="14" height="44" fill="var(--pink)" style="mix-blend-mode:var(--blend)"/><rect x="42" y="10" width="12" height="48" fill="none" stroke="var(--ink)" stroke-width="2.5"/><line x1="4" y1="59" x2="60" y2="59" stroke="var(--ink)" stroke-width="4"/></svg>
+        <span class="nm"><small>Skill</small>技能＝書架上的說明書</span>
+        <dl><dt>是什麼</dt><dd>某一類工作的完整做法，可以附範本和小程式</dd><dt>何時生效</dt><dd>任務對得上時才打開</dd></dl>
+      </div>
+      <div class="obj">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="16" y="20" width="32" height="24" rx="4" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2.5"/><g stroke="var(--ink)" stroke-width="4" stroke-linecap="round"><line x1="25" y1="8" x2="25" y2="20"/><line x1="39" y1="8" x2="39" y2="20"/></g><path d="M32 44 V52 Q32 58 40 58 H56" fill="none" stroke="var(--blue)" stroke-width="3.5"/></svg>
+        <span class="nm"><small>MCP</small>工具連接＝插頭</span>
+        <dl><dt>是什麼</dt><dd>讓 AI 能動到外部服務：Gmail、行事曆、資料庫</dd><dt>何時生效</dt><dd>AI 決定要用時</dd></dl>
+      </div>
+    </div>
+    <p class="motto">MCP 讓 AI <em>做得到</em>，<br>Skill 讓 AI <strong>做得好</strong>。</p>
+  </section>
+
+  <!-- 05 -->
+  <section class="chapter" id="ch5" aria-labelledby="ch5-title">
+    <div class="ch-head">
+      <span class="ch-no">05</span>
+      <div><span class="kicker">動手寫寫看</span><h2 id="ch5-title">你的第一個 Skill</h2></div>
+    </div>
+    <p class="ch-intro">挑一件你最常對 AI 說「不是這樣，要那樣」的工作。下面已經填好一個範例，改成你自己的內容，右邊會即時變成一份可以用的 <code>SKILL.md</code>。</p>
+    <div class="builder">
+      <form class="form" id="form" autocomplete="off">
+        <div class="field">
+          <label for="f-name">代號</label>
+          <input id="f-name" value="customer-reply">
+          <span class="hint" id="name-hint">英文小寫、數字、連字號，例如 weekly-report</span>
+        </div>
+        <div class="field">
+          <label for="f-desc">做什麼、什麼時候用</label>
+          <input id="f-desc" value="回覆客戶抱怨信。當使用者貼上客戶來信、或提到客訴時使用。">
+          <span class="hint">AI 只靠這一句決定要不要打開它</span>
+        </div>
+        <div class="field">
+          <label for="f-steps">步驟（一行一條）</label>
+          <textarea id="f-steps">先用一句話複述客戶的問題，讓對方知道我們看懂了。
+道歉只說一次，不要重複。
+提出具體的處理方式和完成日期。
+署名一律用「客服中心 敬上」。
+全文不超過 200 字。</textarea>
+        </div>
+        <ul class="checks" id="checks" aria-live="polite">
+          <li data-check="name">代號格式正確</li>
+          <li data-check="when">描述有寫「什麼時候用」</li>
+          <li data-check="steps">至少三條步驟</li>
+        </ul>
+      </form>
+      <div class="preview">
+        <div class="preview-top">
+          <span class="path" id="path"></span>
+          <button type="button" class="copy" id="copy">複製內容</button>
+        </div>
+        <pre id="out"></pre>
+        <span class="status" id="status" role="status"></span>
+      </div>
+    </div>
+    <p class="ch-intro"><b>放到哪裡：</b>在 Claude Code 裡，把整個資料夾放進 <code>~/.claude/skills/</code>，你所有專案都能用；放進專案裡的 <code>.claude/skills/</code>，就只有那個專案用。在 Claude 網頁版，到設定裡打開 Skills 功能，就能上傳或使用內建的 Word、Excel、PowerPoint、PDF Skill。也可以直接請 Claude 幫你寫。</p>
+  </section>
+
+  <section class="chapter" aria-labelledby="rules-title">
+    <div class="ch-head">
+      <span class="ch-no">＋</span>
+      <div><span class="kicker">寫好 Skill 的守則</span><h2 id="rules-title">描述寫得好，<br>AI 才找得到它</h2></div>
+    </div>
+    <div class="rules">
+      <div class="rule"><h3>寫「什麼時候用」</h3><p>不只寫它是什麼。「當使用者提到月報、每月業績時使用」比「月報工具」好找得多。</p></div>
+      <div class="rule"><h3>一份只講一類事</h3><p>「月報」和「客訴回覆」分成兩份。塞成一本大雜燴，AI 反而不知道何時該翻。</p></div>
+      <div class="rule"><h3>步驟要具體</h3><p>「語氣要專業」太模糊。「不用驚嘆號、每段不超過三句」AI 才做得到。</p></div>
+      <div class="rule warn"><h3>只裝信得過的 Skill</h3><p>Skill 可以附小程式，AI 可能會執行它。來路不明的 Skill 就像來路不明的軟體，先打開看過內容再用。</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span><b>AI Skill 入門手冊</b><br>以 Anthropic Claude 的 Agent Skills 為例。其他 AI 工具也有類似概念，名稱和安裝位置可能不同。</span>
+    <span>雙色疊印：鈷藍 × 螢光粉</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  /* ---------- 開場書架 ---------- */
+  const LABEL_WORDS = 60, QUESTION_WORDS = 20, BOOK_WORDS = 1200;
+  const skills = [
+    { id: 'monthly-report', spine: '部門月報', desc: '製作部門月報',
+      body: '# 月報製作步驟\n1. 先問業績數字和三件重點\n2. 標題用「YYYY 年 M 月部門月報」\n3. 長條圖：執行 make_chart.py\n…' },
+    { id: 'pdf-tools', spine: 'PDF 工具', desc: '合併、拆分、填寫 PDF',
+      body: '# PDF 處理\n- 合併：依使用者給的順序\n- 拆分：先確認頁碼範圍\n- 執行 scripts/merge.py\n…' },
+    { id: 'brand-style', spine: '品牌風格', desc: '套用公司品牌色與字型',
+      body: '# 品牌規範\n- 主色 #2B44DE，輔色 #FF4E8A\n- 標題字型：思源宋體 Heavy\n- Logo 四周留白至少 1 公分\n…' },
+    { id: 'code-review', spine: '程式審查', desc: '依團隊規則檢查程式碼',
+      body: '# 程式審查清單\n1. 有沒有寫死的密碼\n2. 錯誤有沒有被處理\n3. 有沒有對應的測試\n…' },
+    { id: 'slide-maker', spine: '簡報製作', desc: '做出公司格式的簡報',
+      body: '# 簡報規則\n- 一頁只講一件事\n- 封面放日期與部門\n- 套用 template.pptx\n…' }
+  ];
+  const prompts = [
+    { text: '幫我整理十月的部門月報', skill: 'monthly-report',
+      why: '「月報」對上了 monthly-report 的描述。AI 從書架抽出這一本，攤在桌上照步驟做；其他四本仍然只看了書脊。' },
+    { text: '把這三個 PDF 合成一個', skill: 'pdf-tools',
+      why: '「PDF」對上了 pdf-tools。AI 打開它，做到合併那一步時，再去執行裡面附的小程式。' },
+    { text: '做一張有公司品牌色的海報', skill: 'brand-style',
+      why: '「品牌色」對上了 brand-style。AI 先讀進公司的色碼和字型規範，再開始設計。' },
+    { text: '今天天氣怎麼樣？', skill: null,
+      why: '沒有任何一本的描述對得上，所以一本都不打開，AI 直接用它原本的知識回答。用不到就不佔桌面，這就是分層的好處。' }
+  ];
+
+  const shelf = document.getElementById('shelf');
+  const chips = document.getElementById('chips');
+  const desk = document.getElementById('desk');
+  const caption = document.getElementById('caption');
+  const used = document.getElementById('used');
+  const full = document.getElementById('full');
+  const bar = document.getElementById('bar');
+
+  const fullWords = QUESTION_WORDS + skills.length * (LABEL_WORDS + BOOK_WORDS);
+  full.textContent = fullWords.toLocaleString('zh-TW');
+
+  skills.forEach((s, i) => {
+    const el = document.createElement('div');
+    el.className = 'spine';
+    el.dataset.id = s.id;
+    el.innerHTML = '<span class="t"></span><span class="no">' + String(i + 1).padStart(2, '0') + '</span>';
+    el.querySelector('.t').textContent = s.spine;
+    shelf.appendChild(el);
+  });
+
+  prompts.forEach((p, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'chip';
+    b.id = 'ask-' + (i + 1);
+    b.textContent = p.text;
+    b.addEventListener('click', () => select(i));
+    chips.appendChild(b);
+  });
+
+  function el(tag, cls, text) {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  function select(index) {
+    const p = prompts[index];
+    chips.querySelectorAll('.chip').forEach((b, i) => b.setAttribute('aria-pressed', String(i === index)));
+    shelf.querySelectorAll('.spine').forEach(s => s.classList.toggle('pulled', s.dataset.id === p.skill));
+
+    desk.replaceChildren();
+    const q = el('div', 'note');
+    q.append(el('small', null, '你的問題'), el('span', null, p.text));
+    desk.append(q);
+
+    const lab = el('div', 'note');
+    const labels = el('div', 'labels');
+    skills.forEach(s => labels.append(el('span', 'label' + (s.id === p.skill ? ' hit' : ''), s.id + '：' + s.desc)));
+    lab.append(el('small', null, '第一層：5 本書的書脊（名字＋描述）'), labels);
+    desk.append(lab);
+
+    const s = skills.find(x => x.id === p.skill);
+    if (s) {
+      const book = el('div', 'book');
+      book.append(el('span', 'bt', '第二層：打開 ' + s.id + '/SKILL.md'), document.createTextNode(s.body));
+      desk.append(book);
+    } else {
+      desk.append(el('div', 'empty-desk', '沒有打開任何說明書。桌面保持清爽。'));
+    }
+
+    const words = QUESTION_WORDS + skills.length * LABEL_WORDS + (s ? BOOK_WORDS : 0);
+    used.textContent = words.toLocaleString('zh-TW');
+    bar.style.width = (words / fullWords * 100).toFixed(1) + '%';
+    caption.textContent = p.why;
+  }
+  select(0);
+
+  /* ---------- 第二章：圖釘連動 ---------- */
+  const zones = document.querySelectorAll('#sheet .zone');
+  const notes = document.querySelectorAll('#notes li');
+  function light(pin) {
+    zones.forEach(z => z.classList.toggle('lit', z.dataset.pin === pin));
+    notes.forEach(n => n.classList.toggle('lit', n.dataset.pin === pin));
+  }
+  notes.forEach(n => {
+    n.tabIndex = 0;
+    n.addEventListener('mouseenter', () => light(n.dataset.pin));
+    n.addEventListener('focus', () => light(n.dataset.pin));
+    n.addEventListener('click', () => light(n.dataset.pin));
+  });
+  zones.forEach(z => z.addEventListener('mouseenter', () => light(z.dataset.pin)));
+  document.getElementById('sheet').addEventListener('mouseleave', () => light(null));
+  document.getElementById('notes').addEventListener('mouseleave', () => light(null));
+
+  /* ---------- 第五章：產生 SKILL.md ---------- */
+  const fName = document.getElementById('f-name');
+  const fDesc = document.getElementById('f-desc');
+  const fSteps = document.getElementById('f-steps');
+  const out = document.getElementById('out');
+  const path = document.getElementById('path');
+  const nameHint = document.getElementById('name-hint');
+  const checks = document.getElementById('checks');
+  const status = document.getElementById('status');
+  const NAME_OK = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+  const WHEN = /(當|時|使用者提到|需要|如果)/;
+
+  function slug(v) {
+    return v.trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+  }
+  function render() {
+    const raw = fName.value;
+    const name = slug(raw) || 'my-skill';
+    const desc = fDesc.value.trim() || '（請寫這個 Skill 做什麼、什麼時候用）';
+    const steps = fSteps.value.split('\n').map(s => s.trim()).filter(Boolean);
+    out.textContent =
+      '---\nname: ' + name + '\ndescription: ' + desc + '\n---\n\n# 步驟\n\n' +
+      (steps.length ? steps.map((s, i) => (i + 1) + '. ' + s).join('\n') : '1. （在左邊寫下第一條步驟）') + '\n';
+    path.textContent = '~/.claude/skills/' + name + '/SKILL.md';
+    const nameOk = NAME_OK.test(raw.trim());
+    nameHint.textContent = nameOk ? '英文小寫、數字、連字號，例如 weekly-report'
+      : (raw.trim() ? '會自動改成「' + name + '」。只能用英文小寫、數字、連字號。' : '請填一個代號，例如 weekly-report');
+    const state = { name: nameOk, when: WHEN.test(fDesc.value), steps: steps.length >= 3 };
+    checks.querySelectorAll('li').forEach(li => li.classList.toggle('ok', state[li.dataset.check]));
+    status.textContent = '';
+  }
+  [fName, fDesc, fSteps].forEach(i => i.addEventListener('input', render));
+  document.getElementById('form').addEventListener('submit', e => e.preventDefault());
+  document.getElementById('copy').addEventListener('click', () => {
+    const text = out.textContent;
+    const fallback = () => {
+      const r = document.createRange(); r.selectNodeContents(out);
+      const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      status.textContent = '已幫你選取全文，按 ⌘C 或 Ctrl+C 複製。';
+    };
+    try {
+      navigator.clipboard.writeText(text).then(() => { status.textContent = '已複製。存成 SKILL.md 放進上面的資料夾就能用。'; }, fallback);
+    } catch (e) { fallback(); }
+  });
+  render();
+})();
+</script>
