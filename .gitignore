@@ -58,3 +58,17 @@
 # macOS metadata and Office temporary files.
 .DS_Store
 ~$*
+
+# Week 7: only the overview and five HTML examples are public.
+!/Material/week07/
+/Material/week07/**
+!/Material/week07/index.html
+!/Material/week07/GPT_Web_skills.html
+!/Material/week07/Claude_CLI/
+!/Material/week07/Claude_CLI/skill-intro.html
+!/Material/week07/codex_CLI/
+!/Material/week07/codex_CLI/index.html
+!/Material/week07/Gemini_stitch_skills/
+!/Material/week07/Gemini_stitch_skills/code.html
+!/Material/week07/opencode/
+!/Material/week07/opencode/skill-manual-editorial-2026-10-26.html
