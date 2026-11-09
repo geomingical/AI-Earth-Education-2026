@@ -1,4 +1,3 @@
-// One entry per released week. PDF is optional; notes points to the week overview.
 // After editing this list, bump ?v= on courses.js in index.html so browsers load the new list at once.
 window.AI_EARTH_COURSES = [
   {
@@ -55,5 +54,13 @@ window.AI_EARTH_COURSES = [
     description: "認識 AI 工具，搭配課程影片瀏覽五組以 Skill 為題的網頁作品。",
     notes: "Material/week07/index.html",
     video: "https://www.youtube.com/live/DQHXLdIPeD4"
+  },
+  {
+    week: 8,
+    title: "地端模型：這台機器跑得動哪個模型？",
+    description: "從記憶體容量、資料傳輸頻寬與同時使用人數，判斷自己的機器適合跑哪些模型，並用報價檢查清單核對硬體與使用需求。",
+    notes: "Material/Week08/index.html",
+    slides: "https://local-ai.aimingdata.com/#/1",
+    video: "https://www.youtube.com/watch?v=aSX_9w04-Qk&t=661s"
   }
 ];

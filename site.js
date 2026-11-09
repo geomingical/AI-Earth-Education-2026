@@ -20,7 +20,7 @@ if (Array.isArray(courses)) {
     description.textContent = course.description;
     const actions = document.createElement("div");
     actions.className = "actions";
-    for (const [key, label] of [["notes", "閱讀筆記"], ["pdf", "PDF 簡報"], ["video", "課程影片"]]) {
+    for (const [key, label] of [["notes", "閱讀筆記"], ["pdf", "PDF 簡報"], ["slides", "互動投影片"], ["video", "課程影片"]]) {
       if (!course[key]) continue;
       const link = document.createElement("a");
       link.className = key === "notes" ? "button primary" : "button";
