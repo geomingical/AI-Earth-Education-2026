@@ -62,5 +62,13 @@ window.AI_EARTH_COURSES = [
     notes: "Material/Week08/index.html",
     slides: "https://local-ai.aimingdata.com/#/1",
     video: "https://www.youtube.com/watch?v=aSX_9w04-Qk&t=661s"
+  },
+  {
+    week: 9,
+    title: "API：用程式呼叫 AI 模型",
+    description: "從「這張圖是不是豬」的小工具，理解 API 與訂閱的差別、六年來 API 的演進、token 計費與模型選擇，以及金鑰為什麼只能放在伺服器。",
+    notes: "Material/Week09/index.html",
+    slides: "https://api-talk-neon.vercel.app/#/1",
+    video: "https://www.youtube.com/watch?v=BVoG_wJDCbs"
   }
 ];
