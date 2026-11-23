@@ -1,0 +1,8978 @@
+{
+ "video_id": "ED8jJr7x7TU",
+ "title": "AI × Earth Education｜Retrieval-Augmented Generation",
+ "source": "https://www.youtube.com/watch?v=ED8jJr7x7TU",
+ "language": "zh",
+ "audio_duration_seconds": 3960.001,
+ "backend": "faster-whisper",
+ "model": "medium",
+ "chunk_duration_ms": 900000,
+ "chunk_overlap_ms": 30000,
+ "chunks": [
+  {
+   "index": 0,
+   "start_ms": 0,
+   "end_ms": 899938
+  },
+  {
+   "index": 1,
+   "start_ms": 869938,
+   "end_ms": 1770666
+  },
+  {
+   "index": 2,
+   "start_ms": 1740666,
+   "end_ms": 2639752
+  },
+  {
+   "index": 3,
+   "start_ms": 2609752,
+   "end_ms": 3507009
+  },
+  {
+   "index": 4,
+   "start_ms": 3477009,
+   "end_ms": 3960001
+  }
+ ],
+ "method": "video_script AudioChunker + WhisperTranscriber.transcribe_chunks with SQLite checkpoints; Chinese recognition; absolute original-media times",
+ "text_note": "text is OpenCC s2tw conversion of raw_text, reviewed segment by segment; overrides listed in conversion_overrides. Not manually proofread word by word.",
+ "conversion_overrides": {
+  "S0213": "如果你是資料量是只有30萬個Token",
+  "S0265": "如果你問他可能去年台灣某一個颱風"
+ },
+ "stitch_note": "Each 15-minute chunk overlaps the next by 30 seconds. Where the next chunk re-recognised the same speech, the earlier chunk's segments are marked overlap_duplicate/excluded; they stay in transcript-raw.md.",
+ "overlap_duplicates": 33,
+ "segments": [
+  {
+   "id": "S0001",
+   "start_seconds": 439.78,
+   "end_seconds": 443.78,
+   "text": "A blueprint drawn in colors we are yet to find",
+   "source_chunk": 0,
+   "raw_text": "A blueprint drawn in colors we are yet to find"
+  },
+  {
+   "id": "S0002",
+   "start_seconds": 444.78,
+   "end_seconds": 448.78,
+   "text": "Leaving all our heavy careless ways behind",
+   "source_chunk": 0,
+   "raw_text": "Leaving all our heavy careless ways behind"
+  },
+  {
+   "id": "S0003",
+   "start_seconds": 449.78,
+   "end_seconds": 554.63,
+   "text": "Leave my shoes by the old oak door",
+   "source_chunk": 0,
+   "raw_text": "Leave my shoes by the old oak door"
+  },
+  {
+   "id": "S0004",
+   "start_seconds": 554.63,
+   "end_seconds": 557.63,
+   "text": "And I step onto the moss on the forest floor",
+   "source_chunk": 0,
+   "raw_text": "And I step onto the moss on the forest floor"
+  },
+  {
+   "id": "S0005",
+   "start_seconds": 558.63,
+   "end_seconds": 561.63,
+   "text": "The air is thick with the scent of pine and rain",
+   "source_chunk": 0,
+   "raw_text": "The air is thick with the scent of pine and rain"
+  },
+  {
+   "id": "S0006",
+   "start_seconds": 561.63,
+   "end_seconds": 564.63,
+   "text": "Washing away the weight of a world in pain",
+   "source_chunk": 0,
+   "raw_text": "Washing away the weight of a world in pain"
+  },
+  {
+   "id": "S0007",
+   "start_seconds": 565.63,
+   "end_seconds": 568.63,
+   "text": "I press my palms to the damp and dark soil",
+   "source_chunk": 0,
+   "raw_text": "I press my palms to the damp and dark soil"
+  },
+  {
+   "id": "S0008",
+   "start_seconds": 568.63,
+   "end_seconds": 571.63,
+   "text": "Feeling the life that breathes beneath the tall",
+   "source_chunk": 0,
+   "raw_text": "Feeling the life that breathes beneath the tall"
+  },
+  {
+   "id": "S0009",
+   "start_seconds": 572.63,
+   "end_seconds": 574.63,
+   "text": "It's not just a place where we lay our head",
+   "source_chunk": 0,
+   "raw_text": "It's not just a place where we lay our head"
+  },
+  {
+   "id": "S0010",
+   "start_seconds": 574.63,
+   "end_seconds": 577.63,
+   "text": "It's the very blood, it's the daily bread",
+   "source_chunk": 0,
+   "raw_text": "It's the very blood, it's the daily bread"
+  },
+  {
+   "id": "S0011",
+   "start_seconds": 578.63,
+   "end_seconds": 581.63,
+   "text": "Oh, we don't just live here, we belong",
+   "source_chunk": 0,
+   "raw_text": "Oh, we don't just live here, we belong"
+  },
+  {
+   "id": "S0012",
+   "start_seconds": 581.63,
+   "end_seconds": 584.63,
+   "text": "To the whisper of the trees and the river song",
+   "source_chunk": 0,
+   "raw_text": "To the whisper of the trees and the river song"
+  },
+  {
+   "id": "S0013",
+   "start_seconds": 584.63,
+   "end_seconds": 586.63,
+   "text": "We're made of the dust and the ocean's gray",
+   "source_chunk": 0,
+   "raw_text": "We're made of the dust and the ocean's gray"
+  },
+  {
+   "id": "S0014",
+   "start_seconds": 586.63,
+   "end_seconds": 589.63,
+   "text": "A part of the earth that won't fade away",
+   "source_chunk": 0,
+   "raw_text": "A part of the earth that won't fade away"
+  },
+  {
+   "id": "S0015",
+   "start_seconds": 589.63,
+   "end_seconds": 593.63,
+   "text": "Yes, we are home in the dirt, in the sky",
+   "source_chunk": 0,
+   "raw_text": "Yes, we are home in the dirt, in the sky"
+  },
+  {
+   "id": "S0016",
+   "start_seconds": 593.63,
+   "end_seconds": 596.63,
+   "text": "This is where we live and where we lie",
+   "source_chunk": 0,
+   "raw_text": "This is where we live and where we lie"
+  },
+  {
+   "id": "S0017",
+   "start_seconds": 597.63,
+   "end_seconds": 600.63,
+   "text": "I climb the ridge as the afternoon blows",
+   "source_chunk": 0,
+   "raw_text": "I climb the ridge as the afternoon blows"
+  },
+  {
+   "id": "S0018",
+   "start_seconds": 600.63,
+   "end_seconds": 604.63,
+   "text": "And I let the ocean wind take what it knows",
+   "source_chunk": 0,
+   "raw_text": "And I let the ocean wind take what it knows"
+  },
+  {
+   "id": "S0019",
+   "start_seconds": 604.63,
+   "end_seconds": 607.63,
+   "text": "It carries the salt and the secrets of old",
+   "source_chunk": 0,
+   "raw_text": "It carries the salt and the secrets of old"
+  },
+  {
+   "id": "S0020",
+   "start_seconds": 607.63,
+   "end_seconds": 611.98,
+   "text": "The story in every cold breath that he's told",
+   "source_chunk": 0,
+   "raw_text": "The story in every cold breath that he's told"
+  },
+  {
+   "id": "S0021",
+   "start_seconds": 611.98,
+   "end_seconds": 614.98,
+   "text": "Look at my hands in the creases I see",
+   "source_chunk": 0,
+   "raw_text": "Look at my hands in the creases I see"
+  },
+  {
+   "id": "S0022",
+   "start_seconds": 614.98,
+   "end_seconds": 617.98,
+   "text": "The very same lights that are etched in the tree",
+   "source_chunk": 0,
+   "raw_text": "The very same lights that are etched in the tree"
+  },
+  {
+   "id": "S0023",
+   "start_seconds": 617.98,
+   "end_seconds": 620.98,
+   "text": "We aren't just visitors passing on through",
+   "source_chunk": 0,
+   "raw_text": "We aren't just visitors passing on through"
+  },
+  {
+   "id": "S0024",
+   "start_seconds": 620.98,
+   "end_seconds": 624.98,
+   "text": "I am a part of this earth and so are you",
+   "source_chunk": 0,
+   "raw_text": "I am a part of this earth and so are you"
+  },
+  {
+   "id": "S0025",
+   "start_seconds": 624.98,
+   "end_seconds": 628.98,
+   "text": "Oh, we don't just live here, we belong",
+   "source_chunk": 0,
+   "raw_text": "Oh, we don't just live here, we belong"
+  },
+  {
+   "id": "S0026",
+   "start_seconds": 628.98,
+   "end_seconds": 631.98,
+   "text": "To the whisper of the trees and the river song",
+   "source_chunk": 0,
+   "raw_text": "To the whisper of the trees and the river song"
+  },
+  {
+   "id": "S0027",
+   "start_seconds": 631.98,
+   "end_seconds": 633.98,
+   "text": "We're made of the dust and the ocean's gray",
+   "source_chunk": 0,
+   "raw_text": "We're made of the dust and the ocean's gray"
+  },
+  {
+   "id": "S0028",
+   "start_seconds": 633.98,
+   "end_seconds": 635.98,
+   "text": "A part of the earth that won't fade away",
+   "source_chunk": 0,
+   "raw_text": "A part of the earth that won't fade away"
+  },
+  {
+   "id": "S0029",
+   "start_seconds": 635.98,
+   "end_seconds": 640.35,
+   "text": "Yes, we are home in the dirt, in the sky",
+   "source_chunk": 0,
+   "raw_text": "Yes, we are home in the dirt, in the sky"
+  },
+  {
+   "id": "S0030",
+   "start_seconds": 640.35,
+   "end_seconds": 643.35,
+   "text": "This is where we live and where we lie",
+   "source_chunk": 0,
+   "raw_text": "This is where we live and where we lie"
+  },
+  {
+   "id": "S0031",
+   "start_seconds": 643.35,
+   "end_seconds": 645.35,
+   "text": "Yeah, we are home",
+   "source_chunk": 0,
+   "raw_text": "Yeah, we are home"
+  },
+  {
+   "id": "S0032",
+   "start_seconds": 645.35,
+   "end_seconds": 675.3,
+   "text": "We started from the soil and the sun",
+   "source_chunk": 0,
+   "raw_text": "We started from the soil and the sun"
+  },
+  {
+   "id": "S0033",
+   "start_seconds": 726.62,
+   "end_seconds": 729.62,
+   "text": "I am a part of this earth and so are you",
+   "source_chunk": 0,
+   "raw_text": "I am a part of this earth and so are you"
+  },
+  {
+   "id": "S0034",
+   "start_seconds": 729.62,
+   "end_seconds": 732.62,
+   "text": "Oh, we don't just live in the dirt, we belong",
+   "source_chunk": 0,
+   "raw_text": "Oh, we don't just live in the dirt, we belong"
+  },
+  {
+   "id": "S0035",
+   "start_seconds": 732.62,
+   "end_seconds": 734.62,
+   "text": "To the whisper of the trees and the river song",
+   "source_chunk": 0,
+   "raw_text": "To the whisper of the trees and the river song"
+  },
+  {
+   "id": "S0036",
+   "start_seconds": 734.62,
+   "end_seconds": 737.62,
+   "text": "We are known as the river song",
+   "source_chunk": 0,
+   "raw_text": "We are known as the river song"
+  },
+  {
+   "id": "S0037",
+   "start_seconds": 737.62,
+   "end_seconds": 740.62,
+   "text": "We're made of the dust and the ocean's gray",
+   "source_chunk": 0,
+   "raw_text": "We're made of the dust and the ocean's gray"
+  },
+  {
+   "id": "S0038",
+   "start_seconds": 740.62,
+   "end_seconds": 743.62,
+   "text": "A part of the earth that won't fade away",
+   "source_chunk": 0,
+   "raw_text": "A part of the earth that won't fade away"
+  },
+  {
+   "id": "S0039",
+   "start_seconds": 743.62,
+   "end_seconds": 746.62,
+   "text": "Yes, we are home in the dirt, in the sky",
+   "source_chunk": 0,
+   "raw_text": "Yes, we are home in the dirt, in the sky"
+  },
+  {
+   "id": "S0040",
+   "start_seconds": 746.62,
+   "end_seconds": 750.62,
+   "text": "We're born on earth",
+   "source_chunk": 0,
+   "raw_text": "We're born on earth"
+  },
+  {
+   "id": "S0041",
+   "start_seconds": 750.62,
+   "end_seconds": 752.62,
+   "text": "We are born on earth",
+   "source_chunk": 0,
+   "raw_text": "We are born on earth"
+  },
+  {
+   "id": "S0042",
+   "start_seconds": 752.62,
+   "end_seconds": 754.62,
+   "text": "We are born in the desert",
+   "source_chunk": 0,
+   "raw_text": "We are born in the desert"
+  },
+  {
+   "id": "S0043",
+   "start_seconds": 754.62,
+   "end_seconds": 761.62,
+   "text": "AI的事情,第一個就是卡奧扣一樣,就是他們公佈了一個",
+   "source_chunk": 0,
+   "raw_text": "AI的事情,第一個就是卡奧扣一樣,就是他們公佈了一個"
+  },
+  {
+   "id": "S0044",
+   "start_seconds": 761.62,
+   "end_seconds": 766.62,
+   "text": "就是非常艱難的一個數學的一個問題",
+   "source_chunk": 0,
+   "raw_text": "就是非常艱難的一個數學的一個問題"
+  },
+  {
+   "id": "S0045",
+   "start_seconds": 766.62,
+   "end_seconds": 768.62,
+   "text": "那叫做黎曼猜想",
+   "source_chunk": 0,
+   "raw_text": "那叫做黎曼猜想"
+  },
+  {
+   "id": "S0046",
+   "start_seconds": 768.62,
+   "end_seconds": 771.62,
+   "text": "那第二個就是一樣Entropy他們上市了",
+   "source_chunk": 0,
+   "raw_text": "那第二個就是一樣Entropy他們上市了"
+  },
+  {
+   "id": "S0047",
+   "start_seconds": 771.62,
+   "end_seconds": 777.62,
+   "text": "所以第一個新聞跟第二個新聞其實都是跟Entropy是相關的",
+   "source_chunk": 0,
+   "raw_text": "所以第一個新聞跟第二個新聞其實都是跟Entropy是相關的"
+  },
+  {
+   "id": "S0048",
+   "start_seconds": 777.62,
+   "end_seconds": 782.62,
+   "text": "對那最近在X上面有在討論說",
+   "source_chunk": 0,
+   "raw_text": "對那最近在X上面有在討論說"
+  },
+  {
+   "id": "S0049",
+   "start_seconds": 782.62,
+   "end_seconds": 787.62,
+   "text": "因為卡奧扣他們從去年開始就壓住了Coding的這一塊",
+   "source_chunk": 0,
+   "raw_text": "因為卡奧扣他們從去年開始就壓住了Coding的這一塊"
+  },
+  {
+   "id": "S0050",
+   "start_seconds": 787.62,
+   "end_seconds": 793.62,
+   "text": "那從去年到現在的Coding其實已經做得差不多了",
+   "source_chunk": 0,
+   "raw_text": "那從去年到現在的Coding其實已經做得差不多了"
+  },
+  {
+   "id": "S0051",
+   "start_seconds": 793.62,
+   "end_seconds": 797.62,
+   "text": "就是這一條路線其實已經開發接近到了盡頭",
+   "source_chunk": 0,
+   "raw_text": "就是這一條路線其實已經開發接近到了盡頭"
+  },
+  {
+   "id": "S0052",
+   "start_seconds": 797.62,
+   "end_seconds": 801.62,
+   "text": "就是Coding已經有非常難再優化的空間",
+   "source_chunk": 0,
+   "raw_text": "就是Coding已經有非常難再優化的空間"
+  },
+  {
+   "id": "S0053",
+   "start_seconds": 801.62,
+   "end_seconds": 806.62,
+   "text": "所以卡奧扣其實他們有考慮要改不同的方向",
+   "source_chunk": 0,
+   "raw_text": "所以卡奧扣其實他們有考慮要改不同的方向"
+  },
+  {
+   "id": "S0054",
+   "start_seconds": 806.62,
+   "end_seconds": 810.62,
+   "text": "就是他們還是會專注在前沿模型的這一塊",
+   "source_chunk": 0,
+   "raw_text": "就是他們還是會專注在前沿模型的這一塊"
+  },
+  {
+   "id": "S0055",
+   "start_seconds": 810.62,
+   "end_seconds": 814.62,
+   "text": "但他們現在開發的方向有點像是說",
+   "source_chunk": 0,
+   "raw_text": "但他們現在開發的方向有點像是說"
+  },
+  {
+   "id": "S0056",
+   "start_seconds": 814.62,
+   "end_seconds": 820.62,
+   "text": "就是可能AI for Science或AI for 生物科學",
+   "source_chunk": 0,
+   "raw_text": "就是可能AI for Science或AI for 生物科學"
+  },
+  {
+   "id": "S0057",
+   "start_seconds": 820.62,
+   "end_seconds": 824.62,
+   "text": "和AI for 醫學的不同小的這個領域",
+   "source_chunk": 0,
+   "raw_text": "和AI for 醫學的不同小的這個領域"
+  },
+  {
+   "id": "S0058",
+   "start_seconds": 824.62,
+   "end_seconds": 831.62,
+   "text": "對所以就是Entropy他們可能未來的主要發展方向可能之一",
+   "source_chunk": 0,
+   "raw_text": "對所以就是Entropy他們可能未來的主要發展方向可能之一"
+  },
+  {
+   "id": "S0059",
+   "start_seconds": 831.62,
+   "end_seconds": 836.62,
+   "text": "那第三個就是OpenAI他們公佈了模型的進度",
+   "source_chunk": 0,
+   "raw_text": "那第三個就是OpenAI他們公佈了模型的進度"
+  },
+  {
+   "id": "S0060",
+   "start_seconds": 837.62,
+   "end_seconds": 842.62,
+   "text": "那一樣他們提到一些模型安全的這個規則",
+   "source_chunk": 0,
+   "raw_text": "那一樣他們提到一些模型安全的這個規則"
+  },
+  {
+   "id": "S0061",
+   "start_seconds": 842.62,
+   "end_seconds": 847.62,
+   "text": "就因為其實從上前兩個月開始",
+   "source_chunk": 0,
+   "raw_text": "就因為其實從上前兩個月開始"
+  },
+  {
+   "id": "S0062",
+   "start_seconds": 847.62,
+   "end_seconds": 849.62,
+   "text": "資安變得非常非常的重要",
+   "source_chunk": 0,
+   "raw_text": "資安變得非常非常的重要"
+  },
+  {
+   "id": "S0063",
+   "start_seconds": 849.62,
+   "end_seconds": 856.62,
+   "text": "因為AI可以無甚至的去攻破每一個防火牆",
+   "source_chunk": 0,
+   "raw_text": "因為AI可以無甚至的去攻破每一個防火牆"
+  },
+  {
+   "id": "S0064",
+   "start_seconds": 856.62,
+   "end_seconds": 860.62,
+   "text": "然後我上禮拜有跟一個APP的開發者碰面",
+   "source_chunk": 0,
+   "raw_text": "然後我上禮拜有跟一個APP的開發者碰面"
+  },
+  {
+   "id": "S0065",
+   "start_seconds": 860.62,
+   "end_seconds": 864.62,
+   "text": "那他談的問題其實也是類似的問題",
+   "source_chunk": 0,
+   "raw_text": "那他談的問題其實也是類似的問題"
+  },
+  {
+   "id": "S0066",
+   "start_seconds": 864.62,
+   "end_seconds": 871.62,
+   "text": "就是大家現在有非常多的時間都是花在自己產品的資安上面",
+   "source_chunk": 0,
+   "raw_text": "就是大家現在有非常多的時間都是花在自己產品的資安上面"
+  },
+  {
+   "id": "S0067",
+   "start_seconds": 871.62,
+   "end_seconds": 876.62,
+   "text": "對所以如果要開發系統或一些APP的話",
+   "source_chunk": 0,
+   "raw_text": "對所以如果要開發系統或一些APP的話",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0068",
+   "start_seconds": 876.62,
+   "end_seconds": 882.62,
+   "text": "就是需要去注意一下就是AI的安全的這個規範",
+   "source_chunk": 0,
+   "raw_text": "就是需要去注意一下就是AI的安全的這個規範",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0069",
+   "start_seconds": 882.62,
+   "end_seconds": 888.62,
+   "text": "對所以這是這禮拜三個比較重要的AI的事務",
+   "source_chunk": 0,
+   "raw_text": "對所以這是這禮拜三個比較重要的AI的事務",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0070",
+   "start_seconds": 888.62,
+   "end_seconds": 899.48,
+   "text": "那現在就回到回到今天的",
+   "source_chunk": 0,
+   "raw_text": "那現在就回到回到今天的",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0071",
+   "start_seconds": 869.94,
+   "end_seconds": 872.94,
+   "text": "自己產品的資安上面",
+   "source_chunk": 1,
+   "raw_text": "自己產品的資安上面"
+  },
+  {
+   "id": "S0072",
+   "start_seconds": 872.94,
+   "end_seconds": 875.94,
+   "text": "所以如果要開發系統啊",
+   "source_chunk": 1,
+   "raw_text": "所以如果要開發系統啊"
+  },
+  {
+   "id": "S0073",
+   "start_seconds": 875.94,
+   "end_seconds": 877.94,
+   "text": "或一些APP的話",
+   "source_chunk": 1,
+   "raw_text": "或一些APP的話"
+  },
+  {
+   "id": "S0074",
+   "start_seconds": 877.94,
+   "end_seconds": 880.94,
+   "text": "就是需要去注意一下",
+   "source_chunk": 1,
+   "raw_text": "就是需要去注意一下"
+  },
+  {
+   "id": "S0075",
+   "start_seconds": 880.94,
+   "end_seconds": 883.94,
+   "text": "AI的安全的規範",
+   "source_chunk": 1,
+   "raw_text": "AI的安全的規範"
+  },
+  {
+   "id": "S0076",
+   "start_seconds": 883.94,
+   "end_seconds": 886.94,
+   "text": "所以這是這禮拜",
+   "source_chunk": 1,
+   "raw_text": "所以這是這禮拜"
+  },
+  {
+   "id": "S0077",
+   "start_seconds": 886.94,
+   "end_seconds": 889.94,
+   "text": "三個比較重要的AI的事務",
+   "source_chunk": 1,
+   "raw_text": "三個比較重要的AI的事務"
+  },
+  {
+   "id": "S0078",
+   "start_seconds": 889.94,
+   "end_seconds": 898.83,
+   "text": "那現在就回到",
+   "source_chunk": 1,
+   "raw_text": "那現在就回到"
+  },
+  {
+   "id": "S0079",
+   "start_seconds": 898.83,
+   "end_seconds": 904.97,
+   "text": "回到今天的內容上面",
+   "source_chunk": 1,
+   "raw_text": "回到今天的內容上面"
+  },
+  {
+   "id": "S0080",
+   "start_seconds": 904.97,
+   "end_seconds": 907.97,
+   "text": "我要回到第一頁",
+   "source_chunk": 1,
+   "raw_text": "我要回到第一頁"
+  },
+  {
+   "id": "S0081",
+   "start_seconds": 907.97,
+   "end_seconds": 911.97,
+   "text": "那今天主要是要來說",
+   "source_chunk": 1,
+   "raw_text": "那今天主要是要來說"
+  },
+  {
+   "id": "S0082",
+   "start_seconds": 911.97,
+   "end_seconds": 912.97,
+   "text": "REG",
+   "source_chunk": 1,
+   "raw_text": "REG"
+  },
+  {
+   "id": "S0083",
+   "start_seconds": 912.97,
+   "end_seconds": 916.97,
+   "text": "也就是檢索增長的生成",
+   "source_chunk": 1,
+   "raw_text": "也就是檢索增長的生成"
+  },
+  {
+   "id": "S0084",
+   "start_seconds": 916.97,
+   "end_seconds": 919.97,
+   "text": "REG這個技術它其實是算蠻新的",
+   "source_chunk": 1,
+   "raw_text": "REG這個技術它其實是算蠻新的"
+  },
+  {
+   "id": "S0085",
+   "start_seconds": 919.97,
+   "end_seconds": 922.97,
+   "text": "而且是在AI時代才有的",
+   "source_chunk": 1,
+   "raw_text": "而且是在AI時代才有的"
+  },
+  {
+   "id": "S0086",
+   "start_seconds": 922.97,
+   "end_seconds": 925.97,
+   "text": "如果你需要建一個資料庫",
+   "source_chunk": 1,
+   "raw_text": "如果你需要建一個資料庫"
+  },
+  {
+   "id": "S0087",
+   "start_seconds": 925.97,
+   "end_seconds": 928.97,
+   "text": "你就會需要用到REG",
+   "source_chunk": 1,
+   "raw_text": "你就會需要用到REG"
+  },
+  {
+   "id": "S0088",
+   "start_seconds": 928.97,
+   "end_seconds": 931.97,
+   "text": "資料庫這個東西可大可小",
+   "source_chunk": 1,
+   "raw_text": "資料庫這個東西可大可小"
+  },
+  {
+   "id": "S0089",
+   "start_seconds": 931.97,
+   "end_seconds": 934.97,
+   "text": "你可以是個人的一個簡單的資料庫",
+   "source_chunk": 1,
+   "raw_text": "你可以是個人的一個簡單的資料庫"
+  },
+  {
+   "id": "S0090",
+   "start_seconds": 934.97,
+   "end_seconds": 937.97,
+   "text": "如果你要求非常精準的話",
+   "source_chunk": 1,
+   "raw_text": "如果你要求非常精準的話"
+  },
+  {
+   "id": "S0091",
+   "start_seconds": 937.97,
+   "end_seconds": 939.97,
+   "text": "那你就需要用到REG",
+   "source_chunk": 1,
+   "raw_text": "那你就需要用到REG"
+  },
+  {
+   "id": "S0092",
+   "start_seconds": 939.97,
+   "end_seconds": 942.97,
+   "text": "那如果你的要求不是那麼精準",
+   "source_chunk": 1,
+   "raw_text": "那如果你的要求不是那麼精準"
+  },
+  {
+   "id": "S0093",
+   "start_seconds": 942.97,
+   "end_seconds": 945.97,
+   "text": "那你可以用Notebook LM",
+   "source_chunk": 1,
+   "raw_text": "那你可以用Notebook LM"
+  },
+  {
+   "id": "S0094",
+   "start_seconds": 945.97,
+   "end_seconds": 948.97,
+   "text": "其實就可以滿足你的需求",
+   "source_chunk": 1,
+   "raw_text": "其實就可以滿足你的需求"
+  },
+  {
+   "id": "S0095",
+   "start_seconds": 948.97,
+   "end_seconds": 952.97,
+   "text": "所以如果你需要到你搜尋回來的數字",
+   "source_chunk": 1,
+   "raw_text": "所以如果你需要到你搜尋回來的數字"
+  },
+  {
+   "id": "S0096",
+   "start_seconds": 952.97,
+   "end_seconds": 955.97,
+   "text": "那包括文字都是正確",
+   "source_chunk": 1,
+   "raw_text": "那包括文字都是正確"
+  },
+  {
+   "id": "S0097",
+   "start_seconds": 955.97,
+   "end_seconds": 958.97,
+   "text": "那就要看一下今天這禮拜的這個REG",
+   "source_chunk": 1,
+   "raw_text": "那就要看一下今天這禮拜的這個REG"
+  },
+  {
+   "id": "S0098",
+   "start_seconds": 959.97,
+   "end_seconds": 962.97,
+   "text": "所以上禮拜說的其實是API",
+   "source_chunk": 1,
+   "raw_text": "所以上禮拜說的其實是API"
+  },
+  {
+   "id": "S0099",
+   "start_seconds": 962.97,
+   "end_seconds": 965.97,
+   "text": "那API有點像是說",
+   "source_chunk": 1,
+   "raw_text": "那API有點像是說"
+  },
+  {
+   "id": "S0100",
+   "start_seconds": 965.97,
+   "end_seconds": 968.97,
+   "text": "只是由你的程式跟模型",
+   "source_chunk": 1,
+   "raw_text": "只是由你的程式跟模型"
+  },
+  {
+   "id": "S0101",
+   "start_seconds": 968.97,
+   "end_seconds": 971.97,
+   "text": "之間去產生互動而已",
+   "source_chunk": 1,
+   "raw_text": "之間去產生互動而已"
+  },
+  {
+   "id": "S0102",
+   "start_seconds": 971.97,
+   "end_seconds": 974.97,
+   "text": "但到了REG的時候",
+   "source_chunk": 1,
+   "raw_text": "但到了REG的時候"
+  },
+  {
+   "id": "S0103",
+   "start_seconds": 974.97,
+   "end_seconds": 977.97,
+   "text": "你就會涉及到你的程式然後模型",
+   "source_chunk": 1,
+   "raw_text": "你就會涉及到你的程式然後模型"
+  },
+  {
+   "id": "S0104",
+   "start_seconds": 977.97,
+   "end_seconds": 981.97,
+   "text": "以及你自己所收斂的資料",
+   "source_chunk": 1,
+   "raw_text": "以及你自己所收斂的資料"
+  },
+  {
+   "id": "S0105",
+   "start_seconds": 981.97,
+   "end_seconds": 984.97,
+   "text": "那在REG裡面呢",
+   "source_chunk": 1,
+   "raw_text": "那在REG裡面呢"
+  },
+  {
+   "id": "S0106",
+   "start_seconds": 984.97,
+   "end_seconds": 987.97,
+   "text": "其實八成以上的準確度",
+   "source_chunk": 1,
+   "raw_text": "其實八成以上的準確度"
+  },
+  {
+   "id": "S0107",
+   "start_seconds": 987.97,
+   "end_seconds": 990.97,
+   "text": "都要仰賴你自己清理出來的資料",
+   "source_chunk": 1,
+   "raw_text": "都要仰賴你自己清理出來的資料"
+  },
+  {
+   "id": "S0108",
+   "start_seconds": 990.97,
+   "end_seconds": 993.97,
+   "text": "因為在資料科學裡面",
+   "source_chunk": 1,
+   "raw_text": "因為在資料科學裡面"
+  },
+  {
+   "id": "S0109",
+   "start_seconds": 993.97,
+   "end_seconds": 996.97,
+   "text": "一樣 garbage in garbage out",
+   "source_chunk": 1,
+   "raw_text": "一樣 garbage in garbage out"
+  },
+  {
+   "id": "S0110",
+   "start_seconds": 996.97,
+   "end_seconds": 999.97,
+   "text": "如果你準備的資料是有非常多的garbage的話",
+   "source_chunk": 1,
+   "raw_text": "如果你準備的資料是有非常多的garbage的話"
+  },
+  {
+   "id": "S0111",
+   "start_seconds": 999.97,
+   "end_seconds": 1002.97,
+   "text": "那你搜尋回來的東西也就會是個garbage",
+   "source_chunk": 1,
+   "raw_text": "那你搜尋回來的東西也就會是個garbage"
+  },
+  {
+   "id": "S0112",
+   "start_seconds": 1002.97,
+   "end_seconds": 1005.97,
+   "text": "那這個後面呢就會",
+   "source_chunk": 1,
+   "raw_text": "那這個後面呢就會"
+  },
+  {
+   "id": "S0113",
+   "start_seconds": 1005.97,
+   "end_seconds": 1010.51,
+   "text": "跟各位舉幾個例子去做說明",
+   "source_chunk": 1,
+   "raw_text": "跟各位舉幾個例子去做說明"
+  },
+  {
+   "id": "S0114",
+   "start_seconds": 1010.51,
+   "end_seconds": 1013.51,
+   "text": "所以用GBT的時候呢",
+   "source_chunk": 1,
+   "raw_text": "所以用GBT的時候呢"
+  },
+  {
+   "id": "S0115",
+   "start_seconds": 1013.51,
+   "end_seconds": 1016.51,
+   "text": "有可能你會遇到三個問題",
+   "source_chunk": 1,
+   "raw_text": "有可能你會遇到三個問題"
+  },
+  {
+   "id": "S0116",
+   "start_seconds": 1016.51,
+   "end_seconds": 1019.51,
+   "text": "你的文件根本不在他",
+   "source_chunk": 1,
+   "raw_text": "你的文件根本不在他"
+  },
+  {
+   "id": "S0117",
+   "start_seconds": 1019.51,
+   "end_seconds": 1022.51,
+   "text": "學過的資料裡面",
+   "source_chunk": 1,
+   "raw_text": "學過的資料裡面"
+  },
+  {
+   "id": "S0118",
+   "start_seconds": 1022.51,
+   "end_seconds": 1025.51,
+   "text": "那例如呢就是像你今天要問",
+   "source_chunk": 1,
+   "raw_text": "那例如呢就是像你今天要問"
+  },
+  {
+   "id": "S0119",
+   "start_seconds": 1025.51,
+   "end_seconds": 1028.51,
+   "text": "你的社團是幾點集合",
+   "source_chunk": 1,
+   "raw_text": "你的社團是幾點集合"
+  },
+  {
+   "id": "S0120",
+   "start_seconds": 1028.51,
+   "end_seconds": 1031.51,
+   "text": "就他根本就不知道GBT根本就不知道",
+   "source_chunk": 1,
+   "raw_text": "就他根本就不知道GBT根本就不知道"
+  },
+  {
+   "id": "S0121",
+   "start_seconds": 1031.51,
+   "end_seconds": 1034.51,
+   "text": "你的社團的資料幾",
+   "source_chunk": 1,
+   "raw_text": "你的社團的資料幾"
+  },
+  {
+   "id": "S0122",
+   "start_seconds": 1034.51,
+   "end_seconds": 1037.51,
+   "text": "所以你的文件根本沒有在他學習的資料裡面",
+   "source_chunk": 1,
+   "raw_text": "所以你的文件根本沒有在他學習的資料裡面"
+  },
+  {
+   "id": "S0123",
+   "start_seconds": 1037.51,
+   "end_seconds": 1040.51,
+   "text": "因為他的學習的資料可能是",
+   "source_chunk": 1,
+   "raw_text": "因為他的學習的資料可能是"
+  },
+  {
+   "id": "S0124",
+   "start_seconds": 1040.51,
+   "end_seconds": 1043.51,
+   "text": "從網路上大量抓下來的這種資料",
+   "source_chunk": 1,
+   "raw_text": "從網路上大量抓下來的這種資料"
+  },
+  {
+   "id": "S0125",
+   "start_seconds": 1044.51,
+   "end_seconds": 1047.51,
+   "text": "那第二個呢則是",
+   "source_chunk": 1,
+   "raw_text": "那第二個呢則是"
+  },
+  {
+   "id": "S0126",
+   "start_seconds": 1047.51,
+   "end_seconds": 1050.51,
+   "text": "這篇的論文是誰他有可能是一本正經的亂講",
+   "source_chunk": 1,
+   "raw_text": "這篇的論文是誰他有可能是一本正經的亂講"
+  },
+  {
+   "id": "S0127",
+   "start_seconds": 1050.51,
+   "end_seconds": 1053.51,
+   "text": "那這個在去年也是蠻廣放",
+   "source_chunk": 1,
+   "raw_text": "那這個在去年也是蠻廣放"
+  },
+  {
+   "id": "S0128",
+   "start_seconds": 1053.51,
+   "end_seconds": 1056.51,
+   "text": "被討論的就是AI會有幻覺",
+   "source_chunk": 1,
+   "raw_text": "被討論的就是AI會有幻覺"
+  },
+  {
+   "id": "S0129",
+   "start_seconds": 1056.51,
+   "end_seconds": 1059.51,
+   "text": "那AI找回來的連結很多都是",
+   "source_chunk": 1,
+   "raw_text": "那AI找回來的連結很多都是"
+  },
+  {
+   "id": "S0130",
+   "start_seconds": 1059.51,
+   "end_seconds": 1062.51,
+   "text": "很有問題的但其實到了今年",
+   "source_chunk": 1,
+   "raw_text": "很有問題的但其實到了今年"
+  },
+  {
+   "id": "S0131",
+   "start_seconds": 1062.51,
+   "end_seconds": 1065.51,
+   "text": "大概年中左右",
+   "source_chunk": 1,
+   "raw_text": "大概年中左右"
+  },
+  {
+   "id": "S0132",
+   "start_seconds": 1065.51,
+   "end_seconds": 1068.51,
+   "text": "其實這個問題已經幾乎非常",
+   "source_chunk": 1,
+   "raw_text": "其實這個問題已經幾乎非常"
+  },
+  {
+   "id": "S0133",
+   "start_seconds": 1068.51,
+   "end_seconds": 1071.51,
+   "text": "大量的被解決了",
+   "source_chunk": 1,
+   "raw_text": "大量的被解決了"
+  },
+  {
+   "id": "S0134",
+   "start_seconds": 1071.51,
+   "end_seconds": 1074.51,
+   "text": "那其實你就拿一個檢核的模型",
+   "source_chunk": 1,
+   "raw_text": "那其實你就拿一個檢核的模型"
+  },
+  {
+   "id": "S0135",
+   "start_seconds": 1074.51,
+   "end_seconds": 1077.51,
+   "text": "然後不斷地去檢核他的產出",
+   "source_chunk": 1,
+   "raw_text": "然後不斷地去檢核他的產出"
+  },
+  {
+   "id": "S0136",
+   "start_seconds": 1077.51,
+   "end_seconds": 1080.51,
+   "text": "然後以及他所附上的連結是不是一致的",
+   "source_chunk": 1,
+   "raw_text": "然後以及他所附上的連結是不是一致的"
+  },
+  {
+   "id": "S0137",
+   "start_seconds": 1080.51,
+   "end_seconds": 1083.51,
+   "text": "那第三個則是",
+   "source_chunk": 1,
+   "raw_text": "那第三個則是"
+  },
+  {
+   "id": "S0138",
+   "start_seconds": 1083.51,
+   "end_seconds": 1086.51,
+   "text": "就是他的知識點會停在某一天",
+   "source_chunk": 1,
+   "raw_text": "就是他的知識點會停在某一天"
+  },
+  {
+   "id": "S0139",
+   "start_seconds": 1086.51,
+   "end_seconds": 1089.51,
+   "text": "原因是因為模型的預訓練資料呢",
+   "source_chunk": 1,
+   "raw_text": "原因是因為模型的預訓練資料呢"
+  },
+  {
+   "id": "S0140",
+   "start_seconds": 1089.51,
+   "end_seconds": 1092.51,
+   "text": "假設模型可能是9月被release出來",
+   "source_chunk": 1,
+   "raw_text": "假設模型可能是9月被release出來"
+  },
+  {
+   "id": "S0141",
+   "start_seconds": 1092.51,
+   "end_seconds": 1095.51,
+   "text": "那他的預訓練資料可能只到今年的5月",
+   "source_chunk": 1,
+   "raw_text": "那他的預訓練資料可能只到今年的5月"
+  },
+  {
+   "id": "S0142",
+   "start_seconds": 1095.51,
+   "end_seconds": 1098.51,
+   "text": "所以如果你問模型",
+   "source_chunk": 1,
+   "raw_text": "所以如果你問模型"
+  },
+  {
+   "id": "S0143",
+   "start_seconds": 1098.51,
+   "end_seconds": 1101.51,
+   "text": "如果他在Crawl Code的黎曼猜想這個東西",
+   "source_chunk": 1,
+   "raw_text": "如果他在Crawl Code的黎曼猜想這個東西"
+  },
+  {
+   "id": "S0144",
+   "start_seconds": 1101.51,
+   "end_seconds": 1104.51,
+   "text": "那他就會去上網找資料",
+   "source_chunk": 1,
+   "raw_text": "那他就會去上網找資料"
+  },
+  {
+   "id": "S0145",
+   "start_seconds": 1104.51,
+   "end_seconds": 1107.51,
+   "text": "因為這個資料不在他的認知裡面",
+   "source_chunk": 1,
+   "raw_text": "因為這個資料不在他的認知裡面"
+  },
+  {
+   "id": "S0146",
+   "start_seconds": 1107.51,
+   "end_seconds": 1113.96,
+   "text": "所以在去年有一個很重要的名字",
+   "source_chunk": 1,
+   "raw_text": "所以在去年有一個很重要的名字"
+  },
+  {
+   "id": "S0147",
+   "start_seconds": 1113.96,
+   "end_seconds": 1116.96,
+   "text": "叫幻覺那幻覺呢",
+   "source_chunk": 1,
+   "raw_text": "叫幻覺那幻覺呢"
+  },
+  {
+   "id": "S0148",
+   "start_seconds": 1116.96,
+   "end_seconds": 1119.96,
+   "text": "主要定義就是看起來很合理",
+   "source_chunk": 1,
+   "raw_text": "主要定義就是看起來很合理"
+  },
+  {
+   "id": "S0149",
+   "start_seconds": 1119.96,
+   "end_seconds": 1122.96,
+   "text": "但實際是錯的內容",
+   "source_chunk": 1,
+   "raw_text": "但實際是錯的內容"
+  },
+  {
+   "id": "S0150",
+   "start_seconds": 1122.96,
+   "end_seconds": 1125.96,
+   "text": "所以他的錯有可能是他的數字引用錯誤",
+   "source_chunk": 1,
+   "raw_text": "所以他的錯有可能是他的數字引用錯誤"
+  },
+  {
+   "id": "S0151",
+   "start_seconds": 1125.96,
+   "end_seconds": 1128.96,
+   "text": "他的文件引用錯誤或是他是統計",
+   "source_chunk": 1,
+   "raw_text": "他的文件引用錯誤或是他是統計"
+  },
+  {
+   "id": "S0152",
+   "start_seconds": 1128.96,
+   "end_seconds": 1131.96,
+   "text": "所以模型裡面細部的資訊呢是不對的",
+   "source_chunk": 1,
+   "raw_text": "所以模型裡面細部的資訊呢是不對的"
+  },
+  {
+   "id": "S0153",
+   "start_seconds": 1131.96,
+   "end_seconds": 1134.96,
+   "text": "那產生幻覺的原因呢",
+   "source_chunk": 1,
+   "raw_text": "那產生幻覺的原因呢"
+  },
+  {
+   "id": "S0154",
+   "start_seconds": 1134.96,
+   "end_seconds": 1137.96,
+   "text": "很大一部分是關跟模型的後訓練是有關係的",
+   "source_chunk": 1,
+   "raw_text": "很大一部分是關跟模型的後訓練是有關係的"
+  },
+  {
+   "id": "S0155",
+   "start_seconds": 1137.96,
+   "end_seconds": 1140.96,
+   "text": "因為後訓練的過程當中呢",
+   "source_chunk": 1,
+   "raw_text": "因為後訓練的過程當中呢"
+  },
+  {
+   "id": "S0156",
+   "start_seconds": 1140.96,
+   "end_seconds": 1143.96,
+   "text": "我們會要求模型",
+   "source_chunk": 1,
+   "raw_text": "我們會要求模型"
+  },
+  {
+   "id": "S0157",
+   "start_seconds": 1143.96,
+   "end_seconds": 1146.96,
+   "text": "就是有點像猜對答對",
+   "source_chunk": 1,
+   "raw_text": "就是有點像猜對答對"
+  },
+  {
+   "id": "S0158",
+   "start_seconds": 1146.96,
+   "end_seconds": 1149.96,
+   "text": "我就給你一分那答錯呢我就扣你一分",
+   "source_chunk": 1,
+   "raw_text": "我就給你一分那答錯呢我就扣你一分"
+  },
+  {
+   "id": "S0159",
+   "start_seconds": 1149.96,
+   "end_seconds": 1152.96,
+   "text": "所以模型為了不被扣分呢",
+   "source_chunk": 1,
+   "raw_text": "所以模型為了不被扣分呢"
+  },
+  {
+   "id": "S0160",
+   "start_seconds": 1152.96,
+   "end_seconds": 1155.96,
+   "text": "他就會去掰一個答案出來",
+   "source_chunk": 1,
+   "raw_text": "他就會去掰一個答案出來"
+  },
+  {
+   "id": "S0161",
+   "start_seconds": 1155.96,
+   "end_seconds": 1158.96,
+   "text": "那他也不承認他不知道",
+   "source_chunk": 1,
+   "raw_text": "那他也不承認他不知道"
+  },
+  {
+   "id": "S0162",
+   "start_seconds": 1158.96,
+   "end_seconds": 1161.96,
+   "text": "但因為這是2025年9月的時候",
+   "source_chunk": 1,
+   "raw_text": "但因為這是2025年9月的時候"
+  },
+  {
+   "id": "S0163",
+   "start_seconds": 1161.96,
+   "end_seconds": 1164.96,
+   "text": "所以現在的模型的幻覺呢",
+   "source_chunk": 1,
+   "raw_text": "所以現在的模型的幻覺呢"
+  },
+  {
+   "id": "S0164",
+   "start_seconds": 1164.96,
+   "end_seconds": 1167.96,
+   "text": "其實有一部分已經被解決了",
+   "source_chunk": 1,
+   "raw_text": "其實有一部分已經被解決了"
+  },
+  {
+   "id": "S0165",
+   "start_seconds": 1167.96,
+   "end_seconds": 1170.96,
+   "text": "所以幻覺的狀況呢其實是會越來越少的",
+   "source_chunk": 1,
+   "raw_text": "所以幻覺的狀況呢其實是會越來越少的"
+  },
+  {
+   "id": "S0166",
+   "start_seconds": 1170.96,
+   "end_seconds": 1173.96,
+   "text": "那再來則是知識的截止日",
+   "source_chunk": 1,
+   "raw_text": "那再來則是知識的截止日"
+  },
+  {
+   "id": "S0167",
+   "start_seconds": 1173.96,
+   "end_seconds": 1176.96,
+   "text": "那這個剛才有大致上提過",
+   "source_chunk": 1,
+   "raw_text": "那這個剛才有大致上提過"
+  },
+  {
+   "id": "S0168",
+   "start_seconds": 1176.96,
+   "end_seconds": 1179.96,
+   "text": "就是模型推出的時候呢可能是",
+   "source_chunk": 1,
+   "raw_text": "就是模型推出的時候呢可能是"
+  },
+  {
+   "id": "S0169",
+   "start_seconds": 1179.96,
+   "end_seconds": 1182.96,
+   "text": "假設11月17號是GBT的6.2出來",
+   "source_chunk": 1,
+   "raw_text": "假設11月17號是GBT的6.2出來"
+  },
+  {
+   "id": "S0170",
+   "start_seconds": 1182.96,
+   "end_seconds": 1185.96,
+   "text": "那他的截止日呢就大概",
+   "source_chunk": 1,
+   "raw_text": "那他的截止日呢就大概"
+  },
+  {
+   "id": "S0171",
+   "start_seconds": 1185.96,
+   "end_seconds": 1188.96,
+   "text": "是大概5、6月左右",
+   "source_chunk": 1,
+   "raw_text": "是大概5、6月左右"
+  },
+  {
+   "id": "S0172",
+   "start_seconds": 1188.96,
+   "end_seconds": 1191.96,
+   "text": "那這個是沒有驗證的",
+   "source_chunk": 1,
+   "raw_text": "那這個是沒有驗證的"
+  },
+  {
+   "id": "S0173",
+   "start_seconds": 1191.96,
+   "end_seconds": 1194.96,
+   "text": "但你可以大概去知道這件事",
+   "source_chunk": 1,
+   "raw_text": "但你可以大概去知道這件事"
+  },
+  {
+   "id": "S0174",
+   "start_seconds": 1194.96,
+   "end_seconds": 1197.96,
+   "text": "所以如果沒有資料的話",
+   "source_chunk": 1,
+   "raw_text": "所以如果沒有資料的話"
+  },
+  {
+   "id": "S0175",
+   "start_seconds": 1197.96,
+   "end_seconds": 1200.96,
+   "text": "模型可能會怎麼回答",
+   "source_chunk": 1,
+   "raw_text": "模型可能會怎麼回答"
+  },
+  {
+   "id": "S0176",
+   "start_seconds": 1200.96,
+   "end_seconds": 1203.96,
+   "text": "就是他可能有第一種回答",
+   "source_chunk": 1,
+   "raw_text": "就是他可能有第一種回答"
+  },
+  {
+   "id": "S0177",
+   "start_seconds": 1203.96,
+   "end_seconds": 1206.96,
+   "text": "就是他沒有你們的資料無法得知時間",
+   "source_chunk": 1,
+   "raw_text": "就是他沒有你們的資料無法得知時間"
+  },
+  {
+   "id": "S0178",
+   "start_seconds": 1206.96,
+   "end_seconds": 1209.96,
+   "text": "那當然他也會去掰答案",
+   "source_chunk": 1,
+   "raw_text": "那當然他也會去掰答案"
+  },
+  {
+   "id": "S0179",
+   "start_seconds": 1209.96,
+   "end_seconds": 1212.96,
+   "text": "所以如果是越聰明的模型呢",
+   "source_chunk": 1,
+   "raw_text": "所以如果是越聰明的模型呢"
+  },
+  {
+   "id": "S0180",
+   "start_seconds": 1212.96,
+   "end_seconds": 1215.96,
+   "text": "就是他們有些回答會比較傾向於A",
+   "source_chunk": 1,
+   "raw_text": "就是他們有些回答會比較傾向於A"
+  },
+  {
+   "id": "S0181",
+   "start_seconds": 1215.96,
+   "end_seconds": 1218.96,
+   "text": "因為他們在幻覺的部分呢",
+   "source_chunk": 1,
+   "raw_text": "因為他們在幻覺的部分呢"
+  },
+  {
+   "id": "S0182",
+   "start_seconds": 1218.96,
+   "end_seconds": 1221.96,
+   "text": "已經被大量的消除了",
+   "source_chunk": 1,
+   "raw_text": "已經被大量的消除了"
+  },
+  {
+   "id": "S0183",
+   "start_seconds": 1221.96,
+   "end_seconds": 1224.96,
+   "text": "但如果你是用地端模型的話呢",
+   "source_chunk": 1,
+   "raw_text": "但如果你是用地端模型的話呢"
+  },
+  {
+   "id": "S0184",
+   "start_seconds": 1224.96,
+   "end_seconds": 1227.96,
+   "text": "他就可能會答B",
+   "source_chunk": 1,
+   "raw_text": "他就可能會答B"
+  },
+  {
+   "id": "S0185",
+   "start_seconds": 1227.96,
+   "end_seconds": 1230.96,
+   "text": "因為地端模型相對他的參數量比較少",
+   "source_chunk": 1,
+   "raw_text": "因為地端模型相對他的參數量比較少"
+  },
+  {
+   "id": "S0186",
+   "start_seconds": 1230.96,
+   "end_seconds": 1233.96,
+   "text": "所以他還是會有掰的可能性存在",
+   "source_chunk": 1,
+   "raw_text": "所以他還是會有掰的可能性存在"
+  },
+  {
+   "id": "S0187",
+   "start_seconds": 1233.96,
+   "end_seconds": 1238.85,
+   "text": "所以REG這個東西呢其實",
+   "source_chunk": 1,
+   "raw_text": "所以REG這個東西呢其實"
+  },
+  {
+   "id": "S0188",
+   "start_seconds": 1238.85,
+   "end_seconds": 1241.85,
+   "text": "大家或多或少都有用過",
+   "source_chunk": 1,
+   "raw_text": "大家或多或少都有用過"
+  },
+  {
+   "id": "S0189",
+   "start_seconds": 1241.85,
+   "end_seconds": 1244.85,
+   "text": "就其實只是你把一個PDF檔",
+   "source_chunk": 1,
+   "raw_text": "就其實只是你把一個PDF檔"
+  },
+  {
+   "id": "S0190",
+   "start_seconds": 1244.85,
+   "end_seconds": 1247.85,
+   "text": "然後拉進一個對話的視窗裡面",
+   "source_chunk": 1,
+   "raw_text": "然後拉進一個對話的視窗裡面"
+  },
+  {
+   "id": "S0191",
+   "start_seconds": 1247.85,
+   "end_seconds": 1250.85,
+   "text": "那你可能問他裡面PDF檔的內容",
+   "source_chunk": 1,
+   "raw_text": "那你可能問他裡面PDF檔的內容"
+  },
+  {
+   "id": "S0192",
+   "start_seconds": 1250.85,
+   "end_seconds": 1253.85,
+   "text": "那這個當然就是一個REG的手動版",
+   "source_chunk": 1,
+   "raw_text": "那這個當然就是一個REG的手動版"
+  },
+  {
+   "id": "S0193",
+   "start_seconds": 1253.85,
+   "end_seconds": 1256.85,
+   "text": "就是你給他一個資料庫",
+   "source_chunk": 1,
+   "raw_text": "就是你給他一個資料庫"
+  },
+  {
+   "id": "S0194",
+   "start_seconds": 1256.85,
+   "end_seconds": 1259.85,
+   "text": "那這個資料庫的範圍非常小",
+   "source_chunk": 1,
+   "raw_text": "那這個資料庫的範圍非常小"
+  },
+  {
+   "id": "S0195",
+   "start_seconds": 1259.85,
+   "end_seconds": 1262.85,
+   "text": "可能就是一個PDF檔的範圍",
+   "source_chunk": 1,
+   "raw_text": "可能就是一個PDF檔的範圍"
+  },
+  {
+   "id": "S0196",
+   "start_seconds": 1262.85,
+   "end_seconds": 1265.85,
+   "text": "所以你給他PDF檔的範圍呢",
+   "source_chunk": 1,
+   "raw_text": "所以你給他PDF檔的範圍呢"
+  },
+  {
+   "id": "S0197",
+   "start_seconds": 1265.85,
+   "end_seconds": 1268.85,
+   "text": "然後你再問",
+   "source_chunk": 1,
+   "raw_text": "然後你再問"
+  },
+  {
+   "id": "S0198",
+   "start_seconds": 1268.85,
+   "end_seconds": 1271.85,
+   "text": "那相對的人就會得到比較正確的答案",
+   "source_chunk": 1,
+   "raw_text": "那相對的人就會得到比較正確的答案"
+  },
+  {
+   "id": "S0199",
+   "start_seconds": 1271.85,
+   "end_seconds": 1274.85,
+   "text": "那如果你有非常非常多的",
+   "source_chunk": 1,
+   "raw_text": "那如果你有非常非常多的"
+  },
+  {
+   "id": "S0200",
+   "start_seconds": 1274.85,
+   "end_seconds": 1277.85,
+   "text": "文件的時候的話",
+   "source_chunk": 1,
+   "raw_text": "文件的時候的話"
+  },
+  {
+   "id": "S0201",
+   "start_seconds": 1277.85,
+   "end_seconds": 1280.85,
+   "text": "你就需要用到真正的REG",
+   "source_chunk": 1,
+   "raw_text": "你就需要用到真正的REG"
+  },
+  {
+   "id": "S0202",
+   "start_seconds": 1280.85,
+   "end_seconds": 1283.85,
+   "text": "原因是因為像GPT還有這些模型",
+   "source_chunk": 1,
+   "raw_text": "原因是因為像GPT還有這些模型"
+  },
+  {
+   "id": "S0203",
+   "start_seconds": 1283.85,
+   "end_seconds": 1286.85,
+   "text": "他們的上下文都有一定的窗口",
+   "source_chunk": 1,
+   "raw_text": "他們的上下文都有一定的窗口"
+  },
+  {
+   "id": "S0204",
+   "start_seconds": 1286.85,
+   "end_seconds": 1289.85,
+   "text": "像GPT6.2大概是100萬個",
+   "source_chunk": 1,
+   "raw_text": "像GPT6.2大概是100萬個"
+  },
+  {
+   "id": "S0205",
+   "start_seconds": 1289.85,
+   "end_seconds": 1292.85,
+   "text": "Token左右",
+   "source_chunk": 1,
+   "raw_text": "Token左右"
+  },
+  {
+   "id": "S0206",
+   "start_seconds": 1292.85,
+   "end_seconds": 1295.85,
+   "text": "那每問一次呢你就必須得付一整包的錢",
+   "source_chunk": 1,
+   "raw_text": "那每問一次呢你就必須得付一整包的錢"
+  },
+  {
+   "id": "S0207",
+   "start_seconds": 1295.85,
+   "end_seconds": 1298.85,
+   "text": "而且有時候太長的時候",
+   "source_chunk": 1,
+   "raw_text": "而且有時候太長的時候"
+  },
+  {
+   "id": "S0208",
+   "start_seconds": 1298.85,
+   "end_seconds": 1301.85,
+   "text": "他根本就會看不到重點",
+   "source_chunk": 1,
+   "raw_text": "他根本就會看不到重點"
+  },
+  {
+   "id": "S0209",
+   "start_seconds": 1301.85,
+   "end_seconds": 1304.85,
+   "text": "那第三個呢則是如果你的資料呢",
+   "source_chunk": 1,
+   "raw_text": "那第三個呢則是如果你的資料呢"
+  },
+  {
+   "id": "S0210",
+   "start_seconds": 1304.85,
+   "end_seconds": 1307.85,
+   "text": "是時常需要更新的話",
+   "source_chunk": 1,
+   "raw_text": "是時常需要更新的話"
+  },
+  {
+   "id": "S0211",
+   "start_seconds": 1307.85,
+   "end_seconds": 1310.85,
+   "text": "那你每一次都需要重新貼",
+   "source_chunk": 1,
+   "raw_text": "那你每一次都需要重新貼"
+  },
+  {
+   "id": "S0212",
+   "start_seconds": 1310.85,
+   "end_seconds": 1313.85,
+   "text": "所以這只是一個很簡單的換算",
+   "source_chunk": 1,
+   "raw_text": "所以這只是一個很簡單的換算"
+  },
+  {
+   "id": "S0213",
+   "start_seconds": 1313.85,
+   "end_seconds": 1316.85,
+   "text": "如果你是資料量是只有30萬個Token",
+   "source_chunk": 1,
+   "raw_text": "如果你是資料量是只有30萬個Token"
+  },
+  {
+   "id": "S0214",
+   "start_seconds": 1316.85,
+   "end_seconds": 1319.85,
+   "text": "然後你每天問100次的話",
+   "source_chunk": 1,
+   "raw_text": "然後你每天問100次的話"
+  },
+  {
+   "id": "S0215",
+   "start_seconds": 1319.85,
+   "end_seconds": 1322.85,
+   "text": "你整包都貼給他你大概一天要花到120塊",
+   "source_chunk": 1,
+   "raw_text": "你整包都貼給他你大概一天要花到120塊"
+  },
+  {
+   "id": "S0216",
+   "start_seconds": 1322.85,
+   "end_seconds": 1325.85,
+   "text": "但如果你用REG只挑五段",
+   "source_chunk": 1,
+   "raw_text": "但如果你用REG只挑五段"
+  },
+  {
+   "id": "S0217",
+   "start_seconds": 1325.85,
+   "end_seconds": 1328.85,
+   "text": "最重要的訊息",
+   "source_chunk": 1,
+   "raw_text": "最重要的訊息"
+  },
+  {
+   "id": "S0218",
+   "start_seconds": 1328.85,
+   "end_seconds": 1331.85,
+   "text": "那其實你每天只要花0.8塊",
+   "source_chunk": 1,
+   "raw_text": "那其實你每天只要花0.8塊"
+  },
+  {
+   "id": "S0219",
+   "start_seconds": 1331.85,
+   "end_seconds": 1334.85,
+   "text": "所以他們其實是相差150倍左右",
+   "source_chunk": 1,
+   "raw_text": "所以他們其實是相差150倍左右"
+  },
+  {
+   "id": "S0220",
+   "start_seconds": 1334.85,
+   "end_seconds": 1337.85,
+   "text": "所以REG常用的情境呢",
+   "source_chunk": 1,
+   "raw_text": "所以REG常用的情境呢"
+  },
+  {
+   "id": "S0221",
+   "start_seconds": 1337.85,
+   "end_seconds": 1340.85,
+   "text": "就是他這個資料集",
+   "source_chunk": 1,
+   "raw_text": "就是他這個資料集"
+  },
+  {
+   "id": "S0222",
+   "start_seconds": 1340.85,
+   "end_seconds": 1343.85,
+   "text": "非常高頻率的被使用",
+   "source_chunk": 1,
+   "raw_text": "非常高頻率的被使用"
+  },
+  {
+   "id": "S0223",
+   "start_seconds": 1343.85,
+   "end_seconds": 1346.85,
+   "text": "所以高頻率有可能是",
+   "source_chunk": 1,
+   "raw_text": "所以高頻率有可能是"
+  },
+  {
+   "id": "S0224",
+   "start_seconds": 1346.85,
+   "end_seconds": 1349.85,
+   "text": "你自己個人的文獻資料庫",
+   "source_chunk": 1,
+   "raw_text": "你自己個人的文獻資料庫"
+  },
+  {
+   "id": "S0225",
+   "start_seconds": 1349.85,
+   "end_seconds": 1352.85,
+   "text": "或者是某個領域大的",
+   "source_chunk": 1,
+   "raw_text": "或者是某個領域大的"
+  },
+  {
+   "id": "S0226",
+   "start_seconds": 1352.85,
+   "end_seconds": 1355.85,
+   "text": "資料庫",
+   "source_chunk": 1,
+   "raw_text": "資料庫"
+  },
+  {
+   "id": "S0227",
+   "start_seconds": 1355.85,
+   "end_seconds": 1358.85,
+   "text": "假設你是山崩領域好了",
+   "source_chunk": 1,
+   "raw_text": "假設你是山崩領域好了"
+  },
+  {
+   "id": "S0228",
+   "start_seconds": 1358.85,
+   "end_seconds": 1361.85,
+   "text": "那有可能是山崩領域的整個資料庫",
+   "source_chunk": 1,
+   "raw_text": "那有可能是山崩領域的整個資料庫"
+  },
+  {
+   "id": "S0229",
+   "start_seconds": 1361.85,
+   "end_seconds": 1364.85,
+   "text": "那這個資料庫呢可能會被幾百個人",
+   "source_chunk": 1,
+   "raw_text": "那這個資料庫呢可能會被幾百個人"
+  },
+  {
+   "id": "S0230",
+   "start_seconds": 1364.85,
+   "end_seconds": 1367.85,
+   "text": "甚至上千個人去使用",
+   "source_chunk": 1,
+   "raw_text": "甚至上千個人去使用"
+  },
+  {
+   "id": "S0231",
+   "start_seconds": 1367.85,
+   "end_seconds": 1370.85,
+   "text": "所以這種非常高頻率的使用",
+   "source_chunk": 1,
+   "raw_text": "所以這種非常高頻率的使用"
+  },
+  {
+   "id": "S0232",
+   "start_seconds": 1370.85,
+   "end_seconds": 1373.85,
+   "text": "你就需要用到REG",
+   "source_chunk": 1,
+   "raw_text": "你就需要用到REG"
+  },
+  {
+   "id": "S0233",
+   "start_seconds": 1373.85,
+   "end_seconds": 1376.85,
+   "text": "那你可能說不定你就是用NobodyLM",
+   "source_chunk": 1,
+   "raw_text": "那你可能說不定你就是用NobodyLM"
+  },
+  {
+   "id": "S0234",
+   "start_seconds": 1376.85,
+   "end_seconds": 1381.52,
+   "text": "就可以解決很多事情",
+   "source_chunk": 1,
+   "raw_text": "就可以解決很多事情"
+  },
+  {
+   "id": "S0235",
+   "start_seconds": 1381.52,
+   "end_seconds": 1384.52,
+   "text": "那另外一個問題就是太長的資料呢",
+   "source_chunk": 1,
+   "raw_text": "那另外一個問題就是太長的資料呢"
+  },
+  {
+   "id": "S0236",
+   "start_seconds": 1384.52,
+   "end_seconds": 1387.52,
+   "text": "有可能會漏看",
+   "source_chunk": 1,
+   "raw_text": "有可能會漏看"
+  },
+  {
+   "id": "S0237",
+   "start_seconds": 1387.52,
+   "end_seconds": 1390.52,
+   "text": "但這只是其中一個2023年的預印本的資料",
+   "source_chunk": 1,
+   "raw_text": "但這只是其中一個2023年的預印本的資料"
+  },
+  {
+   "id": "S0238",
+   "start_seconds": 1390.52,
+   "end_seconds": 1393.52,
+   "text": "現在呢有可能會不一定是正確的",
+   "source_chunk": 1,
+   "raw_text": "現在呢有可能會不一定是正確的"
+  },
+  {
+   "id": "S0239",
+   "start_seconds": 1393.52,
+   "end_seconds": 1398.79,
+   "text": "所以REG的精髓呢",
+   "source_chunk": 1,
+   "raw_text": "所以REG的精髓呢"
+  },
+  {
+   "id": "S0240",
+   "start_seconds": 1398.79,
+   "end_seconds": 1401.79,
+   "text": "其實就是全部的文件裡面呢",
+   "source_chunk": 1,
+   "raw_text": "其實就是全部的文件裡面呢"
+  },
+  {
+   "id": "S0241",
+   "start_seconds": 1401.79,
+   "end_seconds": 1404.79,
+   "text": "他只挑出跟你的問題相關的",
+   "source_chunk": 1,
+   "raw_text": "他只挑出跟你的問題相關的"
+  },
+  {
+   "id": "S0242",
+   "start_seconds": 1404.79,
+   "end_seconds": 1407.79,
+   "text": "那有可能是三到五段甚至五十段左右",
+   "source_chunk": 1,
+   "raw_text": "那有可能是三到五段甚至五十段左右"
+  },
+  {
+   "id": "S0243",
+   "start_seconds": 1407.79,
+   "end_seconds": 1410.79,
+   "text": "所以模型呢相對呢就會看的比較少",
+   "source_chunk": 1,
+   "raw_text": "所以模型呢相對呢就會看的比較少"
+  },
+  {
+   "id": "S0244",
+   "start_seconds": 1410.79,
+   "end_seconds": 1413.79,
+   "text": "而且看的資料呢也比較精準",
+   "source_chunk": 1,
+   "raw_text": "而且看的資料呢也比較精準"
+  },
+  {
+   "id": "S0245",
+   "start_seconds": 1413.79,
+   "end_seconds": 1416.79,
+   "text": "所以一樣就是",
+   "source_chunk": 1,
+   "raw_text": "所以一樣就是"
+  },
+  {
+   "id": "S0246",
+   "start_seconds": 1416.79,
+   "end_seconds": 1419.79,
+   "text": "在做AI跟做資料科學的概念是一樣的",
+   "source_chunk": 1,
+   "raw_text": "在做AI跟做資料科學的概念是一樣的"
+  },
+  {
+   "id": "S0247",
+   "start_seconds": 1419.79,
+   "end_seconds": 1422.79,
+   "text": "就是你要最後的這個答案",
+   "source_chunk": 1,
+   "raw_text": "就是你要最後的這個答案"
+  },
+  {
+   "id": "S0248",
+   "start_seconds": 1422.79,
+   "end_seconds": 1425.79,
+   "text": "非常的準那你就要回到",
+   "source_chunk": 1,
+   "raw_text": "非常的準那你就要回到"
+  },
+  {
+   "id": "S0249",
+   "start_seconds": 1425.79,
+   "end_seconds": 1428.79,
+   "text": "最前面的東西",
+   "source_chunk": 1,
+   "raw_text": "最前面的東西"
+  },
+  {
+   "id": "S0250",
+   "start_seconds": 1428.79,
+   "end_seconds": 1431.79,
+   "text": "就是你要確保你保留的文件",
+   "source_chunk": 1,
+   "raw_text": "就是你要確保你保留的文件"
+  },
+  {
+   "id": "S0251",
+   "start_seconds": 1431.79,
+   "end_seconds": 1434.79,
+   "text": "都是你要的",
+   "source_chunk": 1,
+   "raw_text": "都是你要的"
+  },
+  {
+   "id": "S0252",
+   "start_seconds": 1434.79,
+   "end_seconds": 1437.79,
+   "text": "因為只要你塞一片垃圾進去",
+   "source_chunk": 1,
+   "raw_text": "因為只要你塞一片垃圾進去"
+  },
+  {
+   "id": "S0253",
+   "start_seconds": 1437.79,
+   "end_seconds": 1440.79,
+   "text": "在自動挑選過程當中呢就有可能挑到那一片垃圾",
+   "source_chunk": 1,
+   "raw_text": "在自動挑選過程當中呢就有可能挑到那一片垃圾"
+  },
+  {
+   "id": "S0254",
+   "start_seconds": 1440.79,
+   "end_seconds": 1443.79,
+   "text": "然後這個段落呢也有可能",
+   "source_chunk": 1,
+   "raw_text": "然後這個段落呢也有可能"
+  },
+  {
+   "id": "S0255",
+   "start_seconds": 1443.79,
+   "end_seconds": 1446.79,
+   "text": "所以一樣你能夠從最上游的地方呢",
+   "source_chunk": 1,
+   "raw_text": "所以一樣你能夠從最上游的地方呢"
+  },
+  {
+   "id": "S0256",
+   "start_seconds": 1446.79,
+   "end_seconds": 1449.79,
+   "text": "把錯誤都截斷",
+   "source_chunk": 1,
+   "raw_text": "把錯誤都截斷"
+  },
+  {
+   "id": "S0257",
+   "start_seconds": 1449.79,
+   "end_seconds": 1454.8,
+   "text": "那你到越下游的地方你就會越來越準確",
+   "source_chunk": 1,
+   "raw_text": "那你到越下游的地方你就會越來越準確"
+  },
+  {
+   "id": "S0258",
+   "start_seconds": 1454.8,
+   "end_seconds": 1457.8,
+   "text": "所以REG呢他有點像是一個",
+   "source_chunk": 1,
+   "raw_text": "所以REG呢他有點像是一個"
+  },
+  {
+   "id": "S0259",
+   "start_seconds": 1457.8,
+   "end_seconds": 1460.8,
+   "text": "開書考的一個概念",
+   "source_chunk": 1,
+   "raw_text": "開書考的一個概念"
+  },
+  {
+   "id": "S0260",
+   "start_seconds": 1460.8,
+   "end_seconds": 1463.8,
+   "text": "那這個知識呢永遠只停留在",
+   "source_chunk": 1,
+   "raw_text": "那這個知識呢永遠只停留在"
+  },
+  {
+   "id": "S0261",
+   "start_seconds": 1463.8,
+   "end_seconds": 1466.8,
+   "text": "Agent本身自己憑記憶",
+   "source_chunk": 1,
+   "raw_text": "Agent本身自己憑記憶"
+  },
+  {
+   "id": "S0262",
+   "start_seconds": 1466.8,
+   "end_seconds": 1469.8,
+   "text": "所以這個記憶呢很有可能是",
+   "source_chunk": 1,
+   "raw_text": "所以這個記憶呢很有可能是"
+  },
+  {
+   "id": "S0263",
+   "start_seconds": 1469.8,
+   "end_seconds": 1472.8,
+   "text": "錯的假設這邊舉例來說",
+   "source_chunk": 1,
+   "raw_text": "錯的假設這邊舉例來說"
+  },
+  {
+   "id": "S0264",
+   "start_seconds": 1472.8,
+   "end_seconds": 1475.8,
+   "text": "好了",
+   "source_chunk": 1,
+   "raw_text": "好了"
+  },
+  {
+   "id": "S0265",
+   "start_seconds": 1475.8,
+   "end_seconds": 1478.8,
+   "text": "如果你問他可能去年台灣某一個颱風",
+   "source_chunk": 1,
+   "raw_text": "如果你問他可能去年台灣某一個颱風"
+  },
+  {
+   "id": "S0266",
+   "start_seconds": 1478.8,
+   "end_seconds": 1481.8,
+   "text": "降雨的狀況",
+   "source_chunk": 1,
+   "raw_text": "降雨的狀況"
+  },
+  {
+   "id": "S0267",
+   "start_seconds": 1481.8,
+   "end_seconds": 1484.8,
+   "text": "那這個憑記憶呢就有可能會記錯",
+   "source_chunk": 1,
+   "raw_text": "那這個憑記憶呢就有可能會記錯"
+  },
+  {
+   "id": "S0268",
+   "start_seconds": 1484.8,
+   "end_seconds": 1487.8,
+   "text": "原因是因為這種資料太細節已經太細了",
+   "source_chunk": 1,
+   "raw_text": "原因是因為這種資料太細節已經太細了"
+  },
+  {
+   "id": "S0269",
+   "start_seconds": 1487.8,
+   "end_seconds": 1490.8,
+   "text": "所以在他的訓練資料集裡面即使有",
+   "source_chunk": 1,
+   "raw_text": "所以在他的訓練資料集裡面即使有"
+  },
+  {
+   "id": "S0270",
+   "start_seconds": 1490.8,
+   "end_seconds": 1493.8,
+   "text": "他也不見得會答對",
+   "source_chunk": 1,
+   "raw_text": "他也不見得會答對"
+  },
+  {
+   "id": "S0271",
+   "start_seconds": 1493.8,
+   "end_seconds": 1496.8,
+   "text": "所以他就必須要去做網路搜尋",
+   "source_chunk": 1,
+   "raw_text": "所以他就必須要去做網路搜尋"
+  },
+  {
+   "id": "S0272",
+   "start_seconds": 1496.8,
+   "end_seconds": 1499.8,
+   "text": "或者是開書考",
+   "source_chunk": 1,
+   "raw_text": "或者是開書考"
+  },
+  {
+   "id": "S0273",
+   "start_seconds": 1499.8,
+   "end_seconds": 1502.8,
+   "text": "就是你給他準備了相對應的資料集",
+   "source_chunk": 1,
+   "raw_text": "就是你給他準備了相對應的資料集"
+  },
+  {
+   "id": "S0274",
+   "start_seconds": 1502.8,
+   "end_seconds": 1505.8,
+   "text": "你讓他去翻裡面的資料",
+   "source_chunk": 1,
+   "raw_text": "你讓他去翻裡面的資料"
+  },
+  {
+   "id": "S0275",
+   "start_seconds": 1505.8,
+   "end_seconds": 1508.8,
+   "text": "然後再去把答案說出來",
+   "source_chunk": 1,
+   "raw_text": "然後再去把答案說出來"
+  },
+  {
+   "id": "S0276",
+   "start_seconds": 1508.8,
+   "end_seconds": 1511.8,
+   "text": "所以這邊呢就會有兩個路線",
+   "source_chunk": 1,
+   "raw_text": "所以這邊呢就會有兩個路線"
+  },
+  {
+   "id": "S0277",
+   "start_seconds": 1511.8,
+   "end_seconds": 1514.8,
+   "text": "第一個路線呢就是REG你準備好",
+   "source_chunk": 1,
+   "raw_text": "第一個路線呢就是REG你準備好"
+  },
+  {
+   "id": "S0278",
+   "start_seconds": 1514.8,
+   "end_seconds": 1517.8,
+   "text": "的功能去把答案給找回來",
+   "source_chunk": 1,
+   "raw_text": "的功能去把答案給找回來"
+  },
+  {
+   "id": "S0279",
+   "start_seconds": 1517.8,
+   "end_seconds": 1522.63,
+   "text": "然後去思考這個答案是不是對的",
+   "source_chunk": 1,
+   "raw_text": "然後去思考這個答案是不是對的"
+  },
+  {
+   "id": "S0280",
+   "start_seconds": 1522.63,
+   "end_seconds": 1525.63,
+   "text": "所以REG呢是由三個英文單字",
+   "source_chunk": 1,
+   "raw_text": "所以REG呢是由三個英文單字"
+  },
+  {
+   "id": "S0281",
+   "start_seconds": 1525.63,
+   "end_seconds": 1528.63,
+   "text": "所組成的Retreatal, Augmented",
+   "source_chunk": 1,
+   "raw_text": "所組成的Retreatal, Augmented"
+  },
+  {
+   "id": "S0282",
+   "start_seconds": 1528.63,
+   "end_seconds": 1531.63,
+   "text": "跟Generation的三個",
+   "source_chunk": 1,
+   "raw_text": "跟Generation的三個"
+  },
+  {
+   "id": "S0283",
+   "start_seconds": 1531.63,
+   "end_seconds": 1536.26,
+   "text": "那中文叫做檢索增長生成",
+   "source_chunk": 1,
+   "raw_text": "那中文叫做檢索增長生成"
+  },
+  {
+   "id": "S0284",
+   "start_seconds": 1536.26,
+   "end_seconds": 1539.26,
+   "text": "所以REG呢大部分就是拆成這幾個",
+   "source_chunk": 1,
+   "raw_text": "所以REG呢大部分就是拆成這幾個"
+  },
+  {
+   "id": "S0285",
+   "start_seconds": 1539.26,
+   "end_seconds": 1542.26,
+   "text": "第一個呢你的問題進去之後呢",
+   "source_chunk": 1,
+   "raw_text": "第一個呢你的問題進去之後呢"
+  },
+  {
+   "id": "S0286",
+   "start_seconds": 1542.26,
+   "end_seconds": 1545.26,
+   "text": "R呢是搜尋從相關段落",
+   "source_chunk": 1,
+   "raw_text": "R呢是搜尋從相關段落"
+  },
+  {
+   "id": "S0287",
+   "start_seconds": 1545.26,
+   "end_seconds": 1548.26,
+   "text": "裡面呢去把資料找出來",
+   "source_chunk": 1,
+   "raw_text": "裡面呢去把資料找出來"
+  },
+  {
+   "id": "S0288",
+   "start_seconds": 1548.26,
+   "end_seconds": 1551.26,
+   "text": "A呢把段落跟問題組合起來",
+   "source_chunk": 1,
+   "raw_text": "A呢把段落跟問題組合起來"
+  },
+  {
+   "id": "S0289",
+   "start_seconds": 1551.26,
+   "end_seconds": 1554.26,
+   "text": "那G呢就是生成,生成出你要的一個答案",
+   "source_chunk": 1,
+   "raw_text": "那G呢就是生成,生成出你要的一個答案"
+  },
+  {
+   "id": "S0290",
+   "start_seconds": 1554.26,
+   "end_seconds": 1557.26,
+   "text": "那這是來自於2020",
+   "source_chunk": 1,
+   "raw_text": "那這是來自於2020"
+  },
+  {
+   "id": "S0291",
+   "start_seconds": 1557.26,
+   "end_seconds": 1560.26,
+   "text": "年的一篇論文",
+   "source_chunk": 1,
+   "raw_text": "年的一篇論文"
+  },
+  {
+   "id": "S0292",
+   "start_seconds": 1560.26,
+   "end_seconds": 1563.26,
+   "text": "那他一開始呢是把維持百科",
+   "source_chunk": 1,
+   "raw_text": "那他一開始呢是把維持百科"
+  },
+  {
+   "id": "S0293",
+   "start_seconds": 1563.26,
+   "end_seconds": 1568.76,
+   "text": "給切斷,所以在REG裡面呢",
+   "source_chunk": 1,
+   "raw_text": "給切斷,所以在REG裡面呢"
+  },
+  {
+   "id": "S0294",
+   "start_seconds": 1568.76,
+   "end_seconds": 1571.76,
+   "text": "你要準備的呢只是資料庫",
+   "source_chunk": 1,
+   "raw_text": "你要準備的呢只是資料庫"
+  },
+  {
+   "id": "S0295",
+   "start_seconds": 1571.76,
+   "end_seconds": 1574.76,
+   "text": "而已,就是你根本就不需要去換到",
+   "source_chunk": 1,
+   "raw_text": "而已,就是你根本就不需要去換到"
+  },
+  {
+   "id": "S0296",
+   "start_seconds": 1574.76,
+   "end_seconds": 1577.76,
+   "text": "模型本身,那當然你可以換不同",
+   "source_chunk": 1,
+   "raw_text": "模型本身,那當然你可以換不同"
+  },
+  {
+   "id": "S0297",
+   "start_seconds": 1577.76,
+   "end_seconds": 1580.76,
+   "text": "模型去做資料的檢索",
+   "source_chunk": 1,
+   "raw_text": "模型去做資料的檢索"
+  },
+  {
+   "id": "S0298",
+   "start_seconds": 1580.76,
+   "end_seconds": 1583.76,
+   "text": "這個都沒有問題,但核心都還是在你的",
+   "source_chunk": 1,
+   "raw_text": "這個都沒有問題,但核心都還是在你的"
+  },
+  {
+   "id": "S0299",
+   "start_seconds": 1583.76,
+   "end_seconds": 1590.6,
+   "text": "資料庫,所以REG的兩個階段呢",
+   "source_chunk": 1,
+   "raw_text": "資料庫,所以REG的兩個階段呢"
+  },
+  {
+   "id": "S0300",
+   "start_seconds": 1590.6,
+   "end_seconds": 1593.6,
+   "text": "總共有八個步驟,第一個呢則是",
+   "source_chunk": 1,
+   "raw_text": "總共有八個步驟,第一個呢則是"
+  },
+  {
+   "id": "S0301",
+   "start_seconds": 1593.6,
+   "end_seconds": 1596.6,
+   "text": "你需要把你的PDF檔、Word檔",
+   "source_chunk": 1,
+   "raw_text": "你需要把你的PDF檔、Word檔"
+  },
+  {
+   "id": "S0302",
+   "start_seconds": 1596.6,
+   "end_seconds": 1599.6,
+   "text": "跟網頁檔轉成存文字",
+   "source_chunk": 1,
+   "raw_text": "跟網頁檔轉成存文字"
+  },
+  {
+   "id": "S0303",
+   "start_seconds": 1599.6,
+   "end_seconds": 1602.6,
+   "text": "那存文字呢你可以存成MD檔",
+   "source_chunk": 1,
+   "raw_text": "那存文字呢你可以存成MD檔"
+  },
+  {
+   "id": "S0304",
+   "start_seconds": 1602.6,
+   "end_seconds": 1605.6,
+   "text": "MOD檔或是TST的這種存文字",
+   "source_chunk": 1,
+   "raw_text": "MOD檔或是TST的這種存文字"
+  },
+  {
+   "id": "S0305",
+   "start_seconds": 1605.6,
+   "end_seconds": 1608.6,
+   "text": "那一樣的表格呢你也需要把它轉成",
+   "source_chunk": 1,
+   "raw_text": "那一樣的表格呢你也需要把它轉成"
+  },
+  {
+   "id": "S0306",
+   "start_seconds": 1608.6,
+   "end_seconds": 1611.6,
+   "text": "像文字一樣,那圖片呢",
+   "source_chunk": 1,
+   "raw_text": "像文字一樣,那圖片呢"
+  },
+  {
+   "id": "S0307",
+   "start_seconds": 1611.6,
+   "end_seconds": 1614.6,
+   "text": "不一定,看你個人的需求,你可以只轉",
+   "source_chunk": 1,
+   "raw_text": "不一定,看你個人的需求,你可以只轉"
+  },
+  {
+   "id": "S0308",
+   "start_seconds": 1614.6,
+   "end_seconds": 1617.6,
+   "text": "圖說,然後把圖說裡面呢",
+   "source_chunk": 1,
+   "raw_text": "圖說,然後把圖說裡面呢"
+  },
+  {
+   "id": "S0309",
+   "start_seconds": 1617.6,
+   "end_seconds": 1620.6,
+   "text": "綁一個能夠對照,找到你那個圖片",
+   "source_chunk": 1,
+   "raw_text": "綁一個能夠對照,找到你那個圖片"
+  },
+  {
+   "id": "S0310",
+   "start_seconds": 1620.6,
+   "end_seconds": 1623.6,
+   "text": "路徑的東西,這樣也可以",
+   "source_chunk": 1,
+   "raw_text": "路徑的東西,這樣也可以"
+  },
+  {
+   "id": "S0311",
+   "start_seconds": 1623.6,
+   "end_seconds": 1626.6,
+   "text": "那第二個呢,這些文字收集完之後呢",
+   "source_chunk": 1,
+   "raw_text": "那第二個呢,這些文字收集完之後呢"
+  },
+  {
+   "id": "S0312",
+   "start_seconds": 1626.6,
+   "end_seconds": 1629.6,
+   "text": "你要把它切成一小塊",
+   "source_chunk": 1,
+   "raw_text": "你要把它切成一小塊"
+  },
+  {
+   "id": "S0313",
+   "start_seconds": 1629.6,
+   "end_seconds": 1632.6,
+   "text": "一小塊的,那每一塊呢",
+   "source_chunk": 1,
+   "raw_text": "一小塊的,那每一塊呢"
+  },
+  {
+   "id": "S0314",
+   "start_seconds": 1632.6,
+   "end_seconds": 1635.6,
+   "text": "所以每個單字都會有一個代碼",
+   "source_chunk": 1,
+   "raw_text": "所以每個單字都會有一個代碼"
+  },
+  {
+   "id": "S0315",
+   "start_seconds": 1635.6,
+   "end_seconds": 1638.6,
+   "text": "那這個我們在第二週的時候呢",
+   "source_chunk": 1,
+   "raw_text": "那這個我們在第二周的時候呢"
+  },
+  {
+   "id": "S0316",
+   "start_seconds": 1638.6,
+   "end_seconds": 1641.6,
+   "text": "其實有說過,那每一個",
+   "source_chunk": 1,
+   "raw_text": "其實有說過,那每一個"
+  },
+  {
+   "id": "S0317",
+   "start_seconds": 1641.6,
+   "end_seconds": 1644.6,
+   "text": "Token呢它都會對應到一個數字的ID",
+   "source_chunk": 1,
+   "raw_text": "Token呢它都會對應到一個數字的ID"
+  },
+  {
+   "id": "S0318",
+   "start_seconds": 1644.6,
+   "end_seconds": 1647.6,
+   "text": "然後所以你切塊呢是",
+   "source_chunk": 1,
+   "raw_text": "然後所以你切塊呢是"
+  },
+  {
+   "id": "S0319",
+   "start_seconds": 1647.6,
+   "end_seconds": 1650.6,
+   "text": "有可能是一個矩陣,那這個矩陣裡面呢",
+   "source_chunk": 1,
+   "raw_text": "有可能是一個矩陣,那這個矩陣裡面呢"
+  },
+  {
+   "id": "S0320",
+   "start_seconds": 1650.6,
+   "end_seconds": 1653.6,
+   "text": "一圍矩陣,那你有可能有非常多的數字",
+   "source_chunk": 1,
+   "raw_text": "一圍矩陣,那你有可能有非常多的數字"
+  },
+  {
+   "id": "S0321",
+   "start_seconds": 1653.6,
+   "end_seconds": 1656.6,
+   "text": "所組成的,那再投影到",
+   "source_chunk": 1,
+   "raw_text": "所組成的,那再投影到"
+  },
+  {
+   "id": "S0322",
+   "start_seconds": 1656.6,
+   "end_seconds": 1659.6,
+   "text": "高緯度的向量空間裡面",
+   "source_chunk": 1,
+   "raw_text": "高緯度的向量空間裡面"
+  },
+  {
+   "id": "S0323",
+   "start_seconds": 1659.6,
+   "end_seconds": 1662.6,
+   "text": "然後把這個向量檔給存下來",
+   "source_chunk": 1,
+   "raw_text": "然後把這個向量檔給存下來"
+  },
+  {
+   "id": "S0324",
+   "start_seconds": 1663.6,
+   "end_seconds": 1666.6,
+   "text": "所以如果到了問問題的時候呢",
+   "source_chunk": 1,
+   "raw_text": "所以如果到了問問題的時候呢"
+  },
+  {
+   "id": "S0325",
+   "start_seconds": 1666.6,
+   "end_seconds": 1669.6,
+   "text": "其實是一樣的,它把你的問題呢",
+   "source_chunk": 1,
+   "raw_text": "其實是一樣的,它把你的問題呢"
+  },
+  {
+   "id": "S0326",
+   "start_seconds": 1669.6,
+   "end_seconds": 1672.6,
+   "text": "先拆成Token,那Token呢",
+   "source_chunk": 1,
+   "raw_text": "先拆成Token,那Token呢"
+  },
+  {
+   "id": "S0327",
+   "start_seconds": 1672.6,
+   "end_seconds": 1675.6,
+   "text": "再找出對應的數字",
+   "source_chunk": 1,
+   "raw_text": "再找出對應的數字"
+  },
+  {
+   "id": "S0328",
+   "start_seconds": 1675.6,
+   "end_seconds": 1678.6,
+   "text": "所以數字呢,再轉成向量空間",
+   "source_chunk": 1,
+   "raw_text": "所以數字呢,再轉成向量空間"
+  },
+  {
+   "id": "S0329",
+   "start_seconds": 1678.6,
+   "end_seconds": 1681.6,
+   "text": "裡面的某一個點,然後去找",
+   "source_chunk": 1,
+   "raw_text": "裡面的某一個點,然後去找"
+  },
+  {
+   "id": "S0330",
+   "start_seconds": 1681.6,
+   "end_seconds": 1684.6,
+   "text": "周圍最像的幾段",
+   "source_chunk": 1,
+   "raw_text": "周圍最像的幾段"
+  },
+  {
+   "id": "S0331",
+   "start_seconds": 1684.6,
+   "end_seconds": 1687.6,
+   "text": "然後組成提示,最後模型再回答",
+   "source_chunk": 1,
+   "raw_text": "然後組成提示,最後模型再回答"
+  },
+  {
+   "id": "S0332",
+   "start_seconds": 1687.6,
+   "end_seconds": 1690.6,
+   "text": "所以這邊聽起來會有點混亂,但後面呢",
+   "source_chunk": 1,
+   "raw_text": "所以這邊聽起來會有點混亂,但後面呢"
+  },
+  {
+   "id": "S0333",
+   "start_seconds": 1690.6,
+   "end_seconds": 1693.6,
+   "text": "就會把幾個步驟呢給拆開來看",
+   "source_chunk": 1,
+   "raw_text": "就會把幾個步驟呢給拆開來看"
+  },
+  {
+   "id": "S0334",
+   "start_seconds": 1694.6,
+   "end_seconds": 1697.6,
+   "text": "所以第一個呢就是",
+   "source_chunk": 1,
+   "raw_text": "所以第一個呢就是"
+  },
+  {
+   "id": "S0335",
+   "start_seconds": 1697.6,
+   "end_seconds": 1700.6,
+   "text": "載入,載入這邊呢會有",
+   "source_chunk": 1,
+   "raw_text": "載入,載入這邊呢會有"
+  },
+  {
+   "id": "S0336",
+   "start_seconds": 1700.6,
+   "end_seconds": 1703.6,
+   "text": "各種的檔案,那這些檔案呢",
+   "source_chunk": 1,
+   "raw_text": "各種的檔案,那這些檔案呢"
+  },
+  {
+   "id": "S0337",
+   "start_seconds": 1703.6,
+   "end_seconds": 1706.6,
+   "text": "都需要轉成籌文字,你有可能是",
+   "source_chunk": 1,
+   "raw_text": "都需要轉成籌文字,你有可能是"
+  },
+  {
+   "id": "S0338",
+   "start_seconds": 1706.6,
+   "end_seconds": 1709.6,
+   "text": "PDF Word,網頁或簡報,那假設呢",
+   "source_chunk": 1,
+   "raw_text": "PDF Word,網頁或簡報,那假設呢"
+  },
+  {
+   "id": "S0339",
+   "start_seconds": 1709.6,
+   "end_seconds": 1712.6,
+   "text": "我們經營的範例呢是這邊的",
+   "source_chunk": 1,
+   "raw_text": "我們經營的範例呢是這邊的"
+  },
+  {
+   "id": "S0340",
+   "start_seconds": 1712.6,
+   "end_seconds": 1715.6,
+   "text": "六份文件,所以你可能",
+   "source_chunk": 1,
+   "raw_text": "六份文件,所以你可能"
+  },
+  {
+   "id": "S0341",
+   "start_seconds": 1715.6,
+   "end_seconds": 1718.6,
+   "text": "你可能納入了2026年的規則",
+   "source_chunk": 1,
+   "raw_text": "你可能納入了2026年的規則"
+  },
+  {
+   "id": "S0342",
+   "start_seconds": 1718.6,
+   "end_seconds": 1721.6,
+   "text": "那2025年舊版的",
+   "source_chunk": 1,
+   "raw_text": "那2025年舊版的"
+  },
+  {
+   "id": "S0343",
+   "start_seconds": 1721.6,
+   "end_seconds": 1724.6,
+   "text": "然後你還有一些可能講義啊",
+   "source_chunk": 1,
+   "raw_text": "然後你還有一些可能講義啊"
+  },
+  {
+   "id": "S0344",
+   "start_seconds": 1724.6,
+   "end_seconds": 1727.6,
+   "text": "或是器材的這一些規則",
+   "source_chunk": 1,
+   "raw_text": "或是器材的這一些規則"
+  },
+  {
+   "id": "S0345",
+   "start_seconds": 1727.6,
+   "end_seconds": 1730.6,
+   "text": "所以在這邊要記得的是",
+   "source_chunk": 1,
+   "raw_text": "所以在這邊要記得的是"
+  },
+  {
+   "id": "S0346",
+   "start_seconds": 1730.6,
+   "end_seconds": 1733.6,
+   "text": "如果你需要問今年的事",
+   "source_chunk": 1,
+   "raw_text": "如果你需要問今年的事"
+  },
+  {
+   "id": "S0347",
+   "start_seconds": 1733.6,
+   "end_seconds": 1736.6,
+   "text": "那你需要知道說2025年的",
+   "source_chunk": 1,
+   "raw_text": "那你需要知道說2025年的"
+  },
+  {
+   "id": "S0348",
+   "start_seconds": 1736.6,
+   "end_seconds": 1739.6,
+   "text": "這個檔案是不是你需要去",
+   "source_chunk": 1,
+   "raw_text": "這個檔案是不是你需要去"
+  },
+  {
+   "id": "S0349",
+   "start_seconds": 1739.6,
+   "end_seconds": 1742.6,
+   "text": "留下來的,如果它不需要",
+   "source_chunk": 1,
+   "raw_text": "留下來的,如果它不需要"
+  },
+  {
+   "id": "S0350",
+   "start_seconds": 1742.6,
+   "end_seconds": 1745.6,
+   "text": "留,那你就要把它剔除",
+   "source_chunk": 1,
+   "raw_text": "留,那你就要把它剔除",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0351",
+   "start_seconds": 1745.6,
+   "end_seconds": 1748.6,
+   "text": "如果你需要去比較時間軸上的問題",
+   "source_chunk": 1,
+   "raw_text": "如果你需要去比較時間軸上的問題",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0352",
+   "start_seconds": 1748.6,
+   "end_seconds": 1751.6,
+   "text": "假設你想要知道2025跟2026",
+   "source_chunk": 1,
+   "raw_text": "假設你想要知道2025跟2026",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0353",
+   "start_seconds": 1751.6,
+   "end_seconds": 1754.6,
+   "text": "中間在可能",
+   "source_chunk": 1,
+   "raw_text": "中間在可能",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0354",
+   "start_seconds": 1754.6,
+   "end_seconds": 1757.6,
+   "text": "一些細節演化上的差異",
+   "source_chunk": 1,
+   "raw_text": "一些細節演化上的差異",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0355",
+   "start_seconds": 1757.6,
+   "end_seconds": 1760.6,
+   "text": "那當然你就要把2025年納進你的資料庫",
+   "source_chunk": 1,
+   "raw_text": "那當然你就要把2025年納進你的資料庫",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0356",
+   "start_seconds": 1760.6,
+   "end_seconds": 1763.6,
+   "text": "如果你只想要知道",
+   "source_chunk": 1,
+   "raw_text": "如果你只想要知道",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0357",
+   "start_seconds": 1763.6,
+   "end_seconds": 1766.6,
+   "text": "現在的這個細節",
+   "source_chunk": 1,
+   "raw_text": "現在的這個細節",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0358",
+   "start_seconds": 1766.6,
+   "end_seconds": 1769.6,
+   "text": "那你就要把2025年從你的資料庫裡面",
+   "source_chunk": 1,
+   "raw_text": "那你就要把2025年從你的資料庫裡面",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0359",
+   "start_seconds": 1769.6,
+   "end_seconds": 1770.6,
+   "text": "給",
+   "source_chunk": 1,
+   "raw_text": "給",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0360",
+   "start_seconds": 1740.67,
+   "end_seconds": 1744.67,
+   "text": "如果它不需要留 那你就要把它剔除",
+   "source_chunk": 2,
+   "raw_text": "如果它不需要留 那你就要把它剔除"
+  },
+  {
+   "id": "S0361",
+   "start_seconds": 1751.67,
+   "end_seconds": 1756.67,
+   "text": "中間在可能一些細節演化上的差異",
+   "source_chunk": 2,
+   "raw_text": "中間在可能一些細節演化上的差異"
+  },
+  {
+   "id": "S0362",
+   "start_seconds": 1756.67,
+   "end_seconds": 1760.67,
+   "text": "那當然你就要把2025年給納進你的資料庫",
+   "source_chunk": 2,
+   "raw_text": "那當然你就要把2025年給納進你的資料庫"
+  },
+  {
+   "id": "S0363",
+   "start_seconds": 1760.67,
+   "end_seconds": 1766.67,
+   "text": "如果你只想要知道現在的這個細節",
+   "source_chunk": 2,
+   "raw_text": "如果你只想要知道現在的這個細節"
+  },
+  {
+   "id": "S0364",
+   "start_seconds": 1766.67,
+   "end_seconds": 1771.67,
+   "text": "那你就要把2025年從你的資料庫裡面給剔出去",
+   "source_chunk": 2,
+   "raw_text": "那你就要把2025年從你的資料庫裡面給剔出去"
+  },
+  {
+   "id": "S0365",
+   "start_seconds": 1771.67,
+   "end_seconds": 1773.67,
+   "text": "所以這個是非常重要",
+   "source_chunk": 2,
+   "raw_text": "所以這個是非常重要"
+  },
+  {
+   "id": "S0366",
+   "start_seconds": 1773.67,
+   "end_seconds": 1776.67,
+   "text": "原因是因為你如果要問的是現在",
+   "source_chunk": 2,
+   "raw_text": "原因是因為你如果要問的是現在"
+  },
+  {
+   "id": "S0367",
+   "start_seconds": 1776.67,
+   "end_seconds": 1778.67,
+   "text": "你混入了2025年的資料",
+   "source_chunk": 2,
+   "raw_text": "你混入了2025年的資料"
+  },
+  {
+   "id": "S0368",
+   "start_seconds": 1778.67,
+   "end_seconds": 1780.67,
+   "text": "你在回答的過程當中",
+   "source_chunk": 2,
+   "raw_text": "你在回答的過程當中"
+  },
+  {
+   "id": "S0369",
+   "start_seconds": 1780.67,
+   "end_seconds": 1783.67,
+   "text": "就一定會有機率是出錯的",
+   "source_chunk": 2,
+   "raw_text": "就一定會有機率是出錯的"
+  },
+  {
+   "id": "S0370",
+   "start_seconds": 1783.67,
+   "end_seconds": 1787.67,
+   "text": "那同樣在其他的部分也一樣",
+   "source_chunk": 2,
+   "raw_text": "那同樣在其他的部分也一樣"
+  },
+  {
+   "id": "S0371",
+   "start_seconds": 1787.67,
+   "end_seconds": 1795.23,
+   "text": "你要真的要仔細思考說這個資料要留還是不留",
+   "source_chunk": 2,
+   "raw_text": "你要真的要仔細思考說這個資料要留還是不留"
+  },
+  {
+   "id": "S0372",
+   "start_seconds": 1795.23,
+   "end_seconds": 1801.23,
+   "text": "所以切塊就是把一個長的文件把它給拆開來",
+   "source_chunk": 2,
+   "raw_text": "所以切塊就是把一個長的文件把它給拆開來"
+  },
+  {
+   "id": "S0373",
+   "start_seconds": 1801.23,
+   "end_seconds": 1806.23,
+   "text": "那這個後面就可以來看一下",
+   "source_chunk": 2,
+   "raw_text": "那這個後面就可以來看一下"
+  },
+  {
+   "id": "S0374",
+   "start_seconds": 1806.23,
+   "end_seconds": 1809.23,
+   "text": "假設我們整個的段落是這樣子的",
+   "source_chunk": 2,
+   "raw_text": "假設我們整個的段落是這樣子的"
+  },
+  {
+   "id": "S0375",
+   "start_seconds": 1809.23,
+   "end_seconds": 1813.23,
+   "text": "那這個有可能是就是一則野外的訊息",
+   "source_chunk": 2,
+   "raw_text": "那這個有可能是就是一則野外的訊息"
+  },
+  {
+   "id": "S0376",
+   "start_seconds": 1813.23,
+   "end_seconds": 1815.23,
+   "text": "那第一則告訴你說",
+   "source_chunk": 2,
+   "raw_text": "那第一則告訴你說"
+  },
+  {
+   "id": "S0377",
+   "start_seconds": 1815.23,
+   "end_seconds": 1819.23,
+   "text": "野外考察的時間、日期、地點",
+   "source_chunk": 2,
+   "raw_text": "野外考察的時間、日期、地點"
+  },
+  {
+   "id": "S0378",
+   "start_seconds": 1819.23,
+   "end_seconds": 1823.23,
+   "text": "然後當天集合的時間跟地點",
+   "source_chunk": 2,
+   "raw_text": "然後當天集合的時間跟地點"
+  },
+  {
+   "id": "S0379",
+   "start_seconds": 1823.23,
+   "end_seconds": 1825.23,
+   "text": "那出發的時間",
+   "source_chunk": 2,
+   "raw_text": "那出發的時間"
+  },
+  {
+   "id": "S0380",
+   "start_seconds": 1825.23,
+   "end_seconds": 1828.23,
+   "text": "那以及你需要的穿著",
+   "source_chunk": 2,
+   "raw_text": "那以及你需要的穿著"
+  },
+  {
+   "id": "S0381",
+   "start_seconds": 1828.23,
+   "end_seconds": 1831.23,
+   "text": "然後你需要帶的工具",
+   "source_chunk": 2,
+   "raw_text": "然後你需要帶的工具"
+  },
+  {
+   "id": "S0382",
+   "start_seconds": 1831.23,
+   "end_seconds": 1834.23,
+   "text": "然後以及注意事項",
+   "source_chunk": 2,
+   "raw_text": "然後以及注意事項"
+  },
+  {
+   "id": "S0383",
+   "start_seconds": 1834.23,
+   "end_seconds": 1836.23,
+   "text": "所以在切塊裡面呢",
+   "source_chunk": 2,
+   "raw_text": "所以在切塊裡面呢"
+  },
+  {
+   "id": "S0384",
+   "start_seconds": 1836.23,
+   "end_seconds": 1840.23,
+   "text": "你就會決定兩個不同的因子",
+   "source_chunk": 2,
+   "raw_text": "你就會決定兩個不同的因子"
+  },
+  {
+   "id": "S0385",
+   "start_seconds": 1840.23,
+   "end_seconds": 1843.23,
+   "text": "第一個是你每一塊要幾個字",
+   "source_chunk": 2,
+   "raw_text": "第一個是你每一塊要幾個字"
+  },
+  {
+   "id": "S0386",
+   "start_seconds": 1843.23,
+   "end_seconds": 1846.23,
+   "text": "所以如果你是120個字的話",
+   "source_chunk": 2,
+   "raw_text": "所以如果你是120個字的話"
+  },
+  {
+   "id": "S0387",
+   "start_seconds": 1846.23,
+   "end_seconds": 1850.23,
+   "text": "那你就會發現說你在第一塊會非常的長",
+   "source_chunk": 2,
+   "raw_text": "那你就會發現說你在第一塊會非常的長"
+  },
+  {
+   "id": "S0388",
+   "start_seconds": 1850.23,
+   "end_seconds": 1853.23,
+   "text": "那第二塊可能只剩兩個字",
+   "source_chunk": 2,
+   "raw_text": "那第二塊可能只剩兩個字"
+  },
+  {
+   "id": "S0389",
+   "start_seconds": 1853.23,
+   "end_seconds": 1856.23,
+   "text": "所以你如果把它逐漸的拉",
+   "source_chunk": 2,
+   "raw_text": "所以你如果把它逐漸的拉"
+  },
+  {
+   "id": "S0390",
+   "start_seconds": 1856.23,
+   "end_seconds": 1859.23,
+   "text": "假設拉到55個字",
+   "source_chunk": 2,
+   "raw_text": "假設拉到55個字"
+  },
+  {
+   "id": "S0391",
+   "start_seconds": 1859.23,
+   "end_seconds": 1862.23,
+   "text": "那50個字你就會發現說",
+   "source_chunk": 2,
+   "raw_text": "那50個字你就會發現說"
+  },
+  {
+   "id": "S0392",
+   "start_seconds": 1862.23,
+   "end_seconds": 1866.23,
+   "text": "第一段會被時間會被解切到",
+   "source_chunk": 2,
+   "raw_text": "第一段會被時間會被解切到"
+  },
+  {
+   "id": "S0393",
+   "start_seconds": 1866.23,
+   "end_seconds": 1869.23,
+   "text": "那第二段一樣你的帽子",
+   "source_chunk": 2,
+   "raw_text": "那第二段一樣你的帽子"
+  },
+  {
+   "id": "S0394",
+   "start_seconds": 1869.23,
+   "end_seconds": 1873.23,
+   "text": "會被拆成兩個部分",
+   "source_chunk": 2,
+   "raw_text": "會被拆成兩個部分"
+  },
+  {
+   "id": "S0395",
+   "start_seconds": 1873.23,
+   "end_seconds": 1875.23,
+   "text": "所以你在搜尋的當中",
+   "source_chunk": 2,
+   "raw_text": "所以你在搜尋的當中"
+  },
+  {
+   "id": "S0396",
+   "start_seconds": 1875.23,
+   "end_seconds": 1878.23,
+   "text": "它返回的是你的這一塊",
+   "source_chunk": 2,
+   "raw_text": "它返回的是你的這一塊"
+  },
+  {
+   "id": "S0397",
+   "start_seconds": 1878.23,
+   "end_seconds": 1881.23,
+   "text": "或這一塊或這一塊",
+   "source_chunk": 2,
+   "raw_text": "或這一塊或這一塊"
+  },
+  {
+   "id": "S0398",
+   "start_seconds": 1881.23,
+   "end_seconds": 1884.23,
+   "text": "所以你可以想像一個畫面",
+   "source_chunk": 2,
+   "raw_text": "所以你可以想像一個畫面"
+  },
+  {
+   "id": "S0399",
+   "start_seconds": 1884.23,
+   "end_seconds": 1887.23,
+   "text": "假設你想要找的是裝備",
+   "source_chunk": 2,
+   "raw_text": "假設你想要找的是裝備"
+  },
+  {
+   "id": "S0400",
+   "start_seconds": 1887.23,
+   "end_seconds": 1890.23,
+   "text": "那裝備它可能就會返還",
+   "source_chunk": 2,
+   "raw_text": "那裝備它可能就會返還"
+  },
+  {
+   "id": "S0401",
+   "start_seconds": 1890.23,
+   "end_seconds": 1893.23,
+   "text": "鞋子、登山鞋",
+   "source_chunk": 2,
+   "raw_text": "鞋子、登山鞋"
+  },
+  {
+   "id": "S0402",
+   "start_seconds": 1893.23,
+   "end_seconds": 1895.23,
+   "text": "那或者甚至是拖鞋",
+   "source_chunk": 2,
+   "raw_text": "那或者甚至是拖鞋"
+  },
+  {
+   "id": "S0403",
+   "start_seconds": 1895.23,
+   "end_seconds": 1899.23,
+   "text": "所以它會給AI的就是第二塊跟第三塊",
+   "source_chunk": 2,
+   "raw_text": "所以它會給AI的就是第二塊跟第三塊"
+  },
+  {
+   "id": "S0404",
+   "start_seconds": 1899.23,
+   "end_seconds": 1904.23,
+   "text": "所以切塊會涉及到一個很重要的議題",
+   "source_chunk": 2,
+   "raw_text": "所以切塊會涉及到一個很重要的議題"
+  },
+  {
+   "id": "S0405",
+   "start_seconds": 1904.23,
+   "end_seconds": 1909.23,
+   "text": "你希望整段的概念是完整的被保留",
+   "source_chunk": 2,
+   "raw_text": "你希望整段的概念是完整的被保留"
+  },
+  {
+   "id": "S0406",
+   "start_seconds": 1909.23,
+   "end_seconds": 1912.23,
+   "text": "你如果要完整的被保留的話",
+   "source_chunk": 2,
+   "raw_text": "你如果要完整的被保留的話"
+  },
+  {
+   "id": "S0407",
+   "start_seconds": 1912.23,
+   "end_seconds": 1915.23,
+   "text": "那你可以當然可以給它一些重疊值",
+   "source_chunk": 2,
+   "raw_text": "那你可以當然可以給它一些重疊值"
+  },
+  {
+   "id": "S0408",
+   "start_seconds": 1915.23,
+   "end_seconds": 1918.23,
+   "text": "假設重疊十個字",
+   "source_chunk": 2,
+   "raw_text": "假設重疊十個字"
+  },
+  {
+   "id": "S0409",
+   "start_seconds": 1918.23,
+   "end_seconds": 1921.23,
+   "text": "那可能第一段被截斷之後",
+   "source_chunk": 2,
+   "raw_text": "那可能第一段被截斷之後"
+  },
+  {
+   "id": "S0410",
+   "start_seconds": 1921.23,
+   "end_seconds": 1924.23,
+   "text": "第二段往前再保留十個字",
+   "source_chunk": 2,
+   "raw_text": "第二段往前再保留十個字"
+  },
+  {
+   "id": "S0411",
+   "start_seconds": 1924.23,
+   "end_seconds": 1927.23,
+   "text": "那或者你可以按照句子去切",
+   "source_chunk": 2,
+   "raw_text": "那或者你可以按照句子去切"
+  },
+  {
+   "id": "S0412",
+   "start_seconds": 1927.23,
+   "end_seconds": 1929.23,
+   "text": "這種也可以",
+   "source_chunk": 2,
+   "raw_text": "這種也可以"
+  },
+  {
+   "id": "S0413",
+   "start_seconds": 1929.23,
+   "end_seconds": 1931.23,
+   "text": "但因為這個是比較短",
+   "source_chunk": 2,
+   "raw_text": "但因為這個是比較短"
+  },
+  {
+   "id": "S0414",
+   "start_seconds": 1931.23,
+   "end_seconds": 1933.23,
+   "text": "所以它比較好去理解",
+   "source_chunk": 2,
+   "raw_text": "所以它比較好去理解"
+  },
+  {
+   "id": "S0415",
+   "start_seconds": 1933.23,
+   "end_seconds": 1938.23,
+   "text": "假設你把整個概念想像成好幾篇不同的文章",
+   "source_chunk": 2,
+   "raw_text": "假設你把整個概念想像成好幾篇不同的文章"
+  },
+  {
+   "id": "S0416",
+   "start_seconds": 1938.23,
+   "end_seconds": 1940.23,
+   "text": "所以好幾篇不同的文章",
+   "source_chunk": 2,
+   "raw_text": "所以好幾篇不同的文章"
+  },
+  {
+   "id": "S0417",
+   "start_seconds": 1940.23,
+   "end_seconds": 1943.23,
+   "text": "你可以想的是你要按照句子切",
+   "source_chunk": 2,
+   "raw_text": "你可以想的是你要按照句子切"
+  },
+  {
+   "id": "S0418",
+   "start_seconds": 1943.23,
+   "end_seconds": 1947.23,
+   "text": "還是你要按照段落去切",
+   "source_chunk": 2,
+   "raw_text": "還是你要按照段落去切"
+  },
+  {
+   "id": "S0419",
+   "start_seconds": 1947.23,
+   "end_seconds": 1951.23,
+   "text": "因為我自己的話我是都按照段落去切",
+   "source_chunk": 2,
+   "raw_text": "因為我自己的話我是都按照段落去切"
+  },
+  {
+   "id": "S0420",
+   "start_seconds": 1951.23,
+   "end_seconds": 1954.23,
+   "text": "因為段落去切你起碼能夠保證說",
+   "source_chunk": 2,
+   "raw_text": "因為段落去切你起碼能夠保證說"
+  },
+  {
+   "id": "S0421",
+   "start_seconds": 1954.23,
+   "end_seconds": 1957.23,
+   "text": "這個段落他說的東西",
+   "source_chunk": 2,
+   "raw_text": "這個段落他說的東西"
+  },
+  {
+   "id": "S0422",
+   "start_seconds": 1957.23,
+   "end_seconds": 1962.23,
+   "text": "有可能是同樣或類似的概念",
+   "source_chunk": 2,
+   "raw_text": "有可能是同樣或類似的概念"
+  },
+  {
+   "id": "S0423",
+   "start_seconds": 1962.23,
+   "end_seconds": 1968.23,
+   "text": "所以在每塊這邊你可以自己去嘗試一下",
+   "source_chunk": 2,
+   "raw_text": "所以在每塊這邊你可以自己去嘗試一下"
+  },
+  {
+   "id": "S0424",
+   "start_seconds": 1968.23,
+   "end_seconds": 1973.23,
+   "text": "你當然可以加上重疊或剛好被切斷",
+   "source_chunk": 2,
+   "raw_text": "你當然可以加上重疊或剛好被切斷"
+  },
+  {
+   "id": "S0425",
+   "start_seconds": 1973.23,
+   "end_seconds": 1977.23,
+   "text": "或是你可以試把它切成非常多小塊",
+   "source_chunk": 2,
+   "raw_text": "或是你可以試把它切成非常多小塊"
+  },
+  {
+   "id": "S0426",
+   "start_seconds": 1977.23,
+   "end_seconds": 1980.23,
+   "text": "那這個都是可以去嘗試的",
+   "source_chunk": 2,
+   "raw_text": "那這個都是可以去嘗試的"
+  },
+  {
+   "id": "S0427",
+   "start_seconds": 1980.23,
+   "end_seconds": 1986.23,
+   "text": "就是沒有一種切的方式能夠符合所有的資料庫",
+   "source_chunk": 2,
+   "raw_text": "就是沒有一種切的方式能夠符合所有的資料庫"
+  },
+  {
+   "id": "S0428",
+   "start_seconds": 1986.23,
+   "end_seconds": 1989.23,
+   "text": "因為這個完全是case by case",
+   "source_chunk": 2,
+   "raw_text": "因為這個完全是case by case"
+  },
+  {
+   "id": "S0429",
+   "start_seconds": 1989.23,
+   "end_seconds": 1995.98,
+   "text": "所以OpenAI他們自己有他們自己的切法",
+   "source_chunk": 2,
+   "raw_text": "所以OpenAI他們自己有他們自己的切法"
+  },
+  {
+   "id": "S0430",
+   "start_seconds": 1995.98,
+   "end_seconds": 1998.98,
+   "text": "那他們一塊就是800token",
+   "source_chunk": 2,
+   "raw_text": "那他們一塊就是800token"
+  },
+  {
+   "id": "S0431",
+   "start_seconds": 1998.98,
+   "end_seconds": 2004.98,
+   "text": "那重疊就是大概400token左右",
+   "source_chunk": 2,
+   "raw_text": "那重疊就是大概400token左右"
+  },
+  {
+   "id": "S0432",
+   "start_seconds": 2004.98,
+   "end_seconds": 2009.98,
+   "text": "所以這個回到最一開始會談到說要不要使用RAG",
+   "source_chunk": 2,
+   "raw_text": "所以這個回到最一開始會談到說要不要使用RAG"
+  },
+  {
+   "id": "S0433",
+   "start_seconds": 2009.98,
+   "end_seconds": 2012.98,
+   "text": "就會取決於說你要的答案有多準",
+   "source_chunk": 2,
+   "raw_text": "就會取決於說你要的答案有多準"
+  },
+  {
+   "id": "S0434",
+   "start_seconds": 2012.98,
+   "end_seconds": 2015.98,
+   "text": "所以如果你回到前一頁來看的話",
+   "source_chunk": 2,
+   "raw_text": "所以如果你回到前一頁來看的話"
+  },
+  {
+   "id": "S0435",
+   "start_seconds": 2015.98,
+   "end_seconds": 2019.98,
+   "text": "如果你要的答案是真的非常準的話",
+   "source_chunk": 2,
+   "raw_text": "如果你要的答案是真的非常準的話"
+  },
+  {
+   "id": "S0436",
+   "start_seconds": 2019.98,
+   "end_seconds": 2021.98,
+   "text": "那你就要自己去做RAG",
+   "source_chunk": 2,
+   "raw_text": "那你就要自己去做RAG"
+  },
+  {
+   "id": "S0437",
+   "start_seconds": 2021.98,
+   "end_seconds": 2023.98,
+   "text": "來去自己去做切塊",
+   "source_chunk": 2,
+   "raw_text": "來去自己去做切塊"
+  },
+  {
+   "id": "S0438",
+   "start_seconds": 2023.98,
+   "end_seconds": 2025.98,
+   "text": "然後自己去做資料庫的編排",
+   "source_chunk": 2,
+   "raw_text": "然後自己去做資料庫的編排"
+  },
+  {
+   "id": "S0439",
+   "start_seconds": 2025.98,
+   "end_seconds": 2028.98,
+   "text": "那如果你拿的是不準的話",
+   "source_chunk": 2,
+   "raw_text": "那如果你拿的是不準的話"
+  },
+  {
+   "id": "S0440",
+   "start_seconds": 2028.98,
+   "end_seconds": 2032.98,
+   "text": "像NoblLM或是像OpenAI這種檔案搜尋",
+   "source_chunk": 2,
+   "raw_text": "像NoblLM或是像OpenAI這種檔案搜尋"
+  },
+  {
+   "id": "S0441",
+   "start_seconds": 2032.98,
+   "end_seconds": 2038.98,
+   "text": "因為它裡面的東西參數都是完全固定化",
+   "source_chunk": 2,
+   "raw_text": "因為它裡面的東西參數都是完全固定化"
+  },
+  {
+   "id": "S0442",
+   "start_seconds": 2038.98,
+   "end_seconds": 2043.98,
+   "text": "所以在整個功能被寫死的狀態之下",
+   "source_chunk": 2,
+   "raw_text": "所以在整個功能被寫死的狀態之下"
+  },
+  {
+   "id": "S0443",
+   "start_seconds": 2043.98,
+   "end_seconds": 2048.98,
+   "text": "你不能夠每一次都期待它的功能是符合你的要求",
+   "source_chunk": 2,
+   "raw_text": "你不能夠每一次都期待它的功能是符合你的要求"
+  },
+  {
+   "id": "S0444",
+   "start_seconds": 2048.98,
+   "end_seconds": 2050.98,
+   "text": "所以這是蠻重要的一點",
+   "source_chunk": 2,
+   "raw_text": "所以這是蠻重要的一點"
+  },
+  {
+   "id": "S0445",
+   "start_seconds": 2050.98,
+   "end_seconds": 2053.98,
+   "text": "就是每樣工具都有它厲害的地方",
+   "source_chunk": 2,
+   "raw_text": "就是每樣工具都有它厲害的地方"
+  },
+  {
+   "id": "S0446",
+   "start_seconds": 2053.98,
+   "end_seconds": 2056.98,
+   "text": "那每樣工具其實都要用對地方",
+   "source_chunk": 2,
+   "raw_text": "那每樣工具其實都要用對地方"
+  },
+  {
+   "id": "S0447",
+   "start_seconds": 2056.98,
+   "end_seconds": 2063.0,
+   "text": "在第三個步驟就會轉成數字",
+   "source_chunk": 2,
+   "raw_text": "在第三個步驟就會轉成數字"
+  },
+  {
+   "id": "S0448",
+   "start_seconds": 2063.0,
+   "end_seconds": 2066.0,
+   "text": "然後去做向量的投影",
+   "source_chunk": 2,
+   "raw_text": "然後去做向量的投影"
+  },
+  {
+   "id": "S0449",
+   "start_seconds": 2066.0,
+   "end_seconds": 2068.0,
+   "text": "那這個叫embedding",
+   "source_chunk": 2,
+   "raw_text": "那這個叫embedding"
+  },
+  {
+   "id": "S0450",
+   "start_seconds": 2068.0,
+   "end_seconds": 2071.0,
+   "text": "像野外考察這個東西",
+   "source_chunk": 2,
+   "raw_text": "像野外考察這個東西"
+  },
+  {
+   "id": "S0451",
+   "start_seconds": 2071.0,
+   "end_seconds": 2074.0,
+   "text": "你如果經過embedding的模型之後",
+   "source_chunk": 2,
+   "raw_text": "你如果經過embedding的模型之後"
+  },
+  {
+   "id": "S0452",
+   "start_seconds": 2074.0,
+   "end_seconds": 2079.0,
+   "text": "它會被變化可能是1024個數字",
+   "source_chunk": 2,
+   "raw_text": "它會被變化可能是1024個數字"
+  },
+  {
+   "id": "S0453",
+   "start_seconds": 2080.0,
+   "end_seconds": 2082.0,
+   "text": "那為什麼是1024個",
+   "source_chunk": 2,
+   "raw_text": "那為什麼是1024個"
+  },
+  {
+   "id": "S0454",
+   "start_seconds": 2082.0,
+   "end_seconds": 2085.0,
+   "text": "那這個取決於說你embedding模型裡面",
+   "source_chunk": 2,
+   "raw_text": "那這個取決於說你embedding模型裡面"
+  },
+  {
+   "id": "S0455",
+   "start_seconds": 2085.0,
+   "end_seconds": 2087.0,
+   "text": "用的是哪一個模型",
+   "source_chunk": 2,
+   "raw_text": "用的是哪一個模型"
+  },
+  {
+   "id": "S0456",
+   "start_seconds": 2087.0,
+   "end_seconds": 2092.0,
+   "text": "那有些模型是會幫你把整段轉成固定1024個數字",
+   "source_chunk": 2,
+   "raw_text": "那有些模型是會幫你把整段轉成固定1024個數字"
+  },
+  {
+   "id": "S0457",
+   "start_seconds": 2092.0,
+   "end_seconds": 2094.0,
+   "text": "那或者是2048",
+   "source_chunk": 2,
+   "raw_text": "那或者是2048"
+  },
+  {
+   "id": "S0458",
+   "start_seconds": 2094.0,
+   "end_seconds": 2096.0,
+   "text": "那這些都不一定",
+   "source_chunk": 2,
+   "raw_text": "那這些都不一定"
+  },
+  {
+   "id": "S0459",
+   "start_seconds": 2096.0,
+   "end_seconds": 2101.0,
+   "text": "所以要看你當時embedding的模型是哪一個",
+   "source_chunk": 2,
+   "raw_text": "所以要看你當時embedding的模型是哪一個"
+  },
+  {
+   "id": "S0460",
+   "start_seconds": 2101.0,
+   "end_seconds": 2104.0,
+   "text": "所以這邊就會涉及到一個問題",
+   "source_chunk": 2,
+   "raw_text": "所以這邊就會涉及到一個問題"
+  },
+  {
+   "id": "S0461",
+   "start_seconds": 2104.0,
+   "end_seconds": 2107.0,
+   "text": "就是在前面這邊",
+   "source_chunk": 2,
+   "raw_text": "就是在前面這邊"
+  },
+  {
+   "id": "S0462",
+   "start_seconds": 2107.0,
+   "end_seconds": 2111.0,
+   "text": "你在第三個步驟你會轉成數字",
+   "source_chunk": 2,
+   "raw_text": "你在第三個步驟你會轉成數字"
+  },
+  {
+   "id": "S0463",
+   "start_seconds": 2111.0,
+   "end_seconds": 2113.0,
+   "text": "所以你會做embedding",
+   "source_chunk": 2,
+   "raw_text": "所以你會做embedding"
+  },
+  {
+   "id": "S0464",
+   "start_seconds": 2113.0,
+   "end_seconds": 2115.0,
+   "text": "然後第五個步驟",
+   "source_chunk": 2,
+   "raw_text": "然後第五個步驟"
+  },
+  {
+   "id": "S0465",
+   "start_seconds": 2115.0,
+   "end_seconds": 2118.0,
+   "text": "你的問題也會被轉成數字",
+   "source_chunk": 2,
+   "raw_text": "你的問題也會被轉成數字"
+  },
+  {
+   "id": "S0466",
+   "start_seconds": 2118.0,
+   "end_seconds": 2120.0,
+   "text": "所以它一樣是去做embedding",
+   "source_chunk": 2,
+   "raw_text": "所以它一樣是去做embedding"
+  },
+  {
+   "id": "S0467",
+   "start_seconds": 2120.0,
+   "end_seconds": 2124.0,
+   "text": "所以在3跟5的embedding模型",
+   "source_chunk": 2,
+   "raw_text": "所以在3跟5的embedding模型"
+  },
+  {
+   "id": "S0468",
+   "start_seconds": 2124.0,
+   "end_seconds": 2126.0,
+   "text": "要完全一模一樣",
+   "source_chunk": 2,
+   "raw_text": "要完全一模一樣"
+  },
+  {
+   "id": "S0469",
+   "start_seconds": 2126.0,
+   "end_seconds": 2129.0,
+   "text": "因為你總不可能這裡轉成1024",
+   "source_chunk": 2,
+   "raw_text": "因為你總不可能這裡轉成1024"
+  },
+  {
+   "id": "S0470",
+   "start_seconds": 2129.0,
+   "end_seconds": 2131.0,
+   "text": "那這裡轉成2048",
+   "source_chunk": 2,
+   "raw_text": "那這裡轉成2048"
+  },
+  {
+   "id": "S0471",
+   "start_seconds": 2131.0,
+   "end_seconds": 2133.0,
+   "text": "所以頭尾就會對不起來",
+   "source_chunk": 2,
+   "raw_text": "所以頭尾就會對不起來"
+  },
+  {
+   "id": "S0472",
+   "start_seconds": 2133.0,
+   "end_seconds": 2136.0,
+   "text": "所以3跟5的embedding模型",
+   "source_chunk": 2,
+   "raw_text": "所以3跟5的embedding模型"
+  },
+  {
+   "id": "S0473",
+   "start_seconds": 2136.0,
+   "end_seconds": 2138.0,
+   "text": "是要是相同的",
+   "source_chunk": 2,
+   "raw_text": "是要是相同的"
+  },
+  {
+   "id": "S0474",
+   "start_seconds": 2138.0,
+   "end_seconds": 2144.75,
+   "text": "所以這個有點像是embedding的模型",
+   "source_chunk": 2,
+   "raw_text": "所以這個有點像是embedding的模型"
+  },
+  {
+   "id": "S0475",
+   "start_seconds": 2146.75,
+   "end_seconds": 2151.75,
+   "text": "我們把它投影到一個空間平面上來看好了",
+   "source_chunk": 2,
+   "raw_text": "我們把它投影到一個空間平面上來看好了"
+  },
+  {
+   "id": "S0476",
+   "start_seconds": 2151.75,
+   "end_seconds": 2152.75,
+   "text": "其實真實的向量空間",
+   "source_chunk": 2,
+   "raw_text": "其實真實的向量空間"
+  },
+  {
+   "id": "S0477",
+   "start_seconds": 2152.75,
+   "end_seconds": 2157.75,
+   "text": "記得它有像剛才的是1024個維度",
+   "source_chunk": 2,
+   "raw_text": "記得它有像剛才的是1024個維度"
+  },
+  {
+   "id": "S0478",
+   "start_seconds": 2157.75,
+   "end_seconds": 2159.75,
+   "text": "但這邊只畫了兩個維度",
+   "source_chunk": 2,
+   "raw_text": "但這邊只畫了兩個維度"
+  },
+  {
+   "id": "S0479",
+   "start_seconds": 2159.75,
+   "end_seconds": 2162.75,
+   "text": "原因是因為上千維這個沒辦法去畫",
+   "source_chunk": 2,
+   "raw_text": "原因是因為上千維這個沒辦法去畫"
+  },
+  {
+   "id": "S0480",
+   "start_seconds": 2162.75,
+   "end_seconds": 2167.75,
+   "text": "所以我們這裡只畫兩個維度來去做呈現",
+   "source_chunk": 2,
+   "raw_text": "所以我們這裡只畫兩個維度來去做呈現"
+  },
+  {
+   "id": "S0481",
+   "start_seconds": 2167.75,
+   "end_seconds": 2171.75,
+   "text": "如果今天要問的是幾點到",
+   "source_chunk": 2,
+   "raw_text": "如果今天要問的是幾點到"
+  },
+  {
+   "id": "S0482",
+   "start_seconds": 2171.75,
+   "end_seconds": 2176.75,
+   "text": "那幾點到可能投影在向量空間某一個點",
+   "source_chunk": 2,
+   "raw_text": "那幾點到可能投影在向量空間某一個點"
+  },
+  {
+   "id": "S0483",
+   "start_seconds": 2176.75,
+   "end_seconds": 2181.75,
+   "text": "那你就會去找最近的幾個投影",
+   "source_chunk": 2,
+   "raw_text": "那你就會去找最近的幾個投影"
+  },
+  {
+   "id": "S0484",
+   "start_seconds": 2181.75,
+   "end_seconds": 2185.75,
+   "text": "那這個數字我們就要K值",
+   "source_chunk": 2,
+   "raw_text": "那這個數字我們就要K值"
+  },
+  {
+   "id": "S0485",
+   "start_seconds": 2185.75,
+   "end_seconds": 2187.75,
+   "text": "那K值可以自己去設定",
+   "source_chunk": 2,
+   "raw_text": "那K值可以自己去設定"
+  },
+  {
+   "id": "S0486",
+   "start_seconds": 2187.75,
+   "end_seconds": 2191.75,
+   "text": "你可以選4或5或6",
+   "source_chunk": 2,
+   "raw_text": "你可以選4或5或6"
+  },
+  {
+   "id": "S0487",
+   "start_seconds": 2191.75,
+   "end_seconds": 2193.75,
+   "text": "你選1",
+   "source_chunk": 2,
+   "raw_text": "你選1"
+  },
+  {
+   "id": "S0488",
+   "start_seconds": 2193.75,
+   "end_seconds": 2197.75,
+   "text": "那當然你可以更精準的可能找到",
+   "source_chunk": 2,
+   "raw_text": "那當然你可以更精準的可能找到"
+  },
+  {
+   "id": "S0489",
+   "start_seconds": 2197.75,
+   "end_seconds": 2201.75,
+   "text": "跟你這個幾點要到的這個在數學表達",
+   "source_chunk": 2,
+   "raw_text": "跟你這個幾點要到的這個在數學表達"
+  },
+  {
+   "id": "S0490",
+   "start_seconds": 2201.75,
+   "end_seconds": 2205.75,
+   "text": "是不是類似或向量空間當中的點是類似",
+   "source_chunk": 2,
+   "raw_text": "是不是類似或向量空間當中的點是類似"
+  },
+  {
+   "id": "S0491",
+   "start_seconds": 2205.75,
+   "end_seconds": 2208.75,
+   "text": "的這個文具出現",
+   "source_chunk": 2,
+   "raw_text": "的這個文具出現"
+  },
+  {
+   "id": "S0492",
+   "start_seconds": 2208.75,
+   "end_seconds": 2211.75,
+   "text": "但是它不一定是答案",
+   "source_chunk": 2,
+   "raw_text": "但是它不一定是答案"
+  },
+  {
+   "id": "S0493",
+   "start_seconds": 2211.75,
+   "end_seconds": 2215.75,
+   "text": "但你把你的K拉越大的時候",
+   "source_chunk": 2,
+   "raw_text": "但你把你的K拉越大的時候"
+  },
+  {
+   "id": "S0494",
+   "start_seconds": 2215.75,
+   "end_seconds": 2218.75,
+   "text": "它就有可能會收很多",
+   "source_chunk": 2,
+   "raw_text": "它就有可能會收很多"
+  },
+  {
+   "id": "S0495",
+   "start_seconds": 2218.75,
+   "end_seconds": 2223.75,
+   "text": "跟你的提議無關的東西回來",
+   "source_chunk": 2,
+   "raw_text": "跟你的提議無關的東西回來"
+  },
+  {
+   "id": "S0496",
+   "start_seconds": 2223.75,
+   "end_seconds": 2229.75,
+   "text": "所以這裡的K也是一個很麻煩的一個參數",
+   "source_chunk": 2,
+   "raw_text": "所以這裡的K也是一個很麻煩的一個參數"
+  },
+  {
+   "id": "S0497",
+   "start_seconds": 2229.75,
+   "end_seconds": 2233.75,
+   "text": "因為你自己要決定這個K值要設多少",
+   "source_chunk": 2,
+   "raw_text": "因為你自己要決定這個K值要設多少"
+  },
+  {
+   "id": "S0498",
+   "start_seconds": 2233.75,
+   "end_seconds": 2236.75,
+   "text": "當然這個K也可以做動態的",
+   "source_chunk": 2,
+   "raw_text": "當然這個K也可以做動態的"
+  },
+  {
+   "id": "S0499",
+   "start_seconds": 2236.75,
+   "end_seconds": 2238.75,
+   "text": "你可以讓一個AI去打分數",
+   "source_chunk": 2,
+   "raw_text": "你可以讓一個AI去打分數"
+  },
+  {
+   "id": "S0500",
+   "start_seconds": 2238.75,
+   "end_seconds": 2242.75,
+   "text": "那每一次回來的K值都不太一樣",
+   "source_chunk": 2,
+   "raw_text": "那每一次回來的K值都不太一樣"
+  },
+  {
+   "id": "S0501",
+   "start_seconds": 2242.75,
+   "end_seconds": 2247.75,
+   "text": "那第二個則是假設你今天說是下雨還要去嗎",
+   "source_chunk": 2,
+   "raw_text": "那第二個則是假設你今天說是下雨還要去嗎"
+  },
+  {
+   "id": "S0502",
+   "start_seconds": 2247.75,
+   "end_seconds": 2249.75,
+   "text": "那轉成向量空間",
+   "source_chunk": 2,
+   "raw_text": "那轉成向量空間"
+  },
+  {
+   "id": "S0503",
+   "start_seconds": 2249.75,
+   "end_seconds": 2254.75,
+   "text": "那如果相關性最高三個就這三個",
+   "source_chunk": 2,
+   "raw_text": "那如果相關性最高三個就這三個"
+  },
+  {
+   "id": "S0504",
+   "start_seconds": 2254.75,
+   "end_seconds": 2257.75,
+   "text": "那當然你把它拉到4、5",
+   "source_chunk": 2,
+   "raw_text": "那當然你把它拉到4、5"
+  },
+  {
+   "id": "S0505",
+   "start_seconds": 2257.75,
+   "end_seconds": 2261.75,
+   "text": "你就會多了就是不相干的兩個句子",
+   "source_chunk": 2,
+   "raw_text": "你就會多了就是不相干的兩個句子"
+  },
+  {
+   "id": "S0506",
+   "start_seconds": 2261.75,
+   "end_seconds": 2265.75,
+   "text": "那這個避震一樣是同樣的",
+   "source_chunk": 2,
+   "raw_text": "那這個避震一樣是同樣的"
+  },
+  {
+   "id": "S0507",
+   "start_seconds": 2265.75,
+   "end_seconds": 2270.75,
+   "text": "所以這個只是一個非常簡單二維的示意圖而已",
+   "source_chunk": 2,
+   "raw_text": "所以這個只是一個非常簡單二維的示意圖而已"
+  },
+  {
+   "id": "S0508",
+   "start_seconds": 2271.75,
+   "end_seconds": 2273.75,
+   "text": "所以真實的embedding就是",
+   "source_chunk": 2,
+   "raw_text": "所以真實的embedding就是"
+  },
+  {
+   "id": "S0509",
+   "start_seconds": 2273.75,
+   "end_seconds": 2277.75,
+   "text": "可能有tax embedding、sine、small跟large",
+   "source_chunk": 2,
+   "raw_text": "可能有tax embedding、sine、small跟large"
+  },
+  {
+   "id": "S0510",
+   "start_seconds": 2277.75,
+   "end_seconds": 2281.75,
+   "text": "那這個一句話就會變成",
+   "source_chunk": 2,
+   "raw_text": "那這個一句話就會變成"
+  },
+  {
+   "id": "S0511",
+   "start_seconds": 2281.75,
+   "end_seconds": 2286.75,
+   "text": "1536個維度的一個投影",
+   "source_chunk": 2,
+   "raw_text": "1536個維度的一個投影"
+  },
+  {
+   "id": "S0512",
+   "start_seconds": 2286.75,
+   "end_seconds": 2290.75,
+   "text": "那剛用的是1024個維度",
+   "source_chunk": 2,
+   "raw_text": "那剛用的是1024個維度"
+  },
+  {
+   "id": "S0513",
+   "start_seconds": 2290.75,
+   "end_seconds": 2294.75,
+   "text": "那embedding也是需要算費用的",
+   "source_chunk": 2,
+   "raw_text": "那embedding也是需要算費用的"
+  },
+  {
+   "id": "S0514",
+   "start_seconds": 2294.75,
+   "end_seconds": 2297.75,
+   "text": "所以轉向量其實蠻便宜的",
+   "source_chunk": 2,
+   "raw_text": "所以轉向量其實蠻便宜的"
+  },
+  {
+   "id": "S0515",
+   "start_seconds": 2297.75,
+   "end_seconds": 2301.75,
+   "text": "而且所有的文件你只需要去轉一次就好了",
+   "source_chunk": 2,
+   "raw_text": "而且所有的文件你只需要去轉一次就好了"
+  },
+  {
+   "id": "S0516",
+   "start_seconds": 2301.75,
+   "end_seconds": 2305.75,
+   "text": "假設你固定邏輯你按照段落去拆分",
+   "source_chunk": 2,
+   "raw_text": "假設你固定邏輯你按照段落去拆分"
+  },
+  {
+   "id": "S0517",
+   "start_seconds": 2305.75,
+   "end_seconds": 2307.75,
+   "text": "那你有100個PDF",
+   "source_chunk": 2,
+   "raw_text": "那你有100個PDF"
+  },
+  {
+   "id": "S0518",
+   "start_seconds": 2307.75,
+   "end_seconds": 2311.75,
+   "text": "所以這100個PDF都按段落去拆分你只要轉一次",
+   "source_chunk": 2,
+   "raw_text": "所以這100個PDF都按段落去拆分你只要轉一次"
+  },
+  {
+   "id": "S0519",
+   "start_seconds": 2311.75,
+   "end_seconds": 2313.75,
+   "text": "那你後面加進來的文件",
+   "source_chunk": 2,
+   "raw_text": "那你後面加進來的文件"
+  },
+  {
+   "id": "S0520",
+   "start_seconds": 2313.75,
+   "end_seconds": 2316.75,
+   "text": "你就後面再接著去轉就好",
+   "source_chunk": 2,
+   "raw_text": "你就後面再接著去轉就好"
+  },
+  {
+   "id": "S0521",
+   "start_seconds": 2316.75,
+   "end_seconds": 2325.66,
+   "text": "所以高維度向量的點要看有多接近",
+   "source_chunk": 2,
+   "raw_text": "所以高維度向量的點要看有多接近"
+  },
+  {
+   "id": "S0522",
+   "start_seconds": 2325.66,
+   "end_seconds": 2329.66,
+   "text": "那通常他們的比較會用餘弦的相似程度",
+   "source_chunk": 2,
+   "raw_text": "那通常他們的比較會用餘弦的相似程度"
+  },
+  {
+   "id": "S0523",
+   "start_seconds": 2329.66,
+   "end_seconds": 2333.66,
+   "text": "那也就是兩個東西的夾角",
+   "source_chunk": 2,
+   "raw_text": "那也就是兩個東西的夾角"
+  },
+  {
+   "id": "S0524",
+   "start_seconds": 2333.66,
+   "end_seconds": 2340.66,
+   "text": "當然你如果是可能180的話就代表說這兩個東西的相關性是完全不一樣的",
+   "source_chunk": 2,
+   "raw_text": "當然你如果是可能180的話就代表說這兩個東西的相關性是完全不一樣的"
+  },
+  {
+   "id": "S0525",
+   "start_seconds": 2340.66,
+   "end_seconds": 2344.66,
+   "text": "那這邊只是一個很簡單的示意",
+   "source_chunk": 2,
+   "raw_text": "那這邊只是一個很簡單的示意"
+  },
+  {
+   "id": "S0526",
+   "start_seconds": 2344.66,
+   "end_seconds": 2351.2,
+   "text": "那在高維度空間裡面它其實也有方向",
+   "source_chunk": 2,
+   "raw_text": "那在高維度空間裡面它其實也有方向"
+  },
+  {
+   "id": "S0527",
+   "start_seconds": 2351.2,
+   "end_seconds": 2354.2,
+   "text": "那這個是2013年的文章",
+   "source_chunk": 2,
+   "raw_text": "那這個是2013年的文章"
+  },
+  {
+   "id": "S0528",
+   "start_seconds": 2354.2,
+   "end_seconds": 2356.2,
+   "text": "這邊文章叫walk to vector",
+   "source_chunk": 2,
+   "raw_text": "這邊文章叫walk to vector"
+  },
+  {
+   "id": "S0529",
+   "start_seconds": 2356.2,
+   "end_seconds": 2361.2,
+   "text": "是非常有名的一篇就是向量投影的這個文章",
+   "source_chunk": 2,
+   "raw_text": "是非常有名的一篇就是向量投影的這個文章"
+  },
+  {
+   "id": "S0530",
+   "start_seconds": 2361.2,
+   "end_seconds": 2363.2,
+   "text": "那可以來看一下",
+   "source_chunk": 2,
+   "raw_text": "那可以來看一下"
+  },
+  {
+   "id": "S0531",
+   "start_seconds": 2363.2,
+   "end_seconds": 2367.2,
+   "text": "在高維度空間裡面假設你是男跟女",
+   "source_chunk": 2,
+   "raw_text": "在高維度空間裡面假設你是男跟女"
+  },
+  {
+   "id": "S0532",
+   "start_seconds": 2367.2,
+   "end_seconds": 2372.2,
+   "text": "那你男到女之間就會有一個向量",
+   "source_chunk": 2,
+   "raw_text": "那你男到女之間就會有一個向量"
+  },
+  {
+   "id": "S0533",
+   "start_seconds": 2372.2,
+   "end_seconds": 2375.2,
+   "text": "那如果你是國王到皇后",
+   "source_chunk": 2,
+   "raw_text": "那如果你是國王到皇后"
+  },
+  {
+   "id": "S0534",
+   "start_seconds": 2375.2,
+   "end_seconds": 2377.2,
+   "text": "它一樣有一個向量",
+   "source_chunk": 2,
+   "raw_text": "它一樣有一個向量"
+  },
+  {
+   "id": "S0535",
+   "start_seconds": 2377.2,
+   "end_seconds": 2379.2,
+   "text": "而且男到女跟國王到皇后",
+   "source_chunk": 2,
+   "raw_text": "而且男到女跟國王到皇后"
+  },
+  {
+   "id": "S0536",
+   "start_seconds": 2379.2,
+   "end_seconds": 2384.2,
+   "text": "這個向量其實是非常非常的接近的",
+   "source_chunk": 2,
+   "raw_text": "這個向量其實是非常非常的接近的"
+  },
+  {
+   "id": "S0537",
+   "start_seconds": 2384.2,
+   "end_seconds": 2386.2,
+   "text": "所以AI就有點類似",
+   "source_chunk": 2,
+   "raw_text": "所以AI就有點類似"
+  },
+  {
+   "id": "S0538",
+   "start_seconds": 2386.2,
+   "end_seconds": 2389.2,
+   "text": "利用這種相似程度",
+   "source_chunk": 2,
+   "raw_text": "利用這種相似程度"
+  },
+  {
+   "id": "S0539",
+   "start_seconds": 2389.2,
+   "end_seconds": 2393.2,
+   "text": "它其實就可以找出它的相關性出來",
+   "source_chunk": 2,
+   "raw_text": "它其實就可以找出它的相關性出來"
+  },
+  {
+   "id": "S0540",
+   "start_seconds": 2393.2,
+   "end_seconds": 2395.2,
+   "text": "那假設你給AI一個範例",
+   "source_chunk": 2,
+   "raw_text": "那假設你給AI一個範例"
+  },
+  {
+   "id": "S0541",
+   "start_seconds": 2395.2,
+   "end_seconds": 2398.2,
+   "text": "男然後你給它一個箭號到女",
+   "source_chunk": 2,
+   "raw_text": "男然後你給它一個箭號到女"
+  },
+  {
+   "id": "S0542",
+   "start_seconds": 2398.2,
+   "end_seconds": 2400.2,
+   "text": "然後國王到什麼",
+   "source_chunk": 2,
+   "raw_text": "然後國王到什麼"
+  },
+  {
+   "id": "S0543",
+   "start_seconds": 2400.2,
+   "end_seconds": 2404.2,
+   "text": "那它其實就知道說國王就是要到皇后",
+   "source_chunk": 2,
+   "raw_text": "那它其實就知道說國王就是要到皇后"
+  },
+  {
+   "id": "S0544",
+   "start_seconds": 2404.2,
+   "end_seconds": 2409.2,
+   "text": "那原因是因為他們在向量空間的向量是非常的相似",
+   "source_chunk": 2,
+   "raw_text": "那原因是因為他們在向量空間的向量是非常的相似"
+  },
+  {
+   "id": "S0545",
+   "start_seconds": 2409.2,
+   "end_seconds": 2418.0,
+   "text": "所以一樣如果這邊你的問題是",
+   "source_chunk": 2,
+   "raw_text": "所以一樣如果這邊你的問題是"
+  },
+  {
+   "id": "S0546",
+   "start_seconds": 2418.0,
+   "end_seconds": 2421.0,
+   "text": "when do we go to the moon",
+   "source_chunk": 2,
+   "raw_text": "when do we go to the moon"
+  },
+  {
+   "id": "S0547",
+   "start_seconds": 2421.0,
+   "end_seconds": 2427.0,
+   "text": "那這個東西整個會被轉成向量空間裡面的一個投影",
+   "source_chunk": 2,
+   "raw_text": "那這個東西整個會被轉成向量空間裡面的一個投影"
+  },
+  {
+   "id": "S0548",
+   "start_seconds": 2427.0,
+   "end_seconds": 2433.0,
+   "text": "那比對方面有關鍵字比對或者是餘意比對",
+   "source_chunk": 2,
+   "raw_text": "那比對方面有關鍵字比對或者是餘意比對"
+  },
+  {
+   "id": "S0549",
+   "start_seconds": 2433.0,
+   "end_seconds": 2436.0,
+   "text": "那我們這邊如果看餘意比對的話",
+   "source_chunk": 2,
+   "raw_text": "那我們這邊如果看餘意比對的話"
+  },
+  {
+   "id": "S0550",
+   "start_seconds": 2436.0,
+   "end_seconds": 2438.0,
+   "text": "就是餘意比對其實就是模糊比對",
+   "source_chunk": 2,
+   "raw_text": "就是餘意比對其實就是模糊比對"
+  },
+  {
+   "id": "S0551",
+   "start_seconds": 2438.0,
+   "end_seconds": 2440.0,
+   "text": "這個後面就會說",
+   "source_chunk": 2,
+   "raw_text": "這個後面就會說"
+  },
+  {
+   "id": "S0552",
+   "start_seconds": 2440.0,
+   "end_seconds": 2445.0,
+   "text": "那你就有可能去把最正確的句子給找出來",
+   "source_chunk": 2,
+   "raw_text": "那你就有可能去把最正確的句子給找出來"
+  },
+  {
+   "id": "S0553",
+   "start_seconds": 2445.0,
+   "end_seconds": 2448.0,
+   "text": "那如果你是用關鍵字比對的話",
+   "source_chunk": 2,
+   "raw_text": "那如果你是用關鍵字比對的話"
+  },
+  {
+   "id": "S0554",
+   "start_seconds": 2448.0,
+   "end_seconds": 2453.0,
+   "text": "它就會去把這個句子裡面給拆分掉",
+   "source_chunk": 2,
+   "raw_text": "它就會去把這個句子裡面給拆分掉"
+  },
+  {
+   "id": "S0555",
+   "start_seconds": 2453.0,
+   "end_seconds": 2455.0,
+   "text": "那拆分裡面呢",
+   "source_chunk": 2,
+   "raw_text": "那拆分裡面呢"
+  },
+  {
+   "id": "S0556",
+   "start_seconds": 2455.0,
+   "end_seconds": 2460.0,
+   "text": "權重最高的就是相對比較稀有的字",
+   "source_chunk": 2,
+   "raw_text": "權重最高的就是相對比較稀有的字"
+  },
+  {
+   "id": "S0557",
+   "start_seconds": 2460.0,
+   "end_seconds": 2462.0,
+   "text": "所以when do we go to the",
+   "source_chunk": 2,
+   "raw_text": "所以when do we go to the"
+  },
+  {
+   "id": "S0558",
+   "start_seconds": 2462.0,
+   "end_seconds": 2465.0,
+   "text": "這些都是非常常見的英文的字",
+   "source_chunk": 2,
+   "raw_text": "這些都是非常常見的英文的字"
+  },
+  {
+   "id": "S0559",
+   "start_seconds": 2465.0,
+   "end_seconds": 2468.0,
+   "text": "那所以裡面最稀有的可能就是moon",
+   "source_chunk": 2,
+   "raw_text": "那所以裡面最稀有的可能就是moon"
+  },
+  {
+   "id": "S0560",
+   "start_seconds": 2468.0,
+   "end_seconds": 2471.0,
+   "text": "所以moon這個字它的權重就比較高",
+   "source_chunk": 2,
+   "raw_text": "所以moon這個字它的權重就比較高"
+  },
+  {
+   "id": "S0561",
+   "start_seconds": 2471.0,
+   "end_seconds": 2474.0,
+   "text": "所以你如果用moon去做搜尋的話",
+   "source_chunk": 2,
+   "raw_text": "所以你如果用moon去做搜尋的話"
+  },
+  {
+   "id": "S0562",
+   "start_seconds": 2474.0,
+   "end_seconds": 2479.0,
+   "text": "你就會發現說你找到的是月餅mooncake的這一句",
+   "source_chunk": 2,
+   "raw_text": "你就會發現說你找到的是月餅mooncake的這一句"
+  },
+  {
+   "id": "S0563",
+   "start_seconds": 2479.0,
+   "end_seconds": 2484.0,
+   "text": "所以它在關鍵字比對的分數就會比較高一點",
+   "source_chunk": 2,
+   "raw_text": "所以它在關鍵字比對的分數就會比較高一點"
+  },
+  {
+   "id": "S0564",
+   "start_seconds": 2484.0,
+   "end_seconds": 2487.0,
+   "text": "但這一句是不是你要的這一句不是",
+   "source_chunk": 2,
+   "raw_text": "但這一句是不是你要的這一句不是"
+  },
+  {
+   "id": "S0565",
+   "start_seconds": 2487.0,
+   "end_seconds": 2492.0,
+   "text": "所以在搜尋上也會有兩個很重要的",
+   "source_chunk": 2,
+   "raw_text": "所以在搜尋上也會有兩個很重要的"
+  },
+  {
+   "id": "S0566",
+   "start_seconds": 2492.0,
+   "end_seconds": 2494.0,
+   "text": "就是第一個則是關鍵字",
+   "source_chunk": 2,
+   "raw_text": "就是第一個則是關鍵字"
+  },
+  {
+   "id": "S0567",
+   "start_seconds": 2494.0,
+   "end_seconds": 2497.0,
+   "text": "第二個則是餘意",
+   "source_chunk": 2,
+   "raw_text": "第二個則是餘意"
+  },
+  {
+   "id": "S0568",
+   "start_seconds": 2497.0,
+   "end_seconds": 2500.0,
+   "text": "有時候你關鍵字對了你的餘意不見得對",
+   "source_chunk": 2,
+   "raw_text": "有時候你關鍵字對了你的餘意不見得對"
+  },
+  {
+   "id": "S0569",
+   "start_seconds": 2500.0,
+   "end_seconds": 2503.0,
+   "text": "有時候你的餘意對了你的關鍵字不見得對",
+   "source_chunk": 2,
+   "raw_text": "有時候你的餘意對了你的關鍵字不見得對"
+  },
+  {
+   "id": "S0570",
+   "start_seconds": 2503.0,
+   "end_seconds": 2507.0,
+   "text": "所以這是rag非常麻煩的一個地方",
+   "source_chunk": 2,
+   "raw_text": "所以這是rag非常麻煩的一個地方"
+  },
+  {
+   "id": "S0571",
+   "start_seconds": 2507.0,
+   "end_seconds": 2512.0,
+   "text": "就是要找回真的答案其實非常非常的難做",
+   "source_chunk": 2,
+   "raw_text": "就是要找回真的答案其實非常非常的難做"
+  },
+  {
+   "id": "S0572",
+   "start_seconds": 2512.0,
+   "end_seconds": 2519.04,
+   "text": "那為什麼我們需要模糊搜尋",
+   "source_chunk": 2,
+   "raw_text": "那為什麼我們需要模糊搜尋"
+  },
+  {
+   "id": "S0573",
+   "start_seconds": 2519.04,
+   "end_seconds": 2523.04,
+   "text": "因為如果你問的是山崩要注意什麼",
+   "source_chunk": 2,
+   "raw_text": "因為如果你問的是山崩要注意什麼"
+  },
+  {
+   "id": "S0574",
+   "start_seconds": 2523.04,
+   "end_seconds": 2527.04,
+   "text": "你如果用關鍵字你會發現說你一個都找不到",
+   "source_chunk": 2,
+   "raw_text": "你如果用關鍵字你會發現說你一個都找不到"
+  },
+  {
+   "id": "S0575",
+   "start_seconds": 2527.04,
+   "end_seconds": 2530.04,
+   "text": "原因是因為你的關鍵字就是山崩",
+   "source_chunk": 2,
+   "raw_text": "原因是因為你的關鍵字就是山崩"
+  },
+  {
+   "id": "S0576",
+   "start_seconds": 2530.04,
+   "end_seconds": 2532.04,
+   "text": "但山崩有可能叫滑坡",
+   "source_chunk": 2,
+   "raw_text": "但山崩有可能叫滑坡"
+  },
+  {
+   "id": "S0577",
+   "start_seconds": 2532.04,
+   "end_seconds": 2534.04,
+   "text": "有可能叫length slide",
+   "source_chunk": 2,
+   "raw_text": "有可能叫length slide"
+  },
+  {
+   "id": "S0578",
+   "start_seconds": 2534.04,
+   "end_seconds": 2535.04,
+   "text": "有點叫攤方",
+   "source_chunk": 2,
+   "raw_text": "有點叫攤方"
+  },
+  {
+   "id": "S0579",
+   "start_seconds": 2535.04,
+   "end_seconds": 2539.04,
+   "text": "那有一些如果你沒有定義的非常的清楚",
+   "source_chunk": 2,
+   "raw_text": "那有一些如果你沒有定義的非常的清楚"
+  },
+  {
+   "id": "S0580",
+   "start_seconds": 2539.04,
+   "end_seconds": 2543.04,
+   "text": "那有可能民眾也會覺得說這個可能就是土石流",
+   "source_chunk": 2,
+   "raw_text": "那有可能民眾也會覺得說這個可能就是土石流"
+  },
+  {
+   "id": "S0581",
+   "start_seconds": 2543.04,
+   "end_seconds": 2548.04,
+   "text": "所以你用山崩你不見得找到你要的細節",
+   "source_chunk": 2,
+   "raw_text": "所以你用山崩你不見得找到你要的細節"
+  },
+  {
+   "id": "S0582",
+   "start_seconds": 2548.04,
+   "end_seconds": 2551.04,
+   "text": "但如果你用餘意搜尋的話",
+   "source_chunk": 2,
+   "raw_text": "但如果你用餘意搜尋的話"
+  },
+  {
+   "id": "S0583",
+   "start_seconds": 2551.04,
+   "end_seconds": 2555.04,
+   "text": "就是它有可能會出現攤方",
+   "source_chunk": 2,
+   "raw_text": "就是它有可能會出現攤方"
+  },
+  {
+   "id": "S0584",
+   "start_seconds": 2555.04,
+   "end_seconds": 2557.04,
+   "text": "那為什麼會出現地震",
+   "source_chunk": 2,
+   "raw_text": "那為什麼會出現地震"
+  },
+  {
+   "id": "S0585",
+   "start_seconds": 2557.04,
+   "end_seconds": 2561.04,
+   "text": "因為在餘意裡面呢山崩像是災害",
+   "source_chunk": 2,
+   "raw_text": "因為在餘意裡面呢山崩像是災害"
+  },
+  {
+   "id": "S0586",
+   "start_seconds": 2562.04,
+   "end_seconds": 2565.04,
+   "text": "地震也跟災害是有關係的",
+   "source_chunk": 2,
+   "raw_text": "地震也跟災害是有關係的"
+  },
+  {
+   "id": "S0587",
+   "start_seconds": 2565.04,
+   "end_seconds": 2567.04,
+   "text": "所以這兩個其實它都有點像是",
+   "source_chunk": 2,
+   "raw_text": "所以這兩個其實它都有點像是"
+  },
+  {
+   "id": "S0588",
+   "start_seconds": 2567.04,
+   "end_seconds": 2571.04,
+   "text": "跟災害的向量空間會非常的近",
+   "source_chunk": 2,
+   "raw_text": "跟災害的向量空間會非常的近"
+  },
+  {
+   "id": "S0589",
+   "start_seconds": 2571.04,
+   "end_seconds": 2574.04,
+   "text": "所以你返回來的可能就會有",
+   "source_chunk": 2,
+   "raw_text": "所以你返回來的可能就會有"
+  },
+  {
+   "id": "S0590",
+   "start_seconds": 2574.04,
+   "end_seconds": 2577.04,
+   "text": "前幾名就會有地震的這個",
+   "source_chunk": 2,
+   "raw_text": "前幾名就會有地震的這個"
+  },
+  {
+   "id": "S0591",
+   "start_seconds": 2577.04,
+   "end_seconds": 2578.04,
+   "text": "但這個就不是你要的",
+   "source_chunk": 2,
+   "raw_text": "但這個就不是你要的"
+  },
+  {
+   "id": "S0592",
+   "start_seconds": 2578.04,
+   "end_seconds": 2580.04,
+   "text": "那第三個滑坡",
+   "source_chunk": 2,
+   "raw_text": "那第三個滑坡"
+  },
+  {
+   "id": "S0593",
+   "start_seconds": 2580.04,
+   "end_seconds": 2582.04,
+   "text": "然後土石流",
+   "source_chunk": 2,
+   "raw_text": "然後土石流"
+  },
+  {
+   "id": "S0594",
+   "start_seconds": 2582.04,
+   "end_seconds": 2584.04,
+   "text": "然後包括這種蛋糕這種",
+   "source_chunk": 2,
+   "raw_text": "然後包括這種蛋糕這種"
+  },
+  {
+   "id": "S0595",
+   "start_seconds": 2584.04,
+   "end_seconds": 2587.04,
+   "text": "也會進餘意搜尋",
+   "source_chunk": 2,
+   "raw_text": "也會進餘意搜尋"
+  },
+  {
+   "id": "S0596",
+   "start_seconds": 2587.04,
+   "end_seconds": 2588.04,
+   "text": "那為什麼呢",
+   "source_chunk": 2,
+   "raw_text": "那為什麼呢"
+  },
+  {
+   "id": "S0597",
+   "start_seconds": 2588.04,
+   "end_seconds": 2590.04,
+   "text": "這個有時候沒有理由",
+   "source_chunk": 2,
+   "raw_text": "這個有時候沒有理由"
+  },
+  {
+   "id": "S0598",
+   "start_seconds": 2590.04,
+   "end_seconds": 2592.04,
+   "text": "原因就是因為你投影過去之後",
+   "source_chunk": 2,
+   "raw_text": "原因就是因為你投影過去之後"
+  },
+  {
+   "id": "S0599",
+   "start_seconds": 2592.04,
+   "end_seconds": 2596.04,
+   "text": "它在向量空間當中的點很接近",
+   "source_chunk": 2,
+   "raw_text": "它在向量空間當中的點很接近"
+  },
+  {
+   "id": "S0600",
+   "start_seconds": 2596.04,
+   "end_seconds": 2600.04,
+   "text": "所以才會回過頭來去說",
+   "source_chunk": 2,
+   "raw_text": "所以才會回過頭來去說"
+  },
+  {
+   "id": "S0601",
+   "start_seconds": 2600.04,
+   "end_seconds": 2603.04,
+   "text": "如果你的資料庫是做山崩",
+   "source_chunk": 2,
+   "raw_text": "如果你的資料庫是做山崩"
+  },
+  {
+   "id": "S0602",
+   "start_seconds": 2603.04,
+   "end_seconds": 2607.04,
+   "text": "那你就要把非山崩的東西全部都給拿掉",
+   "source_chunk": 2,
+   "raw_text": "那你就要把非山崩的東西全部都給拿掉"
+  },
+  {
+   "id": "S0603",
+   "start_seconds": 2607.04,
+   "end_seconds": 2609.04,
+   "text": "像地震這個",
+   "source_chunk": 2,
+   "raw_text": "像地震這個"
+  },
+  {
+   "id": "S0604",
+   "start_seconds": 2609.04,
+   "end_seconds": 2612.04,
+   "text": "那你可能地震只保留同陣山崩",
+   "source_chunk": 2,
+   "raw_text": "那你可能地震只保留同陣山崩"
+  },
+  {
+   "id": "S0605",
+   "start_seconds": 2612.04,
+   "end_seconds": 2615.04,
+   "text": "像蛋糕這個完全沒有關係的",
+   "source_chunk": 2,
+   "raw_text": "像蛋糕這個完全沒有關係的",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0606",
+   "start_seconds": 2615.04,
+   "end_seconds": 2619.04,
+   "text": "這個就要從資料庫裡面去把它剔除掉",
+   "source_chunk": 2,
+   "raw_text": "這個就要從資料庫裡面去把它剔除掉",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0607",
+   "start_seconds": 2619.04,
+   "end_seconds": 2621.04,
+   "text": "那可能最相關的這種",
+   "source_chunk": 2,
+   "raw_text": "那可能最相關的這種",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0608",
+   "start_seconds": 2621.04,
+   "end_seconds": 2623.04,
+   "text": "Landslide risk is high",
+   "source_chunk": 2,
+   "raw_text": "Landslide risk is high",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0609",
+   "start_seconds": 2623.04,
+   "end_seconds": 2624.04,
+   "text": "Now fall什麼什麼什麼",
+   "source_chunk": 2,
+   "raw_text": "Now fall什麼什麼什麼",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0610",
+   "start_seconds": 2624.04,
+   "end_seconds": 2627.04,
+   "text": "這個有可能就是會在餘意搜尋上",
+   "source_chunk": 2,
+   "raw_text": "這個有可能就是會在餘意搜尋上",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0611",
+   "start_seconds": 2627.04,
+   "end_seconds": 2632.37,
+   "text": "就會去排最後一名",
+   "source_chunk": 2,
+   "raw_text": "就會去排最後一名",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0612",
+   "start_seconds": 2632.37,
+   "end_seconds": 2635.37,
+   "text": "所以這個剛才有說過就是",
+   "source_chunk": 2,
+   "raw_text": "所以這個剛才有說過就是",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0613",
+   "start_seconds": 2635.37,
+   "end_seconds": 2639.37,
+   "text": "文字它會轉成一段向量",
+   "source_chunk": 2,
+   "raw_text": "文字它會轉成一段向量",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0614",
+   "start_seconds": 2609.75,
+   "end_seconds": 2612.11,
+   "text": "保留銅鎮山崩",
+   "source_chunk": 3,
+   "raw_text": "保留銅鎮山崩"
+  },
+  {
+   "id": "S0615",
+   "start_seconds": 2614.71,
+   "end_seconds": 2616.79,
+   "text": "這個就要從資料庫裡面呢",
+   "source_chunk": 3,
+   "raw_text": "這個就要從資料庫裡面呢"
+  },
+  {
+   "id": "S0616",
+   "start_seconds": 2616.79,
+   "end_seconds": 2619.31,
+   "text": "去把它剔除掉",
+   "source_chunk": 3,
+   "raw_text": "去把它剔除掉"
+  },
+  {
+   "id": "S0617",
+   "start_seconds": 2621.51,
+   "end_seconds": 2622.95,
+   "text": "Landsatrix is high",
+   "source_chunk": 3,
+   "raw_text": "Landsatrix is high"
+  },
+  {
+   "id": "S0618",
+   "start_seconds": 2622.95,
+   "end_seconds": 2624.11,
+   "text": "然後for什麼什麼",
+   "source_chunk": 3,
+   "raw_text": "然後for什麼什麼"
+  },
+  {
+   "id": "S0619",
+   "start_seconds": 2624.11,
+   "end_seconds": 2627.05,
+   "text": "這個有可能就是會在語意搜尋上",
+   "source_chunk": 3,
+   "raw_text": "這個有可能就是會在語意搜尋上"
+  },
+  {
+   "id": "S0620",
+   "start_seconds": 2632.18,
+   "end_seconds": 2633.08,
+   "text": "所以這個呢",
+   "source_chunk": 3,
+   "raw_text": "所以這個呢"
+  },
+  {
+   "id": "S0621",
+   "start_seconds": 2633.08,
+   "end_seconds": 2635.88,
+   "text": "剛才有說過就是文字呢",
+   "source_chunk": 3,
+   "raw_text": "剛才有說過就是文字呢"
+  },
+  {
+   "id": "S0622",
+   "start_seconds": 2635.88,
+   "end_seconds": 2638.94,
+   "text": "它會轉成一段項量",
+   "source_chunk": 3,
+   "raw_text": "它會轉成一段項量"
+  },
+  {
+   "id": "S0623",
+   "start_seconds": 2638.94,
+   "end_seconds": 2641.58,
+   "text": "那在這個項量裡面呢",
+   "source_chunk": 3,
+   "raw_text": "那在這個項量裡面呢"
+  },
+  {
+   "id": "S0624",
+   "start_seconds": 2641.58,
+   "end_seconds": 2643.94,
+   "text": "你可以去綁它的metadata",
+   "source_chunk": 3,
+   "raw_text": "你可以去綁它的metadata"
+  },
+  {
+   "id": "S0625",
+   "start_seconds": 2643.94,
+   "end_seconds": 2645.08,
+   "text": "這個metadata呢",
+   "source_chunk": 3,
+   "raw_text": "這個metadata呢"
+  },
+  {
+   "id": "S0626",
+   "start_seconds": 2645.08,
+   "end_seconds": 2646.58,
+   "text": "可能是它的檔名",
+   "source_chunk": 3,
+   "raw_text": "可能是它的檔名"
+  },
+  {
+   "id": "S0627",
+   "start_seconds": 2646.58,
+   "end_seconds": 2648.18,
+   "text": "可能是它的日期",
+   "source_chunk": 3,
+   "raw_text": "可能是它的日期"
+  },
+  {
+   "id": "S0628",
+   "start_seconds": 2648.18,
+   "end_seconds": 2649.82,
+   "text": "或是可能是它",
+   "source_chunk": 3,
+   "raw_text": "或是可能是它"
+  },
+  {
+   "id": "S0629",
+   "start_seconds": 2649.82,
+   "end_seconds": 2654.34,
+   "text": "whatever需要的這種資訊都可以",
+   "source_chunk": 3,
+   "raw_text": "whatever需要的這種資訊都可以"
+  },
+  {
+   "id": "S0630",
+   "start_seconds": 2654.34,
+   "end_seconds": 2655.78,
+   "text": "所以這三個呢",
+   "source_chunk": 3,
+   "raw_text": "所以這三個呢"
+  },
+  {
+   "id": "S0631",
+   "start_seconds": 2655.78,
+   "end_seconds": 2658.34,
+   "text": "它是可以被綁在一起的",
+   "source_chunk": 3,
+   "raw_text": "它是可以被綁在一起的"
+  },
+  {
+   "id": "S0632",
+   "start_seconds": 2658.34,
+   "end_seconds": 2660.02,
+   "text": "那綁在一起之後呢",
+   "source_chunk": 3,
+   "raw_text": "那綁在一起之後呢"
+  },
+  {
+   "id": "S0633",
+   "start_seconds": 2660.02,
+   "end_seconds": 2661.58,
+   "text": "他們都會存進這個",
+   "source_chunk": 3,
+   "raw_text": "他們都會存進這個"
+  },
+  {
+   "id": "S0634",
+   "start_seconds": 2661.58,
+   "end_seconds": 2667.15,
+   "text": "項量資料庫裡面",
+   "source_chunk": 3,
+   "raw_text": "項量資料庫裡面"
+  },
+  {
+   "id": "S0635",
+   "start_seconds": 2667.15,
+   "end_seconds": 2670.51,
+   "text": "所以這邊有一個簡單的連連看",
+   "source_chunk": 3,
+   "raw_text": "所以這邊有一個簡單的連連看"
+  },
+  {
+   "id": "S0636",
+   "start_seconds": 2670.51,
+   "end_seconds": 2671.85,
+   "text": "那這個就是",
+   "source_chunk": 3,
+   "raw_text": "那這個就是"
+  },
+  {
+   "id": "S0637",
+   "start_seconds": 2671.85,
+   "end_seconds": 2674.75,
+   "text": "後續呢大家反正同一篇就是有放上來",
+   "source_chunk": 3,
+   "raw_text": "後續呢大家反正同一篇就是有放上來"
+  },
+  {
+   "id": "S0638",
+   "start_seconds": 2674.75,
+   "end_seconds": 2676.21,
+   "text": "所以大家都可以",
+   "source_chunk": 3,
+   "raw_text": "所以大家都可以"
+  },
+  {
+   "id": "S0639",
+   "start_seconds": 2676.21,
+   "end_seconds": 2681.01,
+   "text": "稍微的去玩看看",
+   "source_chunk": 3,
+   "raw_text": "稍微的去玩看看"
+  },
+  {
+   "id": "S0640",
+   "start_seconds": 2681.01,
+   "end_seconds": 2683.23,
+   "text": "接下來則是到了搜尋",
+   "source_chunk": 3,
+   "raw_text": "接下來則是到了搜尋"
+  },
+  {
+   "id": "S0641",
+   "start_seconds": 2683.23,
+   "end_seconds": 2685.17,
+   "text": "所以搜尋就是跟剛說的",
+   "source_chunk": 3,
+   "raw_text": "所以搜尋就是跟剛說的"
+  },
+  {
+   "id": "S0642",
+   "start_seconds": 2685.17,
+   "end_seconds": 2687.83,
+   "text": "問題也會轉成項量",
+   "source_chunk": 3,
+   "raw_text": "問題也會轉成項量"
+  },
+  {
+   "id": "S0643",
+   "start_seconds": 2687.83,
+   "end_seconds": 2689.21,
+   "text": "所以問題轉成項量呢",
+   "source_chunk": 3,
+   "raw_text": "所以問題轉成項量呢"
+  },
+  {
+   "id": "S0644",
+   "start_seconds": 2689.21,
+   "end_seconds": 2691.33,
+   "text": "它用的呢是要使同一個模型",
+   "source_chunk": 3,
+   "raw_text": "它用的呢是要使同一個模型"
+  },
+  {
+   "id": "S0645",
+   "start_seconds": 2691.33,
+   "end_seconds": 2693.91,
+   "text": "你絕對不能給它用不同的模型",
+   "source_chunk": 3,
+   "raw_text": "你絕對不能給它用不同的模型"
+  },
+  {
+   "id": "S0646",
+   "start_seconds": 2693.91,
+   "end_seconds": 2694.93,
+   "text": "因為你用不同的模型",
+   "source_chunk": 3,
+   "raw_text": "因為你用不同的模型"
+  },
+  {
+   "id": "S0647",
+   "start_seconds": 2694.93,
+   "end_seconds": 2696.93,
+   "text": "它其實就會沒辦法搜索",
+   "source_chunk": 3,
+   "raw_text": "它其實就會沒辦法搜索"
+  },
+  {
+   "id": "S0648",
+   "start_seconds": 2696.93,
+   "end_seconds": 2701.07,
+   "text": "所以RAG第二個非常難做的",
+   "source_chunk": 3,
+   "raw_text": "所以RAG第二個非常難做的"
+  },
+  {
+   "id": "S0649",
+   "start_seconds": 2701.07,
+   "end_seconds": 2704.37,
+   "text": "就是你沒有辦法去預測使用者",
+   "source_chunk": 3,
+   "raw_text": "就是你沒有辦法去預測使用者"
+  },
+  {
+   "id": "S0650",
+   "start_seconds": 2704.37,
+   "end_seconds": 2708.21,
+   "text": "要用什麼樣的方法去問問題",
+   "source_chunk": 3,
+   "raw_text": "要用什麼樣的方法去問問題"
+  },
+  {
+   "id": "S0651",
+   "start_seconds": 2708.21,
+   "end_seconds": 2710.13,
+   "text": "因為絕大多數的人",
+   "source_chunk": 3,
+   "raw_text": "因為絕大多數的人"
+  },
+  {
+   "id": "S0652",
+   "start_seconds": 2710.13,
+   "end_seconds": 2713.13,
+   "text": "他其實不太會問問題",
+   "source_chunk": 3,
+   "raw_text": "他其實不太會問問題"
+  },
+  {
+   "id": "S0653",
+   "start_seconds": 2713.13,
+   "end_seconds": 2714.93,
+   "text": "所以這個蠻重要的",
+   "source_chunk": 3,
+   "raw_text": "所以這個蠻重要的"
+  },
+  {
+   "id": "S0654",
+   "start_seconds": 2714.93,
+   "end_seconds": 2717.33,
+   "text": "就是大家都是用自己的經驗",
+   "source_chunk": 3,
+   "raw_text": "就是大家都是用自己的經驗"
+  },
+  {
+   "id": "S0655",
+   "start_seconds": 2717.33,
+   "end_seconds": 2719.13,
+   "text": "然後非常通靈的方式",
+   "source_chunk": 3,
+   "raw_text": "然後非常通靈的方式"
+  },
+  {
+   "id": "S0656",
+   "start_seconds": 2719.13,
+   "end_seconds": 2720.83,
+   "text": "來去問一個問題",
+   "source_chunk": 3,
+   "raw_text": "來去問一個問題"
+  },
+  {
+   "id": "S0657",
+   "start_seconds": 2720.83,
+   "end_seconds": 2723.93,
+   "text": "但你的問題會被轉成項量",
+   "source_chunk": 3,
+   "raw_text": "但你的問題會被轉成項量"
+  },
+  {
+   "id": "S0658",
+   "start_seconds": 2723.93,
+   "end_seconds": 2726.13,
+   "text": "然後投影到項量空間裡面",
+   "source_chunk": 3,
+   "raw_text": "然後投影到項量空間裡面"
+  },
+  {
+   "id": "S0659",
+   "start_seconds": 2726.13,
+   "end_seconds": 2727.73,
+   "text": "再去把答案找回來",
+   "source_chunk": 3,
+   "raw_text": "再去把答案找回來"
+  },
+  {
+   "id": "S0660",
+   "start_seconds": 2727.73,
+   "end_seconds": 2729.53,
+   "text": "所以問題其實也是",
+   "source_chunk": 3,
+   "raw_text": "所以問題其實也是"
+  },
+  {
+   "id": "S0661",
+   "start_seconds": 2729.53,
+   "end_seconds": 2731.73,
+   "text": "整個資料的一環",
+   "source_chunk": 3,
+   "raw_text": "整個資料的一環"
+  },
+  {
+   "id": "S0662",
+   "start_seconds": 2731.73,
+   "end_seconds": 2733.13,
+   "text": "所以問題問得不好",
+   "source_chunk": 3,
+   "raw_text": "所以問題問得不好"
+  },
+  {
+   "id": "S0663",
+   "start_seconds": 2733.13,
+   "end_seconds": 2734.73,
+   "text": "你根本就找不到答案",
+   "source_chunk": 3,
+   "raw_text": "你根本就找不到答案"
+  },
+  {
+   "id": "S0664",
+   "start_seconds": 2734.73,
+   "end_seconds": 2743.41,
+   "text": "那或者是你會找到一個完全錯的答案",
+   "source_chunk": 3,
+   "raw_text": "那或者是你會找到一個完全錯的答案"
+  },
+  {
+   "id": "S0665",
+   "start_seconds": 2743.41,
+   "end_seconds": 2746.27,
+   "text": "那這邊呢就是Top K",
+   "source_chunk": 3,
+   "raw_text": "那這邊呢就是Top K"
+  },
+  {
+   "id": "S0666",
+   "start_seconds": 2746.27,
+   "end_seconds": 2749.37,
+   "text": "就是我們剛說的K值",
+   "source_chunk": 3,
+   "raw_text": "就是我們剛說的K值"
+  },
+  {
+   "id": "S0667",
+   "start_seconds": 2749.37,
+   "end_seconds": 2750.51,
+   "text": "對如果有印象的話",
+   "source_chunk": 3,
+   "raw_text": "對如果有印象的話"
+  },
+  {
+   "id": "S0668",
+   "start_seconds": 2750.51,
+   "end_seconds": 2753.77,
+   "text": "在Transformer裡面呢也會有一個Top K",
+   "source_chunk": 3,
+   "raw_text": "在Transformer裡面呢也會有一個Top K"
+  },
+  {
+   "id": "S0669",
+   "start_seconds": 2753.77,
+   "end_seconds": 2756.71,
+   "text": "這其實跟Transformer那個Top K的概念呢",
+   "source_chunk": 3,
+   "raw_text": "這其實跟Transformer那個Top K的概念呢"
+  },
+  {
+   "id": "S0670",
+   "start_seconds": 2756.71,
+   "end_seconds": 2757.37,
+   "text": "是類似的",
+   "source_chunk": 3,
+   "raw_text": "是類似的"
+  },
+  {
+   "id": "S0671",
+   "start_seconds": 2757.37,
+   "end_seconds": 2759.93,
+   "text": "就是你到底要找回幾個",
+   "source_chunk": 3,
+   "raw_text": "就是你到底要找回幾個"
+  },
+  {
+   "id": "S0672",
+   "start_seconds": 2759.93,
+   "end_seconds": 2761.57,
+   "text": "答案的選項回來",
+   "source_chunk": 3,
+   "raw_text": "答案的選項回來"
+  },
+  {
+   "id": "S0673",
+   "start_seconds": 2761.57,
+   "end_seconds": 2764.43,
+   "text": "所以如果你找六個的話",
+   "source_chunk": 3,
+   "raw_text": "所以如果你找六個的話"
+  },
+  {
+   "id": "S0674",
+   "start_seconds": 2764.47,
+   "end_seconds": 2768.39,
+   "text": "那你的問題可能是星期六幾點要到",
+   "source_chunk": 3,
+   "raw_text": "那你的問題可能是星期六幾點要到"
+  },
+  {
+   "id": "S0675",
+   "start_seconds": 2768.39,
+   "end_seconds": 2770.23,
+   "text": "然後你找回來六個",
+   "source_chunk": 3,
+   "raw_text": "然後你找回來六個"
+  },
+  {
+   "id": "S0676",
+   "start_seconds": 2770.23,
+   "end_seconds": 2770.83,
+   "text": "第一個呢",
+   "source_chunk": 3,
+   "raw_text": "第一個呢"
+  },
+  {
+   "id": "S0677",
+   "start_seconds": 2770.83,
+   "end_seconds": 2773.69,
+   "text": "可能是出現在2026年的準則",
+   "source_chunk": 3,
+   "raw_text": "可能是出現在2026年的準則"
+  },
+  {
+   "id": "S0678",
+   "start_seconds": 2773.69,
+   "end_seconds": 2776.29,
+   "text": "那這個才是你需要的",
+   "source_chunk": 3,
+   "raw_text": "那這個才是你需要的"
+  },
+  {
+   "id": "S0679",
+   "start_seconds": 2776.29,
+   "end_seconds": 2777.17,
+   "text": "那第二個呢",
+   "source_chunk": 3,
+   "raw_text": "那第二個呢"
+  },
+  {
+   "id": "S0680",
+   "start_seconds": 2777.17,
+   "end_seconds": 2781.63,
+   "text": "可能就會混到2025年的準則",
+   "source_chunk": 3,
+   "raw_text": "可能就會混到2025年的準則"
+  },
+  {
+   "id": "S0681",
+   "start_seconds": 2781.63,
+   "end_seconds": 2784.93,
+   "text": "那2025年呢就不見得是你需要的",
+   "source_chunk": 3,
+   "raw_text": "那2025年呢就不見得是你需要的"
+  },
+  {
+   "id": "S0682",
+   "start_seconds": 2784.93,
+   "end_seconds": 2786.29,
+   "text": "但答案最後呢",
+   "source_chunk": 3,
+   "raw_text": "但答案最後呢"
+  },
+  {
+   "id": "S0683",
+   "start_seconds": 2786.29,
+   "end_seconds": 2790.39,
+   "text": "就可能有點在7點30到8點之間",
+   "source_chunk": 3,
+   "raw_text": "就可能有點在7點30到8點之間"
+  },
+  {
+   "id": "S0684",
+   "start_seconds": 2790.39,
+   "end_seconds": 2792.13,
+   "text": "可能用甩甩子的方式",
+   "source_chunk": 3,
+   "raw_text": "可能用甩甩子的方式"
+  },
+  {
+   "id": "S0685",
+   "start_seconds": 2792.13,
+   "end_seconds": 2795.73,
+   "text": "因為記得LM的生成它是機率式的",
+   "source_chunk": 3,
+   "raw_text": "因為記得LM的生成它是機率式的"
+  },
+  {
+   "id": "S0686",
+   "start_seconds": 2795.73,
+   "end_seconds": 2798.77,
+   "text": "所以它就有可能會反反給你錯的答案",
+   "source_chunk": 3,
+   "raw_text": "所以它就有可能會反反給你錯的答案"
+  },
+  {
+   "id": "S0687",
+   "start_seconds": 2798.77,
+   "end_seconds": 2803.13,
+   "text": "所以不是有REG就代表你百分百沒有問題",
+   "source_chunk": 3,
+   "raw_text": "所以不是有REG就代表你百分百沒有問題"
+  },
+  {
+   "id": "S0688",
+   "start_seconds": 2803.13,
+   "end_seconds": 2808.99,
+   "text": "那有REG呢還要回來看你的資料庫本身",
+   "source_chunk": 3,
+   "raw_text": "那有REG呢還要回來看你的資料庫本身"
+  },
+  {
+   "id": "S0689",
+   "start_seconds": 2808.99,
+   "end_seconds": 2811.35,
+   "text": "所以K要設多少呢",
+   "source_chunk": 3,
+   "raw_text": "所以K要設多少呢"
+  },
+  {
+   "id": "S0690",
+   "start_seconds": 2811.35,
+   "end_seconds": 2813.49,
+   "text": "這個很不好回答",
+   "source_chunk": 3,
+   "raw_text": "這個很不好回答"
+  },
+  {
+   "id": "S0691",
+   "start_seconds": 2813.49,
+   "end_seconds": 2815.93,
+   "text": "原因是因為這個門就沒有一個答案",
+   "source_chunk": 3,
+   "raw_text": "原因是因為這個門就沒有一個答案"
+  },
+  {
+   "id": "S0692",
+   "start_seconds": 2815.93,
+   "end_seconds": 2817.49,
+   "text": "你K太小呢",
+   "source_chunk": 3,
+   "raw_text": "你K太小呢"
+  },
+  {
+   "id": "S0693",
+   "start_seconds": 2817.49,
+   "end_seconds": 2819.45,
+   "text": "你很有可能就把答案漏掉",
+   "source_chunk": 3,
+   "raw_text": "你很有可能就把答案漏掉"
+  },
+  {
+   "id": "S0694",
+   "start_seconds": 2819.45,
+   "end_seconds": 2820.93,
+   "text": "你K太大呢",
+   "source_chunk": 3,
+   "raw_text": "你K太大呢"
+  },
+  {
+   "id": "S0695",
+   "start_seconds": 2820.93,
+   "end_seconds": 2823.15,
+   "text": "你有非常多的雜訊",
+   "source_chunk": 3,
+   "raw_text": "你有非常多的雜訊"
+  },
+  {
+   "id": "S0696",
+   "start_seconds": 2823.15,
+   "end_seconds": 2826.89,
+   "text": "中間呢有一大堆的資訊根本就不是你要的",
+   "source_chunk": 3,
+   "raw_text": "中間呢有一大堆的資訊根本就不是你要的"
+  },
+  {
+   "id": "S0697",
+   "start_seconds": 2826.89,
+   "end_seconds": 2828.41,
+   "text": "那OpenAI它預設呢",
+   "source_chunk": 3,
+   "raw_text": "那OpenAI它預設呢"
+  },
+  {
+   "id": "S0698",
+   "start_seconds": 2828.41,
+   "end_seconds": 2831.05,
+   "text": "每一段最多10段",
+   "source_chunk": 3,
+   "raw_text": "每一段最多10段"
+  },
+  {
+   "id": "S0699",
+   "start_seconds": 2831.05,
+   "end_seconds": 2834.55,
+   "text": "那最多可以設到50",
+   "source_chunk": 3,
+   "raw_text": "那最多可以設到50"
+  },
+  {
+   "id": "S0700",
+   "start_seconds": 2834.55,
+   "end_seconds": 2837.09,
+   "text": "有點像是它K值最多就是50",
+   "source_chunk": 3,
+   "raw_text": "有點像是它K值最多就是50"
+  },
+  {
+   "id": "S0701",
+   "start_seconds": 2837.09,
+   "end_seconds": 2839.35,
+   "text": "但50也不見得是最好的",
+   "source_chunk": 3,
+   "raw_text": "但50也不見得是最好的"
+  },
+  {
+   "id": "S0702",
+   "start_seconds": 2839.35,
+   "end_seconds": 2843.79,
+   "text": "所以這邊真的沒有一個標準答案可以參考",
+   "source_chunk": 3,
+   "raw_text": "所以這邊真的沒有一個標準答案可以參考"
+  },
+  {
+   "id": "S0703",
+   "start_seconds": 2843.79,
+   "end_seconds": 2847.35,
+   "text": "這個要一直不斷的去做測試",
+   "source_chunk": 3,
+   "raw_text": "這個要一直不斷的去做測試"
+  },
+  {
+   "id": "S0704",
+   "start_seconds": 2847.35,
+   "end_seconds": 2851.64,
+   "text": "去做迭代",
+   "source_chunk": 3,
+   "raw_text": "去做迭代"
+  },
+  {
+   "id": "S0705",
+   "start_seconds": 2851.64,
+   "end_seconds": 2852.46,
+   "text": "所以最後呢",
+   "source_chunk": 3,
+   "raw_text": "所以最後呢"
+  },
+  {
+   "id": "S0706",
+   "start_seconds": 2852.46,
+   "end_seconds": 2855.56,
+   "text": "就到了生成的部分",
+   "source_chunk": 3,
+   "raw_text": "就到了生成的部分"
+  },
+  {
+   "id": "S0707",
+   "start_seconds": 2855.56,
+   "end_seconds": 2857.12,
+   "text": "所以生成呢",
+   "source_chunk": 3,
+   "raw_text": "所以生成呢"
+  },
+  {
+   "id": "S0708",
+   "start_seconds": 2857.12,
+   "end_seconds": 2858.92,
+   "text": "你有可能是",
+   "source_chunk": 3,
+   "raw_text": "你有可能是"
+  },
+  {
+   "id": "S0709",
+   "start_seconds": 2858.92,
+   "end_seconds": 2860.66,
+   "text": "你的指令先",
+   "source_chunk": 3,
+   "raw_text": "你的指令先"
+  },
+  {
+   "id": "S0710",
+   "start_seconds": 2860.66,
+   "end_seconds": 2863.86,
+   "text": "然後到了你的資料",
+   "source_chunk": 3,
+   "raw_text": "然後到了你的資料"
+  },
+  {
+   "id": "S0711",
+   "start_seconds": 2863.86,
+   "end_seconds": 2866.82,
+   "text": "之後才是問題",
+   "source_chunk": 3,
+   "raw_text": "之後才是問題"
+  },
+  {
+   "id": "S0712",
+   "start_seconds": 2866.82,
+   "end_seconds": 2869.5,
+   "text": "對因為在問題之前呢",
+   "source_chunk": 3,
+   "raw_text": "對因為在問題之前呢"
+  },
+  {
+   "id": "S0713",
+   "start_seconds": 2869.5,
+   "end_seconds": 2871.26,
+   "text": "這兩個東西呢",
+   "source_chunk": 3,
+   "raw_text": "這兩個東西呢"
+  },
+  {
+   "id": "S0714",
+   "start_seconds": 2871.26,
+   "end_seconds": 2873.72,
+   "text": "都要進你的",
+   "source_chunk": 3,
+   "raw_text": "都要進你的"
+  },
+  {
+   "id": "S0715",
+   "start_seconds": 2873.72,
+   "end_seconds": 2876.7,
+   "text": "有點像你LM裡面的context window",
+   "source_chunk": 3,
+   "raw_text": "有點像你LM裡面的context window"
+  },
+  {
+   "id": "S0716",
+   "start_seconds": 2876.7,
+   "end_seconds": 2878.36,
+   "text": "因為指令就有點像是",
+   "source_chunk": 3,
+   "raw_text": "因為指令就有點像是"
+  },
+  {
+   "id": "S0717",
+   "start_seconds": 2878.36,
+   "end_seconds": 2879.72,
+   "text": "你是一個",
+   "source_chunk": 3,
+   "raw_text": "你是一個"
+  },
+  {
+   "id": "S0718",
+   "start_seconds": 2879.72,
+   "end_seconds": 2882.36,
+   "text": "這個是一個system prompt的一個概念",
+   "source_chunk": 3,
+   "raw_text": "這個是一個system prompt的一個概念"
+  },
+  {
+   "id": "S0719",
+   "start_seconds": 2882.36,
+   "end_seconds": 2884.0,
+   "text": "就是模型預設的",
+   "source_chunk": 3,
+   "raw_text": "就是模型預設的"
+  },
+  {
+   "id": "S0720",
+   "start_seconds": 2884.04,
+   "end_seconds": 2885.06,
+   "text": "你起碼",
+   "source_chunk": 3,
+   "raw_text": "你起碼"
+  },
+  {
+   "id": "S0721",
+   "start_seconds": 2885.06,
+   "end_seconds": 2886.96,
+   "text": "call一個AI進來",
+   "source_chunk": 3,
+   "raw_text": "call一個AI進來"
+  },
+  {
+   "id": "S0722",
+   "start_seconds": 2886.96,
+   "end_seconds": 2887.94,
+   "text": "這個AI很聰明",
+   "source_chunk": 3,
+   "raw_text": "這個AI很聰明"
+  },
+  {
+   "id": "S0723",
+   "start_seconds": 2887.94,
+   "end_seconds": 2890.86,
+   "text": "那你起碼要告訴它說你是要幹嘛的",
+   "source_chunk": 3,
+   "raw_text": "那你起碼要告訴它說你是要幹嘛的"
+  },
+  {
+   "id": "S0724",
+   "start_seconds": 2890.86,
+   "end_seconds": 2892.36,
+   "text": "那再來則是",
+   "source_chunk": 3,
+   "raw_text": "那再來則是"
+  },
+  {
+   "id": "S0725",
+   "start_seconds": 2892.36,
+   "end_seconds": 2892.86,
+   "text": "資料",
+   "source_chunk": 3,
+   "raw_text": "資料"
+  },
+  {
+   "id": "S0726",
+   "start_seconds": 2892.86,
+   "end_seconds": 2895.54,
+   "text": "生成檢索的東西呢就會返回來",
+   "source_chunk": 3,
+   "raw_text": "生成檢索的東西呢就會返回來"
+  },
+  {
+   "id": "S0727",
+   "start_seconds": 2895.54,
+   "end_seconds": 2898.04,
+   "text": "所以指令加資料呢結合問題",
+   "source_chunk": 3,
+   "raw_text": "所以指令加資料呢結合問題"
+  },
+  {
+   "id": "S0728",
+   "start_seconds": 2898.04,
+   "end_seconds": 2902.38,
+   "text": "它就有辦法可以去回答",
+   "source_chunk": 3,
+   "raw_text": "它就有辦法可以去回答"
+  },
+  {
+   "id": "S0729",
+   "start_seconds": 2902.38,
+   "end_seconds": 2905.28,
+   "text": "所以指令裡面呢有四具",
+   "source_chunk": 3,
+   "raw_text": "所以指令裡面呢有四具"
+  },
+  {
+   "id": "S0730",
+   "start_seconds": 2905.28,
+   "end_seconds": 2907.92,
+   "text": "比較關鍵的東西",
+   "source_chunk": 3,
+   "raw_text": "比較關鍵的東西"
+  },
+  {
+   "id": "S0731",
+   "start_seconds": 2907.92,
+   "end_seconds": 2909.18,
+   "text": "對那",
+   "source_chunk": 3,
+   "raw_text": "對那"
+  },
+  {
+   "id": "S0732",
+   "start_seconds": 2909.18,
+   "end_seconds": 2912.48,
+   "text": "第一個呢就是你需要讓它按照",
+   "source_chunk": 3,
+   "raw_text": "第一個呢就是你需要讓它按照"
+  },
+  {
+   "id": "S0733",
+   "start_seconds": 2912.48,
+   "end_seconds": 2915.12,
+   "text": "真實的狀態去做回答",
+   "source_chunk": 3,
+   "raw_text": "真實的狀態去做回答"
+  },
+  {
+   "id": "S0734",
+   "start_seconds": 2915.12,
+   "end_seconds": 2917.68,
+   "text": "如果找不到呢你一定要讓它說",
+   "source_chunk": 3,
+   "raw_text": "如果找不到呢你一定要讓它說"
+  },
+  {
+   "id": "S0735",
+   "start_seconds": 2917.68,
+   "end_seconds": 2919.88,
+   "text": "你就說你找不到就好",
+   "source_chunk": 3,
+   "raw_text": "你就說你找不到就好"
+  },
+  {
+   "id": "S0736",
+   "start_seconds": 2919.88,
+   "end_seconds": 2921.78,
+   "text": "那第三個你可以用編號",
+   "source_chunk": 3,
+   "raw_text": "那第三個你可以用編號"
+  },
+  {
+   "id": "S0737",
+   "start_seconds": 2921.78,
+   "end_seconds": 2923.36,
+   "text": "那這個編號可以是",
+   "source_chunk": 3,
+   "raw_text": "那這個編號可以是"
+  },
+  {
+   "id": "S0738",
+   "start_seconds": 2923.36,
+   "end_seconds": 2926.56,
+   "text": "檔案的名字加頁碼",
+   "source_chunk": 3,
+   "raw_text": "檔案的名字加頁碼"
+  },
+  {
+   "id": "S0739",
+   "start_seconds": 2926.56,
+   "end_seconds": 2929.98,
+   "text": "以方便你點回去查詢說是真的有",
+   "source_chunk": 3,
+   "raw_text": "以方便你點回去查詢說是真的有"
+  },
+  {
+   "id": "S0740",
+   "start_seconds": 2929.98,
+   "end_seconds": 2931.46,
+   "text": "這個東西",
+   "source_chunk": 3,
+   "raw_text": "這個東西"
+  },
+  {
+   "id": "S0741",
+   "start_seconds": 2931.46,
+   "end_seconds": 2932.92,
+   "text": "那第四個呢",
+   "source_chunk": 3,
+   "raw_text": "那第四個呢"
+  },
+  {
+   "id": "S0742",
+   "start_seconds": 2932.92,
+   "end_seconds": 2934.46,
+   "text": "資料有新舊版本的時候呢",
+   "source_chunk": 3,
+   "raw_text": "資料有新舊版本的時候呢"
+  },
+  {
+   "id": "S0743",
+   "start_seconds": 2934.46,
+   "end_seconds": 2935.72,
+   "text": "以日期新的為主",
+   "source_chunk": 3,
+   "raw_text": "以日期新的為主"
+  },
+  {
+   "id": "S0744",
+   "start_seconds": 2935.72,
+   "end_seconds": 2938.68,
+   "text": "但這個其實就是把資料庫",
+   "source_chunk": 3,
+   "raw_text": "但這個其實就是把資料庫"
+  },
+  {
+   "id": "S0745",
+   "start_seconds": 2938.68,
+   "end_seconds": 2940.52,
+   "text": "洗得乾淨一點就好了",
+   "source_chunk": 3,
+   "raw_text": "洗得乾淨一點就好了"
+  },
+  {
+   "id": "S0746",
+   "start_seconds": 2940.52,
+   "end_seconds": 2941.86,
+   "text": "舊的其實就丟掉",
+   "source_chunk": 3,
+   "raw_text": "舊的其實就丟掉"
+  },
+  {
+   "id": "S0747",
+   "start_seconds": 2941.86,
+   "end_seconds": 2944.26,
+   "text": "就不需要再用了",
+   "source_chunk": 3,
+   "raw_text": "就不需要再用了"
+  },
+  {
+   "id": "S0748",
+   "start_seconds": 2944.26,
+   "end_seconds": 2945.92,
+   "text": "對那第二句蠻重要的",
+   "source_chunk": 3,
+   "raw_text": "對那第二句蠻重要的"
+  },
+  {
+   "id": "S0749",
+   "start_seconds": 2945.92,
+   "end_seconds": 2948.26,
+   "text": "因為你可以讓AI說不知道",
+   "source_chunk": 3,
+   "raw_text": "因為你可以讓AI說不知道"
+  },
+  {
+   "id": "S0750",
+   "start_seconds": 2948.26,
+   "end_seconds": 2949.86,
+   "text": "它真的會說不知道",
+   "source_chunk": 3,
+   "raw_text": "它真的會說不知道"
+  },
+  {
+   "id": "S0751",
+   "start_seconds": 2949.86,
+   "end_seconds": 2952.02,
+   "text": "那這就比較不會去",
+   "source_chunk": 3,
+   "raw_text": "那這就比較不會去"
+  },
+  {
+   "id": "S0752",
+   "start_seconds": 2952.02,
+   "end_seconds": 2956.99,
+   "text": "硬掰出一個有幻覺的答案出來",
+   "source_chunk": 3,
+   "raw_text": "硬掰出一個有幻覺的答案出來"
+  },
+  {
+   "id": "S0753",
+   "start_seconds": 2956.99,
+   "end_seconds": 2959.23,
+   "text": "那答案呢我自己做資料庫呢",
+   "source_chunk": 3,
+   "raw_text": "那答案呢我自己做資料庫呢"
+  },
+  {
+   "id": "S0754",
+   "start_seconds": 2959.23,
+   "end_seconds": 2961.25,
+   "text": "我都會帶",
+   "source_chunk": 3,
+   "raw_text": "我都會帶"
+  },
+  {
+   "id": "S0755",
+   "start_seconds": 2961.25,
+   "end_seconds": 2963.79,
+   "text": "就是可能這種1跟2這種",
+   "source_chunk": 3,
+   "raw_text": "就是可能這種1跟2這種"
+  },
+  {
+   "id": "S0756",
+   "start_seconds": 2963.79,
+   "end_seconds": 2965.15,
+   "text": "因為我要知道",
+   "source_chunk": 3,
+   "raw_text": "因為我要知道"
+  },
+  {
+   "id": "S0757",
+   "start_seconds": 2965.15,
+   "end_seconds": 2968.05,
+   "text": "它的出處是從哪邊來的",
+   "source_chunk": 3,
+   "raw_text": "它的出處是從哪邊來的"
+  },
+  {
+   "id": "S0758",
+   "start_seconds": 2968.05,
+   "end_seconds": 2969.95,
+   "text": "尤其是有數字的時候",
+   "source_chunk": 3,
+   "raw_text": "尤其是有數字的時候"
+  },
+  {
+   "id": "S0759",
+   "start_seconds": 2969.95,
+   "end_seconds": 2971.19,
+   "text": "我方便點了之後呢",
+   "source_chunk": 3,
+   "raw_text": "我方便點了之後呢"
+  },
+  {
+   "id": "S0760",
+   "start_seconds": 2971.19,
+   "end_seconds": 2973.25,
+   "text": "馬上那個PK本上就打開",
+   "source_chunk": 3,
+   "raw_text": "馬上那個PK本上就打開"
+  },
+  {
+   "id": "S0761",
+   "start_seconds": 2973.25,
+   "end_seconds": 2975.95,
+   "text": "那我就可以看說到底是哪一頁",
+   "source_chunk": 3,
+   "raw_text": "那我就可以看說到底是哪一頁"
+  },
+  {
+   "id": "S0762",
+   "start_seconds": 2975.95,
+   "end_seconds": 2979.19,
+   "text": "這個對我來說蠻重要的",
+   "source_chunk": 3,
+   "raw_text": "這個對我來說蠻重要的"
+  },
+  {
+   "id": "S0763",
+   "start_seconds": 2979.19,
+   "end_seconds": 2980.41,
+   "text": "所以同一個問題呢",
+   "source_chunk": 3,
+   "raw_text": "所以同一個問題呢"
+  },
+  {
+   "id": "S0764",
+   "start_seconds": 2980.41,
+   "end_seconds": 2981.89,
+   "text": "有RAG跟沒有RAG",
+   "source_chunk": 3,
+   "raw_text": "有RAG跟沒有RAG"
+  },
+  {
+   "id": "S0765",
+   "start_seconds": 2981.89,
+   "end_seconds": 2983.69,
+   "text": "你如果沒有RAG的時候",
+   "source_chunk": 3,
+   "raw_text": "你如果沒有RAG的時候"
+  },
+  {
+   "id": "S0766",
+   "start_seconds": 2983.69,
+   "end_seconds": 2985.51,
+   "text": "它可能就是用BI的",
+   "source_chunk": 3,
+   "raw_text": "它可能就是用BI的"
+  },
+  {
+   "id": "S0767",
+   "start_seconds": 2985.51,
+   "end_seconds": 2987.75,
+   "text": "但你如果有RAG的時候呢",
+   "source_chunk": 3,
+   "raw_text": "但你如果有RAG的時候呢"
+  },
+  {
+   "id": "S0768",
+   "start_seconds": 2987.75,
+   "end_seconds": 2990.19,
+   "text": "它就會跟著這個文件",
+   "source_chunk": 3,
+   "raw_text": "它就會跟著這個文件"
+  },
+  {
+   "id": "S0769",
+   "start_seconds": 2990.19,
+   "end_seconds": 2992.09,
+   "text": "然後告訴你說",
+   "source_chunk": 3,
+   "raw_text": "然後告訴你說"
+  },
+  {
+   "id": "S0770",
+   "start_seconds": 2992.09,
+   "end_seconds": 2999.48,
+   "text": "就是真實的資料的內容是什麼",
+   "source_chunk": 3,
+   "raw_text": "就是真實的資料的內容是什麼"
+  },
+  {
+   "id": "S0771",
+   "start_seconds": 2999.48,
+   "end_seconds": 3001.48,
+   "text": "所以這邊會有一個",
+   "source_chunk": 3,
+   "raw_text": "所以這邊會有一個"
+  },
+  {
+   "id": "S0772",
+   "start_seconds": 3001.48,
+   "end_seconds": 3002.54,
+   "text": "A",
+   "source_chunk": 3,
+   "raw_text": "A"
+  },
+  {
+   "id": "S0773",
+   "start_seconds": 3002.54,
+   "end_seconds": 3005.74,
+   "text": "簡單的RAG的過程",
+   "source_chunk": 3,
+   "raw_text": "簡單的RAG的過程"
+  },
+  {
+   "id": "S0774",
+   "start_seconds": 3005.74,
+   "end_seconds": 3008.78,
+   "text": "那一樣就是假設你問禮拜六幾點要到",
+   "source_chunk": 3,
+   "raw_text": "那一樣就是假設你問禮拜六幾點要到"
+  },
+  {
+   "id": "S0775",
+   "start_seconds": 3008.78,
+   "end_seconds": 3011.88,
+   "text": "那它找回了第一段第二段第三段",
+   "source_chunk": 3,
+   "raw_text": "那它找回了第一段第二段第三段"
+  },
+  {
+   "id": "S0776",
+   "start_seconds": 3011.88,
+   "end_seconds": 3013.9,
+   "text": "所以它送給模型的提示呢",
+   "source_chunk": 3,
+   "raw_text": "所以它送給模型的提示呢"
+  },
+  {
+   "id": "S0777",
+   "start_seconds": 3013.9,
+   "end_seconds": 3016.24,
+   "text": "就是有三段資料",
+   "source_chunk": 3,
+   "raw_text": "就是有三段資料"
+  },
+  {
+   "id": "S0778",
+   "start_seconds": 3016.24,
+   "end_seconds": 3018.04,
+   "text": "那加問題",
+   "source_chunk": 3,
+   "raw_text": "那加問題"
+  },
+  {
+   "id": "S0779",
+   "start_seconds": 3018.04,
+   "end_seconds": 3021.3,
+   "text": "問題就是禮拜六幾點要到",
+   "source_chunk": 3,
+   "raw_text": "問題就是禮拜六幾點要到"
+  },
+  {
+   "id": "S0780",
+   "start_seconds": 3021.3,
+   "end_seconds": 3022.34,
+   "text": "那它的回答呢",
+   "source_chunk": 3,
+   "raw_text": "那它的回答呢"
+  },
+  {
+   "id": "S0781",
+   "start_seconds": 3022.34,
+   "end_seconds": 3024.2,
+   "text": "就是說這禮拜六",
+   "source_chunk": 3,
+   "raw_text": "就是說這禮拜六"
+  },
+  {
+   "id": "S0782",
+   "start_seconds": 3024.2,
+   "end_seconds": 3027.9,
+   "text": "那是七點半要出發",
+   "source_chunk": 3,
+   "raw_text": "那是七點半要出發"
+  },
+  {
+   "id": "S0783",
+   "start_seconds": 3027.9,
+   "end_seconds": 3030.34,
+   "text": "對那當然這是預寫好的啦",
+   "source_chunk": 3,
+   "raw_text": "對那當然這是預寫好的啦"
+  },
+  {
+   "id": "S0784",
+   "start_seconds": 3030.34,
+   "end_seconds": 3032.08,
+   "text": "那原因就是因為在",
+   "source_chunk": 3,
+   "raw_text": "那原因就是因為在"
+  },
+  {
+   "id": "S0785",
+   "start_seconds": 3032.08,
+   "end_seconds": 3034.94,
+   "text": "在私生Prom裡面呢有加上說",
+   "source_chunk": 3,
+   "raw_text": "在私生Prom裡面呢有加上說"
+  },
+  {
+   "id": "S0786",
+   "start_seconds": 3034.94,
+   "end_seconds": 3038.1,
+   "text": "可能會混入過去的資料",
+   "source_chunk": 3,
+   "raw_text": "可能會混入過去的資料"
+  },
+  {
+   "id": "S0787",
+   "start_seconds": 3038.1,
+   "end_seconds": 3040.2,
+   "text": "那可能以當年度的資料為準",
+   "source_chunk": 3,
+   "raw_text": "那可能以當年度的資料為準"
+  },
+  {
+   "id": "S0788",
+   "start_seconds": 3040.2,
+   "end_seconds": 3044.74,
+   "text": "當然這就是看個人怎麼樣去做設計",
+   "source_chunk": 3,
+   "raw_text": "當然這就是看個人怎麼樣去做設計"
+  },
+  {
+   "id": "S0789",
+   "start_seconds": 3044.74,
+   "end_seconds": 3047.24,
+   "text": "那還有後面有幾個",
+   "source_chunk": 3,
+   "raw_text": "那還有後面有幾個"
+  },
+  {
+   "id": "S0790",
+   "start_seconds": 3047.24,
+   "end_seconds": 3049.8,
+   "text": "就是各位可以",
+   "source_chunk": 3,
+   "raw_text": "就是各位可以"
+  },
+  {
+   "id": "S0791",
+   "start_seconds": 3049.8,
+   "end_seconds": 3052.78,
+   "text": "後來可以自己再去玩看看",
+   "source_chunk": 3,
+   "raw_text": "後來可以自己再去玩看看"
+  },
+  {
+   "id": "S0792",
+   "start_seconds": 3052.78,
+   "end_seconds": 3054.88,
+   "text": "所以這邊只是要",
+   "source_chunk": 3,
+   "raw_text": "所以這邊只是要"
+  },
+  {
+   "id": "S0793",
+   "start_seconds": 3054.88,
+   "end_seconds": 3056.7,
+   "text": "跟各位簡單的解釋說",
+   "source_chunk": 3,
+   "raw_text": "跟各位簡單的解釋說"
+  },
+  {
+   "id": "S0794",
+   "start_seconds": 3056.7,
+   "end_seconds": 3059.44,
+   "text": "在瀏覽器跑整個RAG",
+   "source_chunk": 3,
+   "raw_text": "在瀏覽器跑整個RAG"
+  },
+  {
+   "id": "S0795",
+   "start_seconds": 3059.44,
+   "end_seconds": 3063.38,
+   "text": "那它大概會是什麼樣的狀態",
+   "source_chunk": 3,
+   "raw_text": "那它大概會是什麼樣的狀態"
+  },
+  {
+   "id": "S0796",
+   "start_seconds": 3063.38,
+   "end_seconds": 3067.44,
+   "text": "就是它還是會收幾段K的文字回來",
+   "source_chunk": 3,
+   "raw_text": "就是它還是會收幾段K的文字回來"
+  },
+  {
+   "id": "S0797",
+   "start_seconds": 3067.44,
+   "end_seconds": 3072.54,
+   "text": "那收回來的文字呢它會再進行整理",
+   "source_chunk": 3,
+   "raw_text": "那收回來的文字呢它會再進行整理"
+  },
+  {
+   "id": "S0798",
+   "start_seconds": 3072.54,
+   "end_seconds": 3076.04,
+   "text": "那OpenAI它有一個File Search的功能",
+   "source_chunk": 3,
+   "raw_text": "那OpenAI它有一個File Search的功能"
+  },
+  {
+   "id": "S0799",
+   "start_seconds": 3076.04,
+   "end_seconds": 3079.64,
+   "text": "它其實就是打包好的RAG",
+   "source_chunk": 3,
+   "raw_text": "它其實就是打包好的RAG"
+  },
+  {
+   "id": "S0800",
+   "start_seconds": 3079.64,
+   "end_seconds": 3081.46,
+   "text": "所以同樣的就是",
+   "source_chunk": 3,
+   "raw_text": "所以同樣的就是"
+  },
+  {
+   "id": "S0801",
+   "start_seconds": 3081.46,
+   "end_seconds": 3083.46,
+   "text": "別人做好的工具",
+   "source_chunk": 3,
+   "raw_text": "別人做好的工具"
+  },
+  {
+   "id": "S0802",
+   "start_seconds": 3083.46,
+   "end_seconds": 3085.86,
+   "text": "適不適合你用不知道",
+   "source_chunk": 3,
+   "raw_text": "適不適合你用不知道"
+  },
+  {
+   "id": "S0803",
+   "start_seconds": 3085.86,
+   "end_seconds": 3091.26,
+   "text": "就是你必須得測試了之後才會知道",
+   "source_chunk": 3,
+   "raw_text": "就是你必須得測試了之後才會知道"
+  },
+  {
+   "id": "S0804",
+   "start_seconds": 3091.26,
+   "end_seconds": 3092.86,
+   "text": "但我一般會比較少用這個",
+   "source_chunk": 3,
+   "raw_text": "但我一般會比較少用這個"
+  },
+  {
+   "id": "S0805",
+   "start_seconds": 3092.86,
+   "end_seconds": 3096.5,
+   "text": "我一般都是自己做會比較快",
+   "source_chunk": 3,
+   "raw_text": "我一般都是自己做會比較快"
+  },
+  {
+   "id": "S0806",
+   "start_seconds": 3096.5,
+   "end_seconds": 3101.1,
+   "text": "所以八個步驟呢大致上就是都走過一遍",
+   "source_chunk": 3,
+   "raw_text": "所以八個步驟呢大致上就是都走過一遍"
+  },
+  {
+   "id": "S0807",
+   "start_seconds": 3101.1,
+   "end_seconds": 3103.5,
+   "text": "就是載入檔案切塊",
+   "source_chunk": 3,
+   "raw_text": "就是載入檔案切塊"
+  },
+  {
+   "id": "S0808",
+   "start_seconds": 3103.5,
+   "end_seconds": 3105.22,
+   "text": "相當空間存起來",
+   "source_chunk": 3,
+   "raw_text": "相當空間存起來"
+  },
+  {
+   "id": "S0809",
+   "start_seconds": 3105.22,
+   "end_seconds": 3109.56,
+   "text": "問題轉成相當空間找出最像的幾段",
+   "source_chunk": 3,
+   "raw_text": "問題轉成相當空間找出最像的幾段"
+  },
+  {
+   "id": "S0810",
+   "start_seconds": 3109.56,
+   "end_seconds": 3111.52,
+   "text": "就你要取回幾個K",
+   "source_chunk": 3,
+   "raw_text": "就你要取回幾個K"
+  },
+  {
+   "id": "S0811",
+   "start_seconds": 3111.52,
+   "end_seconds": 3114.76,
+   "text": "然後把所有的東西呢都結合起來",
+   "source_chunk": 3,
+   "raw_text": "然後把所有的東西呢都結合起來"
+  },
+  {
+   "id": "S0812",
+   "start_seconds": 3114.76,
+   "end_seconds": 3119.77,
+   "text": "然後模型最後再回答",
+   "source_chunk": 3,
+   "raw_text": "然後模型最後再回答"
+  },
+  {
+   "id": "S0813",
+   "start_seconds": 3119.77,
+   "end_seconds": 3121.27,
+   "text": "所以如果",
+   "source_chunk": 3,
+   "raw_text": "所以如果"
+  },
+  {
+   "id": "S0814",
+   "start_seconds": 3121.27,
+   "end_seconds": 3123.67,
+   "text": "答對和答錯呢",
+   "source_chunk": 3,
+   "raw_text": "答對和答錯呢"
+  },
+  {
+   "id": "S0815",
+   "start_seconds": 3123.67,
+   "end_seconds": 3127.13,
+   "text": "就是這邊可能需要看一下",
+   "source_chunk": 3,
+   "raw_text": "就是這邊可能需要看一下"
+  },
+  {
+   "id": "S0816",
+   "start_seconds": 3127.13,
+   "end_seconds": 3129.33,
+   "text": "就是如果你找對資料",
+   "source_chunk": 3,
+   "raw_text": "就是如果你找對資料"
+  },
+  {
+   "id": "S0817",
+   "start_seconds": 3129.33,
+   "end_seconds": 3131.11,
+   "text": "而且你也回答對的話",
+   "source_chunk": 3,
+   "raw_text": "而且你也回答對的話"
+  },
+  {
+   "id": "S0818",
+   "start_seconds": 3131.11,
+   "end_seconds": 3132.83,
+   "text": "那當然就是成功",
+   "source_chunk": 3,
+   "raw_text": "那當然就是成功"
+  },
+  {
+   "id": "S0819",
+   "start_seconds": 3132.83,
+   "end_seconds": 3134.87,
+   "text": "如果你找對的資料",
+   "source_chunk": 3,
+   "raw_text": "如果你找對的資料"
+  },
+  {
+   "id": "S0820",
+   "start_seconds": 3134.87,
+   "end_seconds": 3137.63,
+   "text": "但是回答錯的話",
+   "source_chunk": 3,
+   "raw_text": "但是回答錯的話"
+  },
+  {
+   "id": "S0821",
+   "start_seconds": 3137.63,
+   "end_seconds": 3141.23,
+   "text": "就是你的模型生成是有問題的",
+   "source_chunk": 3,
+   "raw_text": "就是你的模型生成是有問題的"
+  },
+  {
+   "id": "S0822",
+   "start_seconds": 3141.23,
+   "end_seconds": 3145.21,
+   "text": "那有可能是你的系統的體制值沒有寫好",
+   "source_chunk": 3,
+   "raw_text": "那有可能是你的系統的體制值沒有寫好"
+  },
+  {
+   "id": "S0823",
+   "start_seconds": 3145.21,
+   "end_seconds": 3148.41,
+   "text": "那以剛才2026年跟2025年的資料",
+   "source_chunk": 3,
+   "raw_text": "那以剛才2026年跟2025年的資料"
+  },
+  {
+   "id": "S0824",
+   "start_seconds": 3148.41,
+   "end_seconds": 3149.87,
+   "text": "舉例來說好了",
+   "source_chunk": 3,
+   "raw_text": "舉例來說好了"
+  },
+  {
+   "id": "S0825",
+   "start_seconds": 3149.87,
+   "end_seconds": 3152.97,
+   "text": "你可能沒有跟他說你只需要2026年",
+   "source_chunk": 3,
+   "raw_text": "你可能沒有跟他說你只需要2026年"
+  },
+  {
+   "id": "S0826",
+   "start_seconds": 3152.97,
+   "end_seconds": 3154.87,
+   "text": "那你只給他說",
+   "source_chunk": 3,
+   "raw_text": "那你只給他說"
+  },
+  {
+   "id": "S0827",
+   "start_seconds": 3154.87,
+   "end_seconds": 3158.27,
+   "text": "你就是一個文件搜尋的小幫手",
+   "source_chunk": 3,
+   "raw_text": "你就是一個文件搜尋的小幫手"
+  },
+  {
+   "id": "S0828",
+   "start_seconds": 3158.27,
+   "end_seconds": 3161.13,
+   "text": "那你的功能呢就是負責把找到的東西呢",
+   "source_chunk": 3,
+   "raw_text": "那你的功能呢就是負責把找到的東西呢"
+  },
+  {
+   "id": "S0829",
+   "start_seconds": 3161.13,
+   "end_seconds": 3163.43,
+   "text": "返回答案給使用者",
+   "source_chunk": 3,
+   "raw_text": "返回答案給使用者"
+  },
+  {
+   "id": "S0830",
+   "start_seconds": 3163.43,
+   "end_seconds": 3166.67,
+   "text": "那這個時候呢你就可能會生成錯誤",
+   "source_chunk": 3,
+   "raw_text": "那這個時候呢你就可能會生成錯誤"
+  },
+  {
+   "id": "S0831",
+   "start_seconds": 3166.67,
+   "end_seconds": 3170.77,
+   "text": "原因是因為你生成到2025年的資料",
+   "source_chunk": 3,
+   "raw_text": "原因是因為你生成到2025年的資料"
+  },
+  {
+   "id": "S0832",
+   "start_seconds": 3170.77,
+   "end_seconds": 3172.37,
+   "text": "那回答對呢",
+   "source_chunk": 3,
+   "raw_text": "那回答對呢"
+  },
+  {
+   "id": "S0833",
+   "start_seconds": 3172.37,
+   "end_seconds": 3173.91,
+   "text": "找錯資料",
+   "source_chunk": 3,
+   "raw_text": "找錯資料"
+  },
+  {
+   "id": "S0834",
+   "start_seconds": 3173.91,
+   "end_seconds": 3175.61,
+   "text": "那有可能就是",
+   "source_chunk": 3,
+   "raw_text": "那有可能就是"
+  },
+  {
+   "id": "S0835",
+   "start_seconds": 3175.61,
+   "end_seconds": 3176.51,
+   "text": "你有幻覺",
+   "source_chunk": 3,
+   "raw_text": "你有幻覺"
+  },
+  {
+   "id": "S0836",
+   "start_seconds": 3176.51,
+   "end_seconds": 3179.07,
+   "text": "但這個幻覺運氣很好還跟你掰對",
+   "source_chunk": 3,
+   "raw_text": "但這個幻覺運氣很好還跟你掰對"
+  },
+  {
+   "id": "S0837",
+   "start_seconds": 3179.07,
+   "end_seconds": 3181.51,
+   "text": "那原因就是你可能",
+   "source_chunk": 3,
+   "raw_text": "那原因就是你可能"
+  },
+  {
+   "id": "S0838",
+   "start_seconds": 3181.51,
+   "end_seconds": 3185.03,
+   "text": "這個回答不見得帶有數字",
+   "source_chunk": 3,
+   "raw_text": "這個回答不見得帶有數字"
+  },
+  {
+   "id": "S0839",
+   "start_seconds": 3185.03,
+   "end_seconds": 3187.21,
+   "text": "所以你使用者其實",
+   "source_chunk": 3,
+   "raw_text": "所以你使用者其實"
+  },
+  {
+   "id": "S0840",
+   "start_seconds": 3187.21,
+   "end_seconds": 3188.71,
+   "text": "不見得那麼好去辨別",
+   "source_chunk": 3,
+   "raw_text": "不見得那麼好去辨別"
+  },
+  {
+   "id": "S0841",
+   "start_seconds": 3188.71,
+   "end_seconds": 3190.67,
+   "text": "他是對的還錯的",
+   "source_chunk": 3,
+   "raw_text": "他是對的還錯的"
+  },
+  {
+   "id": "S0842",
+   "start_seconds": 3190.67,
+   "end_seconds": 3193.33,
+   "text": "那找錯資料也回答錯",
+   "source_chunk": 3,
+   "raw_text": "那找錯資料也回答錯"
+  },
+  {
+   "id": "S0843",
+   "start_seconds": 3193.33,
+   "end_seconds": 3195.73,
+   "text": "那就是你的檢索出問題",
+   "source_chunk": 3,
+   "raw_text": "那就是你的檢索出問題"
+  },
+  {
+   "id": "S0844",
+   "start_seconds": 3195.73,
+   "end_seconds": 3197.63,
+   "text": "檢索出問題就很麻煩",
+   "source_chunk": 3,
+   "raw_text": "檢索出問題就很麻煩"
+  },
+  {
+   "id": "S0845",
+   "start_seconds": 3197.63,
+   "end_seconds": 3199.31,
+   "text": "你可能是trunk切錯",
+   "source_chunk": 3,
+   "raw_text": "你可能是trunk切錯"
+  },
+  {
+   "id": "S0846",
+   "start_seconds": 3199.31,
+   "end_seconds": 3201.11,
+   "text": "你可能是搜尋的問題",
+   "source_chunk": 3,
+   "raw_text": "你可能是搜尋的問題"
+  },
+  {
+   "id": "S0847",
+   "start_seconds": 3201.11,
+   "end_seconds": 3203.47,
+   "text": "那甚至你在原始資料",
+   "source_chunk": 3,
+   "raw_text": "那甚至你在原始資料"
+  },
+  {
+   "id": "S0848",
+   "start_seconds": 3203.47,
+   "end_seconds": 3206.97,
+   "text": "就已經出錯了",
+   "source_chunk": 3,
+   "raw_text": "就已經出錯了"
+  },
+  {
+   "id": "S0849",
+   "start_seconds": 3206.97,
+   "end_seconds": 3209.81,
+   "text": "所以四個比較常見的問題",
+   "source_chunk": 3,
+   "raw_text": "所以四個比較常見的問題"
+  },
+  {
+   "id": "S0850",
+   "start_seconds": 3209.81,
+   "end_seconds": 3211.25,
+   "text": "就是第一個呢",
+   "source_chunk": 3,
+   "raw_text": "就是第一個呢"
+  },
+  {
+   "id": "S0851",
+   "start_seconds": 3211.25,
+   "end_seconds": 3213.25,
+   "text": "你的答案可能被切兩倍",
+   "source_chunk": 3,
+   "raw_text": "你的答案可能被切兩倍"
+  },
+  {
+   "id": "S0852",
+   "start_seconds": 3213.25,
+   "end_seconds": 3216.45,
+   "text": "那這個呢我們剛才就有提到",
+   "source_chunk": 3,
+   "raw_text": "那這個呢我們剛才就有提到"
+  },
+  {
+   "id": "S0853",
+   "start_seconds": 3216.45,
+   "end_seconds": 3218.05,
+   "text": "你有可能冒紙",
+   "source_chunk": 3,
+   "raw_text": "你有可能冒紙"
+  },
+  {
+   "id": "S0854",
+   "start_seconds": 3218.05,
+   "end_seconds": 3220.61,
+   "text": "那個冒跟紙就被切斷了",
+   "source_chunk": 3,
+   "raw_text": "那個冒跟紙就被切斷了"
+  },
+  {
+   "id": "S0855",
+   "start_seconds": 3220.61,
+   "end_seconds": 3224.71,
+   "text": "所以你找不回冒紙的這個名詞",
+   "source_chunk": 3,
+   "raw_text": "所以你找不回冒紙的這個名詞"
+  },
+  {
+   "id": "S0856",
+   "start_seconds": 3224.71,
+   "end_seconds": 3227.41,
+   "text": "所以這切斷了你可以用重疊",
+   "source_chunk": 3,
+   "raw_text": "所以這切斷了你可以用重疊"
+  },
+  {
+   "id": "S0857",
+   "start_seconds": 3227.41,
+   "end_seconds": 3231.75,
+   "text": "或是你用整個段落去做你的trunk",
+   "source_chunk": 3,
+   "raw_text": "或是你用整個段落去做你的trunk"
+  },
+  {
+   "id": "S0858",
+   "start_seconds": 3231.75,
+   "end_seconds": 3232.91,
+   "text": "那找錯了",
+   "source_chunk": 3,
+   "raw_text": "那找錯了"
+  },
+  {
+   "id": "S0859",
+   "start_seconds": 3232.91,
+   "end_seconds": 3235.85,
+   "text": "可能下雨先找到雨衣",
+   "source_chunk": 3,
+   "raw_text": "可能下雨先找到雨衣"
+  },
+  {
+   "id": "S0860",
+   "start_seconds": 3235.85,
+   "end_seconds": 3237.41,
+   "text": "那這個則是你",
+   "source_chunk": 3,
+   "raw_text": "那這個則是你"
+  },
+  {
+   "id": "S0861",
+   "start_seconds": 3237.41,
+   "end_seconds": 3239.65,
+   "text": "後面呢怎麼樣去排序的問題",
+   "source_chunk": 3,
+   "raw_text": "後面呢怎麼樣去排序的問題"
+  },
+  {
+   "id": "S0862",
+   "start_seconds": 3239.65,
+   "end_seconds": 3241.55,
+   "text": "這個後面會再說",
+   "source_chunk": 3,
+   "raw_text": "這個後面會再說"
+  },
+  {
+   "id": "S0863",
+   "start_seconds": 3241.55,
+   "end_seconds": 3245.85,
+   "text": "那再來就是根本沒有這個答案",
+   "source_chunk": 3,
+   "raw_text": "那再來就是根本沒有這個答案"
+  },
+  {
+   "id": "S0864",
+   "start_seconds": 3245.85,
+   "end_seconds": 3247.55,
+   "text": "那因為分數太低",
+   "source_chunk": 3,
+   "raw_text": "那因為分數太低"
+  },
+  {
+   "id": "S0865",
+   "start_seconds": 3247.55,
+   "end_seconds": 3250.15,
+   "text": "所以你要允許模型說不知道",
+   "source_chunk": 3,
+   "raw_text": "所以你要允許模型說不知道"
+  },
+  {
+   "id": "S0866",
+   "start_seconds": 3250.15,
+   "end_seconds": 3251.15,
+   "text": "那找到舊的",
+   "source_chunk": 3,
+   "raw_text": "那找到舊的"
+  },
+  {
+   "id": "S0867",
+   "start_seconds": 3251.15,
+   "end_seconds": 3255.95,
+   "text": "那就是把檔案剃掉",
+   "source_chunk": 3,
+   "raw_text": "那就是把檔案剃掉"
+  },
+  {
+   "id": "S0868",
+   "start_seconds": 3255.95,
+   "end_seconds": 3259.45,
+   "text": "所以show rag出錯呢",
+   "source_chunk": 3,
+   "raw_text": "所以show rag出錯呢"
+  },
+  {
+   "id": "S0869",
+   "start_seconds": 3259.45,
+   "end_seconds": 3260.49,
+   "text": "有幾個方法",
+   "source_chunk": 3,
+   "raw_text": "有幾個方法"
+  },
+  {
+   "id": "S0870",
+   "start_seconds": 3260.49,
+   "end_seconds": 3264.55,
+   "text": "第一個方法呢是你可以用混合搜尋",
+   "source_chunk": 3,
+   "raw_text": "第一個方法呢是你可以用混合搜尋"
+  },
+  {
+   "id": "S0871",
+   "start_seconds": 3264.55,
+   "end_seconds": 3267.69,
+   "text": "混合搜尋呢是雨衣加關鍵字",
+   "source_chunk": 3,
+   "raw_text": "混合搜尋呢是雨衣加關鍵字"
+  },
+  {
+   "id": "S0872",
+   "start_seconds": 3267.79,
+   "end_seconds": 3272.83,
+   "text": "那假設我們的問題是下雨天還要去嗎",
+   "source_chunk": 3,
+   "raw_text": "那假設我們的問題是下雨天還要去嗎"
+  },
+  {
+   "id": "S0873",
+   "start_seconds": 3272.83,
+   "end_seconds": 3274.39,
+   "text": "下雨天還要去嗎",
+   "source_chunk": 3,
+   "raw_text": "下雨天還要去嗎"
+  },
+  {
+   "id": "S0874",
+   "start_seconds": 3274.39,
+   "end_seconds": 3277.23,
+   "text": "你的雨衣搜尋可能就會找出四段",
+   "source_chunk": 3,
+   "raw_text": "你的雨衣搜尋可能就會找出四段"
+  },
+  {
+   "id": "S0875",
+   "start_seconds": 3277.23,
+   "end_seconds": 3278.33,
+   "text": "那你的關鍵字",
+   "source_chunk": 3,
+   "raw_text": "那你的關鍵字"
+  },
+  {
+   "id": "S0876",
+   "start_seconds": 3278.33,
+   "end_seconds": 3279.39,
+   "text": "關鍵字沒有",
+   "source_chunk": 3,
+   "raw_text": "關鍵字沒有"
+  },
+  {
+   "id": "S0877",
+   "start_seconds": 3279.39,
+   "end_seconds": 3280.89,
+   "text": "那我們可能要換一個",
+   "source_chunk": 3,
+   "raw_text": "那我們可能要換一個"
+  },
+  {
+   "id": "S0878",
+   "start_seconds": 3280.89,
+   "end_seconds": 3283.79,
+   "text": "好 換放大鏡可以借多久",
+   "source_chunk": 3,
+   "raw_text": "好 換放大鏡可以借多久"
+  },
+  {
+   "id": "S0879",
+   "start_seconds": 3283.79,
+   "end_seconds": 3285.83,
+   "text": "那雨衣搜尋呢",
+   "source_chunk": 3,
+   "raw_text": "那雨衣搜尋呢"
+  },
+  {
+   "id": "S0880",
+   "start_seconds": 3285.83,
+   "end_seconds": 3288.69,
+   "text": "你可以找可能四段不同的",
+   "source_chunk": 3,
+   "raw_text": "你可以找可能四段不同的"
+  },
+  {
+   "id": "S0881",
+   "start_seconds": 3288.69,
+   "end_seconds": 3290.19,
+   "text": "那關鍵字呢",
+   "source_chunk": 3,
+   "raw_text": "那關鍵字呢"
+  },
+  {
+   "id": "S0882",
+   "start_seconds": 3290.19,
+   "end_seconds": 3293.63,
+   "text": "你可以一樣可以找可能放大鏡之類的",
+   "source_chunk": 3,
+   "raw_text": "你可以一樣可以找可能放大鏡之類的"
+  },
+  {
+   "id": "S0883",
+   "start_seconds": 3293.63,
+   "end_seconds": 3294.49,
+   "text": "或是多久",
+   "source_chunk": 3,
+   "raw_text": "或是多久"
+  },
+  {
+   "id": "S0884",
+   "start_seconds": 3294.49,
+   "end_seconds": 3296.69,
+   "text": "這種也算關鍵字",
+   "source_chunk": 3,
+   "raw_text": "這種也算關鍵字"
+  },
+  {
+   "id": "S0885",
+   "start_seconds": 3296.69,
+   "end_seconds": 3298.79,
+   "text": "所以最後的結果呢",
+   "source_chunk": 3,
+   "raw_text": "所以最後的結果呢"
+  },
+  {
+   "id": "S0886",
+   "start_seconds": 3298.79,
+   "end_seconds": 3302.53,
+   "text": "其實兩邊的結果合併起來",
+   "source_chunk": 3,
+   "raw_text": "其實兩邊的結果合併起來"
+  },
+  {
+   "id": "S0887",
+   "start_seconds": 3302.53,
+   "end_seconds": 3303.83,
+   "text": "那你有可能",
+   "source_chunk": 3,
+   "raw_text": "那你有可能"
+  },
+  {
+   "id": "S0888",
+   "start_seconds": 3303.83,
+   "end_seconds": 3305.69,
+   "text": "雨衣搜尋找了四段",
+   "source_chunk": 3,
+   "raw_text": "雨衣搜尋找了四段"
+  },
+  {
+   "id": "S0889",
+   "start_seconds": 3305.69,
+   "end_seconds": 3307.09,
+   "text": "你top K取四",
+   "source_chunk": 3,
+   "raw_text": "你top K取四"
+  },
+  {
+   "id": "S0890",
+   "start_seconds": 3307.09,
+   "end_seconds": 3308.89,
+   "text": "那你就把這四段",
+   "source_chunk": 3,
+   "raw_text": "那你就把這四段"
+  },
+  {
+   "id": "S0891",
+   "start_seconds": 3308.89,
+   "end_seconds": 3309.93,
+   "text": "那關鍵搜尋呢",
+   "source_chunk": 3,
+   "raw_text": "那關鍵搜尋呢"
+  },
+  {
+   "id": "S0892",
+   "start_seconds": 3309.93,
+   "end_seconds": 3311.43,
+   "text": "你可能top K取二",
+   "source_chunk": 3,
+   "raw_text": "你可能top K取二"
+  },
+  {
+   "id": "S0893",
+   "start_seconds": 3311.43,
+   "end_seconds": 3313.03,
+   "text": "你就把四加二",
+   "source_chunk": 3,
+   "raw_text": "你就把四加二"
+  },
+  {
+   "id": "S0894",
+   "start_seconds": 3313.03,
+   "end_seconds": 3317.33,
+   "text": "所以你最後返回六段不同的文字",
+   "source_chunk": 3,
+   "raw_text": "所以你最後返回六段不同的文字"
+  },
+  {
+   "id": "S0895",
+   "start_seconds": 3317.33,
+   "end_seconds": 3320.13,
+   "text": "然後你再把重複給去掉之類的",
+   "source_chunk": 3,
+   "raw_text": "然後你再把重複給去掉之類的"
+  },
+  {
+   "id": "S0896",
+   "start_seconds": 3320.13,
+   "end_seconds": 3322.53,
+   "text": "或是可能有找到重複的",
+   "source_chunk": 3,
+   "raw_text": "或是可能有找到重複的"
+  },
+  {
+   "id": "S0897",
+   "start_seconds": 3322.53,
+   "end_seconds": 3325.59,
+   "text": "這一段文字的權重就會提高",
+   "source_chunk": 3,
+   "raw_text": "這一段文字的權重就會提高"
+  },
+  {
+   "id": "S0898",
+   "start_seconds": 3325.59,
+   "end_seconds": 3326.93,
+   "text": "所以這是合併",
+   "source_chunk": 3,
+   "raw_text": "所以這是合併"
+  },
+  {
+   "id": "S0899",
+   "start_seconds": 3326.93,
+   "end_seconds": 3329.89,
+   "text": "這叫混合搜尋",
+   "source_chunk": 3,
+   "raw_text": "這叫混合搜尋"
+  },
+  {
+   "id": "S0900",
+   "start_seconds": 3329.89,
+   "end_seconds": 3332.03,
+   "text": "那合併的方式有很多種",
+   "source_chunk": 3,
+   "raw_text": "那合併的方式有很多種"
+  },
+  {
+   "id": "S0901",
+   "start_seconds": 3332.03,
+   "end_seconds": 3333.59,
+   "text": "那這完全是看",
+   "source_chunk": 3,
+   "raw_text": "那這完全是看"
+  },
+  {
+   "id": "S0902",
+   "start_seconds": 3333.59,
+   "end_seconds": 3342.11,
+   "text": "每個人演算法邏輯上的差異",
+   "source_chunk": 3,
+   "raw_text": "每個人演算法邏輯上的差異"
+  },
+  {
+   "id": "S0903",
+   "start_seconds": 3342.11,
+   "end_seconds": 3343.31,
+   "text": "所以混合搜尋呢",
+   "source_chunk": 3,
+   "raw_text": "所以混合搜尋呢"
+  },
+  {
+   "id": "S0904",
+   "start_seconds": 3343.31,
+   "end_seconds": 3346.07,
+   "text": "有一個就是要去解決",
+   "source_chunk": 3,
+   "raw_text": "有一個就是要去解決"
+  },
+  {
+   "id": "S0905",
+   "start_seconds": 3346.07,
+   "end_seconds": 3350.27,
+   "text": "這個名詞不統一的問題",
+   "source_chunk": 3,
+   "raw_text": "這個名詞不統一的問題"
+  },
+  {
+   "id": "S0906",
+   "start_seconds": 3350.27,
+   "end_seconds": 3352.11,
+   "text": "假設你山崩要注意什麼",
+   "source_chunk": 3,
+   "raw_text": "假設你山崩要注意什麼"
+  },
+  {
+   "id": "S0907",
+   "start_seconds": 3352.11,
+   "end_seconds": 3353.33,
+   "text": "你的雨衣搜尋呢",
+   "source_chunk": 3,
+   "raw_text": "你的雨衣搜尋呢"
+  },
+  {
+   "id": "S0908",
+   "start_seconds": 3353.33,
+   "end_seconds": 3354.83,
+   "text": "就是這三個",
+   "source_chunk": 3,
+   "raw_text": "就是這三個"
+  },
+  {
+   "id": "S0909",
+   "start_seconds": 3354.83,
+   "end_seconds": 3356.71,
+   "text": "你如果用關鍵字",
+   "source_chunk": 3,
+   "raw_text": "你如果用關鍵字"
+  },
+  {
+   "id": "S0910",
+   "start_seconds": 3356.71,
+   "end_seconds": 3358.47,
+   "text": "你找不到山崩",
+   "source_chunk": 3,
+   "raw_text": "你找不到山崩"
+  },
+  {
+   "id": "S0911",
+   "start_seconds": 3358.47,
+   "end_seconds": 3361.47,
+   "text": "那你用關鍵字加統一字",
+   "source_chunk": 3,
+   "raw_text": "那你用關鍵字加統一字"
+  },
+  {
+   "id": "S0912",
+   "start_seconds": 3361.47,
+   "end_seconds": 3363.27,
+   "text": "那你有可能會找回",
+   "source_chunk": 3,
+   "raw_text": "那你有可能會找回"
+  },
+  {
+   "id": "S0913",
+   "start_seconds": 3363.27,
+   "end_seconds": 3367.23,
+   "text": "landslide 滑坡跟潘芳",
+   "source_chunk": 3,
+   "raw_text": "landslide 滑坡跟潘芳"
+  },
+  {
+   "id": "S0914",
+   "start_seconds": 3367.23,
+   "end_seconds": 3368.77,
+   "text": "那關鍵字加統一字呢",
+   "source_chunk": 3,
+   "raw_text": "那關鍵字加統一字呢"
+  },
+  {
+   "id": "S0915",
+   "start_seconds": 3368.77,
+   "end_seconds": 3370.47,
+   "text": "統一字這個呢",
+   "source_chunk": 3,
+   "raw_text": "統一字這個呢"
+  },
+  {
+   "id": "S0916",
+   "start_seconds": 3370.47,
+   "end_seconds": 3374.03,
+   "text": "有一種說法叫模糊搜尋",
+   "source_chunk": 3,
+   "raw_text": "有一種說法叫模糊搜尋"
+  },
+  {
+   "id": "S0917",
+   "start_seconds": 3374.03,
+   "end_seconds": 3375.07,
+   "text": "那模糊搜尋呢",
+   "source_chunk": 3,
+   "raw_text": "那模糊搜尋呢"
+  },
+  {
+   "id": "S0918",
+   "start_seconds": 3375.07,
+   "end_seconds": 3378.27,
+   "text": "它會找可能不同翻譯",
+   "source_chunk": 3,
+   "raw_text": "它會找可能不同翻譯"
+  },
+  {
+   "id": "S0919",
+   "start_seconds": 3378.27,
+   "end_seconds": 3380.47,
+   "text": "不同語言別的名字",
+   "source_chunk": 3,
+   "raw_text": "不同語言別的名字"
+  },
+  {
+   "id": "S0920",
+   "start_seconds": 3380.47,
+   "end_seconds": 3383.27,
+   "text": "那都算是混在山崩裡面",
+   "source_chunk": 3,
+   "raw_text": "那都算是混在山崩裡面"
+  },
+  {
+   "id": "S0921",
+   "start_seconds": 3383.27,
+   "end_seconds": 3384.31,
+   "text": "就假設山崩",
+   "source_chunk": 3,
+   "raw_text": "就假設山崩"
+  },
+  {
+   "id": "S0922",
+   "start_seconds": 3384.31,
+   "end_seconds": 3387.23,
+   "text": "landslide 滑坡 潘芳",
+   "source_chunk": 3,
+   "raw_text": "landslide 滑坡 潘芳"
+  },
+  {
+   "id": "S0923",
+   "start_seconds": 3387.23,
+   "end_seconds": 3389.43,
+   "text": "然後崩山這種東西呢",
+   "source_chunk": 3,
+   "raw_text": "然後崩山這種東西呢"
+  },
+  {
+   "id": "S0924",
+   "start_seconds": 3389.43,
+   "end_seconds": 3390.79,
+   "text": "在模糊搜尋裡面呢",
+   "source_chunk": 3,
+   "raw_text": "在模糊搜尋裡面呢"
+  },
+  {
+   "id": "S0925",
+   "start_seconds": 3390.79,
+   "end_seconds": 3394.69,
+   "text": "它都是對應到山崩的這個字",
+   "source_chunk": 3,
+   "raw_text": "它都是對應到山崩的這個字"
+  },
+  {
+   "id": "S0926",
+   "start_seconds": 3394.69,
+   "end_seconds": 3397.33,
+   "text": "那當然你可以用混合搜尋",
+   "source_chunk": 3,
+   "raw_text": "那當然你可以用混合搜尋"
+  },
+  {
+   "id": "S0927",
+   "start_seconds": 3397.33,
+   "end_seconds": 3398.13,
+   "text": "所以光搜尋",
+   "source_chunk": 3,
+   "raw_text": "所以光搜尋"
+  },
+  {
+   "id": "S0928",
+   "start_seconds": 3398.13,
+   "end_seconds": 3401.09,
+   "text": "其實你就有非常多的考量",
+   "source_chunk": 3,
+   "raw_text": "其實你就有非常多的考量"
+  },
+  {
+   "id": "S0929",
+   "start_seconds": 3401.09,
+   "end_seconds": 3402.39,
+   "text": "所以我才會說就是",
+   "source_chunk": 3,
+   "raw_text": "所以我才會說就是"
+  },
+  {
+   "id": "S0930",
+   "start_seconds": 3402.39,
+   "end_seconds": 3404.73,
+   "text": "rag 這個東西很不好做",
+   "source_chunk": 3,
+   "raw_text": "rag 這個東西很不好做"
+  },
+  {
+   "id": "S0931",
+   "start_seconds": 3404.73,
+   "end_seconds": 3407.03,
+   "text": "原因是因為它太多細節",
+   "source_chunk": 3,
+   "raw_text": "原因是因為它太多細節"
+  },
+  {
+   "id": "S0932",
+   "start_seconds": 3407.03,
+   "end_seconds": 3411.09,
+   "text": "需要做處理",
+   "source_chunk": 3,
+   "raw_text": "需要做處理"
+  },
+  {
+   "id": "S0933",
+   "start_seconds": 3411.09,
+   "end_seconds": 3412.03,
+   "text": "那修法二呢",
+   "source_chunk": 3,
+   "raw_text": "那修法二呢"
+  },
+  {
+   "id": "S0934",
+   "start_seconds": 3412.03,
+   "end_seconds": 3416.59,
+   "text": "則是可能重新排序",
+   "source_chunk": 3,
+   "raw_text": "則是可能重新排序"
+  },
+  {
+   "id": "S0935",
+   "start_seconds": 3416.59,
+   "end_seconds": 3419.55,
+   "text": "你可以先撈一遍",
+   "source_chunk": 3,
+   "raw_text": "你可以先撈一遍"
+  },
+  {
+   "id": "S0936",
+   "start_seconds": 3419.55,
+   "end_seconds": 3421.89,
+   "text": "假設你選十個進來",
+   "source_chunk": 3,
+   "raw_text": "假設你選十個進來"
+  },
+  {
+   "id": "S0937",
+   "start_seconds": 3421.89,
+   "end_seconds": 3423.45,
+   "text": "選十個進來",
+   "source_chunk": 3,
+   "raw_text": "選十個進來"
+  },
+  {
+   "id": "S0938",
+   "start_seconds": 3423.45,
+   "end_seconds": 3424.85,
+   "text": "這邊選六個",
+   "source_chunk": 3,
+   "raw_text": "這邊選六個"
+  },
+  {
+   "id": "S0939",
+   "start_seconds": 3424.85,
+   "end_seconds": 3426.95,
+   "text": "選六個進來之後呢",
+   "source_chunk": 3,
+   "raw_text": "選六個進來之後呢"
+  },
+  {
+   "id": "S0940",
+   "start_seconds": 3426.95,
+   "end_seconds": 3431.59,
+   "text": "你可以用一個重新排序的一個模型",
+   "source_chunk": 3,
+   "raw_text": "你可以用一個重新排序的一個模型"
+  },
+  {
+   "id": "S0941",
+   "start_seconds": 3431.59,
+   "end_seconds": 3435.25,
+   "text": "有模型是專門做重新排序的",
+   "source_chunk": 3,
+   "raw_text": "有模型是專門做重新排序的"
+  },
+  {
+   "id": "S0942",
+   "start_seconds": 3435.25,
+   "end_seconds": 3436.69,
+   "text": "因為它其實就是",
+   "source_chunk": 3,
+   "raw_text": "因為它其實就是"
+  },
+  {
+   "id": "S0943",
+   "start_seconds": 3436.69,
+   "end_seconds": 3437.49,
+   "text": "重新排序呢",
+   "source_chunk": 3,
+   "raw_text": "重新排序呢"
+  },
+  {
+   "id": "S0944",
+   "start_seconds": 3437.49,
+   "end_seconds": 3440.35,
+   "text": "只是把你的問題跟你的答案",
+   "source_chunk": 3,
+   "raw_text": "只是把你的問題跟你的答案"
+  },
+  {
+   "id": "S0945",
+   "start_seconds": 3440.35,
+   "end_seconds": 3445.73,
+   "text": "兩個綁在一起去打一個分數",
+   "source_chunk": 3,
+   "raw_text": "兩個綁在一起去打一個分數"
+  },
+  {
+   "id": "S0946",
+   "start_seconds": 3445.73,
+   "end_seconds": 3448.37,
+   "text": "所以這個則是沒有排序完",
+   "source_chunk": 3,
+   "raw_text": "所以這個則是沒有排序完"
+  },
+  {
+   "id": "S0947",
+   "start_seconds": 3448.37,
+   "end_seconds": 3451.27,
+   "text": "那這個則是重新排序",
+   "source_chunk": 3,
+   "raw_text": "那這個則是重新排序"
+  },
+  {
+   "id": "S0948",
+   "start_seconds": 3451.27,
+   "end_seconds": 3453.17,
+   "text": "它有點像是說",
+   "source_chunk": 3,
+   "raw_text": "它有點像是說"
+  },
+  {
+   "id": "S0949",
+   "start_seconds": 3453.17,
+   "end_seconds": 3455.07,
+   "text": "下雨天還去嗎",
+   "source_chunk": 3,
+   "raw_text": "下雨天還去嗎"
+  },
+  {
+   "id": "S0950",
+   "start_seconds": 3455.07,
+   "end_seconds": 3456.77,
+   "text": "那對應到1的話呢",
+   "source_chunk": 3,
+   "raw_text": "那對應到1的話呢"
+  },
+  {
+   "id": "S0951",
+   "start_seconds": 3456.77,
+   "end_seconds": 3457.63,
+   "text": "下雨天還去嗎",
+   "source_chunk": 3,
+   "raw_text": "下雨天還去嗎"
+  },
+  {
+   "id": "S0952",
+   "start_seconds": 3457.63,
+   "end_seconds": 3460.07,
+   "text": "綁這個井字號1",
+   "source_chunk": 3,
+   "raw_text": "綁這個井字號1"
+  },
+  {
+   "id": "S0953",
+   "start_seconds": 3460.07,
+   "end_seconds": 3461.73,
+   "text": "這兩個Q&A",
+   "source_chunk": 3,
+   "raw_text": "這兩個Q&A"
+  },
+  {
+   "id": "S0954",
+   "start_seconds": 3461.73,
+   "end_seconds": 3465.43,
+   "text": "然後給這個reranking的model",
+   "source_chunk": 3,
+   "raw_text": "然後給這個reranking的model"
+  },
+  {
+   "id": "S0955",
+   "start_seconds": 3465.43,
+   "end_seconds": 3469.07,
+   "text": "針對綁的這個字串去打一個分數",
+   "source_chunk": 3,
+   "raw_text": "針對綁的這個字串去打一個分數"
+  },
+  {
+   "id": "S0956",
+   "start_seconds": 3469.07,
+   "end_seconds": 3471.47,
+   "text": "就是這個question跟這個answer",
+   "source_chunk": 3,
+   "raw_text": "就是這個question跟這個answer"
+  },
+  {
+   "id": "S0957",
+   "start_seconds": 3471.47,
+   "end_seconds": 3473.17,
+   "text": "是不是有相關性",
+   "source_chunk": 3,
+   "raw_text": "是不是有相關性"
+  },
+  {
+   "id": "S0958",
+   "start_seconds": 3473.17,
+   "end_seconds": 3474.57,
+   "text": "如果沒有相關性的話呢",
+   "source_chunk": 3,
+   "raw_text": "如果沒有相關性的話呢"
+  },
+  {
+   "id": "S0959",
+   "start_seconds": 3474.57,
+   "end_seconds": 3476.47,
+   "text": "它的分數就會比較低",
+   "source_chunk": 3,
+   "raw_text": "它的分數就會比較低"
+  },
+  {
+   "id": "S0960",
+   "start_seconds": 3476.47,
+   "end_seconds": 3478.03,
+   "text": "那為什麼reranking的模型",
+   "source_chunk": 3,
+   "raw_text": "那為什麼reranking的模型"
+  },
+  {
+   "id": "S0961",
+   "start_seconds": 3478.03,
+   "end_seconds": 3480.59,
+   "text": "可以做這種打分數",
+   "source_chunk": 3,
+   "raw_text": "可以做這種打分數",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0962",
+   "start_seconds": 3480.59,
+   "end_seconds": 3483.69,
+   "text": "因為它在預訓練的資料裡面呢",
+   "source_chunk": 3,
+   "raw_text": "因為它在預訓練的資料裡面呢",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0963",
+   "start_seconds": 3483.69,
+   "end_seconds": 3486.39,
+   "text": "它放了大量的Q&A Q&A",
+   "source_chunk": 3,
+   "raw_text": "它放了大量的Q&A Q&A",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0964",
+   "start_seconds": 3486.39,
+   "end_seconds": 3489.83,
+   "text": "所以它可以比較容易的去做Q&A",
+   "source_chunk": 3,
+   "raw_text": "所以它可以比較容易的去做Q&A",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0965",
+   "start_seconds": 3489.83,
+   "end_seconds": 3493.89,
+   "text": "的語言類別的判釋",
+   "source_chunk": 3,
+   "raw_text": "的語言類別的判釋",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0966",
+   "start_seconds": 3493.89,
+   "end_seconds": 3496.49,
+   "text": "所以你如果把它重新排序的話",
+   "source_chunk": 3,
+   "raw_text": "所以你如果把它重新排序的話",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0967",
+   "start_seconds": 3496.49,
+   "end_seconds": 3500.53,
+   "text": "那這個東西呢就會變到第一名",
+   "source_chunk": 3,
+   "raw_text": "那這個東西呢就會變到第一名",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0968",
+   "start_seconds": 3500.53,
+   "end_seconds": 3503.63,
+   "text": "所以這是另外一種方式",
+   "source_chunk": 3,
+   "raw_text": "所以這是另外一種方式",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0969",
+   "start_seconds": 3503.63,
+   "end_seconds": 3504.73,
+   "text": "就是你先把",
+   "source_chunk": 3,
+   "raw_text": "就是你先把",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0970",
+   "start_seconds": 3504.73,
+   "end_seconds": 3506.93,
+   "text": "不管假設你把top K舉大",
+   "source_chunk": 3,
+   "raw_text": "不管假設你把top K舉大",
+   "overlap_duplicate": true,
+   "excluded": true
+  },
+  {
+   "id": "S0971",
+   "start_seconds": 3477.01,
+   "end_seconds": 3480.65,
+   "text": "re-ranking的模型可以做這種打分數",
+   "source_chunk": 4,
+   "raw_text": "re-ranking的模型可以做這種打分數"
+  },
+  {
+   "id": "S0972",
+   "start_seconds": 3480.65,
+   "end_seconds": 3483.49,
+   "text": "因為他在預訓練的資料裡面",
+   "source_chunk": 4,
+   "raw_text": "因為他在預訓練的資料裡面"
+  },
+  {
+   "id": "S0973",
+   "start_seconds": 3483.73,
+   "end_seconds": 3486.13,
+   "text": "他放了大量的Q&A Q&A",
+   "source_chunk": 4,
+   "raw_text": "他放了大量的Q&A Q&A"
+  },
+  {
+   "id": "S0974",
+   "start_seconds": 3486.45,
+   "end_seconds": 3490.21,
+   "text": "所以他可以比較容易的去做Q&A的",
+   "source_chunk": 4,
+   "raw_text": "所以他可以比較容易的去做Q&A的"
+  },
+  {
+   "id": "S0975",
+   "start_seconds": 3490.69,
+   "end_seconds": 3492.13,
+   "text": "語言類別的判釋",
+   "source_chunk": 4,
+   "raw_text": "語言類別的判釋"
+  },
+  {
+   "id": "S0976",
+   "start_seconds": 3496.53,
+   "end_seconds": 3500.13,
+   "text": "那這個東西就會變到第一名",
+   "source_chunk": 4,
+   "raw_text": "那這個東西就會變到第一名"
+  },
+  {
+   "id": "S0977",
+   "start_seconds": 3503.65,
+   "end_seconds": 3506.85,
+   "text": "就是你先把不管假設你把TopK取大",
+   "source_chunk": 4,
+   "raw_text": "就是你先把不管假設你把TopK取大"
+  },
+  {
+   "id": "S0978",
+   "start_seconds": 3507.21,
+   "end_seconds": 3509.97,
+   "text": "撈回來之後再用re-ranking的model",
+   "source_chunk": 4,
+   "raw_text": "撈回來之後再用re-ranking的model"
+  },
+  {
+   "id": "S0979",
+   "start_seconds": 3510.21,
+   "end_seconds": 3511.57,
+   "text": "去給他一個一個打分數",
+   "source_chunk": 4,
+   "raw_text": "去給他一個一個打分數"
+  },
+  {
+   "id": "S0980",
+   "start_seconds": 3511.81,
+   "end_seconds": 3515.89,
+   "text": "然後這時候再取另外一個TopK",
+   "source_chunk": 4,
+   "raw_text": "然後這時候再取另外一個TopK"
+  },
+  {
+   "id": "S0981",
+   "start_seconds": 3516.49,
+   "end_seconds": 3519.89,
+   "text": "打分數之後你可能取兩個或取三個",
+   "source_chunk": 4,
+   "raw_text": "打分數之後你可能取兩個或取三個"
+  },
+  {
+   "id": "S0982",
+   "start_seconds": 3523.68,
+   "end_seconds": 3527.76,
+   "text": "修法3則是可能用標籤做篩選",
+   "source_chunk": 4,
+   "raw_text": "修法3則是可能用標籤做篩選"
+  },
+  {
+   "id": "S0983",
+   "start_seconds": 3528.4,
+   "end_seconds": 3531.68,
+   "text": "你有可能是用2025年",
+   "source_chunk": 4,
+   "raw_text": "你有可能是用2025年"
+  },
+  {
+   "id": "S0984",
+   "start_seconds": 3531.96,
+   "end_seconds": 3534.36,
+   "text": "這個兩個就可以把它剔除掉",
+   "source_chunk": 4,
+   "raw_text": "這個兩個就可以把它剔除掉"
+  },
+  {
+   "id": "S0985",
+   "start_seconds": 3535.64,
+   "end_seconds": 3538.2,
+   "text": "你只保留2026年",
+   "source_chunk": 4,
+   "raw_text": "你只保留2026年"
+  },
+  {
+   "id": "S0986",
+   "start_seconds": 3538.36,
+   "end_seconds": 3540.28,
+   "text": "那這種也是一種方式",
+   "source_chunk": 4,
+   "raw_text": "那這種也是一種方式"
+  },
+  {
+   "id": "S0987",
+   "start_seconds": 3543.19,
+   "end_seconds": 3550.85,
+   "text": "修完以後變好就可以簡單的例子來看一下",
+   "source_chunk": 4,
+   "raw_text": "修完以後變好就可以簡單的例子來看一下"
+  },
+  {
+   "id": "S0988",
+   "start_seconds": 3551.49,
+   "end_seconds": 3553.41,
+   "text": "所以怎麼修其實沒有規則",
+   "source_chunk": 4,
+   "raw_text": "所以怎麼修其實沒有規則"
+  },
+  {
+   "id": "S0989",
+   "start_seconds": 3553.93,
+   "end_seconds": 3555.09,
+   "text": "就是完全沒有規則",
+   "source_chunk": 4,
+   "raw_text": "就是完全沒有規則"
+  },
+  {
+   "id": "S0990",
+   "start_seconds": 3555.33,
+   "end_seconds": 3557.77,
+   "text": "完全是看你哪一邊出錯",
+   "source_chunk": 4,
+   "raw_text": "完全是看你哪一邊出錯"
+  },
+  {
+   "id": "S0991",
+   "start_seconds": 3557.97,
+   "end_seconds": 3562.37,
+   "text": "然後你人要對資料是有熟悉的",
+   "source_chunk": 4,
+   "raw_text": "然後你人要對資料是有熟悉的"
+  },
+  {
+   "id": "S0992",
+   "start_seconds": 3562.85,
+   "end_seconds": 3565.77,
+   "text": "那你有辦法去辨別這個資料的真偽",
+   "source_chunk": 4,
+   "raw_text": "那你有辦法去辨別這個資料的真偽"
+  },
+  {
+   "id": "S0993",
+   "start_seconds": 3566.57,
+   "end_seconds": 3570.25,
+   "text": "然後再來知道說你哪一個步驟出錯了",
+   "source_chunk": 4,
+   "raw_text": "然後再來知道說你哪一個步驟出錯了"
+  },
+  {
+   "id": "S0994",
+   "start_seconds": 3570.45,
+   "end_seconds": 3571.65,
+   "text": "那針對哪一個步驟",
+   "source_chunk": 4,
+   "raw_text": "那針對哪一個步驟"
+  },
+  {
+   "id": "S0995",
+   "start_seconds": 3572.25,
+   "end_seconds": 3574.77,
+   "text": "然後去下解決的辦法",
+   "source_chunk": 4,
+   "raw_text": "然後去下解決的辦法"
+  },
+  {
+   "id": "S0996",
+   "start_seconds": 3577.0,
+   "end_seconds": 3582.16,
+   "text": "所以如果是答案引用了去年的時間",
+   "source_chunk": 4,
+   "raw_text": "所以如果是答案引用了去年的時間"
+  },
+  {
+   "id": "S0997",
+   "start_seconds": 3582.16,
+   "end_seconds": 3584.92,
+   "text": "那這個可能是資料上有出錯",
+   "source_chunk": 4,
+   "raw_text": "那這個可能是資料上有出錯"
+  },
+  {
+   "id": "S0998",
+   "start_seconds": 3585.64,
+   "end_seconds": 3589.64,
+   "text": "問器材但是你找不到相對的段落",
+   "source_chunk": 4,
+   "raw_text": "問器材但是你找不到相對的段落"
+  },
+  {
+   "id": "S0999",
+   "start_seconds": 3590.0,
+   "end_seconds": 3592.56,
+   "text": "那這個就是你搜尋有出錯",
+   "source_chunk": 4,
+   "raw_text": "那這個就是你搜尋有出錯"
+  },
+  {
+   "id": "S1000",
+   "start_seconds": 3593.0,
+   "end_seconds": 3595.52,
+   "text": "你的規則被切一半回答是講一半",
+   "source_chunk": 4,
+   "raw_text": "你的規則被切一半回答是講一半"
+  },
+  {
+   "id": "S1001",
+   "start_seconds": 3595.96,
+   "end_seconds": 3597.68,
+   "text": "那有可能是你切塊的時候",
+   "source_chunk": 4,
+   "raw_text": "那有可能是你切塊的時候"
+  },
+  {
+   "id": "S1002",
+   "start_seconds": 3598.12,
+   "end_seconds": 3599.92,
+   "text": "就是已經把人家給切一半",
+   "source_chunk": 4,
+   "raw_text": "就是已經把人家給切一半"
+  },
+  {
+   "id": "S1003",
+   "start_seconds": 3600.48,
+   "end_seconds": 3602.48,
+   "text": "那資料沒有但是編了一個答案",
+   "source_chunk": 4,
+   "raw_text": "那資料沒有但是編了一個答案"
+  },
+  {
+   "id": "S1004",
+   "start_seconds": 3603.0,
+   "end_seconds": 3605.68,
+   "text": "那就可能是你指令沒有寫好",
+   "source_chunk": 4,
+   "raw_text": "那就可能是你指令沒有寫好"
+  },
+  {
+   "id": "S1005",
+   "start_seconds": 3609.59,
+   "end_seconds": 3613.31,
+   "text": "所以除了RAG以外你還有其他種方式",
+   "source_chunk": 4,
+   "raw_text": "所以除了RAG以外你還有其他種方式"
+  },
+  {
+   "id": "S1006",
+   "start_seconds": 3614.23,
+   "end_seconds": 3617.59,
+   "text": "另外一種方式叫做微調",
+   "source_chunk": 4,
+   "raw_text": "另外一種方式叫做微調"
+  },
+  {
+   "id": "S1007",
+   "start_seconds": 3618.35,
+   "end_seconds": 3621.67,
+   "text": "那RAG它主要是資料多",
+   "source_chunk": 4,
+   "raw_text": "那RAG它主要是資料多"
+  },
+  {
+   "id": "S1008",
+   "start_seconds": 3622.39,
+   "end_seconds": 3624.79,
+   "text": "然後場更新然後要出處的時候",
+   "source_chunk": 4,
+   "raw_text": "然後場更新然後要出處的時候"
+  },
+  {
+   "id": "S1009",
+   "start_seconds": 3624.79,
+   "end_seconds": 3626.35,
+   "text": "你可以用RAG動態的",
+   "source_chunk": 4,
+   "raw_text": "你可以用RAG動態的"
+  },
+  {
+   "id": "S1010",
+   "start_seconds": 3626.83,
+   "end_seconds": 3628.79,
+   "text": "只要更新資料你換檔案就好了",
+   "source_chunk": 4,
+   "raw_text": "只要更新資料你換檔案就好了"
+  },
+  {
+   "id": "S1011",
+   "start_seconds": 3629.51,
+   "end_seconds": 3630.87,
+   "text": "那微調是什麼意思呢",
+   "source_chunk": 4,
+   "raw_text": "那微調是什麼意思呢"
+  },
+  {
+   "id": "S1012",
+   "start_seconds": 3631.27,
+   "end_seconds": 3635.15,
+   "text": "微調是你必須要去重新訓練這個模型",
+   "source_chunk": 4,
+   "raw_text": "微調是你必須要去重新訓練這個模型"
+  },
+  {
+   "id": "S1013",
+   "start_seconds": 3635.83,
+   "end_seconds": 3638.83,
+   "text": "因為有一些資料庫它可能會有固定的",
+   "source_chunk": 4,
+   "raw_text": "因為有一些資料庫它可能會有固定的"
+  },
+  {
+   "id": "S1014",
+   "start_seconds": 3639.27,
+   "end_seconds": 3641.71,
+   "text": "回答的格式還有語氣",
+   "source_chunk": 4,
+   "raw_text": "回答的格式還有語氣"
+  },
+  {
+   "id": "S1015",
+   "start_seconds": 3642.07,
+   "end_seconds": 3643.79,
+   "text": "然後還有一些行為",
+   "source_chunk": 4,
+   "raw_text": "然後還有一些行為"
+  },
+  {
+   "id": "S1016",
+   "start_seconds": 3644.27,
+   "end_seconds": 3645.83,
+   "text": "所以在這個狀態之下",
+   "source_chunk": 4,
+   "raw_text": "所以在這個狀態之下"
+  },
+  {
+   "id": "S1017",
+   "start_seconds": 3645.83,
+   "end_seconds": 3649.35,
+   "text": "你可能就需要做到模型的微調",
+   "source_chunk": 4,
+   "raw_text": "你可能就需要做到模型的微調"
+  },
+  {
+   "id": "S1018",
+   "start_seconds": 3651.11,
+   "end_seconds": 3653.87,
+   "text": "那第三個則是長項下文",
+   "source_chunk": 4,
+   "raw_text": "那第三個則是長項下文"
+  },
+  {
+   "id": "S1019",
+   "start_seconds": 3654.47,
+   "end_seconds": 3656.79,
+   "text": "就你如果很低頻率的使用",
+   "source_chunk": 4,
+   "raw_text": "就你如果很低頻率的使用"
+  },
+  {
+   "id": "S1020",
+   "start_seconds": 3656.79,
+   "end_seconds": 3660.35,
+   "text": "其實你就把PTFLon轉成Modern Copy",
+   "source_chunk": 4,
+   "raw_text": "其實你就把PTFLon轉成Modern Copy"
+  },
+  {
+   "id": "S1021",
+   "start_seconds": 3660.83,
+   "end_seconds": 3662.99,
+   "text": "直接貼給AI就可以去回答了",
+   "source_chunk": 4,
+   "raw_text": "直接貼給AI就可以去回答了"
+  },
+  {
+   "id": "S1022",
+   "start_seconds": 3664.87,
+   "end_seconds": 3666.63,
+   "text": "所以微調的精髓是在於說",
+   "source_chunk": 4,
+   "raw_text": "所以微調的精髓是在於說"
+  },
+  {
+   "id": "S1023",
+   "start_seconds": 3667.03,
+   "end_seconds": 3669.79,
+   "text": "讓模型練習成你要的樣子",
+   "source_chunk": 4,
+   "raw_text": "讓模型練習成你要的樣子"
+  },
+  {
+   "id": "S1024",
+   "start_seconds": 3670.51,
+   "end_seconds": 3671.99,
+   "text": "那這個舉例有點像是",
+   "source_chunk": 4,
+   "raw_text": "那這個舉例有點像是"
+  },
+  {
+   "id": "S1025",
+   "start_seconds": 3672.87,
+   "end_seconds": 3674.55,
+   "text": "你如果在寫作過程當中",
+   "source_chunk": 4,
+   "raw_text": "你如果在寫作過程當中"
+  },
+  {
+   "id": "S1026",
+   "start_seconds": 3674.55,
+   "end_seconds": 3676.91,
+   "text": "你需要這個模型永遠依照",
+   "source_chunk": 4,
+   "raw_text": "你需要這個模型永遠依照"
+  },
+  {
+   "id": "S1027",
+   "start_seconds": 3676.91,
+   "end_seconds": 3680.31,
+   "text": "期程轉合的模式去輸出一段文字",
+   "source_chunk": 4,
+   "raw_text": "期程轉合的模式去輸出一段文字"
+  },
+  {
+   "id": "S1028",
+   "start_seconds": 3680.91,
+   "end_seconds": 3682.71,
+   "text": "那你就可以大量去收集",
+   "source_chunk": 4,
+   "raw_text": "那你就可以大量去收集"
+  },
+  {
+   "id": "S1029",
+   "start_seconds": 3682.87,
+   "end_seconds": 3684.99,
+   "text": "由期程轉合文字的段落",
+   "source_chunk": 4,
+   "raw_text": "由期程轉合文字的段落"
+  },
+  {
+   "id": "S1030",
+   "start_seconds": 3685.35,
+   "end_seconds": 3688.47,
+   "text": "然後會去給模型去換一下它的腦袋",
+   "source_chunk": 4,
+   "raw_text": "然後會去給模型去換一下它的腦袋"
+  },
+  {
+   "id": "S1031",
+   "start_seconds": 3688.87,
+   "end_seconds": 3690.15,
+   "text": "就是微調它的權重",
+   "source_chunk": 4,
+   "raw_text": "就是微調它的權重"
+  },
+  {
+   "id": "S1032",
+   "start_seconds": 3690.59,
+   "end_seconds": 3691.75,
+   "text": "所以你之後呢",
+   "source_chunk": 4,
+   "raw_text": "所以你之後呢"
+  },
+  {
+   "id": "S1033",
+   "start_seconds": 3692.19,
+   "end_seconds": 3695.63,
+   "text": "你用這個模型來去做文字的轉寫",
+   "source_chunk": 4,
+   "raw_text": "你用這個模型來去做文字的轉寫"
+  },
+  {
+   "id": "S1034",
+   "start_seconds": 3695.83,
+   "end_seconds": 3698.11,
+   "text": "那就會比較貼近期程轉合",
+   "source_chunk": 4,
+   "raw_text": "那就會比較貼近期程轉合"
+  },
+  {
+   "id": "S1035",
+   "start_seconds": 3699.11,
+   "end_seconds": 3701.39,
+   "text": "對所以另外一個微調的例子也就是",
+   "source_chunk": 4,
+   "raw_text": "對所以另外一個微調的例子也就是"
+  },
+  {
+   "id": "S1036",
+   "start_seconds": 3702.31,
+   "end_seconds": 3706.79,
+   "text": "現在很多模型都是大陸那邊的模型",
+   "source_chunk": 4,
+   "raw_text": "現在很多模型都是大陸那邊的模型"
+  },
+  {
+   "id": "S1037",
+   "start_seconds": 3706.79,
+   "end_seconds": 3707.67,
+   "text": "像地端模型",
+   "source_chunk": 4,
+   "raw_text": "像地端模型"
+  },
+  {
+   "id": "S1038",
+   "start_seconds": 3708.15,
+   "end_seconds": 3709.99,
+   "text": "那地端模型他們可能被",
+   "source_chunk": 4,
+   "raw_text": "那地端模型他們可能被"
+  },
+  {
+   "id": "S1039",
+   "start_seconds": 3710.55,
+   "end_seconds": 3715.07,
+   "text": "在預訓練過程當中被放了很多的共產主義",
+   "source_chunk": 4,
+   "raw_text": "在預訓練過程當中被放了很多的共產主義"
+  },
+  {
+   "id": "S1040",
+   "start_seconds": 3715.07,
+   "end_seconds": 3717.27,
+   "text": "所以你拿到這個模型的時候",
+   "source_chunk": 4,
+   "raw_text": "所以你拿到這個模型的時候"
+  },
+  {
+   "id": "S1041",
+   "start_seconds": 3717.51,
+   "end_seconds": 3718.87,
+   "text": "你可以用民族主義",
+   "source_chunk": 4,
+   "raw_text": "你可以用民族主義"
+  },
+  {
+   "id": "S1042",
+   "start_seconds": 3719.51,
+   "end_seconds": 3721.51,
+   "text": "去把這個模型的腦袋給換掉",
+   "source_chunk": 4,
+   "raw_text": "去把這個模型的腦袋給換掉"
+  },
+  {
+   "id": "S1043",
+   "start_seconds": 3721.51,
+   "end_seconds": 3723.55,
+   "text": "那這個也是一個微調",
+   "source_chunk": 4,
+   "raw_text": "那這個也是一個微調"
+  },
+  {
+   "id": "S1044",
+   "start_seconds": 3723.99,
+   "end_seconds": 3725.11,
+   "text": "那很多人這樣做",
+   "source_chunk": 4,
+   "raw_text": "那很多人這樣做"
+  },
+  {
+   "id": "S1045",
+   "start_seconds": 3725.35,
+   "end_seconds": 3730.19,
+   "text": "就是因為大陸的地端模型相對是比較好用的",
+   "source_chunk": 4,
+   "raw_text": "就是因為大陸的地端模型相對是比較好用的"
+  },
+  {
+   "id": "S1046",
+   "start_seconds": 3730.51,
+   "end_seconds": 3732.07,
+   "text": "所以大部分人拿到之後呢",
+   "source_chunk": 4,
+   "raw_text": "所以大部分人拿到之後呢"
+  },
+  {
+   "id": "S1047",
+   "start_seconds": 3732.07,
+   "end_seconds": 3734.75,
+   "text": "就可以去微調它的一些行為",
+   "source_chunk": 4,
+   "raw_text": "就可以去微調它的一些行為"
+  },
+  {
+   "id": "S1048",
+   "start_seconds": 3737.27,
+   "end_seconds": 3740.79,
+   "text": "所以這邊有幾個簡單的試驗",
+   "source_chunk": 4,
+   "raw_text": "所以這邊有幾個簡單的試驗"
+  },
+  {
+   "id": "S1049",
+   "start_seconds": 3741.03,
+   "end_seconds": 3742.11,
+   "text": "那這個就是大家",
+   "source_chunk": 4,
+   "raw_text": "那這個就是大家"
+  },
+  {
+   "id": "S1050",
+   "start_seconds": 3743.55,
+   "end_seconds": 3744.51,
+   "text": "再看過就好了",
+   "source_chunk": 4,
+   "raw_text": "再看過就好了"
+  },
+  {
+   "id": "S1051",
+   "start_seconds": 3745.47,
+   "end_seconds": 3749.67,
+   "text": "所以做RAG就是有三個好處",
+   "source_chunk": 4,
+   "raw_text": "所以做RAG就是有三個好處"
+  },
+  {
+   "id": "S1052",
+   "start_seconds": 3749.67,
+   "end_seconds": 3752.79,
+   "text": "第一個就是全線的問題",
+   "source_chunk": 4,
+   "raw_text": "第一個就是全線的問題"
+  },
+  {
+   "id": "S1053",
+   "start_seconds": 3752.79,
+   "end_seconds": 3757.19,
+   "text": "因為可能資料庫本來就集中在它可以看得到的地方",
+   "source_chunk": 4,
+   "raw_text": "因為可能資料庫本來就集中在它可以看得到的地方"
+  },
+  {
+   "id": "S1054",
+   "start_seconds": 3758.15,
+   "end_seconds": 3761.35,
+   "text": "然後但是它一樣會有一些隱私的問題",
+   "source_chunk": 4,
+   "raw_text": "然後但是它一樣會有一些隱私的問題"
+  },
+  {
+   "id": "S1055",
+   "start_seconds": 3761.35,
+   "end_seconds": 3764.63,
+   "text": "因為你的文件會被送去模型服務",
+   "source_chunk": 4,
+   "raw_text": "因為你的文件會被送去模型服務"
+  },
+  {
+   "id": "S1056",
+   "start_seconds": 3764.63,
+   "end_seconds": 3767.79,
+   "text": "也就是你用外面的模型去做搜索的時候",
+   "source_chunk": 4,
+   "raw_text": "也就是你用外面的模型去做搜索的時候"
+  },
+  {
+   "id": "S1057",
+   "start_seconds": 3768.19,
+   "end_seconds": 3772.67,
+   "text": "那這個東西一定會進到可能模型公司裡面去",
+   "source_chunk": 4,
+   "raw_text": "那這個東西一定會進到可能模型公司裡面去"
+  },
+  {
+   "id": "S1058",
+   "start_seconds": 3773.59,
+   "end_seconds": 3775.75,
+   "text": "所以你可以用地端的模型去做",
+   "source_chunk": 4,
+   "raw_text": "所以你可以用地端的模型去做"
+  },
+  {
+   "id": "S1059",
+   "start_seconds": 3776.31,
+   "end_seconds": 3778.59,
+   "text": "做RAG的監索",
+   "source_chunk": 4,
+   "raw_text": "做RAG的監索"
+  },
+  {
+   "id": "S1060",
+   "start_seconds": 3779.43,
+   "end_seconds": 3782.75,
+   "text": "那第三個呢則是提示詞的注入",
+   "source_chunk": 4,
+   "raw_text": "那第三個呢則是提示詞的注入"
+  },
+  {
+   "id": "S1061",
+   "start_seconds": 3782.99,
+   "end_seconds": 3787.43,
+   "text": "那這個我們在幾週以前有說過叫Pump Injection",
+   "source_chunk": 4,
+   "raw_text": "那這個我們在幾週以前有說過叫Pump Injection"
+  },
+  {
+   "id": "S1062",
+   "start_seconds": 3787.79,
+   "end_seconds": 3793.11,
+   "text": "就是如果你的文件裡面藏了一些不為人知的規則",
+   "source_chunk": 4,
+   "raw_text": "就是如果你的文件裡面藏了一些不為人知的規則"
+  },
+  {
+   "id": "S1063",
+   "start_seconds": 3793.27,
+   "end_seconds": 3795.11,
+   "text": "或是一些攻擊性的規則",
+   "source_chunk": 4,
+   "raw_text": "或是一些攻擊性的規則"
+  },
+  {
+   "id": "S1064",
+   "start_seconds": 3795.51,
+   "end_seconds": 3798.23,
+   "text": "那在RAG裡面呢它就有可能會被帶進去",
+   "source_chunk": 4,
+   "raw_text": "那在RAG裡面呢它就有可能會被帶進去"
+  },
+  {
+   "id": "S1065",
+   "start_seconds": 3798.47,
+   "end_seconds": 3802.99,
+   "text": "所以在最初的資料清理的過程當中",
+   "source_chunk": 4,
+   "raw_text": "所以在最初的資料清理的過程當中"
+  },
+  {
+   "id": "S1066",
+   "start_seconds": 3803.27,
+   "end_seconds": 3807.03,
+   "text": "這個步驟才是做RAG最重要的精華",
+   "source_chunk": 4,
+   "raw_text": "這個步驟才是做RAG最重要的精華"
+  },
+  {
+   "id": "S1067",
+   "start_seconds": 3807.27,
+   "end_seconds": 3810.11,
+   "text": "就是你只能夠去除純金",
+   "source_chunk": 4,
+   "raw_text": "就是你只能夠去除純金"
+  },
+  {
+   "id": "S1068",
+   "start_seconds": 3812.44,
+   "end_seconds": 3816.16,
+   "text": "好所以今天就是大概有這幾點",
+   "source_chunk": 4,
+   "raw_text": "好所以今天就是大概有這幾點"
+  },
+  {
+   "id": "S1069",
+   "start_seconds": 3817.08,
+   "end_seconds": 3821.2,
+   "text": "就是為什麼模型會沒有你的資料會亂拆",
+   "source_chunk": 4,
+   "raw_text": "就是為什麼模型會沒有你的資料會亂拆"
+  },
+  {
+   "id": "S1070",
+   "start_seconds": 3821.2,
+   "end_seconds": 3823.52,
+   "text": "那這個就原因也說過了",
+   "source_chunk": 4,
+   "raw_text": "那這個就原因也說過了"
+  },
+  {
+   "id": "S1071",
+   "start_seconds": 3823.8,
+   "end_seconds": 3825.44,
+   "text": "那RAG的東西是什麼",
+   "source_chunk": 4,
+   "raw_text": "那RAG的東西是什麼"
+  },
+  {
+   "id": "S1072",
+   "start_seconds": 3825.76,
+   "end_seconds": 3827.36,
+   "text": "那你要怎麼準備RAG",
+   "source_chunk": 4,
+   "raw_text": "那你要怎麼準備RAG"
+  },
+  {
+   "id": "S1073",
+   "start_seconds": 3827.88,
+   "end_seconds": 3830.08,
+   "text": "那包括你提問了之後呢",
+   "source_chunk": 4,
+   "raw_text": "那包括你提問了之後呢"
+  },
+  {
+   "id": "S1074",
+   "start_seconds": 3830.08,
+   "end_seconds": 3832.16,
+   "text": "RAG的整個過程是什麼",
+   "source_chunk": 4,
+   "raw_text": "RAG的整個過程是什麼"
+  },
+  {
+   "id": "S1075",
+   "start_seconds": 3832.68,
+   "end_seconds": 3834.48,
+   "text": "那你要怎麼去修這個RAG",
+   "source_chunk": 4,
+   "raw_text": "那你要怎麼去修這個RAG"
+  },
+  {
+   "id": "S1076",
+   "start_seconds": 3835.48,
+   "end_seconds": 3837.04,
+   "text": "那你要怎麼去選擇RAG",
+   "source_chunk": 4,
+   "raw_text": "那你要怎麼去選擇RAG"
+  },
+  {
+   "id": "S1077",
+   "start_seconds": 3837.68,
+   "end_seconds": 3838.92,
+   "text": "還是微調模型",
+   "source_chunk": 4,
+   "raw_text": "還是微調模型"
+  },
+  {
+   "id": "S1078",
+   "start_seconds": 3839.24,
+   "end_seconds": 3841.84,
+   "text": "還是比較長的上下文",
+   "source_chunk": 4,
+   "raw_text": "還是比較長的上下文"
+  },
+  {
+   "id": "S1079",
+   "start_seconds": 3845.93,
+   "end_seconds": 3849.73,
+   "text": "所以其實可以自己去做一個很簡單的",
+   "source_chunk": 4,
+   "raw_text": "所以其實可以自己去做一個很簡單的"
+  },
+  {
+   "id": "S1080",
+   "start_seconds": 3849.73,
+   "end_seconds": 3854.01,
+   "text": "就是你挑一個可能五份或十份",
+   "source_chunk": 4,
+   "raw_text": "就是你挑一個可能五份或十份"
+  },
+  {
+   "id": "S1081",
+   "start_seconds": 3854.53,
+   "end_seconds": 3857.29,
+   "text": "你自己蠻常用的文獻",
+   "source_chunk": 4,
+   "raw_text": "你自己蠻常用的文獻"
+  },
+  {
+   "id": "S1082",
+   "start_seconds": 3857.53,
+   "end_seconds": 3862.21,
+   "text": "那你可以去做一個簡易的RAG來做測試",
+   "source_chunk": 4,
+   "raw_text": "那你可以去做一個簡易的RAG來做測試"
+  },
+  {
+   "id": "S1083",
+   "start_seconds": 3862.77,
+   "end_seconds": 3866.97,
+   "text": "我去年就有做過就是針對野外地質調查",
+   "source_chunk": 4,
+   "raw_text": "我去年就有做過就是針對野外地質調查"
+  },
+  {
+   "id": "S1084",
+   "start_seconds": 3867.45,
+   "end_seconds": 3871.89,
+   "text": "那我其實就把野外地質調查所涉及到的文獻",
+   "source_chunk": 4,
+   "raw_text": "那我其實就把野外地質調查所涉及到的文獻"
+  },
+  {
+   "id": "S1085",
+   "start_seconds": 3872.21,
+   "end_seconds": 3873.45,
+   "text": "那其實就做成RAG",
+   "source_chunk": 4,
+   "raw_text": "那其實就做成RAG"
+  },
+  {
+   "id": "S1086",
+   "start_seconds": 3874.09,
+   "end_seconds": 3875.53,
+   "text": "那做成RAG之後呢",
+   "source_chunk": 4,
+   "raw_text": "那做成RAG之後呢"
+  },
+  {
+   "id": "S1087",
+   "start_seconds": 3875.93,
+   "end_seconds": 3879.41,
+   "text": "你再結合上禮拜的API的概念",
+   "source_chunk": 4,
+   "raw_text": "你再結合上禮拜的API的概念"
+  },
+  {
+   "id": "S1088",
+   "start_seconds": 3879.77,
+   "end_seconds": 3882.05,
+   "text": "你就可以打造出一個Trip Bar",
+   "source_chunk": 4,
+   "raw_text": "你就可以打造出一個Trip Bar"
+  },
+  {
+   "id": "S1089",
+   "start_seconds": 3882.37,
+   "end_seconds": 3887.21,
+   "text": "那這個Trip Bar就是for某一個地方的地質調查去使用",
+   "source_chunk": 4,
+   "raw_text": "那這個Trip Bar就是for某一個地方的地質調查去使用"
+  },
+  {
+   "id": "S1090",
+   "start_seconds": 3887.53,
+   "end_seconds": 3890.69,
+   "text": "那所以學生很容易的就可以針對",
+   "source_chunk": 4,
+   "raw_text": "那所以學生很容易的就可以針對"
+  },
+  {
+   "id": "S1091",
+   "start_seconds": 3891.13,
+   "end_seconds": 3893.73,
+   "text": "就是這個他們的問題",
+   "source_chunk": 4,
+   "raw_text": "就是這個他們的問題"
+  },
+  {
+   "id": "S1092",
+   "start_seconds": 3893.85,
+   "end_seconds": 3896.53,
+   "text": "然後直接跟Trip Bar去做互動",
+   "source_chunk": 4,
+   "raw_text": "然後直接跟Trip Bar去做互動"
+  },
+  {
+   "id": "S1093",
+   "start_seconds": 3897.05,
+   "end_seconds": 3900.73,
+   "text": "那也不太需要就是真的有一個助教",
+   "source_chunk": 4,
+   "raw_text": "那也不太需要就是真的有一個助教"
+  },
+  {
+   "id": "S1094",
+   "start_seconds": 3900.85,
+   "end_seconds": 3901.81,
+   "text": "隨時陪伴他",
+   "source_chunk": 4,
+   "raw_text": "隨時陪伴他"
+  },
+  {
+   "id": "S1095",
+   "start_seconds": 3901.97,
+   "end_seconds": 3905.53,
+   "text": "所以這其實就是一個虛擬助教的一個概念",
+   "source_chunk": 4,
+   "raw_text": "所以這其實就是一個虛擬助教的一個概念"
+  },
+  {
+   "id": "S1096",
+   "start_seconds": 3908.08,
+   "end_seconds": 3912.4,
+   "text": "對那這個就快速看過名詞",
+   "source_chunk": 4,
+   "raw_text": "對那這個就快速看過名詞"
+  },
+  {
+   "id": "S1097",
+   "start_seconds": 3912.68,
+   "end_seconds": 3916.84,
+   "text": "對所以這邊呢是最最最簡單的RAG",
+   "source_chunk": 4,
+   "raw_text": "對所以這邊呢是最最最簡單的RAG"
+  },
+  {
+   "id": "S1098",
+   "start_seconds": 3917.56,
+   "end_seconds": 3920.52,
+   "text": "所以如果你要再更進階的話呢",
+   "source_chunk": 4,
+   "raw_text": "所以如果你要再更進階的話呢"
+  },
+  {
+   "id": "S1099",
+   "start_seconds": 3920.56,
+   "end_seconds": 3923.24,
+   "text": "你就可以看看這邊",
+   "source_chunk": 4,
+   "raw_text": "你就可以看看這邊"
+  },
+  {
+   "id": "S1100",
+   "start_seconds": 3923.28,
+   "end_seconds": 3926.24,
+   "text": "就是我有放在Discord裡面",
+   "source_chunk": 4,
+   "raw_text": "就是我有放在Discord裡面"
+  },
+  {
+   "id": "S1101",
+   "start_seconds": 3926.36,
+   "end_seconds": 3928.84,
+   "text": "那Discord裡面應該今天放的",
+   "source_chunk": 4,
+   "raw_text": "那Discord裡面應該今天放的"
+  },
+  {
+   "id": "S1102",
+   "start_seconds": 3929.28,
+   "end_seconds": 3932.84,
+   "text": "那有一個叫RAG的Technic",
+   "source_chunk": 4,
+   "raw_text": "那有一個叫RAG的Technic"
+  },
+  {
+   "id": "S1103",
+   "start_seconds": 3933.4,
+   "end_seconds": 3936.92,
+   "text": "對那裡面他就有附上一些比較",
+   "source_chunk": 4,
+   "raw_text": "對那裡面他就有附上一些比較"
+  },
+  {
+   "id": "S1104",
+   "start_seconds": 3937.56,
+   "end_seconds": 3940.56,
+   "text": "一些比較進階的或一些比較基本的RAG",
+   "source_chunk": 4,
+   "raw_text": "一些比較進階的或一些比較基本的RAG"
+  },
+  {
+   "id": "S1105",
+   "start_seconds": 3941.12,
+   "end_seconds": 3943.0,
+   "text": "然後他都有Video",
+   "source_chunk": 4,
+   "raw_text": "然後他都有Video"
+  },
+  {
+   "id": "S1106",
+   "start_seconds": 3943.24,
+   "end_seconds": 3948.0,
+   "text": "那甚至也有那個Google的Code Lab的Code可以去看",
+   "source_chunk": 4,
+   "raw_text": "那甚至也有那個Google的Code Lab的Code可以去看"
+  },
+  {
+   "id": "S1107",
+   "start_seconds": 3949.0,
+   "end_seconds": 3952.88,
+   "text": "對所以這邊就是額外的一些資訊",
+   "source_chunk": 4,
+   "raw_text": "對所以這邊就是額外的一些資訊"
+  },
+  {
+   "id": "S1108",
+   "start_seconds": 3953.2,
+   "end_seconds": 3957.68,
+   "text": "對好那今天呢就到這邊結束",
+   "source_chunk": 4,
+   "raw_text": "對好那今天呢就到這邊結束"
+  }
+ ]
+}
