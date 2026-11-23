@@ -70,5 +70,13 @@ window.AI_EARTH_COURSES = [
     notes: "Material/Week09/index.html",
     slides: "https://api-talk-neon.vercel.app/#/1",
     video: "https://www.youtube.com/watch?v=BVoG_wJDCbs"
+  },
+  {
+    week: 10,
+    title: "RAG：讓 AI 先查資料再回答",
+    description: "從「社團週六幾點集合？」出發，走完切塊、embedding 向量、top-k 搜尋與提示組合，學會答錯時先檢查找到的段落，並比較 RAG、微調與長上下文。",
+    notes: "Material/Week10/index.html",
+    slides: "https://rag-talk.vercel.app/#/1",
+    video: "https://www.youtube.com/watch?v=ED8jJr7x7TU&t=750s"
   }
 ];
